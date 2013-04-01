@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map [
+<!ENTITY % entities SYSTEM "entities.xml.inc">
+%entities;
+]>
+<!--
+version 2012-10-27 - Yves Cainaud
+-->
+<Map xmlns:xi="http://www.w3.org/2001/XInclude"
+srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over"
+background-color="transparent" >
+    <Style name="nodes-nordic">
+        <Rule>
+            &maxscale_zoom0;
+            &minscale_zoom8;
+            <MarkersSymbolizer fill="orange" opacity="0.5"
+            width="1.5" height="1.5" stroke="orange"
+            stroke-width="3" stroke-opacity=".2"
+            placement="point" marker-type="ellipse"
+            allow-overlap="true" spacing="0"/>
+        </Rule>
+    </Style>
+    <Style name="nodes-nordic2" comp-op="color-dodge">
+        <Rule>
+            &maxscale_zoom0;
+            &minscale_zoom8;
+            <MarkersSymbolizer fill="orange" opacity="1"
+            width="0.5" height="0.5" stroke="orange"
+            stroke-width="2" stroke-opacity="0.6"
+            placement="point" marker-type="ellipse"
+            allow-overlap="true" spacing="0"/>
+        </Rule>
+    </Style>
+
+
+    <Style name="nodes-downhill">
+        <Rule>
+            &maxscale_zoom0;
+            &minscale_zoom8;
+            <MarkersSymbolizer fill="#1E70FF" opacity="0.5"
+            width="1.5" height="1.5" stroke="#1E70FF"
+            stroke-width="3" stroke-opacity=".2"
+            placement="point" marker-type="ellipse"
+            allow-overlap="true" spacing="0"/>
+        </Rule>
+    </Style>
+    <Style name="nodes-downhill2" comp-op="color-dodge">
+        <Rule>
+            &maxscale_zoom0;
+            &minscale_zoom8;
+
+            <MarkersSymbolizer fill="#1E70FF" opacity="1"
+            width="0.5" height="0.5" stroke="#1E70FF"
+            stroke-width="2" stroke-opacity="0.6"
+            placement="point" marker-type="ellipse"
+            allow-overlap="true" spacing="0"/>
+        </Rule>
+    </Style>
+
+
+
+    &downhill;
+    &snowshoeing;
+    &aerialways;
+    &skitour;
+    &icons;
+    &others;
+<!-- White casing -->
+    <Style name="nordic-bg">
+        <Rule>
+            &maxscale_zoom9;
+            &minscale_zoom11;
+            <LineSymbolizer stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+             stroke="#FFFFFF" />
+        </Rule>
+        <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+             stroke="#FFFFFF" />
+        </Rule>
+        <Rule>
+            &maxscale_zoom12;
+            &minscale_zoom14;
+            <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+             stroke="#FFFFFF" />
+        </Rule>
+        <Rule>
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
+             stroke="#FFFFFF" />
+        </Rule>
+    </Style>
+
+<!-- Ways -->
+    <Style name="nordic">
+        <Rule>
+            &maxscale_zoom9;
+            &minscale_zoom11;
+            <LineSymbolizer stroke="#44b2a3" stroke-width="1" stroke-linecap="round" />
+        </Rule>
+        <Rule>
+            <Filter>[piste:grooming]='classic' or [piste:grooming]='skating' or [piste:grooming]='classic;skating'  or [piste:grooming]='classic+skating'</Filter>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <LineSymbolizer stroke="#44b2a3" stroke-width="2" stroke-linecap="round" />
+        </Rule>
+        <Rule>
+            <Filter>[piste:grooming]='classic' or [piste:grooming]='skating' or [piste:grooming]='classic;skating'  or [piste:grooming]='classic+skating'</Filter>
+            &maxscale_zoom12;
+            &minscale_zoom14;
+            <LineSymbolizer stroke="#44b2a3" stroke-width="3" stroke-linecap="round" />
+        </Rule>
+        <Rule>
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <Filter>[piste:grooming]='classic' or [piste:grooming]='skating' or [piste:grooming]='classic;skating'  or [piste:grooming]='classic+skating'</Filter>
+            <LineSymbolizer stroke="#44b2a3" stroke-width="4" stroke-linecap="round" />
+        </Rule>
+        <Rule>
+            <ElseFilter />
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <LineSymbolizer stroke="#44b2a3" stroke-width="1" stroke-linecap="round" stroke-dasharray="3,3" />
+        </Rule>
+        <Rule>
+            <ElseFilter />
+            &maxscale_zoom12;
+            &minscale_zoom14;
+            <LineSymbolizer stroke="#44b2a3" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,5" />
+        </Rule>
+        <Rule>
+            <ElseFilter />
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <LineSymbolizer stroke="#44b2a3" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,8" />
+        </Rule>
+    </Style>
+
+<!--eraser to remove way below relations-->
+    <Style name="eraser" comp-op="dst-out">
+        <Rule>
+            &maxscale_zoom9;
+            &minscale_zoom12;
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+             stroke="#FFFFFF" />
+        </Rule>
+        <Rule>
+            &maxscale_zoom12;
+            &minscale_zoom14;
+            <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+             stroke="#FFFFFF" />
+        </Rule>
+        <Rule>
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
+             stroke="#FFFFFF" />
+        </Rule>
+    </Style>
+
+<!-- White casing for relations -->
+<!-- Colored and offset work for relations -->
+    &relations;
+
+<!-- Difficulty overlay -->
+    <Style name="difficulty" image-filters="agg-stack-blur(3,3)" comp-op="grain-merge">
+        <Rule>
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <Filter>[piste:difficulty]='intermediate'</Filter>
+            <LineSymbolizer stroke="#ffffff" stroke-width="3"
+            stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.6" />
+        </Rule>
+        <Rule>
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert' or [piste:difficulty]='freeride' or [piste:difficulty]='extreme' </Filter>
+            <LineSymbolizer stroke="#ffffff" stroke-width="3"
+            stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.6" />
+        </Rule>
+    </Style>
+
+<!-- Difficulty overlay eraser image-filters="agg-stack-blur(1,1)" -->
+    <Style name="no-difficulty"  comp-op="dst-out">
+        <Rule>
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <LineSymbolizer stroke="#ffffff" stroke-width="15"
+            stroke-linejoin="round" stroke-linecap="butt" stroke-opacity="0.3" stroke-dasharray="8,16" />
+        </Rule>
+    </Style>
+
+<!-- Difficulty overlay -->
+    <Style name="difficulty-icons">
+        <Rule>
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <Filter>[piste:difficulty]='intermediate'</Filter>
+            <ShieldSymbolizer file="danger-black.svg" face-name="DejaVu Sans Bold"
+            spacing="200" allow-overlap="false"
+            placement="line" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
+        </Rule>
+        <Rule>
+            &maxscale_zoom14;
+            &minscale_zoom18;
+            <Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert' or [piste:difficulty]='freeride' or [piste:difficulty]='extreme' </Filter>
+            <ShieldSymbolizer file="danger-red.svg" face-name="DejaVu Sans Bold"
+            spacing="200" allow-overlap="true"
+            placement="line" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
+        </Rule>
+    </Style>
+
+<!--text style for sites names-->
+<Style name="site_text" >
+       <Rule>
+            &maxscale_zoom9;
+            &minscale_zoom10;
+            <Filter>([piste:type]='nordic' or [piste:type]='downhill;nordic') and not ([entrance] = 'yes')</Filter>
+            <TextSymbolizer face-name="DejaVu Sans Oblique"
+            size="10" fill='#003074' halo-fill= "white" halo-radius="1"
+            placement="point" allow-overlap="true" spacing="10000"
+            avoid-edges="true"
+            wrap-width="60" dy="14">[site_name]</TextSymbolizer>
+
+        </Rule>
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>([piste:type]='nordic' or [piste:type]='downhill;nordic') and not ([entrance] = 'yes')</Filter>
+            <TextSymbolizer face-name="DejaVu Sans Oblique"
+            size="12" fill='#003074' halo-fill= "white" halo-radius="1"
+            placement="point" allow-overlap="true" spacing="10000"
+            avoid-edges="true"
+            wrap-width="80" dy="14">[site_name]</TextSymbolizer>
+
+        </Rule>
+       <Rule>
+            &maxscale_zoom9;
+            &minscale_zoom10;
+            <Filter>[piste:type]='nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="nordic.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+       <Rule>
+            &maxscale_zoom9;
+            &minscale_zoom10;
+            <Filter>[piste:type]='downhill' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="alpine-small.png"
+            allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="alpine.png"
+            allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+       <Rule>
+            &maxscale_zoom9;
+            &minscale_zoom10;
+            <Filter>[piste:type]='downhill;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="alpine-nordic-small.png"
+            allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="alpine-nordic.png"
+            allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom18;
+            <Filter>[entrance] = 'yes'</Filter>
+            <PointSymbolizer file="snowflake.png"
+            allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+     </Style>
+
+    <Layer name="nodes-downhill"
+    srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>nodes-downhill</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='downhill') as nodes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="nodes-downhill2"
+    srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>nodes-downhill2</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='downhill') as nodes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="nodes-nordic"
+    srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>nodes-nordic</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <!-- Select only the first node of each way, don't forget the 'as way' otherwise mapnik can't select points -->
+            <Parameter name="table">
+            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='nordic') as nodes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+<!-- Overlay layer for color-dodge effect -->
+    <Layer name="nodes-nordic2"
+    srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>nodes-nordic2</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <!-- Select only the first node of each way, don't forget the 'as way' otherwise mapnik can't select points -->
+            <Parameter name="table">
+            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='nordic') as nodes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="downhill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='downhill'order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-overlay" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-overlay</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='downhill'order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="snowshoeing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>snowshoeing</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='hike'order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="skitour" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>skitour</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='skitour'order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="nordic-bg" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>nordic-bg</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='nordic' and osm_id &gt; 0 order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="nordic" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>nordic</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='nordic' and osm_id &gt; 0 order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="eraser"
+    srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>eraser</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 order by z_order) as routes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="relation-bg"
+    srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>relation-bg</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 order by z_order) as routes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="relation"
+    srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>relation</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) ASC) as routes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="difficulty" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>difficulty</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (SELECT * FROM planet_osm_line where "piste:type"='nordic' and osm_id &gt; 0 order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="no-difficulty" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>no-difficulty</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (SELECT * FROM planet_osm_line where "piste:type"='nordic' and ("piste:difficulty" not in ('novice','easy','intermediate','advanced','expert','freeride','extreme') or "piste:difficulty" is null) and osm_id &gt; 0 order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="others" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>others</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line 
+                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+                or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+             ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    
+    
+    <Layer name="aerialways" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>aerialways</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "aerialway" is not null order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>icons</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line 
+                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+                or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+             ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    
+    <Layer name="aerialways-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>aerialways-icons</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select * from planet_osm_line where "aerialway" is not null order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="difficulty-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>difficulty-icons</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='nordic' and osm_id &gt; 0 order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>text</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 order by z_order) as text
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="site_text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>site_text</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_point</Parameter>
+            <Parameter name="table">
+            (select * from planet_osm_point where site_name is not null) as text
+            </Parameter>
+        </Datasource>
+    </Layer>
+</Map>

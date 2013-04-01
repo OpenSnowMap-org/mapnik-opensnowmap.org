@@ -1,0 +1,33 @@
+<Style name="icons">
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='snow_park' </Filter>
+		<PointSymbolizer file="snow_park.png" />
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
+		<PointSymbolizer file="jump.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='sled' </Filter>
+		<PointSymbolizer file="sled.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
+		<PointSymbolizer file="ice-skate.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='playground' </Filter>
+		<PointSymbolizer file="playground.png"/>
+	</Rule>
+</Style>
+       
