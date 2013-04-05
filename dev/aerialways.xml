@@ -1,0 +1,59 @@
+<Style name="aerialways">
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom18;
+		<LineSymbolizer stroke-width="1" stroke="#4D4D4D"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[aerialway]='station'</Filter>
+		<PointSymbolizer file="station.png"/>
+	</Rule>
+</Style>
+
+
+<Style name="aerialways-icons">
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[aerialway]='funicular'</Filter>
+		<MarkersSymbolizer file="funicular.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[aerialway]='cable_car'</Filter>
+		<MarkersSymbolizer file="cable_car.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[aerialway]='gondola'</Filter>
+		<MarkersSymbolizer file="gondola.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[aerialway]='chair_lift'</Filter>
+		<MarkersSymbolizer file="chair_lift.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[aerialway]='mixed_lift'</Filter>
+		<MarkersSymbolizer file="mixed_lift.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[aerialway]='t-bar' or [aerialway]='j-bar' or [aerialway]='platter' or [aerialway]='rope-tow' or [aerialway]='drag_lift'</Filter>
+		<MarkersSymbolizer file="drag_lift.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[aerialway]='magic_carpet'</Filter>
+		<MarkersSymbolizer file="magic_carpet.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+	</Rule>
+</Style>
