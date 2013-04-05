@@ -361,45 +361,45 @@
 		stroke-linejoin="round" stroke-linecap="round"/>
 	</Rule>
 	
-	<!------AREAS----->
-
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom19;
-		<Filter>[piste:difficulty]='novice' and [area]='yes'</Filter>
-		<PolygonSymbolizer fill="1" stroke="#9CE49C" />
-	</Rule>
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom19;
-		<Filter>[piste:difficulty]='easy' and [area]='yes'</Filter>
-		<PolygonSymbolizer fill="1" stroke="#8888F8" />
-	</Rule>
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom19;
-		<Filter>[piste:difficulty]='intermediate' and [area]='yes'</Filter>
-		<PolygonSymbolizer fill="1" stroke="#FF8383" />
-	</Rule>
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom19;
-		<Filter>[piste:difficulty]='advanced' and [area]='yes'</Filter>
-		<PolygonSymbolizer fill="1" stroke="#6A6868" />
-	</Rule>
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom19;
-		<Filter>[piste:difficulty]='expert' and [area]='yes'</Filter>
-		<PolygonSymbolizer fill="1" stroke="#FFD884" />
-	</Rule>
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom1;
-		<Filter>[piste:difficulty]='freeride' and [area]='yes'</Filter>
-		<PolygonSymbolizer fill="1" stroke="#FFF5A3" />
-	</Rule>
-
-
-
 </Style>
+	<!--AREAS-->
+<Style name="downhill-area-fill">
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='novice'</Filter>
+		<PolygonSymbolizer fill="#9CE49C" />
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='easy'</Filter>
+		<PolygonSymbolizer fill="#8888F8" />
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='intermediate'</Filter>
+		<PolygonSymbolizer fill="#FF8383" />
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='advanced'</Filter>
+		<PolygonSymbolizer fill="#6A6868" />
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='expert'</Filter>
+		<PolygonSymbolizer fill="#FFD884" />
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='freeride'</Filter>
+		<PolygonSymbolizer fill="#FFF5A3" />
+	</Rule>
+</Style>
+
+       

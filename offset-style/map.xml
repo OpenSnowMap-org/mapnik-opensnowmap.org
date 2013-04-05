@@ -345,12 +345,45 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
+    <Layer name="downhill-area-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_polygon where 
+            "piste:type"='downhill' and "area"='yes' 
+            ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
     <Layer name="downhill-overlay" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>downhill-overlay</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
             (select * from planet_osm_line where "piste:type"='downhill'order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-area-overlay" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-overlay</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_polygon where 
+            "piste:type"='downhill' and "area"='yes' 
+            ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-area-fill</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_polygon where 
+            "piste:type"='downhill' and "area"='yes' 
+            ) as pistes
             </Parameter>
         </Datasource>
     </Layer>
@@ -465,7 +498,19 @@ background-color="transparent" >
         </Datasource>
     </Layer>
     
-    
+    <Layer name="others-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>others</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_polygon 
+                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+                or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+             ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+        
     <Layer name="aerialways" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>aerialways</StyleName>
         <Datasource>
