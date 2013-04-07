@@ -28,6 +28,7 @@
 		<LineSymbolizer stroke-width="9" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round"/>
 	</Rule>
+
 	<!--easy-->
 	
 	<Rule>
@@ -58,6 +59,8 @@
 		<LineSymbolizer stroke-width="9" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round"/>
 	</Rule>
+
+	
 	<!--intermediate-->
 			
 	<Rule>
@@ -88,6 +91,8 @@
 		<LineSymbolizer stroke-width="9" stroke="#E81F1F" 
 		stroke-linejoin="round" stroke-linecap="round"/>
 	</Rule>
+
+	
 	<!--advanced-->
 			
 	<Rule>
@@ -118,6 +123,8 @@
 		<LineSymbolizer stroke-width="9" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round"/>
 	</Rule>
+
+	
 	<!--expert-->
 			
 	<Rule>
@@ -148,6 +155,8 @@
 		<LineSymbolizer stroke-width="9" stroke="#FFBB2D" 
 		stroke-linejoin="round" stroke-linecap="round"/>
 	</Rule>
+
+	
 	<!--freeride-->
 			
 	<Rule>
@@ -178,6 +187,7 @@
 		<LineSymbolizer stroke-width="9" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round"/>
 	</Rule>
+	
 
 </Style>
 <Style name="downhill-overlay">
@@ -401,5 +411,66 @@
 		<PolygonSymbolizer fill="#FFF5A3" />
 	</Rule>
 </Style>
-
-       
+	<!--TEXT-->
+<Style name="downhill-text"> 
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#23CD23" halo-fill= "white" halo-radius="1" 
+		placement="line" allow-overlap="false" spacing="10000" 
+		avoid-edges="true"
+		wrap-width="10" dy="10">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#1919DE" halo-fill= "white" halo-radius="1" 
+		placement="line" allow-overlap="false" spacing="10000" 
+		avoid-edges="true"
+		wrap-width="10" dy="10">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='intermediate' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#E81F1F" halo-fill= "white" halo-radius="1" 
+		placement="line" allow-overlap="false" spacing="10000" 
+		avoid-edges="true"
+		wrap-width="10" dy="10">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#222222"  halo-fill= "white" halo-radius="1" 
+		placement="line" allow-overlap="false" spacing="10000" 
+		avoid-edges="true"
+		wrap-width="10" dy="10">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#FFBB2D"   halo-fill= "white" halo-radius="1" 
+		placement="line" allow-overlap="false" spacing="10000" 
+		avoid-edges="true"
+		wrap-width="10" dy="10">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:difficulty]='freeride' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#FFE72D" halo-fill= "white" halo-radius="1" 
+		placement="line" allow-overlap="false" spacing="10000" 
+		avoid-edges="true"
+		wrap-width="10" dy="10">[name]</TextSymbolizer>
+	</Rule>
+</Style>

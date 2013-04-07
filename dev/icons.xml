@@ -2,14 +2,14 @@
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
-		<Filter>[piste:type]='snow_park' </Filter>
-		<PointSymbolizer file="pics/snow_park.png" />
+		<Filter>[piste:type]='snow_park'</Filter>
+		<PointSymbolizer transform="translate(0,-20)" file="pics/snow_park.png" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
-		<PointSymbolizer file="pics/jump.png"/>
+		<PointSymbolizer transform="translate(0,-20)" file="pics/jump.png"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
