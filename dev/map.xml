@@ -198,7 +198,7 @@ background-color="transparent" >
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='intermediate'</Filter>
-            <ShieldSymbolizer file="danger-black.svg" face-name="DejaVu Sans Bold"
+            <ShieldSymbolizer file="pics/danger-black.svg" face-name="DejaVu Sans Bold"
             spacing="200" allow-overlap="false"
             placement="line" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
         </Rule>
@@ -206,7 +206,7 @@ background-color="transparent" >
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert' or [piste:difficulty]='freeride' or [piste:difficulty]='extreme' </Filter>
-            <ShieldSymbolizer file="danger-red.svg" face-name="DejaVu Sans Bold"
+            <ShieldSymbolizer file="pics/danger-red.svg" face-name="DejaVu Sans Bold"
             spacing="200" allow-overlap="true"
             placement="line" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
         </Rule>
@@ -240,49 +240,49 @@ background-color="transparent" >
             &maxscale_zoom9;
             &minscale_zoom10;
             <Filter>[piste:type]='nordic' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="nordic-small.png"
+            <PointSymbolizer file="pics/nordic-small.png"
              allow-overlap="true" ignore-placement="true"/>
         </Rule>
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
             <Filter>[piste:type]='nordic' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="nordic.png"
+            <PointSymbolizer file="pics/nordic.png"
              allow-overlap="true" ignore-placement="true"/>
         </Rule>
        <Rule>
             &maxscale_zoom9;
             &minscale_zoom10;
             <Filter>[piste:type]='downhill' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="alpine-small.png"
+            <PointSymbolizer file="pics/alpine-small.png"
             allow-overlap="true" ignore-placement="true"/>
         </Rule>
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
             <Filter>[piste:type]='downhill' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="alpine.png"
+            <PointSymbolizer file="pics/alpine.png"
             allow-overlap="true" ignore-placement="true"/>
         </Rule>
        <Rule>
             &maxscale_zoom9;
             &minscale_zoom10;
             <Filter>[piste:type]='downhill;nordic' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="alpine-nordic-small.png"
+            <PointSymbolizer file="pics/alpine-nordic-small.png"
             allow-overlap="true" ignore-placement="true"/>
         </Rule>
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
             <Filter>[piste:type]='downhill;nordic' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="alpine-nordic.png"
+            <PointSymbolizer file="pics/alpine-nordic.png"
             allow-overlap="true" ignore-placement="true"/>
         </Rule>
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom18;
             <Filter>[entrance] = 'yes'</Filter>
-            <PointSymbolizer file="snowflake.png"
+            <PointSymbolizer file="pics/snowflake.png"
             allow-overlap="true" ignore-placement="true"/>
         </Rule>
      </Style>
@@ -540,11 +540,25 @@ background-color="transparent" >
             &datasource-settings;
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <Parameter name="table">
-            (select * from planet_osm_line where "aerialway" is not null order by z_order) as pistes
+            (select way as way, aerialway from planet_osm_line where "aerialway" is not null 
+            and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &lt; 180
+            order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
 
+    <Layer name="aerialways-icons-rev" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>aerialways-icons-rev</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="geometry_table">planet_osm_line</Parameter>
+            <Parameter name="table">
+            (select st_reverse(way) as way, aerialway from planet_osm_line where "aerialway" is not null 
+            and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &gt; 180
+            order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
     <Layer name="difficulty-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>difficulty-icons</StyleName>
         <Datasource>
