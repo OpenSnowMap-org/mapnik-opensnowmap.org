@@ -57,14 +57,13 @@ background-color="transparent" >
         </Rule>
     </Style>
 
-
-
     &downhill;
     &snowshoeing;
     &aerialways;
     &skitour;
     &icons;
     &others;
+    
 <!-- White casing -->
     <Style name="nordic-bg">
         <Rule>
@@ -215,14 +214,14 @@ background-color="transparent" >
 <!--text style for sites names-->
 <Style name="site_text" >
        <Rule>
-            &maxscale_zoom9;
+            &maxscale_zoom7;
             &minscale_zoom10;
             <Filter>([piste:type]='nordic' or [piste:type]='downhill;nordic') and not ([entrance] = 'yes')</Filter>
             <TextSymbolizer face-name="DejaVu Sans Oblique"
-            size="10" fill='#003074' halo-fill= "white" halo-radius="1"
-            placement="point" allow-overlap="true" spacing="10000"
+            size="8" fill='#003074' halo-fill= "white" halo-radius="1.5"
+            placement="point" allow-overlap="false" spacing="10000"
             avoid-edges="true"
-            wrap-width="60" dy="14">[site_name]</TextSymbolizer>
+            wrap-width="55">[site_name]</TextSymbolizer>
 
         </Rule>
        <Rule>
@@ -230,15 +229,15 @@ background-color="transparent" >
             &minscale_zoom12;
             <Filter>([piste:type]='nordic' or [piste:type]='downhill;nordic') and not ([entrance] = 'yes')</Filter>
             <TextSymbolizer face-name="DejaVu Sans Oblique"
-            size="12" fill='#003074' halo-fill= "white" halo-radius="1"
-            placement="point" allow-overlap="true" spacing="10000"
+            size="10" fill='#003074' halo-fill= "white" halo-radius="1.5"
+            placement="point" allow-overlap="false" spacing="10000"
             avoid-edges="true"
-            wrap-width="80" dy="14">[site_name]</TextSymbolizer>
+            wrap-width="80" dy="8">[site_name]</TextSymbolizer>
 
         </Rule>
        <Rule>
-            &maxscale_zoom9;
-            &minscale_zoom10;
+            &maxscale_zoom11;
+            &minscale_zoom12;
             <Filter>[piste:type]='nordic' and not ([entrance] = 'yes')</Filter>
             <PointSymbolizer file="pics/nordic-small.png"
              allow-overlap="true" ignore-placement="true"/>
@@ -246,13 +245,6 @@ background-color="transparent" >
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <Filter>[piste:type]='nordic' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="pics/nordic.png"
-             allow-overlap="true" ignore-placement="true"/>
-        </Rule>
-       <Rule>
-            &maxscale_zoom9;
-            &minscale_zoom10;
             <Filter>[piste:type]='downhill' and not ([entrance] = 'yes')</Filter>
             <PointSymbolizer file="pics/alpine-small.png"
             allow-overlap="true" ignore-placement="true"/>
@@ -260,22 +252,8 @@ background-color="transparent" >
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <Filter>[piste:type]='downhill' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="pics/alpine.png"
-            allow-overlap="true" ignore-placement="true"/>
-        </Rule>
-       <Rule>
-            &maxscale_zoom9;
-            &minscale_zoom10;
             <Filter>[piste:type]='downhill;nordic' and not ([entrance] = 'yes')</Filter>
             <PointSymbolizer file="pics/alpine-nordic-small.png"
-            allow-overlap="true" ignore-placement="true"/>
-        </Rule>
-       <Rule>
-            &maxscale_zoom11;
-            &minscale_zoom12;
-            <Filter>[piste:type]='downhill;nordic' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="pics/alpine-nordic.png"
             allow-overlap="true" ignore-placement="true"/>
         </Rule>
        <Rule>
@@ -612,7 +590,8 @@ background-color="transparent" >
         </Datasource>
     </Layer>
 
-    <Layer name="site_text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <Layer name="site_text" clear-label-cache="on"
+    srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>site_text</StyleName>
         <Datasource>
             &datasource-settings;
