@@ -15,13 +15,15 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='sled' </Filter>
-		<PointSymbolizer file="pics/sled.png"/>
+		<MarkersSymbolizer file="pics/sled.png"
+		placement="line" spacing="400"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
-		<PointSymbolizer file="pics/ice-skate.png"/>
+		<MarkersSymbolizer file="pics/ice-skate.png"
+		placement="line" spacing="400"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;

@@ -37,7 +37,7 @@
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='sled' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#9AFF5A"/>
+		<LineSymbolizer stroke-width="2" stroke="#BAFF3A"/>
 	</Rule>
 	
 	<Rule>
