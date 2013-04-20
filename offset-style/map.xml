@@ -216,7 +216,7 @@ background-color="transparent" >
        <Rule>
             &maxscale_zoom7;
             &minscale_zoom10;
-            <Filter>([piste:type]='nordic' or [piste:type]='downhill;nordic') and not ([entrance] = 'yes')</Filter>
+            <Filter>not ([entrance] = 'yes')</Filter>
             <TextSymbolizer face-name="DejaVu Sans Oblique"
             size="8" fill='#003074' halo-fill= "white" halo-radius="1.5"
             placement="point" allow-overlap="false" spacing="10000"
@@ -227,7 +227,7 @@ background-color="transparent" >
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <Filter>([piste:type]='nordic' or [piste:type]='downhill;nordic') and not ([entrance] = 'yes')</Filter>
+            <Filter>not ([entrance] = 'yes')</Filter>
             <TextSymbolizer face-name="DejaVu Sans Oblique"
             size="10" fill='#003074' halo-fill= "white" halo-radius="1.5"
             placement="point" allow-overlap="false" spacing="10000"
@@ -254,6 +254,20 @@ background-color="transparent" >
             &minscale_zoom12;
             <Filter>[piste:type]='downhill;nordic' and not ([entrance] = 'yes')</Filter>
             <PointSymbolizer file="pics/alpine-nordic-small.png"
+            allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="pics/alpine-snowpark-small.png"
+            allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="pics/alpine-nordic-snowpark-small.png"
             allow-overlap="true" ignore-placement="true"/>
         </Rule>
        <Rule>
