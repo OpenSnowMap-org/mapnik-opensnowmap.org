@@ -1,0 +1,4103 @@
+
+<Style name="site_text" >
+       <Rule>
+            &maxscale_zoom7;
+            &minscale_zoom10;
+            <Filter>not ([entrance] = 'yes')</Filter>
+            <TextSymbolizer face-name="DejaVu Sans Oblique"
+            size="8" fill='#003074' halo-fill= "white" halo-radius="1.5"
+            placement="point" allow-overlap="false" spacing="10000"
+            avoid-edges="true"
+            wrap-width="55">[site_name]</TextSymbolizer>
+        </Rule>
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>not ([entrance] = 'yes')</Filter>
+            <TextSymbolizer face-name="DejaVu Sans Oblique"
+            size="10" fill='#003074' halo-fill= "white" halo-radius="1.5"
+            placement="point" allow-overlap="false" spacing="10000"
+            avoid-edges="true"
+            wrap-width="80" dy="15">[site_name]</TextSymbolizer>
+        </Rule>
+
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;playground' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-playground-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='jump;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/jump-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-playground-skitour-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;playground;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-playground-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;playground;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-playground-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;jump;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-jump-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;jump;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-jump-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='ice-skate;jump;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/ice-skate-jump-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;playground;skitour;sled' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-playground-skitour-sled-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;playground;skitour;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-playground-skitour-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;playground;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-playground-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;nordic;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-nordic-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;jump;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-jump-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;jump;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-hike-jump-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;ice-skate;jump;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/downhill-ice-skate-jump-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='hike;ice-skate;jump;nordic;playground;skitour;sled;snow_park' and not ([entrance] = 'yes')</Filter>
+            <PointSymbolizer file="combinations/hike-ice-skate-jump-nordic-playground-skitour-sled-snow_park-small.png"
+             allow-overlap="true" ignore-placement="true"/>
+        </Rule>
+        </Style>
