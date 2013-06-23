@@ -4,6 +4,7 @@
 <!ENTITY aerialways SYSTEM "aerialways.xml">
 <!ENTITY snowshoeing SYSTEM "hike.xml">
 <!ENTITY downhill SYSTEM "downhill.xml">
+<!ENTITY downhillus SYSTEM "downhill-us.xml">
 <!ENTITY relations SYSTEM "relations-style.xml">
 <!ENTITY icons SYSTEM "icons.xml">
 <!ENTITY others SYSTEM "others.xml">

@@ -58,6 +58,7 @@ background-color="transparent" >
     </Style>
 
     &downhill;
+    &downhillus;
     &snowshoeing;
     &aerialways;
     &skitour;
@@ -221,7 +222,8 @@ background-color="transparent" >
             &datasource-settings;
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <Parameter name="table">
-            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='downhill') as nodes
+            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='downhill'
+            ) as nodes
             </Parameter>
         </Datasource>
     </Layer>
@@ -232,7 +234,8 @@ background-color="transparent" >
             &datasource-settings;
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <Parameter name="table">
-            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='downhill') as nodes
+            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='downhill'
+            ) as nodes
             </Parameter>
         </Datasource>
     </Layer>
@@ -244,7 +247,8 @@ background-color="transparent" >
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <!-- Select only the first node of each way, don't forget the 'as way' otherwise mapnik can't select points -->
             <Parameter name="table">
-            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='nordic') as nodes
+            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='nordic'
+			) as nodes
             </Parameter>
         </Datasource>
     </Layer>
@@ -258,7 +262,8 @@ background-color="transparent" >
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <!-- Select only the first node of each way, don't forget the 'as way' otherwise mapnik can't select points -->
             <Parameter name="table">
-            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='nordic') as nodes
+            (select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='nordic'
+            ) as nodes
             </Parameter>
         </Datasource>
     </Layer>
@@ -268,7 +273,9 @@ background-color="transparent" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select * from planet_osm_line where "piste:type"='downhill'order by z_order) as pistes
+            (select * from planet_osm_line where "piste:type"='downhill'
+            and ST_X(ST_StartPoint(way)) &gt; 0
+            order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
@@ -279,6 +286,7 @@ background-color="transparent" >
             <Parameter name="table">
             (select * from planet_osm_polygon where 
             "piste:type"='downhill' and "area"='yes' 
+            and ST_X(ST_StartPoint(way)) &gt; 0
             ) as pistes
             </Parameter>
         </Datasource>
@@ -288,7 +296,9 @@ background-color="transparent" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select * from planet_osm_line where "piste:type"='downhill'order by z_order) as pistes
+            (select * from planet_osm_line where "piste:type"='downhill'
+            and ST_X(ST_StartPoint(way)) &gt; 0
+            order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
@@ -299,6 +309,7 @@ background-color="transparent" >
             <Parameter name="table">
             (select * from planet_osm_polygon where 
             "piste:type"='downhill' and "area"='yes' 
+            and ST_X(ST_StartPoint(way)) &gt; 0
             ) as pistes
             </Parameter>
         </Datasource>
@@ -310,10 +321,72 @@ background-color="transparent" >
             <Parameter name="table">
             (select * from planet_osm_polygon where 
             "piste:type"='downhill' and "area"='yes' 
+            and ST_X(ST_StartPoint(way)) &gt; 0
             ) as pistes
             </Parameter>
         </Datasource>
     </Layer>
+
+    <Layer name="downhill-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-us</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='downhill' 
+            and ST_X(ST_StartPoint(way)) &lt; 0
+            order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-area-casing-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-us</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_polygon where 
+            "piste:type"='downhill' and "area"='yes' 
+            and ST_X(ST_StartPoint(way)) &lt; 0
+            ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-overlay-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-overlay-us</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='downhill'
+            and ST_X(ST_StartPoint(way)) &lt; 0
+            order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-area-overlay-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-overlay-us</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_polygon where 
+            "piste:type"='downhill' and "area"='yes' 
+            and ST_X(ST_StartPoint(way)) &lt; 0
+            ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-area-fill-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-area-fill-us</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_polygon where 
+            "piste:type"='downhill' and "area"='yes' 
+            and ST_X(ST_StartPoint(way)) &lt; 0
+            ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+
 
     <Layer name="snowshoeing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>snowshoeing</StyleName>
@@ -523,7 +596,8 @@ background-color="transparent" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_line where "piste:type"='downhill'order by z_order) as pistes
+            (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_line where "piste:type"='downhill'
+            and ST_X(ST_StartPoint(way)) &gt; 0 order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
@@ -534,6 +608,29 @@ background-color="transparent" >
             <Parameter name="table">
             (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_polygon where 
             "piste:type"='downhill' and "area"='yes' 
+            and ST_X(ST_StartPoint(way)) &gt; 0
+            ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-text-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-text-us</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_line where "piste:type"='downhill'
+            and ST_X(ST_StartPoint(way)) &lt; 0 order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-area-text-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-text-us</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_polygon where 
+            "piste:type"='downhill' and "area"='yes' 
+            and ST_X(ST_StartPoint(way)) &lt; 0
             ) as pistes
             </Parameter>
         </Datasource>
