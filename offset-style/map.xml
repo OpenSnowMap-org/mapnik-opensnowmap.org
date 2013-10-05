@@ -493,7 +493,7 @@ background-color="transparent" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select * from planet_osm_line where "aerialway" is not null order by z_order) as pistes
+            (select * from planet_osm_line where "aerialway" is not null or "railway"='funicular' order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
@@ -529,7 +529,7 @@ background-color="transparent" >
             &datasource-settings;
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <Parameter name="table">
-            (select way as way, aerialway from planet_osm_line where "aerialway" is not null 
+            (select way as way, aerialway, railway from planet_osm_line where "aerialway" is not null or "railway"='funicular'
             and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &lt; 180
             order by z_order) as pistes
             </Parameter>
@@ -542,7 +542,7 @@ background-color="transparent" >
             &datasource-settings;
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <Parameter name="table">
-            (select st_reverse(way) as way, aerialway from planet_osm_line where "aerialway" is not null 
+            (select st_reverse(way) as way, aerialway, railway from planet_osm_line where "aerialway" is not null or "railway"='funicular'
             and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &gt; 180
             order by z_order) as pistes
             </Parameter>
