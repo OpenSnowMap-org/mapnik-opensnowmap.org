@@ -61,7 +61,7 @@
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom18;
-		<Filter>[aerialway]='funicular'</Filter>
+		<Filter>[railway]='funicular'</Filter>
 		<MarkersSymbolizer file="pics/funicular-rev.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
 	</Rule>
 	<Rule>
