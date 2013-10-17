@@ -1,7 +1,7 @@
 
 <Style name="site_text" >
        <Rule>
-            &maxscale_zoom7;
+            &maxscale_zoom5;
             &minscale_zoom10;
             <Filter>not ([entrance] = 'yes')</Filter>
             <TextSymbolizer face-name="DejaVu Sans Oblique"

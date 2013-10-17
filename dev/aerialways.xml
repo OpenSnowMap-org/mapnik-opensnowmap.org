@@ -17,8 +17,8 @@
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom18;
-		<Filter>[aerialway]='funicular'</Filter>
-		<MarkersSymbolizer file="pics/funicular.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+		<Filter>[railway]='funicular' </Filter>
+		<MarkersSymbolizer file="pics/funicular.svg" placement="line" spacing="500" transform="translate(-10 -10) scale(0.12)"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
@@ -61,8 +61,8 @@
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom18;
-		<Filter>[aerialway]='funicular'</Filter>
-		<MarkersSymbolizer file="pics/funicular-rev.svg" placement="line" spacing="500" transform="translate(10 10) scale(0.12)"/>
+		<Filter>[railway]='funicular'</Filter>
+		<MarkersSymbolizer file="pics/funicular-rev.svg" placement="line" spacing="500" transform="translate(-10 -10) scale(0.12)"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;

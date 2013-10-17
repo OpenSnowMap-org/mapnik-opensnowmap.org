@@ -1,0 +1,100 @@
+<Map background-color="transparent" minimum-version="0.7.2" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <FontSet name="bold-fonts">
+        <Font face-name="DejaVu Sans Bold" />
+    </FontSet>
+    <FontSet name="book-fonts">
+        <Font face-name="DejaVu Sans Book" />
+    </FontSet>
+    <FontSet name="oblique-fonts">
+        <Font face-name="DejaVu Sans Oblique" />
+    </FontSet>
+
+
+<Style name="contours10">
+        <Rule>
+                <MaxScaleDenominator>51185</MaxScaleDenominator>
+                <MinScaleDenominator>1599</MinScaleDenominator>
+                <LineSymbolizer stroke="#FFC449" stroke-width="0.5" stroke-opacity="0.8" smooth="1"/></Rule>
+</Style>
+<Style name="contours50">
+        <Rule>
+                <MaxScaleDenominator>204741</MaxScaleDenominator>
+                <MinScaleDenominator>51185</MinScaleDenominator>
+                <LineSymbolizer stroke="#FFC449" stroke-width="0.6" stroke-opacity="0.8" smooth="1"/></Rule>
+        <Rule>
+                <MaxScaleDenominator>51185</MaxScaleDenominator>
+                <MinScaleDenominator>1599</MinScaleDenominator>
+                <LineSymbolizer stroke="#E1A528" stroke-width="0.6" stroke-opacity="0.8" smooth="1"/></Rule>
+</Style>
+<Style name="contours100">
+        <Rule>
+                <MaxScaleDenominator>409483</MaxScaleDenominator>
+                <MinScaleDenominator>204741</MinScaleDenominator>
+                <LineSymbolizer stroke="#FFC449" stroke-width="0.7" stroke-opacity="0.8" smooth="1"/></Rule>
+        <Rule>
+                <MaxScaleDenominator>204741</MaxScaleDenominator>
+                <MinScaleDenominator>51185</MinScaleDenominator>
+                <LineSymbolizer stroke="#E1A528" stroke-width="0.7" stroke-opacity="0.8" smooth="1"/></Rule>
+        <Rule>
+                <MaxScaleDenominator>51185</MaxScaleDenominator>
+                <MinScaleDenominator>1599</MinScaleDenominator>
+                <LineSymbolizer stroke="#E1A528" stroke-width="0.7" stroke-opacity="0.8" smooth="1"/></Rule>
+</Style>
+<Style name="contours-text50">
+        <Rule>
+                <MaxScaleDenominator>51185</MaxScaleDenominator>
+                <MinScaleDenominator>1599</MinScaleDenominator>
+                <TextSymbolizer face-name="DejaVu Sans Book" fill="#747b90" halo-radius="1" opacity="0.9" placement="line" size="8">[height]</TextSymbolizer>
+        </Rule>
+</Style>
+<Style name="contours-text100">
+        <Rule>
+                <MaxScaleDenominator>102370</MaxScaleDenominator>
+                <MinScaleDenominator>51185</MinScaleDenominator>
+                <TextSymbolizer face-name="DejaVu Sans Book" fill="#747b90" halo-radius="1" opacity="0.9" placement="line" size="8">[height]</TextSymbolizer>
+        </Rule>
+        <Rule>
+                <MaxScaleDenominator>51185</MaxScaleDenominator>
+                <MinScaleDenominator>1599</MinScaleDenominator>
+                <TextSymbolizer face-name="DejaVu Sans Book" fill="#855d62" halo-radius="1" opacity="0.9" placement="line" size="8">[height]</TextSymbolizer>
+        </Rule>
+</Style>
+
+	<Layer name="srtm_10" srs="+proj=latlong +datum=WGS84" status="on">
+		<StyleName>contours10</StyleName>
+		<Datasource>
+        <Parameter name="type">postgis</Parameter>
+        <Parameter name="user">mapnik</Parameter>
+            <Parameter name="dbname">contours</Parameter>
+            <Parameter name="estimate_extent">true</Parameter>
+            <Parameter name="extent">-180,-89.99,180,89.99</Parameter>
+			<Parameter name="table">(select way,height::integer from contours WHERE height::integer % 10 = 0 AND height::integer % 50 != 0 AND height::integer % 100 != 0) as "contours-10"</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="srtm_50" srs="+proj=latlong +datum=WGS84" status="on">
+		<StyleName>contours50</StyleName>
+
+		<Datasource>
+        <Parameter name="type">postgis</Parameter>
+        <Parameter name="user">mapnik</Parameter>
+            <Parameter name="dbname">contours</Parameter>
+            <Parameter name="estimate_extent">true</Parameter>
+            <Parameter name="extent">-180,-89.99,180,89.99</Parameter>
+			<Parameter name="table">(select way,height::integer from contours WHERE height::integer % 50 = 0) as "contours-50"</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="srtm_100" srs="+proj=latlong +datum=WGS84" status="on">
+
+		<StyleName>contours-text100</StyleName>
+		<Datasource>
+        <Parameter name="type">postgis</Parameter>
+        <Parameter name="user">mapnik</Parameter>
+            <Parameter name="dbname">contours</Parameter>
+            <Parameter name="estimate_extent">true</Parameter>
+            <Parameter name="extent">-180,-89.99,180,89.99</Parameter>
+			<Parameter name="table">(select way,height::integer from contours WHERE height::integer % 100 = 0) as "contours-100"</Parameter>
+		</Datasource>
+	</Layer>
+
+
+</Map>

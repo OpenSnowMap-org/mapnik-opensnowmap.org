@@ -1,0 +1,36 @@
+<Map background-color="transparent" minimum-version="0.7.2" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <FontSet name="bold-fonts">
+        <Font face-name="DejaVu Sans Bold" />
+    </FontSet>
+    <FontSet name="book-fonts">
+        <Font face-name="DejaVu Sans Book" />
+    </FontSet>
+    <FontSet name="oblique-fonts">
+        <Font face-name="DejaVu Sans Oblique" />
+    </FontSet>
+
+
+<Style name="raster">
+    <Rule>
+    <RasterSymbolizer opacity="0.9" 
+            scaling="bilinear">
+<!--      <RasterColorizer default-mode="linear" default-color="transparent">
+          <stop value="0" color="black"/>
+          <stop value="255" color="transparent"/>
+      </RasterColorizer>
+-->
+    </RasterSymbolizer>
+    </Rule>
+</Style>
+
+  <!-- NOTE: must be in the same SRS as your map-->
+  <Layer name="GDAL Layer from TIFF file">
+  	<StyleName>raster</StyleName>
+  	<Datasource>
+  		<Parameter name="type">gdal</Parameter>
+  		<Parameter name="file">/home/website/hillshade/wgs84_hs.vrt</Parameter>
+  		<Parameter name="band">1</Parameter>
+  	</Datasource>
+  </Layer>
+
+</Map>
