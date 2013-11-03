@@ -516,7 +516,7 @@ background-color="transparent" >
             &datasource-settings;
             <Parameter name="table">
             (select * from planet_osm_polygon 
-                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park','downhill')
                 or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
              ) as pistes
             </Parameter>
@@ -557,7 +557,15 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-
+    <Layer name="other-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>other-icons</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:grooming"='mogul' or "gladed"='yes' or "lit"='yes' or "piste:lit"='yes' order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
     <Layer name="text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>text</StyleName>
         <Datasource>

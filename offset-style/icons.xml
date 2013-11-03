@@ -31,5 +31,49 @@
 		<Filter>[piste:type]='playground' </Filter>
 		<PointSymbolizer file="pics/playground.png"/>
 	</Rule>
+
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:grooming]='mogul'</Filter>
+		<PointSymbolizer file="pics/mogul.svg" transform="scale(0.6,0.6)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[gladed]='yes' </Filter>
+		<PointSymbolizer file="pics/gladed.svg" transform="scale(0.6,0.6)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[lit]='yes' or [piste:lit]='yes'</Filter>
+		<PointSymbolizer file="pics/light.png"/>
+	</Rule>
 </Style>
-       
+<Style name="other-icons">
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[piste:grooming]='mogul'</Filter>
+		<ShieldSymbolizer file="pics/mogul.svg" face-name="DejaVu Sans Bold"
+		spacing="400" allow-overlap="false"
+		placement="line" transform="scale(0.6,0.6)">' '</ShieldSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[gladed]='yes' </Filter>
+		<ShieldSymbolizer file="pics/gladed.svg" face-name="DejaVu Sans Bold"
+		spacing="400" allow-overlap="true"
+		placement="line" transform="scale(0.6,0.6)">' '</ShieldSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<Filter>[lit]='yes' or [piste:lit]='yes'</Filter>
+		<ShieldSymbolizer file="pics/light.png" face-name="DejaVu Sans Bold"
+		spacing="400" allow-overlap="true"
+		placement="line">' '</ShieldSymbolizer>
+	</Rule>
+</Style>
