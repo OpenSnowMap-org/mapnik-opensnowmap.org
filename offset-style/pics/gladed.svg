@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="mogul.svg">
+   sodipodi:docname="gladed.svg">
   <defs
      id="defs4">
     <marker
@@ -97,7 +97,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -118,7 +118,7 @@
        inkscape:connector-curvature="0" />
     <g
        id="g5271"
-       transform="matrix(1.2026032,0,0,1.2715058,-18.055786,-100.39341)">
+       transform="matrix(1.42962,0,0,1.4471861,-78.278303,-165.1811)">
       <g
          transform="translate(-0.43936731,-0.17574692)"
          id="g3812">
