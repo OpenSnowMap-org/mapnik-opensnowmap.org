@@ -52,8 +52,6 @@
 	</Rule>
 </Style>
        
-
-<!-- Icons overlay -->
 <Style name="other-icons">
 	<Rule>
 		&maxscale_zoom14;
