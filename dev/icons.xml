@@ -36,22 +36,21 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:grooming]='mogul'</Filter>
-		<PointSymbolizer file="pics/mogul.svg" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
+		<PointSymbolizer file="pics/mogul.svg" transform="scale(0.4,0.4)"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[gladed]='yes' </Filter>
-		<PointSymbolizer file="pics/gladed.svg" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
+		<PointSymbolizer file="pics/gladed.svg" transform="scale(0.4,0.4)"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[lit]='yes' or [piste:lit]='yes'</Filter>
-		<PointSymbolizer file="pics/light.svg" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
+		<PointSymbolizer file="pics/light.svg" transform="scale(0.4,0.4)"/>
 	</Rule>
 </Style>
-       
 <Style name="other-icons">
 	<Rule>
 		&maxscale_zoom14;
