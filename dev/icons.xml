@@ -57,7 +57,7 @@
 		&minscale_zoom18;
 		<Filter>[piste:grooming]='mogul'</Filter>
 		<ShieldSymbolizer file="pics/mogul.svg" face-name="DejaVu Sans Bold"
-		spacing="300" allow-overlap="false"
+		spacing="400" allow-overlap="false"
 		placement="line" transform="scale(0.6,0.6)">' '</ShieldSymbolizer>
 	</Rule>
 	<Rule>
@@ -65,7 +65,7 @@
 		&minscale_zoom18;
 		<Filter>[gladed]='yes' </Filter>
 		<ShieldSymbolizer file="pics/gladed.svg" face-name="DejaVu Sans Bold"
-		spacing="300" allow-overlap="true"
+		spacing="400" allow-overlap="true"
 		placement="line" transform="scale(0.6,0.6)">' '</ShieldSymbolizer>
 	</Rule>
 	<Rule>
@@ -73,7 +73,7 @@
 		&minscale_zoom18;
 		<Filter>[lit]='yes' or [piste:lit]='yes'</Filter>
 		<ShieldSymbolizer file="pics/light.png" face-name="DejaVu Sans Bold"
-		spacing="300" allow-overlap="true"
+		spacing="400" allow-overlap="true"
 		placement="line">' '</ShieldSymbolizer>
 	</Rule>
 </Style>
