@@ -48,7 +48,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[lit]='yes' or [piste:lit]='yes'</Filter>
-		<PointSymbolizer file="pics/light.svg" transform="scale(0.4,0.4)"/>
+		<PointSymbolizer file="pics/light.svg" transform="scale(1,1)"/>
 	</Rule>
 </Style>
 <Style name="other-icons">
@@ -74,6 +74,6 @@
 		<Filter>[lit]='yes' or [piste:lit]='yes'</Filter>
 		<ShieldSymbolizer file="pics/light.svg" face-name="DejaVu Sans Bold"
 		spacing="200" allow-overlap="true"
-		placement="line" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
+		placement="line" transform="scale(1,1)">' '</ShieldSymbolizer>
 	</Rule>
 </Style>
