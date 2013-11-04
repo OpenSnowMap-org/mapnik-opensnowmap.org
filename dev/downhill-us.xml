@@ -296,17 +296,13 @@
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='advanced'</Filter>
-            <ShieldSymbolizer file="pics/diamond.svg" face-name="DejaVu Sans Bold"
-            spacing="100" allow-overlap="false"
-            placement="line" transform="scale(0.25,0.25)">' '</ShieldSymbolizer>
+            <PointSymbolizer file="pics/diamond.svg" transform="scale(0.25,0.25)">' '</ShieldSymbolizer>
         </Rule>
         <Rule>
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='expert'</Filter>
-            <ShieldSymbolizer file="pics/diamonds.svg" face-name="DejaVu Sans Bold"
-            spacing="100" allow-overlap="false"
-            placement="line" transform="scale(0.25,0.25)">' '</ShieldSymbolizer>
+            <PointSymbolizer file="pics/diamonds.svg" transform="scale(0.25,0.25)">' '</ShieldSymbolizer>
         </Rule>
 
 </Style>
