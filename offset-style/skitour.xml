@@ -5,7 +5,7 @@
 		
 		<LineSymbolizer stroke-width="2" stroke="#FF703C" 
 		stroke-dasharray="1,10"
-		stroke-linejoin="round" stroke-linecap="round"/>
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom11;
@@ -13,7 +13,7 @@
 		
 		<LineSymbolizer stroke-width="4" stroke="#FF703C" 
 		stroke-dasharray="1,10"
-		stroke-linejoin="round" stroke-linecap="round"/>
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
@@ -21,7 +21,7 @@
 		
 		<LineSymbolizer stroke-width="6" stroke="#FF703C" 
 		stroke-dasharray="1,10"
-		stroke-linejoin="round" stroke-linecap="round"/>
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -29,7 +29,7 @@
 		
 		<LineSymbolizer stroke-width="8" stroke="#FF703C" 
 		stroke-dasharray="1,16"
-		stroke-linejoin="round" stroke-linecap="round"/>
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 
 </Style>

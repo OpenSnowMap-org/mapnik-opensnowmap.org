@@ -2,7 +2,12 @@
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom18;
-		<LineSymbolizer stroke-width="1" stroke="#4D4D4D"/>
+		<LineSymbolizer stroke-width="1.5" stroke="#FFFFFF" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom18;
+		<LineSymbolizer stroke-width="1.5" stroke="#4D4D4D" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
