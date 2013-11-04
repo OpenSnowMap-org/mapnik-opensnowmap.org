@@ -296,13 +296,13 @@
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='advanced'</Filter>
-            <PointSymbolizer file="pics/diamond.svg" transform="scale(0.25,0.25)">' '</ShieldSymbolizer>
+            <PointSymbolizer file="pics/diamond.svg" transform="scale(0.25,0.25)"/>
         </Rule>
         <Rule>
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='expert'</Filter>
-            <PointSymbolizer file="pics/diamonds.svg" transform="scale(0.25,0.25)">' '</ShieldSymbolizer>
+            <PointSymbolizer file="pics/diamonds.svg" transform="scale(0.25,0.25)"/>
         </Rule>
 
 </Style>
