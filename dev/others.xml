@@ -3,34 +3,64 @@
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='snow_park' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#0F6DD3" smooth="1" gamma=".8"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="1" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:type]='snow_park' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#0F6DD3" smooth="1" stroke-gamma=".6"/>
 	</Rule>
 	
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='playground' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#A6E05B" smooth="1" gamma=".8"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="1" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:type]='playground' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#A6E05B" smooth="1" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#655ABE" smooth="1" gamma=".8"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="1" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
+		<LineSymbolizer stroke-width="2" stroke="#655ABE" smooth="1" stroke-gamma=".6"/>
 	</Rule>
 	
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='sled' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#BAFF3A" smooth="1" gamma=".8"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="1" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:type]='sled' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#BAFF3A" smooth="1" stroke-gamma=".6"/>
 	</Rule>
 	
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#6FC4D0" smooth="1" gamma=".8"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="1" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
+		<LineSymbolizer stroke-width="2" stroke="#6FC4D0" smooth="1" stroke-gamma=".6"/>
 	</Rule>
 	
 </Style>
@@ -40,13 +70,13 @@
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='snow_park'</Filter>
-		<PolygonSymbolizer fill="#0074F3" fill-opacity="0.5" smooth="1" gamma=".8"/>
+		<PolygonSymbolizer fill="#0074F3" fill-opacity="0.5" smooth="1" gamma=".6"/>
 	</Rule>
 
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='playground'</Filter>
-		<PolygonSymbolizer fill="#A6E05B" fill-opacity="0.5" smooth="1" gamma=".8"/>
+		<PolygonSymbolizer fill="#A6E05B" fill-opacity="0.5" smooth="1" gamma=".6"/>
 	</Rule>
 </Style>

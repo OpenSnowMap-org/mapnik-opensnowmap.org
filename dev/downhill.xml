@@ -1,5 +1,5 @@
 <Style name="downhill">
-	<!--lower case-->
+	<!--white-bg for gamma aliasing-->
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom11;
