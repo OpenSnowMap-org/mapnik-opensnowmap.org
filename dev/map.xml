@@ -71,25 +71,25 @@ background-color="transparent" >
             &maxscale_zoom9;
             &minscale_zoom11;
             <LineSymbolizer stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-             stroke="#FFFFFF"  smooth="1"/>
+             stroke="#FFFFFF"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-             stroke="#FFFFFF"  smooth="1"/>
+             stroke="#FFFFFF"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             &maxscale_zoom12;
             &minscale_zoom14;
             <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-             stroke="#FFFFFF"  smooth="1"/>
+             stroke="#FFFFFF"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             &maxscale_zoom14;
             &minscale_zoom18;
             <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
-             stroke="#FFFFFF"  smooth="1"/>
+             stroke="#FFFFFF"  smooth="1" gamma=".8"/>
         </Rule>
     </Style>
 
@@ -98,43 +98,43 @@ background-color="transparent" >
         <Rule>
             &maxscale_zoom9;
             &minscale_zoom11;
-            <LineSymbolizer stroke="#44b2a3" stroke-width="1" stroke-linecap="round"  smooth="1"/>
+            <LineSymbolizer stroke="#44b2a3" stroke-width="1" stroke-linecap="round"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             <Filter>[piste:grooming]='classic' or [piste:grooming]='skating' or [piste:grooming]='classic;skating'  or [piste:grooming]='classic+skating'</Filter>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <LineSymbolizer stroke="#44b2a3" stroke-width="2" stroke-linecap="round"  smooth="1"/>
+            <LineSymbolizer stroke="#44b2a3" stroke-width="2" stroke-linecap="round"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             <Filter>[piste:grooming]='classic' or [piste:grooming]='skating' or [piste:grooming]='classic;skating'  or [piste:grooming]='classic+skating'</Filter>
             &maxscale_zoom12;
             &minscale_zoom14;
-            <LineSymbolizer stroke="#44b2a3" stroke-width="3" stroke-linecap="round"  smooth="1"/>
+            <LineSymbolizer stroke="#44b2a3" stroke-width="3" stroke-linecap="round"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:grooming]='classic' or [piste:grooming]='skating' or [piste:grooming]='classic;skating'  or [piste:grooming]='classic+skating'</Filter>
-            <LineSymbolizer stroke="#44b2a3" stroke-width="4" stroke-linecap="round"  smooth="1"/>
+            <LineSymbolizer stroke="#44b2a3" stroke-width="4" stroke-linecap="round"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             <ElseFilter />
             &maxscale_zoom11;
             &minscale_zoom12;
-            <LineSymbolizer stroke="#44b2a3" stroke-width="1" stroke-linecap="round" stroke-dasharray="3,3"  smooth="1"/>
+            <LineSymbolizer stroke="#44b2a3" stroke-width="1" stroke-linecap="round" stroke-dasharray="3,3"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             <ElseFilter />
             &maxscale_zoom12;
             &minscale_zoom14;
-            <LineSymbolizer stroke="#44b2a3" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,5"  smooth="1"/>
+            <LineSymbolizer stroke="#44b2a3" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,5"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             <ElseFilter />
             &maxscale_zoom14;
             &minscale_zoom18;
-            <LineSymbolizer stroke="#44b2a3" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,8"  smooth="1"/>
+            <LineSymbolizer stroke="#44b2a3" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,8"  smooth="1" gamma=".8"/>
         </Rule>
     </Style>
 
@@ -144,19 +144,19 @@ background-color="transparent" >
             &maxscale_zoom9;
             &minscale_zoom12;
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-             stroke="#FFFFFF"  smooth="1"/>
+             stroke="#FFFFFF"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             &maxscale_zoom12;
             &minscale_zoom14;
             <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-             stroke="#FFFFFF"  smooth="1"/>
+             stroke="#FFFFFF"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             &maxscale_zoom14;
             &minscale_zoom18;
             <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
-             stroke="#FFFFFF"  smooth="1"/>
+             stroke="#FFFFFF"  smooth="1" gamma=".8"/>
         </Rule>
     </Style>
 
@@ -171,14 +171,14 @@ background-color="transparent" >
             &minscale_zoom18;
             <Filter>[piste:difficulty]='intermediate'</Filter>
             <LineSymbolizer stroke="#ffffff" stroke-width="3"
-            stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.6"  smooth="1"/>
+            stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.6"  smooth="1" gamma=".8"/>
         </Rule>
         <Rule>
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert' or [piste:difficulty]='freeride' or [piste:difficulty]='extreme' </Filter>
             <LineSymbolizer stroke="#ffffff" stroke-width="3"
-            stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.6"  smooth="1"/>
+            stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.6"  smooth="1" gamma=".8"/>
         </Rule>
     </Style>
 
@@ -188,7 +188,7 @@ background-color="transparent" >
             &maxscale_zoom14;
             &minscale_zoom18;
             <LineSymbolizer stroke="#ffffff" stroke-width="15"
-            stroke-linejoin="round" stroke-linecap="butt" stroke-opacity="0.3" stroke-dasharray="8,16"  smooth="1"/>
+            stroke-linejoin="round" stroke-linecap="butt" stroke-opacity="0.3" stroke-dasharray="8,16"  smooth="1" gamma=".8"/>
         </Rule>
     </Style>
 
