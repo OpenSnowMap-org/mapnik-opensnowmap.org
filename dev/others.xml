@@ -64,6 +64,63 @@
 	</Rule>
 	
 </Style>
+<Style name="others-icons">
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='snow_park'</Filter>
+		<PointSymbolizer file="pics/snow_park_bw.png" />
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
+		<ShieldSymbolizer file="pics/jump_bw.png" face-name="DejaVu Sans Bold"
+		spacing="10000" allow-overlap="false"
+		placement="point">' '</ShieldSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='sled' </Filter>
+
+		<ShieldSymbolizer file="pics/sled_bw.png" face-name="DejaVu Sans Bold"
+		spacing="1000" allow-overlap="false"
+		placement="line">' '</ShieldSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
+		<MarkersSymbolizer file="pics/ice-skate.png"
+		placement="point" spacing="400"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='playground' </Filter>
+		<PointSymbolizer file="pics/playground_bw.png"/>
+	</Rule>
+
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:grooming]='mogul'</Filter>
+		<PointSymbolizer file="pics/mogul.svg" transform="scale(0.6,0.6)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[gladed]='yes' </Filter>
+		<PointSymbolizer file="pics/gladed.svg" transform="scale(0.6,0.6)"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[lit]='yes' or [piste:lit]='yes'</Filter>
+		<PointSymbolizer file="pics/light.png"/>
+	</Rule>
+</Style>
 <Style name="others-area">
 	<!--novice-->
 	<Rule>
@@ -72,11 +129,52 @@
 		<Filter>[piste:type]='snow_park'</Filter>
 		<PolygonSymbolizer fill="#0074F3" fill-opacity="0.5" smooth="0.5" gamma=".6"/>
 	</Rule>
-
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='playground'</Filter>
 		<PolygonSymbolizer fill="#A6E05B" fill-opacity="0.5" smooth="0.5" gamma=".6"/>
+	</Rule>
+</Style>
+<Style name="other-text"> 
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='snow_park' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#005CC0" halo-fill= "#DDDDDD" halo-radius="1" 
+		placement="point" allow-overlap="false" spacing="10000" 
+		avoid-edges="true" dy="15"
+		wrap-width="15" >[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='playground' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#6CAD1A" halo-fill= "#DDDDDD" halo-radius="1" 
+		placement="point" allow-overlap="false" spacing="10000" 
+		avoid-edges="true" dy="15"
+		wrap-width="15" >[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='sled' </Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#70A808" halo-fill= "#DDDDDD" halo-radius="1" 
+		placement="point" allow-overlap="false" spacing="1000" 
+		avoid-edges="true" dy="15"
+		wrap-width="15" >[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" 
+		size="10" fill="#655ABE" halo-fill= "#DDDDDD" halo-radius="1" 
+		placement="point" allow-overlap="false" spacing="10000" 
+		avoid-edges="true" dy="15"
+		wrap-width="15" >[name]</TextSymbolizer>
 	</Rule>
 </Style>

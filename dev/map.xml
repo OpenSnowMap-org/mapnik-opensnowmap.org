@@ -62,7 +62,6 @@ background-color="transparent" >
     &snowshoeing;
     &aerialways;
     &skitour;
-    &icons;
     &others;
     
 <!-- White casing -->
@@ -164,25 +163,25 @@ background-color="transparent" >
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
-		<PolygonSymbolizer fill="#FFFFFF" smooth="0.5" gamma=".6"/>
+		<PolygonSymbolizer fill="#FFFFFF"  gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" 
-		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" 
-		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<LineSymbolizer stroke-width="7" stroke="#FFFFFF" 
-		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 </Style>
 <!-- White casing for relations -->
@@ -294,7 +293,7 @@ background-color="transparent" >
     </Layer>
 
     <Layer name="downhill-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill</StyleName>
+        <StyleName>downhill-casing</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -305,7 +304,7 @@ background-color="transparent" >
         </Datasource>
     </Layer>
     <Layer name="downhill-area-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill</StyleName>
+        <StyleName>downhill-area-casing</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -316,8 +315,8 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-    <Layer name="downhill-casing-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill-us</StyleName>
+    <Layer name="downhill-us-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-us-casing</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -327,8 +326,8 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-    <Layer name="downhill-area-casing-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill-us</StyleName>
+    <Layer name="downhill-us-area-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-us-area-casing</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -336,6 +335,28 @@ background-color="transparent" >
             "piste:type"='downhill' and "area"='yes' 
             and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
             ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-overlay" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-overlay</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='downhill'
+            and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+            order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-us-overlay" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-us-overlay</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='downhill'
+            and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+            order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
@@ -351,20 +372,8 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-    
-    <Layer name="downhill-overlay" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill-overlay</StyleName>
-        <Datasource>
-            &datasource-settings;
-            <Parameter name="table">
-            (select * from planet_osm_line where "piste:type"='downhill'
-            and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
-            order by z_order) as pistes
-            </Parameter>
-        </Datasource>
-    </Layer>
-    <Layer name="downhill-overlay-area-border" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill-overlay</StyleName>
+    <Layer name="downhill-area-border" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-area-border</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -375,19 +384,8 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-    <Layer name="downhill-overlay-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill-overlay-us</StyleName>
-        <Datasource>
-            &datasource-settings;
-            <Parameter name="table">
-            (select * from planet_osm_line where "piste:type"='downhill'
-            and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
-            order by z_order) as pistes
-            </Parameter>
-        </Datasource>
-    </Layer>
-    <Layer name="downhill-overlay-area-border-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill-overlay-us</StyleName>
+    <Layer name="downhill-us-area-border" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-us-area-border</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -398,7 +396,30 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-    <Layer name="downhill-overlay-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <Layer name="downhill-overlay-thin" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-overlay-thin</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='downhill'
+            and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+            order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="downhill-us-overlay-thin" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-us-overlay-thin</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select * from planet_osm_line where "piste:type"='downhill'
+            and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+            order by z_order) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="downhill-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>downhill-area-fill</StyleName>
         <Datasource>
             &datasource-settings;
@@ -410,8 +431,8 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-    <Layer name="downhill-area-overlay-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>downhill-area-fill-us</StyleName>
+    <Layer name="downhill-us-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>downhill-us-area-fill</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -435,7 +456,6 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-    
     <Layer name="diamonds-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>diamonds-area</StyleName>
         <Datasource>
@@ -582,8 +602,8 @@ background-color="transparent" >
         </Datasource>
     </Layer>
 
-    <Layer name="icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>icons</StyleName>
+    <Layer name="others-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>others-icons</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -594,8 +614,8 @@ background-color="transparent" >
             </Parameter>
         </Datasource>
     </Layer>
-    <Layer name="icons-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>icons</StyleName>
+    <Layer name="others-icons-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>others-icons</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
@@ -613,25 +633,29 @@ background-color="transparent" >
             &datasource-settings;
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <Parameter name="table">
-            (select way as way, aerialway, railway from planet_osm_line where "aerialway" is not null or "railway"='funicular'
+            (select way as way, aerialway, railway 
+            from planet_osm_line 
+            where ("aerialway" is not null or "railway"='funicular')
             and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &lt; 180
             order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
-
     <Layer name="aerialways-icons-rev" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>aerialways-icons-rev</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="geometry_table">planet_osm_line</Parameter>
             <Parameter name="table">
-            (select st_reverse(way) as way, aerialway, railway from planet_osm_line where "aerialway" is not null or "railway"='funicular'
+            (select st_reverse(way) as way, aerialway, railway 
+            from planet_osm_line 
+            where ("aerialway" is not null or "railway"='funicular')
             and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &gt; 180
             order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
+    
     <Layer name="difficulty-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
         <StyleName>difficulty-icons</StyleName>
         <Datasource>
@@ -642,11 +666,11 @@ background-color="transparent" >
         </Datasource>
     </Layer>
     <Layer name="other-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-        <StyleName>other-icons</StyleName>
+        <StyleName>downhill-icons</StyleName>
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select * from planet_osm_line where "piste:grooming"='mogul' or "gladed"='yes' or "lit"='yes' or "piste:lit"='yes' order by z_order) as pistes
+            (select * from planet_osm_line where "piste:difficulty"='freeride' or"piste:grooming"='mogul' or "gladed"='yes' or "lit"='yes' or "piste:lit"='yes' order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
@@ -665,7 +689,9 @@ background-color="transparent" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_line where "piste:type"='downhill'
+            (select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
+            from planet_osm_line 
+            where "piste:type"='downhill'
             and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0) 
             order by z_order) as pistes
             </Parameter>
@@ -676,8 +702,9 @@ background-color="transparent" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_polygon where 
-            "piste:type"='downhill' and "area"='yes' 
+            (select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
+            from planet_osm_polygon 
+            where "piste:type"='downhill' and "area"='yes' 
             and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
             ) as pistes
             </Parameter>
@@ -688,7 +715,9 @@ background-color="transparent" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_line where "piste:type"='downhill'
+            (select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
+            from planet_osm_line 
+            where "piste:type"='downhill'
             and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
             order by z_order) as pistes
             </Parameter>
@@ -699,10 +728,37 @@ background-color="transparent" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select way, coalesce("piste:name",name) as name, "piste:difficulty" from planet_osm_polygon where 
+            (select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
+            from planet_osm_polygon where 
             "piste:type"='downhill' and "area"='yes' 
             and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
             ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="other-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>other-text</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select  way, coalesce("piste:name",name) as name, "piste:type", sport
+            from planet_osm_line 
+                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+                or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+              ) as pistes
+            </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="other-area-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+        <StyleName>other-text</StyleName>
+        <Datasource>
+            &datasource-settings;
+            <Parameter name="table">
+            (select  way, coalesce("piste:name",name) as name, "piste:type", sport
+            from planet_osm_polygon
+                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+                or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+              ) as pistes
             </Parameter>
         </Datasource>
     </Layer>
