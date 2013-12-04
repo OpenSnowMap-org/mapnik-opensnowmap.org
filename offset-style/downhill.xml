@@ -1072,7 +1072,7 @@
 		&maxscale_zoom14;
 		&minscale_zoom18;
 		<Filter>[piste:grooming]='mogul'</Filter>
-		<ShieldSymbolizer file="pics/mogul.svg" face-name="DejaVu Sans Bold"
+		<ShieldSymbolizer file="pics/mogul.svg" fontset-name="DejaVu Sans Bold"
 		spacing="400" allow-overlap="false"
 		placement="line" transform="scale(0.6,0.6)">' '</ShieldSymbolizer>
 	</Rule>
@@ -1080,7 +1080,7 @@
 		&maxscale_zoom14;
 		&minscale_zoom18;
 		<Filter>[gladed]='yes' </Filter>
-		<ShieldSymbolizer file="pics/gladed.svg" face-name="DejaVu Sans Bold"
+		<ShieldSymbolizer file="pics/gladed.svg" fontset-name="DejaVu Sans Bold"
 		spacing="400" allow-overlap="true"
 		placement="line" transform="scale(0.6,0.6)">' '</ShieldSymbolizer>
 	</Rule>
@@ -1088,7 +1088,7 @@
 		&maxscale_zoom14;
 		&minscale_zoom18;
 		<Filter>[lit]='yes' or [piste:lit]='yes'</Filter>
-		<ShieldSymbolizer file="pics/light.png" face-name="DejaVu Sans Bold"
+		<ShieldSymbolizer file="pics/light.png" fontset-name="DejaVu Sans Bold"
 		spacing="400" allow-overlap="true"
 		placement="line">' '</ShieldSymbolizer>
 	</Rule>
@@ -1096,7 +1096,7 @@
 		&maxscale_zoom14;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride'</Filter>
-		<ShieldSymbolizer file="pics/danger-red.svg" face-name="DejaVu Sans Bold"
+		<ShieldSymbolizer file="pics/danger-red.svg" fontset-name="DejaVu Sans Bold"
 		spacing="400" allow-overlap="true"
 		placement="line" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
 	</Rule>
@@ -1107,7 +1107,7 @@
 		&maxscale_zoom14;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced'</Filter>
-		<ShieldSymbolizer file="pics/diamond.svg" face-name="DejaVu Sans Bold"
+		<ShieldSymbolizer file="pics/diamond.svg" fontset-name="DejaVu Sans Bold"
 		spacing="300" allow-overlap="false"
 		placement="line" transform="scale(0.25,0.25)">' '</ShieldSymbolizer>
 	</Rule>
@@ -1115,7 +1115,7 @@
 		&maxscale_zoom14;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='expert'</Filter>
-		<ShieldSymbolizer file="pics/diamonds.svg" face-name="DejaVu Sans Bold"
+		<ShieldSymbolizer file="pics/diamonds.svg" fontset-name="DejaVu Sans Bold"
 		spacing="300" allow-overlap="false"
 		placement="line" transform="scale(0.25,0.25)">' '</ShieldSymbolizer>
 	</Rule>
@@ -1146,7 +1146,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#02B002" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true"
@@ -1156,7 +1156,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='easy' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#1919DE" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true"
@@ -1166,7 +1166,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#E81F1F" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true"
@@ -1176,7 +1176,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#222222"  halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true"
@@ -1186,7 +1186,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='expert' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#FFBB2D"   halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true"
@@ -1198,7 +1198,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#02B002" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
@@ -1208,7 +1208,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='easy' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#1919DE" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
@@ -1218,7 +1218,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#E81F1F" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
@@ -1228,7 +1228,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#222222"  halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
@@ -1238,7 +1238,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='expert' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#FFBB2D"   halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
@@ -1248,7 +1248,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride'</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="DejaVu Sans Book" 
 		size="10" fill="#FFE72D" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"

@@ -8,7 +8,8 @@ version 2012-10-27 - Yves Cainaud
 -->
 <Map xmlns:xi="http://www.w3.org/2001/XInclude"
 srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over"
-background-color="transparent" >
+background-color="transparent"
+font-directory="fonts\" >
     <Style name="nodes-nordic">
         <Rule>
             &maxscale_zoom0;
@@ -222,7 +223,7 @@ background-color="transparent" >
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='intermediate'</Filter>
-            <ShieldSymbolizer file="pics/danger-black.svg" face-name="DejaVu Sans Bold"
+            <ShieldSymbolizer file="pics/danger-black.svg" fontset-name="DejaVu Sans Bold"
             spacing="200" allow-overlap="false"
             placement="line" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
         </Rule>
@@ -230,7 +231,7 @@ background-color="transparent" >
             &maxscale_zoom14;
             &minscale_zoom18;
             <Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert' or [piste:difficulty]='freeride' or [piste:difficulty]='extreme' </Filter>
-            <ShieldSymbolizer file="pics/danger-red.svg" face-name="DejaVu Sans Bold"
+            <ShieldSymbolizer file="pics/danger-red.svg" fontset-name="DejaVu Sans Bold"
             spacing="200" allow-overlap="true"
             placement="line" transform="scale(0.4,0.4)">' '</ShieldSymbolizer>
         </Rule>

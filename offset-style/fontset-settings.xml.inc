@@ -7,6 +7,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 <FontSet name="book-fonts">
   <Font face_name="DejaVu Sans Book" />
+  <Font face_name="TakaoGothic" />
   <!--Font face_name="unifont Medium" /-->
 </FontSet>
 <FontSet name="bold-fonts">
