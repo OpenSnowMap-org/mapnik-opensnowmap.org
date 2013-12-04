@@ -4,7 +4,7 @@
             &maxscale_zoom5;
             &minscale_zoom10;
             <Filter>not ([entrance] = 'yes')</Filter>
-            <TextSymbolizer face-name="DejaVu Sans Oblique"
+            <TextSymbolizer fontset-name="oblique-fonts"
             size="8" fill='#003074' halo-fill= "white" halo-radius="1.5"
             placement="point" allow-overlap="false" spacing="10000"
             avoid-edges="true"
@@ -14,7 +14,7 @@
             &maxscale_zoom11;
             &minscale_zoom12;
             <Filter>not ([entrance] = 'yes')</Filter>
-            <TextSymbolizer face-name="DejaVu Sans Oblique"
+            <TextSymbolizer fontset-name="oblique-fonts"
             size="10" fill='#003074' halo-fill= "white" halo-radius="1.5"
             placement="point" allow-overlap="false" spacing="10000"
             avoid-edges="true"

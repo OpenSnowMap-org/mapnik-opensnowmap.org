@@ -75,7 +75,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
-		<ShieldSymbolizer file="pics/jump_bw.png" face-name="DejaVu Sans Bold"
+		<ShieldSymbolizer file="pics/jump_bw.png" fontset-name="bold-fonts"
 		spacing="10000" allow-overlap="false"
 		placement="point">' '</ShieldSymbolizer>
 	</Rule>
@@ -84,7 +84,7 @@
 		&minscale_zoom18;
 		<Filter>[piste:type]='sled' </Filter>
 
-		<ShieldSymbolizer file="pics/sled_bw.png" face-name="DejaVu Sans Bold"
+		<ShieldSymbolizer file="pics/sled_bw.png" fontset-name="bold-fonts"
 		spacing="1000" allow-overlap="false"
 		placement="line">' '</ShieldSymbolizer>
 	</Rule>
@@ -141,7 +141,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='snow_park' </Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="book-fonts"
 		size="10" fill="#005CC0" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="15"
@@ -151,7 +151,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='playground' </Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="book-fonts"
 		size="10" fill="#6CAD1A" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="15"
@@ -161,7 +161,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='sled' </Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="book-fonts"
 		size="10" fill="#70A808" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="1000" 
 		avoid-edges="true" dy="15"
@@ -171,7 +171,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" 
+		<TextSymbolizer fontset-name="book-fonts"
 		size="10" fill="#655ABE" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="15"

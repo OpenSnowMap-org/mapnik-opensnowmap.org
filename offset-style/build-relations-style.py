@@ -346,7 +346,7 @@ for c in colorList:
             &maxscale_zoom15;
             &minscale_zoom18;
             <Filter>[color]='"""+c+"""' or [colour]='"""+c+"""'</Filter>
-            <TextSymbolizer face-name="DejaVu Sans Book" 
+            <TextSymbolizer fontset-name="book-fonts"
             size="10" fill='"""+str(color)+"""' halo-fill= "white" halo-radius="1" 
             placement="line" allow-overlap="false" spacing="10000" 
             avoid-edges="true"
@@ -358,7 +358,7 @@ f.write("""\
 			&maxscale_zoom15;
 			&minscale_zoom18;
 			<ElseFilter/>
-			<TextSymbolizer face-name="DejaVu Sans Book" 
+			<TextSymbolizer fontset-name="book-fonts"
 			size="10" fill="#44b2a3" halo-fill= "white" halo-radius="1" 
 			placement="line" allow-overlap="false" spacing="10000" 
 			avoid-edges="true"
