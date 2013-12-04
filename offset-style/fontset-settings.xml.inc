@@ -12,9 +12,11 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 </FontSet>
 <FontSet name="bold-fonts">
   <Font face_name="DejaVu Sans Bold" />
+  <Font face_name="TakaoGothic" />
   <!--Font face_name="unifont Medium" /-->
 </FontSet>
 <FontSet name="oblique-fonts">
   <Font face_name="DejaVu Sans Oblique" />
+  <Font face_name="TakaoGothic" />
   <!--Font face_name="unifont Medium" /-->
 </FontSet>
