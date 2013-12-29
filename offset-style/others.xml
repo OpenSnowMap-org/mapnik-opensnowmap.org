@@ -63,6 +63,19 @@
 		<LineSymbolizer stroke-width="2" stroke="#6FC4D0" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:type]='sleigh'</Filter>
+		<LineSymbolizer stroke-width="2.5" stroke="#009655" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[piste:type]='sleigh'</Filter>
+		<LineSymbolizer stroke-width="2" stroke="#009655" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	
 </Style>
 <Style name="others-icons">
 	<Rule>
@@ -83,7 +96,6 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type]='sled' </Filter>
-
 		<ShieldSymbolizer file="pics/sled_bw.png" fontset-name="bold-fonts"
 		spacing="1000" allow-overlap="false"
 		placement="line">' '</ShieldSymbolizer>
@@ -94,6 +106,14 @@
 		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
 		<MarkersSymbolizer file="pics/ice-skate.png"
 		placement="point" spacing="400"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[piste:type]='sleigh' </Filter>
+		<ShieldSymbolizer file="pics/sleigh_bw.png" fontset-name="bold-fonts"
+		spacing="1000" allow-overlap="false"
+		placement="line">' '</ShieldSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;

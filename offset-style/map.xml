@@ -576,7 +576,7 @@ font-directory="fonts\" >
             &datasource-settings;
             <Parameter name="table">
             (select * from planet_osm_line 
-                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park',sleigh)
                 or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
              ) as pistes
             </Parameter>
@@ -612,7 +612,7 @@ font-directory="fonts\" >
             &datasource-settings;
             <Parameter name="table">
             (select * from planet_osm_line 
-                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+                where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park',sleigh)
                 or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
              ) as pistes
             </Parameter>
