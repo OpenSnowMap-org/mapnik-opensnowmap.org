@@ -73,7 +73,7 @@
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:type]='sleigh'</Filter>
-		<LineSymbolizer stroke-width="1.5" stroke="#8F3FFF" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1.5" stroke="#8F54D8" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
 </Style>
