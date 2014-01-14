@@ -601,7 +601,7 @@ font-directory="fonts\" >
         <Datasource>
             &datasource-settings;
             <Parameter name="table">
-            (select * from planet_osm_line where "aerialway" is not null or "railway"='funicular' order by z_order) as pistes
+            (select * from planet_osm_line where "aerialway" is not null or "railway"='funicular' or "railway"='incline' order by z_order) as pistes
             </Parameter>
         </Datasource>
     </Layer>
