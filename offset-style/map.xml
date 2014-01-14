@@ -639,7 +639,7 @@ font-directory="fonts\" >
             <Parameter name="table">
             (select way as way, aerialway, railway 
             from planet_osm_line 
-            where ("aerialway" is not null or "railway"='funicular')
+            where ("aerialway" is not null or "railway"='funicular' or "railway"='incline' )
             and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &lt; 180
             order by z_order) as pistes
             </Parameter>
@@ -653,7 +653,7 @@ font-directory="fonts\" >
             <Parameter name="table">
             (select st_reverse(way) as way, aerialway, railway 
             from planet_osm_line 
-            where ("aerialway" is not null or "railway"='funicular')
+            where ("aerialway" is not null or "railway"='funicular' or "railway"='incline')
             and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &gt; 180
             order by z_order) as pistes
             </Parameter>
