@@ -326,7 +326,7 @@ font-directory="fonts\" >
 			&datasource-settings;
 			<Parameter name="geometry_table">planet_osm_line</Parameter>
 			<Parameter name="table">
-			(select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) ASC) as routes
+			(select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) DESC) as routes
 			</Parameter>
 		</Datasource>
 	</Layer>
@@ -473,6 +473,7 @@ font-directory="fonts\" >
 		<StyleName>downhill-text</StyleName>
 		<Datasource>
 			&datasource-settings;
+			<Parameter name="geometry_table">planet_osm_line</Parameter>
 			<Parameter name="table">
 			(select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
 			from planet_osm_line 
@@ -486,6 +487,7 @@ font-directory="fonts\" >
 		<StyleName>downhill-text</StyleName>
 		<Datasource>
 			&datasource-settings;
+			<Parameter name="geometry_table">planet_osm_polygon</Parameter>
 			<Parameter name="table">
 			(select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
 			from planet_osm_polygon 
@@ -499,6 +501,7 @@ font-directory="fonts\" >
 		<StyleName>downhill-text-us</StyleName>
 		<Datasource>
 			&datasource-settings;
+			<Parameter name="geometry_table">planet_osm_line</Parameter>
 			<Parameter name="table">
 			(select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
 			from planet_osm_line 
@@ -512,6 +515,7 @@ font-directory="fonts\" >
 		<StyleName>downhill-text-us</StyleName>
 		<Datasource>
 			&datasource-settings;
+			<Parameter name="geometry_table">planet_osm_polygon</Parameter>
 			<Parameter name="table">
 			(select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
 			from planet_osm_polygon where 
@@ -525,6 +529,7 @@ font-directory="fonts\" >
 		<StyleName>other-text</StyleName>
 		<Datasource>
 			&datasource-settings;
+			<Parameter name="geometry_table">planet_osm_line</Parameter>
 			<Parameter name="table">
 			(select  way, coalesce("piste:name",name) as name, "piste:type", sport
 			from planet_osm_line 
@@ -538,6 +543,7 @@ font-directory="fonts\" >
 		<StyleName>other-text</StyleName>
 		<Datasource>
 			&datasource-settings;
+			<Parameter name="geometry_table">planet_osm_polygon</Parameter>
 			<Parameter name="table">
 			(select  way, coalesce("piste:name",name) as name, "piste:type", sport
 			from planet_osm_polygon

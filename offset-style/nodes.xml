@@ -1,0 +1,47 @@
+<Style name="nodes-nordic">
+	<Rule>
+		&maxscale_zoom0;
+		&minscale_zoom8;
+		<MarkersSymbolizer fill="orange" opacity="0.5"
+		width="1.5" height="1.5" stroke="orange"
+		stroke-width="3" stroke-opacity=".2"
+		placement="point" marker-type="ellipse"
+		allow-overlap="true" spacing="0"/>
+	</Rule>
+</Style>
+<Style name="nodes-nordic2" comp-op="color-dodge">
+	<Rule>
+		&maxscale_zoom0;
+		&minscale_zoom8;
+		<MarkersSymbolizer fill="orange" opacity="1"
+		width="0.5" height="0.5" stroke="orange"
+		stroke-width="2" stroke-opacity="0.6"
+		placement="point" marker-type="ellipse"
+		allow-overlap="true" spacing="0"/>
+	</Rule>
+</Style>
+
+
+<Style name="nodes-downhill">
+	<Rule>
+		&maxscale_zoom0;
+		&minscale_zoom8;
+		<MarkersSymbolizer fill="#1E70FF" opacity="0.5"
+		width="1.5" height="1.5" stroke="#1E70FF"
+		stroke-width="3" stroke-opacity=".2"
+		placement="point" marker-type="ellipse"
+		allow-overlap="true" spacing="0"/>
+	</Rule>
+</Style>
+<Style name="nodes-downhill2" comp-op="color-dodge">
+	<Rule>
+		&maxscale_zoom0;
+		&minscale_zoom8;
+
+		<MarkersSymbolizer fill="#1E70FF" opacity="1"
+		width="0.5" height="0.5" stroke="#1E70FF"
+		stroke-width="2" stroke-opacity="0.6"
+		placement="point" marker-type="ellipse"
+		allow-overlap="true" spacing="0"/>
+	</Rule>
+</Style>
