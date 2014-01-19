@@ -119,9 +119,6 @@
 	stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 </Rule>
 </Style>
-<!-- White casing for relations -->
-<!-- Colored and offset work for relations -->
-&relations;
 
 <!-- Difficulty overlay -->
 <Style name="difficulty" image-filters="agg-stack-blur(3,3)" comp-op="grain-merge">
