@@ -13,6 +13,7 @@ activities=[
 	"playground",
 	"skitour",
 	"sled",
+	"sleigh",
 	"snow_park"
 	]
 xml=open('sites.xml','w')
