@@ -15,8 +15,6 @@ font-directory="fonts\" >
 
 	&nodes;
 	&nordic;
-<!-- White casing for relations -->
-<!-- Colored and offset work for relations -->
 	&relations;
 	&downhill;
 	&downhillus;
