@@ -1,14 +1,19 @@
 <!ENTITY datasource-settings SYSTEM "datasource-settings.xml.inc">
 <!ENTITY fontset-settings SYSTEM "fontset-settings.xml.inc">
+<!ENTITY rasters SYSTEM "rasters.xml">
+<!ENTITY contours SYSTEM "contours.xml">
+<!ENTITY nodes SYSTEM "nodes.xml">
+<!ENTITY nordic SYSTEM "nordic.xml">
+<!ENTITY relations SYSTEM "relations-style.xml">
 <!ENTITY skitour SYSTEM "skitour.xml">
 <!ENTITY aerialways SYSTEM "aerialways.xml">
 <!ENTITY snowshoeing SYSTEM "hike.xml">
 <!ENTITY downhill SYSTEM "downhill.xml">
 <!ENTITY downhillus SYSTEM "downhill-us.xml">
-<!ENTITY relations SYSTEM "relations-style.xml">
 <!ENTITY others SYSTEM "others.xml">
 <!ENTITY sites SYSTEM "sites.xml">
-<!ENTITY rasters SYSTEM "rasters.xml">
+<!ENTITY rasters_layers SYSTEM "rasters_layers.xml">
+<!ENTITY layers SYSTEM "layers.xml">
 <!ENTITY srs900913 "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 <!ENTITY srsmercator "+proj=merc +datum=WGS84 +over">
 <!ENTITY srs4326 "+init=epsg:4326">

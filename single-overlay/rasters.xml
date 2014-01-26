@@ -4,6 +4,7 @@
     <RasterSymbolizer opacity="1" scaling="bilinear" />
   </Rule>
 </Style>
+<!--
 <Style name="mod10a2-2" filter-mode="first" image-filters="agg-stack-blur(1,1)" >
   <Rule>
     &maxscale_zoom7;
@@ -16,6 +17,7 @@
     <RasterSymbolizer opacity="0.8" scaling="bicubic" />
   </Rule>
 </Style>
+-->
 
 <style name="void"></style>
 

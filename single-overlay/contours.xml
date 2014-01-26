@@ -1,0 +1,45 @@
+<Style name="contours10">
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<LineSymbolizer stroke="#A8A8A8" stroke-width="0.5" stroke-opacity="0.6" smooth="1" gamma="1"/>
+	</Rule>
+</Style>
+<Style name="contours50">
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom14;
+		<LineSymbolizer stroke="#A8A8A8" stroke-width="0.6" stroke-opacity="0.6" smooth="1" gamma="1"/></Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<LineSymbolizer stroke="#7E7E7E" stroke-width="0.6" stroke-opacity="0.6" smooth="1" gamma="1"/></Rule>
+</Style>
+<Style name="contours100">
+	<Rule>
+		&maxscale_zoom11;
+		&minscale_zoom12;
+		<LineSymbolizer stroke="#A8A8A8" stroke-width="0.7" stroke-opacity="0.6" smooth="1" gamma="1"/></Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom14;
+		<LineSymbolizer stroke="#7E7E7E" stroke-width="0.7" stroke-opacity="0.6" smooth="1" gamma="1"/></Rule>
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+		<LineSymbolizer stroke="#5E5E5E" stroke-width="0.7" stroke-opacity="0.6" smooth="1" gamma="1"/></Rule>
+</Style>
+<Style name="contours-text50">
+        <Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+                <TextSymbolizer face-name="DejaVu Sans Book" fill="#747b90" halo-radius="1" opacity="0.9" placement="line" size="8">[height]</TextSymbolizer>
+        </Rule>
+</Style>
+<Style name="contours-text100">
+        <Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+                <TextSymbolizer face-name="DejaVu Sans Book" fill="#747b90" halo-radius="1" opacity="0.9" placement="line" size="8">[height]</TextSymbolizer>
+        </Rule>
+</Style>
