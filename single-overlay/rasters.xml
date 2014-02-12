@@ -25,13 +25,19 @@
   <Rule>
     &maxscale_zoom8;
     &minscale_zoom11;
-    <RasterSymbolizer opacity="0.4"/>
+    <RasterSymbolizer opacity="0.3"/>
+  </Rule>
+  <Rule>
+    &maxscale_zoom11;
+    &minscale_zoom18;
+    <RasterSymbolizer opacity="0.3" scaling="bilinear"/>
   </Rule>
 </Style>
+<!--
 <Style name="hillshade12" filter-mode="first" image-filters="agg-stack-blur(3,3)"   >
   <Rule>
     &maxscale_zoom12;
-    &minscale_zoom12;
+    &minscale_zoom1;
     <RasterSymbolizer opacity="0.4" scaling="bicubic"/>
   </Rule>
 </Style>
@@ -62,6 +68,7 @@
     <RasterSymbolizer opacity="0.4" scaling="bicubic"/>
   </Rule>
 </Style>
+-->
 
 <Style name="nem" filter-mode="first" >
   <Rule>
