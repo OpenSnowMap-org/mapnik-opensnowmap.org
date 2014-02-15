@@ -1,0 +1,112 @@
+<Style name="mod10a2" filter-mode="first" >
+  <Rule>
+    &minscale_zoom6;
+    <RasterSymbolizer opacity="1" scaling="bilinear" />
+  </Rule>
+</Style>
+<!--
+<Style name="mod10a2-2" filter-mode="first" image-filters="agg-stack-blur(1,1)" >
+  <Rule>
+    &maxscale_zoom7;
+    &minscale_zoom7;
+    <RasterSymbolizer opacity="0.8" scaling="bicubic" />
+  </Rule>
+  <Rule>
+    &maxscale_zoom8;
+    &minscale_zoom8;
+    <RasterSymbolizer opacity="0.8" scaling="bicubic" />
+  </Rule>
+</Style>
+-->
+
+<style name="void"></style>
+
+<Style name="hillshade">
+  <Rule>
+    &maxscale_zoom8;
+    &minscale_zoom11;
+    <RasterSymbolizer opacity="0.3"/>
+  </Rule>
+  <Rule>
+    &maxscale_zoom11;
+    &minscale_zoom18;
+    <RasterSymbolizer opacity="0.3" scaling="bilinear"/>
+  </Rule>
+</Style>
+<!--
+<Style name="hillshade12" filter-mode="first" image-filters="agg-stack-blur(3,3)"   >
+  <Rule>
+    &maxscale_zoom12;
+    &minscale_zoom1;
+    <RasterSymbolizer opacity="0.4" scaling="bicubic"/>
+  </Rule>
+</Style>
+<Style name="hillshade13" filter-mode="first" image-filters="agg-stack-blur(6,6)"  >
+  <Rule>
+    &maxscale_zoom13;
+    &minscale_zoom13;
+    <RasterSymbolizer opacity="0.4" scaling="bicubic"/>
+  </Rule>
+</Style>
+<Style name="hillshade14" filter-mode="first" image-filters="agg-stack-blur(12,12)"  >
+  <Rule>
+    &maxscale_zoom14;
+    &minscale_zoom14;
+    <RasterSymbolizer opacity="0.4" scaling="bicubic"/>
+  </Rule>
+</Style>
+<Style name="hillshade15" filter-mode="first" image-filters="agg-stack-blur(24,24)"  >
+  <Rule>
+    &maxscale_zoom15;
+    &minscale_zoom15;
+    <RasterSymbolizer opacity="0.4" scaling="bicubic"/>
+  </Rule>
+</Style>
+<Style name="hillshade16" filter-mode="first" image-filters="agg-stack-blur(50,50)"  >
+  <Rule>
+    &maxscale_zoom16;
+    <RasterSymbolizer opacity="0.4" scaling="bicubic"/>
+  </Rule>
+</Style>
+-->
+
+<Style name="nem" filter-mode="first" >
+  <Rule>
+	&minscale_zoom6;
+    <RasterSymbolizer opacity="1" scaling="bicubic" />
+  </Rule>
+</Style>
+
+<Style name="ne50madmin0countries" filter-mode="first" >
+  <Rule>
+	&minscale_zoom6;
+    <LineSymbolizer stroke="#555555" stroke-width="1" stroke-opacity="0.2" />
+  </Rule>
+</Style>
+
+<Style name="ne50mpopulatedplaces" filter-mode="first" >
+  <Rule>
+	&maxscale_zoom3;
+	&minscale_zoom4;
+    <Filter>([SCALERANK] &lt;= 2)</Filter>
+    <TextSymbolizer size="9" face-name="DejaVu Sans Bold" fill="#555555" ><![CDATA[[NAMEASCII]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+	&maxscale_zoom4;
+	&minscale_zoom5;
+    <Filter>([SCALERANK] &lt;= 2)</Filter>
+    <TextSymbolizer size="10" face-name="DejaVu Sans Bold" fill="#555555" ><![CDATA[[NAMEASCII]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+	&maxscale_zoom5;
+	&minscale_zoom6;
+    <Filter>([SCALERANK] &gt; 2)</Filter>
+    <TextSymbolizer size="8" face-name="DejaVu Sans Bold" fill="#555555" ><![CDATA[[NAMEASCII]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+	&maxscale_zoom5;
+	&minscale_zoom6;
+    <Filter>([SCALERANK] &lt;= 2)</Filter>
+    <TextSymbolizer size="11" face-name="DejaVu Sans Bold" fill="#555555" ><![CDATA[[NAMEASCII]]]></TextSymbolizer>
+  </Rule>
+</Style>
