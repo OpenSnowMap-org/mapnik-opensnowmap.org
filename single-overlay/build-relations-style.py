@@ -126,29 +126,29 @@ for id in Offsets:
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom9;
             &minscale_zoom11;
-            <LineSymbolizer stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*1*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*2*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*1.5*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom12;
             &minscale_zoom14;
-            <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*3*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*2*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom14;
             &minscale_zoom18;
-            <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" 
-			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*4*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" 
+			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*3*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         """)
 		
@@ -157,28 +157,28 @@ f.write("""\
 		    <ElseFilter/>
             &maxscale_zoom9;
             &minscale_zoom11;
-            <LineSymbolizer stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom12;
             &minscale_zoom14;
-            <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom14;
             &minscale_zoom18;
-            <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" 
+            <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" 
 			 stroke="#FFFFFF" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         """)
@@ -209,22 +209,22 @@ for id in Offsets:
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-			 stroke=\""""+str(color)+"""\" offset=\""""+str(Offsets[id]*2*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+			 stroke=\""""+str(color)+"""\" offset=\""""+str(Offsets[id]*1.5*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom12;
             &minscale_zoom14;
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-			 stroke=\""""+str(color)+"""\" offset=\""""+str(Offsets[id]*3*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+			 stroke=\""""+str(color)+"""\" offset=\""""+str(Offsets[id]*2*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom14;
             &minscale_zoom18;
-            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" 
-			 stroke=\""""+str(color)+"""\" offset=\""""+str(Offsets[id]*4*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" 
+			 stroke=\""""+str(color)+"""\" offset=\""""+str(Offsets[id]*3*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
         </Rule>
         """)
 	else:
@@ -241,22 +241,22 @@ for id in Offsets:
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-			 stroke="#44b2a3" offset=\""""+str(Offsets[id]*2*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+			 stroke="#44b2a3" offset=\""""+str(Offsets[id]*1.5*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom12;
             &minscale_zoom14;
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-			 stroke="#44b2a3" offset=\""""+str(Offsets[id]*3*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+			 stroke="#44b2a3" offset=\""""+str(Offsets[id]*2*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom14;
             &minscale_zoom18;
-            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" 
-			 stroke="#44b2a3" offset=\""""+str(Offsets[id]*4*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" 
+			 stroke="#44b2a3" offset=\""""+str(Offsets[id]*3*1.1)+"""\" smooth="0" stroke-gamma=".6"/>
         </Rule>
         """)
 for c in colorList:
@@ -276,21 +276,21 @@ for c in colorList:
 		    <Filter>[color]='"""+c+"""' or [colour]='"""+c+"""'</Filter>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
 			 stroke=\""""+str(color)+"""\"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[color]='"""+c+"""' or [colour]='"""+c+"""'</Filter>
             &maxscale_zoom12;
             &minscale_zoom14;
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 			 stroke=\""""+str(color)+"""\"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[color]='"""+c+"""' or [colour]='"""+c+"""'</Filter>
             &maxscale_zoom14;
             &minscale_zoom18;
-            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" 
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" 
 			 stroke=\""""+str(color)+"""\"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         """)
@@ -307,21 +307,21 @@ f.write("""\
 		    <ElseFilter/>
             &maxscale_zoom11;
             &minscale_zoom12;
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#44b2a3"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom12;
             &minscale_zoom14;
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#44b2a3"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom14;
             &minscale_zoom18;
-            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" 
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" 
 			 stroke="#44b2a3"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         """)
