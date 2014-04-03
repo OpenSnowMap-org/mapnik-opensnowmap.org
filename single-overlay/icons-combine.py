@@ -12,6 +12,7 @@ activities=[
 	"nordic",
 	"playground",
 	"skitour",
+	"ski_jump",
 	"sled",
 	"sleigh",
 	"snow_park"
