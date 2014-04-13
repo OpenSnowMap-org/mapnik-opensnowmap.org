@@ -8,7 +8,6 @@ activities=[
 	"downhill",
 	"hike",
 	"ice-skate",
-	"jump",
 	"nordic",
 	"playground",
 	"skitour",
@@ -29,17 +28,22 @@ for i in range(1,len(activities)):
 	
 	for c in comb:
 		
-		if len(c) <4 : cols=len(c)
-		else: cols=4
-		rows=len(c)/4+1
-		
-		im=Image.new('RGBA',(14*cols,14*rows))
+		if len(c) <5 : cols=len(c)
+		else: cols=5
+		if len(c) > 5: rows=2
+		else : rows = 1
+		hmargin=3
+		if rows==1: vmargin=11
+		else: vmargin=4
+		#~ im=Image.new('RGBA',(14*cols,14*rows))
+		im=Image.open('pics/sites-icons-bg.png') #36x80px
 		i=0
 		j=0
+		print c
 		for l in c:
 			ac=Image.open('pics/'+l+'-small.png')
-			im.paste(ac,(i*14,j*14))
-			if i==3: 
+			im.paste(ac,(i*15+hmargin,j*15+vmargin))
+			if i==4: 
 				j+=1
 				i=0
 			else:
