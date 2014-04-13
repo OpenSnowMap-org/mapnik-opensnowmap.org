@@ -60,6 +60,7 @@ for i in range(1,len(activities)):
 			 fill="#003074" halo-fill= "white" halo-radius="1.5"
 			spacing="100" 
 			min-distance="50"
+			shield-dy="-25" shield-dx="-25"
 			dy="-24"
 			file="combinations/"""+name+""""
 			>[site_name]</ShieldSymbolizer>
@@ -76,7 +77,8 @@ xml.write("""
             size="8" fill='#003074' halo-fill= "white" halo-radius="1.5"
             placement="point" allow-overlap="false" spacing="10000"
             avoid-edges="true"
-            wrap-width="55">[site_name]</TextSymbolizer>
+            wrap-width="55"
+            >[site_name]</TextSymbolizer>
         </Rule>
 
 """)
