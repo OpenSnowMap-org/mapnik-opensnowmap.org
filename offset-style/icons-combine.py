@@ -18,31 +18,10 @@ activities=[
 	"snow_park"
 	]
 xml=open('sites.xml','w')
+
 xml.write("""
 <Style name="site_text" >
-       <Rule>
-            &maxscale_zoom7;
-            &minscale_zoom10;
-            <Filter>not ([entrance] = 'yes')</Filter>
-            <TextSymbolizer face-name="DejaVu Sans Oblique"
-            size="8" fill='#003074' halo-fill= "white" halo-radius="1.5"
-            placement="point" allow-overlap="false" spacing="10000"
-            avoid-edges="true"
-            wrap-width="55">[site_name]</TextSymbolizer>
-        </Rule>
-       <Rule>
-            &maxscale_zoom11;
-            &minscale_zoom12;
-            <Filter>not ([entrance] = 'yes')</Filter>
-            <TextSymbolizer face-name="DejaVu Sans Oblique"
-            size="10" fill='#003074' halo-fill= "white" halo-radius="1.5"
-            placement="point" allow-overlap="false" spacing="10000"
-            avoid-edges="true"
-            wrap-width="80" dy="8">[site_name]</TextSymbolizer>
-        </Rule>
 """)
-
-
 for i in range(1,len(activities)):
 	comb=list(itertools.combinations(activities,i))
 	for c in comb:
@@ -73,8 +52,42 @@ for i in range(1,len(activities)):
             &maxscale_zoom11;
             &minscale_zoom12;
             <Filter>[piste:type]='"""+rule+"""' and not ([entrance] = 'yes')</Filter>
-            <PointSymbolizer file="combinations/"""+name+""""
-             allow-overlap="true" ignore-placement="true"/>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/"""+name+""""
+			>[site_name]</ShieldSymbolizer>
+
         </Rule>
         """)
+
+xml.write("""
+       <Rule>
+            &maxscale_zoom7;
+            &minscale_zoom10;
+            <Filter>not ([entrance] = 'yes')</Filter>
+            <TextSymbolizer face-name="DejaVu Sans Oblique"
+            size="8" fill='#003074' halo-fill= "white" halo-radius="1.5"
+            placement="point" allow-overlap="false" spacing="10000"
+            avoid-edges="true"
+            wrap-width="55">[site_name]</TextSymbolizer>
+        </Rule>
+
+""")
 xml.write('</Style>')
+       #~ <Rule>
+            #~ &maxscale_zoom11;
+            #~ &minscale_zoom12;
+            #~ <Filter>not ([entrance] = 'yes')</Filter>
+            #~ <TextSymbolizer face-name="DejaVu Sans Oblique"
+            #~ size="10" fill='#003074' halo-fill= "white" halo-radius="1.5"
+            #~ placement="point" allow-overlap="false" spacing="10000"
+            #~ avoid-edges="true"
+            #~ wrap-width="80" placement-type="simple"
+			#~ placements="N,S"
+			#~ >
+  #~ [site_name]</TextSymbolizer>
+        #~ </Rule>
