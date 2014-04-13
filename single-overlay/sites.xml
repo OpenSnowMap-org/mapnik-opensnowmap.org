@@ -154,6 +154,21 @@
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
             <Filter>[piste:type]='downhill;hike' and not ([entrance] = 'yes')</Filter>
 			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
 			 size="10"
@@ -822,6 +837,21 @@
 			min-distance="50"
 			dy="-24"
 			file="combinations/sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
 			>[site_name]</ShieldSymbolizer>
 
         </Rule>
@@ -2622,6 +2652,21 @@
 			min-distance="50"
 			dy="-24"
 			file="combinations/sled-sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
 			>[site_name]</ShieldSymbolizer>
 
         </Rule>
@@ -5772,6 +5817,21 @@
 			min-distance="50"
 			dy="-24"
 			file="combinations/ski_jump-sled-sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
 			>[site_name]</ShieldSymbolizer>
 
         </Rule>
@@ -9559,6 +9619,21 @@
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
             <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour' and not ([entrance] = 'yes')</Filter>
 			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
 			 size="10"
@@ -12709,6 +12784,21 @@
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
             <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump' and not ([entrance] = 'yes')</Filter>
 			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
 			 size="10"
@@ -14509,6 +14599,21 @@
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
             <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled' and not ([entrance] = 'yes')</Filter>
 			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
 			 size="10"
@@ -15184,6 +15289,21 @@
        <Rule>
             &maxscale_zoom11;
             &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
             <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh' and not ([entrance] = 'yes')</Filter>
 			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
 			 size="10"
@@ -15327,6 +15447,21 @@
 			min-distance="50"
 			dy="-24"
 			file="combinations/hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
+			>[site_name]</ShieldSymbolizer>
+
+        </Rule>
+        
+       <Rule>
+            &maxscale_zoom11;
+            &minscale_zoom12;
+            <Filter>[piste:type]='downhill;hike;ice-skate;nordic;playground;skitour;ski_jump;sled;sleigh;snow_park' and not ([entrance] = 'yes')</Filter>
+			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			 size="10"
+			 fill="#003074" halo-fill= "white" halo-radius="1.5"
+			spacing="100" 
+			min-distance="50"
+			dy="-24"
+			file="combinations/downhill-hike-ice-skate-nordic-playground-skitour-ski_jump-sled-sleigh-snow_park-small.png"
 			>[site_name]</ShieldSymbolizer>
 
         </Rule>

@@ -22,35 +22,34 @@ xml.write("""
 <Style name="site_text" >
 """)
 for i in range(1,len(activities)):
-	comb=list(itertools.combinations(activities,i))
-	for c in comb:
-		print list(c)
-	
-	for c in comb:
+	combs=list(itertools.combinations(activities,i))
+	combs.append(activities)
+	for comb in combs:
 		
-		if len(c) <5 : cols=len(c)
-		else: cols=5
-		if len(c) > 5: rows=2
-		else : rows = 1
+		rest = [a for a in activities if a not in comb]
 		hmargin=3
-		if rows==1: vmargin=11
-		else: vmargin=4
-		#~ im=Image.new('RGBA',(14*cols,14*rows))
+		vmargin=4
+		
+		rows = 2
+		cols = 5
+		ind=0
+		rest_ind=0
 		im=Image.open('pics/sites-icons-bg.png') #36x80px
-		i=0
-		j=0
-		print c
-		for l in c:
-			ac=Image.open('pics/'+l+'-small.png')
-			im.paste(ac,(i*15+hmargin,j*15+vmargin))
-			if i==4: 
-				j+=1
-				i=0
-			else:
-				i+=1
-		name='-'.join(c)+'-small.png'
+		print comb, rest, len(comb)
+		for r in range(0,rows):
+			for c in range (0, cols):
+				ind+=1
+				if (ind <= len(comb)):
+					ac=Image.open('piste-type-14px/'+comb[ind-1]+'-14px.png')
+					im.paste(ac,(c*15+hmargin,r*15+vmargin))
+				else :
+					rest_ind+=1
+					ac=Image.open('piste-type-14px/'+rest[rest_ind-1]+'-14px-grey.png')
+					im.paste(ac,(c*15+hmargin,r*15+vmargin))
+					
+		name='-'.join(comb)+'-small.png'
 		im.save('combinations/'+name)
-		rule=';'.join(c)
+		rule=';'.join(comb)
 		xml.write("""
        <Rule>
             &maxscale_zoom11;
