@@ -109,7 +109,7 @@ f=open('colors.txt','w')
 for c in colorList:
 	if isColor(c):
 		color=mapnik.Color(c)
-		color=lighten(deluma(color,0.25),0.2)
+		color=lighten(deluma(color,0.25),0.3)
 		f.write(c+' '+str(color)+'\n')
 f.close()
 
@@ -196,7 +196,7 @@ for id in Offsets:
 	if (id in Colors) and isColor(Colors[id]):
 		# Relation with color attributes and offset
 		color=mapnik.Color(Colors[id])
-		color=lighten(deluma(color,0.25),0.2)
+		color=lighten(deluma(color,0.25),0.3)
 		f.write("""\
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
@@ -263,7 +263,7 @@ for c in colorList:
 	# Relation with color attributes, no offset (because of filter-mode="first")
 	if isColor(c):
 		color=mapnik.Color(c)
-		color=lighten(deluma(color,0.25),0.2)
+		color=lighten(deluma(color,0.25),0.3)
 		f.write("""\
         <Rule>
 		    <Filter>[color]='"""+c+"""' or [colour]='"""+c+"""'</Filter>
@@ -340,7 +340,7 @@ for c in colorList:
 	# Relation with color attributes, no offset
 	if isColor(c):
 		color=mapnik.Color(c)
-		color=lighten(deluma(color,0.25),0.15)
+		color=lighten(deluma(color,0.25),0.2)
 		f.write("""\
        <Rule>
             &maxscale_zoom15;
