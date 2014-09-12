@@ -2,7 +2,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade</StyleName>
 	<Datasource>
-	<Parameter name="file">data/3857-alpha-blur5x5-small.tif</Parameter>
+	<Parameter name="file">../data/3857-alpha-blur5x5-small.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -53,7 +53,7 @@
 	srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
 	<StyleName>nem</StyleName>
 	<Datasource>
-		<Parameter name="file">/home/admin/mapnik/data/ne-ocean-3857.tif</Parameter>
+		<Parameter name="file">../data/ne-ocean-3857.tif</Parameter>
 		<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -62,7 +62,7 @@
 	srs="+proj=longlat +ellps=WGS84 +no_defs">
 	<StyleName>ne50madmin0countries</StyleName>
 	<Datasource>
-		<Parameter name="file">/home/admin/mapnik/data/ne_50m_admin_0_countries.shp</Parameter>
+		<Parameter name="file">../data/ne_50m_admin_0_countries.shp</Parameter>
 		<Parameter name="type">shape</Parameter>
 	</Datasource>
 </Layer>
@@ -72,7 +72,7 @@
 	extent="-20037508,-19929239,20037508,19929239">
 	<StyleName>mod10a2</StyleName>
 	<Datasource>
-		<Parameter name="file">/home/admin/mapnik/data/MOD10A2.005-3857-cubic-alpha.tif</Parameter>
+		<Parameter name="file">../data/MOD10A2.005-3857-cubic-alpha.tif</Parameter>
 		<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -81,7 +81,7 @@
 	extent="-20037508,-19929239,20037508,19929239">
 	<StyleName>mod10a2-2</StyleName>
 	<Datasource>
-		<Parameter name="file">/home/admin/mapnik/data/MOD10A2.005-3857-cubic-alpha.tif</Parameter>
+		<Parameter name="file">../data/MOD10A2.005-3857-cubic-alpha.tif</Parameter>
 		<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
