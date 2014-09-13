@@ -2,14 +2,14 @@
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom18;
-		<Filter>[aerialway]='chair_lift' or [aerialway]='gondola' </Filter>
-		<LinePatternSymbolizer width="30" height="5" type="png" file="pics/chair_lift_line.png"/>
+		<Filter>[aerialway]='chair_lift' or [aerialway]='gondola'</Filter>
+		<LinePatternSymbolizer width="30" height="5" type="png" file="pics/cable_car_line.png"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom18;
 		<ElseFilter />
-		<LinePatternSymbolizer width="28" height="3" type="png" file="pics/cable_car_line.png"/>
+		<LinePatternSymbolizer width="28" height="3" type="png" file="pics/chair_lift_line.png"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
