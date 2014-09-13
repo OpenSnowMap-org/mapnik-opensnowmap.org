@@ -23,7 +23,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<TextSymbolizer 
-		face-name="book-fonts" 
+		fontset-name="book-fonts" 
 		size="10" fill="black" 
 		halo-fill= "white" 
 		halo-radius="1" 
