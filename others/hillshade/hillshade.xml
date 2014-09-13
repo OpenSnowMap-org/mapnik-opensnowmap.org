@@ -28,7 +28,7 @@
   	<StyleName>raster</StyleName>
   	<Datasource>
   		<Parameter name="type">gdal</Parameter>
-  		<Parameter name="file">/home/website/hillshade/wgs84_hs.vrt</Parameter>
+  		<Parameter name="file">../data/wgs84_hs.vrt</Parameter>
   		<Parameter name="band">1</Parameter>
   	</Datasource>
   </Layer>
