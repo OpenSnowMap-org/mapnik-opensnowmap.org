@@ -2,7 +2,7 @@
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom18;
-		<Filter>[aerialway]='chair_lift' or [aerialway]='gondola' or [aerialway]='mixed_lift' </Filter>
+		<Filter>[aerialway]='chair_lift' or [aerialway]='gondola' </Filter>
 		<LinePatternSymbolizer width="30" height="5" type="png" file="pics/chair_lift_line.png"/>
 	</Rule>
 	<Rule>
@@ -18,7 +18,20 @@
 		<PointSymbolizer file="pics/station.png"/>
 	</Rule>
 </Style>
-
+<Style name="aerialways-text">
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<TextSymbolizer 
+		face-name="book-fonts" 
+		size="10" fill="black" 
+		halo-fill= "white" 
+		halo-radius="1" 
+		placement="line" 
+		dx="10"
+		allow-overlap="false">[name]</TextSymbolizer>
+	</Rule>
+</Style>
 
 <Style name="aerialways-icons">
 	<Rule>
