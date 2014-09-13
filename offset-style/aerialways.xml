@@ -2,7 +2,7 @@
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom18;
-		<Filter>[aerialway]='chair_lift' or [aerialway]='gondola'</Filter>
+		<Filter>[aerialway]='cable_car' or [aerialway]='gondola'</Filter>
 		<LinePatternSymbolizer width="30" height="5" type="png" file="pics/cable_car_line.png"/>
 	</Rule>
 	<Rule>
@@ -28,7 +28,7 @@
 		halo-fill= "white" 
 		halo-radius="1" 
 		placement="line" 
-		dx="10"
+		dy="8"
 		allow-overlap="false">[name]</TextSymbolizer>
 	</Rule>
 </Style>
