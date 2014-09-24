@@ -1,0 +1,43 @@
+
+<Style name="nodes-text">
+		<Rule>
+		&maxscale_zoom11;
+		&minscale_zoom18;
+		<TextSymbolizer fontset-name="book-fonts" 
+		size="9" fill="#363636" halo-fill= "#EEEEEE" halo-radius="1.5" 
+		placement="point" allow-overlap="true" spacing="500" 
+		avoid-edges="true" dy="4" horizontal-alignment="right"
+		wrap-width="15" >[name]</TextSymbolizer>
+	</Rule>
+</Style>
+
+<Style name="nodes">
+	<Rule>
+		&maxscale_zoom0;
+		&minscale_zoom6;
+		<MarkersSymbolizer fill="#FFFFFF55" opacity="1"
+		width="7" height="7" stroke="#363636"
+		stroke-width="0.7" stroke-opacity=".8"
+		placement="point" marker-type="ellipse"
+		allow-overlap="false" spacing="0"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom7;
+		&minscale_zoom10;
+		<MarkersSymbolizer fill="#FFFFFF55" opacity="1"
+		width="10" height="10" stroke="#363636"
+		stroke-width="0.7" stroke-opacity=".8"
+		placement="point" marker-type="ellipse"
+		allow-overlap="false" spacing="0"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom11;
+		&minscale_zoom18;
+		<MarkersSymbolizer fill="#FFFFFF55" opacity="1"
+		width="25" height="25" stroke="#363636"
+		stroke-width="0.5" stroke-opacity=".8"
+		placement="point" marker-type="ellipse"
+		allow-overlap="true" spacing="0"/>
+	</Rule>
+</Style>
+

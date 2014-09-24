@@ -1,0 +1,21 @@
+<Layer name="nodes"
+srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs ">
+	<StyleName>nodes</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from resorts ) as nodes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="nodes-text"
+srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs ">
+	<StyleName>nodes-text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from resorts ) as text
+		</Parameter>
+	</Datasource>
+</Layer>
