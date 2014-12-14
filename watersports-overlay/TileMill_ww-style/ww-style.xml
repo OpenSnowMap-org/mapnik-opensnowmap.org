@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#ffffff" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">0,0,2</Parameter>
+  <Parameter name="format">png24</Parameter>
+  <Parameter name="interactivity_layer"></Parameter>
+  <Parameter name="interactivity_fields"></Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">18</Parameter>
+  <Parameter name="scale">1</Parameter>
+  <Parameter name="metatile">1</Parameter>
+  <Parameter name="id"><![CDATA[ww-style]]></Parameter>
+  <Parameter name="_updated">1406358035000</Parameter>
+  <Parameter name="name"><![CDATA[ww-style]]></Parameter>
+  <Parameter name="legend"><![CDATA[<div class='my-legend'>
+<div class='legend-title'>Legend</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:#0080ff;'></span>0-I</li>
+    <li><span style='background:#ffd500;'></span>II</li>
+    <li><span style='background:#ff8000;'></span>III</li>
+    <li><span style='background:#d20000;'></span>IV</li>
+    <li><span style='background:#8e008e;'></span>V</li>
+    <li><span style='background:#3e0000;'></span>VI</li>
+    <li><span style='background:#3e0000;'></span>X</li>
+    <li><span style='background:#FFFFFF;'></span> </li>
+    <li><span style='background:#000000;height: 5px;'></span>dam</li>
+    <li><span style='background:#004386;height: 5px;'></span>weir</li>
+  </ul>
+</div>
+<div class='legend-source'>Source: <a href="#link to source">Name of source</a></div>
+</div>
+
+<style type='text/css'>
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 4px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    margin-top: 5px;
+    /*border: 1px solid #999;*/
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+</style>]]></Parameter>
+  <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
+  <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
+</Parameters>
+
+
+<Style name="waterways" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="waterways"
+  status="off"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>waterways</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select way from planet_osm_line where waterway  in ('river', 'stream', 'canal') ) AS waterways]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-zero" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#0080ff" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#0080ff" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-zero"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-zero</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:section_grade" in ('0', '1','A','B','C','I') ) as grade0]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-zero-rapid" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#0080ff" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#0080ff" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-zero-rapid"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-zero-rapid</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:rapid_grade" in ('0', '1','A','B','C','I') ) as grade0]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-zero-node" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MarkersSymbolizer width="8" fill="#0080ff" stroke-width="0" />
+  </Rule>
+</Style>
+<Layer name="grade-zero-node"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-zero-node</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where "whitewater:rapid_grade" in ('0', '1','A','B','C','I') ) as grade0]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-two" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#ffd500" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#ffd500" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-two"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-two</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:section_grade" in ('2', '2+', '2-','II') ) as grade2]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-two" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#ffd500" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#ffd500" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-two"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-two</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:rapid_grade" in ('2', '2+', '2-','II') ) as grade2]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-two-node" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MarkersSymbolizer width="8" fill="#ffd500" stroke-width="0" />
+  </Rule>
+</Style>
+<Layer name="grade-two-node"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-two-node</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where  "whitewater:rapid_grade" in ('2', '2+', '2-','II') ) as grade2]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-three" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#ff8000" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#ff8000" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-three"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-three</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:section_grade" in ('3', '3+', '3-', '2;3','2-3','III') ) as grade3]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-three-rapid" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#ff8000" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#ff8000" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-three-rapid"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-three-rapid</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:rapid_grade" in ('3', '3+', '3-', '2;3','2-3','III') ) as grade3]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-three-node" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MarkersSymbolizer width="8" fill="#ff8000" stroke-width="0" />
+  </Rule>
+</Style>
+<Layer name="grade-three-node"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-three-node</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where "whitewater:rapid_grade" in ('3', '3+', '3-','III') ) as grade3]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-four-rapid" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#d20000" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#d20000" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-four-rapid"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-four-rapid</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where  "whitewater:rapid_grade" in ('4', '4+','4-', '3;4', '3; 4','IV') ) as grade4]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19621231.47,-7224585.5,19883063.11,11411627.55]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-four" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#d20000" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#d20000" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-four"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-four</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:section_grade" in ('4', '4+','4-', '3;4', '3; 4','IV') ) as grade4]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="id"><![CDATA[grade-four]]></Parameter>
+       <Parameter name="project"><![CDATA[ww-style-2]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-four-node" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MarkersSymbolizer width="8" fill="#d20000" stroke-width="0" />
+  </Rule>
+</Style>
+<Layer name="grade-four-node"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-four-node</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where "whitewater:rapid_grade" in ('4', '4+', '4-','IV') ) as grade4]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-five" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#8e008e" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#8e008e" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-five"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-five</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:section_grade" in ('5', '5+','5-', '4;5','V') ) as grade5
+]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-five-rapid" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#8e008e" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#8e008e" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-five-rapid"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-five-rapid</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:rapid_grade" in ('5', '5+','5-', '4;5','V') ) as grade5
+]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-five-node" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MarkersSymbolizer width="8" fill="#8e008e" stroke-width="0" />
+  </Rule>
+</Style>
+<Layer name="grade-five-node"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-five-node</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where "whitewater:rapid_grade" in ('5', '5+', '5-','V') ) as grade5]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-six" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#3e0000" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#3e0000" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-six"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-six</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:section_grade" in ('6', '6+','6-', '5;6', 'VI') ) as grade6]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-six-rapid" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.2" stroke-width="3" stroke="#3e0000" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#3e0000" offset="2.5" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="grade-six-rapid"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-six-rapid</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where  "whitewater:rapid_grade" in ('6', '6+','6-', '5;6', 'VI') ) as grade6]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-six-node" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MarkersSymbolizer width="8" fill="#3e0000" stroke-width="0" />
+  </Rule>
+</Style>
+<Layer name="grade-six-node"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-six-node</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where "whitewater:rapid_grade" in ('6', '6+', '6-','VI') ) as grade6]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-X" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MarkersSymbolizer file="pics/X-256.svg" placement="line" spacing="30" transform="scale(0.03,0.03)" multi-policy="each" allow-overlap="true" />
+    <LineSymbolizer smooth="0.2" stroke="#3e0000" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <MarkersSymbolizer file="pics/X-256.svg" placement="line" spacing="30" transform="scale(0.03,0.03)" multi-policy="each" allow-overlap="true" />
+    <LineSymbolizer stroke="#3e0000" stroke-width="2" />
+  </Rule>
+</Style>
+<Layer name="grade-X"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-X</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where "whitewater:section_grade" in ('X') or  "whitewater:rapid_grade" in ('X') ) as gradeX]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="grade-X-node" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MarkersSymbolizer file="pics/X-256.svg" placement="point" transform="scale(0.03,0.03)" multi-policy="each" allow-overlap="true" />
+  </Rule>
+</Style>
+<Layer name="grade-X-node"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>grade-X-node</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where "whitewater:rapid_grade" in ('X') ) as gradeX]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="portages" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#000000" stroke-dasharray="1, 6" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="portages"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>portages</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where whitewater = 'portage_way') as portage]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19621231.47,-7224585.5,19883063.11,11411627.55]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="dams-point" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([waterway] = 'weir')</Filter>
+    <MarkersSymbolizer width="5" fill="#004386" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([waterway] = 'dam')</Filter>
+    <MarkersSymbolizer width="5" fill="#000000" stroke-width="0" />
+  </Rule>
+</Style>
+<Layer name="dams-point"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>dams-point</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where waterway in ('dam', 'weir', 'lock', 'lock_gate') ) as dams]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="dams" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([waterway] = 'weir')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#004386" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([waterway] = 'dam')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="dams"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>dams</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where waterway in ('dam', 'weir', 'lock', 'lock_gate') ) as dams]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="ww-names-point" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <TextSymbolizer face-name="DejaVu Sans Book" placement-type="simple" halo-fill="#ffffff" halo-radius="2" wrap-width="10" avoid-edges="true" dy="20" dx="20" ><![CDATA[[wwname]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="ww-names-point"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>ww-names-point</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select way, coalesce("whitewater:rapid_name",
+"whitewater:section_name",
+"whitewater:name") as wwname
+from planet_osm_point 
+where 
+"whitewater:rapid_name" is not null or 
+"whitewater:section_name" is not null or 
+"whitewater:name" is not null  ) as names]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-17418053.1,-5082938.12,19508980.75,10433134.75]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="ww-names" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <TextSymbolizer face-name="DejaVu Sans Book" placement-type="simple" halo-fill="#ffffff" halo-radius="2" wrap-width="10" avoid-edges="true" dy="20" dx="20" ><![CDATA[[wwname]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="ww-names"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>ww-names</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select way, coalesce("whitewater:rapid_name",
+"whitewater:section_name",
+"whitewater:name") as wwname
+from planet_osm_line 
+where 
+"whitewater:rapid_name" is not null or 
+"whitewater:section_name" is not null or 
+"whitewater:name" is not null  ) as names]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="river-names" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <TextSymbolizer face-name="DejaVu Sans Book" placement-type="dummy" placement="line" minimum-distance="200" label-position-tolerance="100" fill="#008bff" halo-fill="#ffffff" halo-radius="2" size="10" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <TextSymbolizer face-name="DejaVu Sans Book" placement-type="simple" placement="point" minimum-distance="50" fill="#008bff" halo-fill="#ffffff" halo-radius="2" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="river-names"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>river-names</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where waterway in ('river', 'stream', 'canal') and name is not null ) as names]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="put_in_out" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MarkersSymbolizer file="pics/put_in_out-256.svg" transform="scale(0.06,0.06)" spacing="50" max-error="0.5" />
+  </Rule>
+</Style>
+<Layer name="put_in_out"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>put_in_out</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where whitewater in ('put_in',  'egress', 'egress;put_in', 'put_in;egress') ) as put_in_out]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-17418053.1,-5082938.12,19508208.68,10433134.75]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="hazard" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MarkersSymbolizer file="pics/danger-black-256.svg" transform="scale(0.06,0.06)" />
+  </Rule>
+</Style>
+<Layer name="hazard"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>hazard</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_point where waterway in ('hazard') or whitewater in ('hazard') ) as hazard]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-17418053.1,-5082938.12,19508980.75,10433134.75]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="bridges" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#00ff00" />
+  </Rule>
+</Style>
+<Layer name="bridges"
+  status="off"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bridges</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select * from planet_osm_line where bridge is not null) as bridges]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-19621231.47,-7224585.5,19883063.11,11411627.55]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

@@ -1,0 +1,757 @@
+{
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "center": [
+    0,
+    0,
+    2
+  ],
+  "format": "png24",
+  "interactivity": {
+    "layer": "",
+    "fields": []
+  },
+  "minzoom": 0,
+  "maxzoom": 18,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way from planet_osm_line where waterway  in ('river', 'stream', 'canal') ) AS waterways",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "waterways",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "waterways",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:section_grade\" in ('0', '1','A','B','C','I') ) as grade0",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-zero",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-zero"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:rapid_grade\" in ('0', '1','A','B','C','I') ) as grade0",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-zero",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-zero-rapid"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -171.75285364452353,
+        -55.26991586803774,
+        178.3574951566317,
+        69.58167997903816
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where \"whitewater:rapid_grade\" in ('0', '1','A','B','C','I') ) as grade0",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19119440.21,-7414428.49,19854665.54,10933908.77",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-zero-node",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-zero-node"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:section_grade\" in ('2', '2+', '2-','II') ) as grade2",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-two",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-two"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:rapid_grade\" in ('2', '2+', '2-','II') ) as grade2",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-two-rapid",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-two"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -171.75285364452353,
+        -55.26991586803774,
+        178.3574951566317,
+        69.58167997903816
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where  \"whitewater:rapid_grade\" in ('2', '2+', '2-','II') ) as grade2",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19119440.21,-7414428.49,19854665.54,10933908.77",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-two-node",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-two-node"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:section_grade\" in ('3', '3+', '3-', '2;3','2-3','III') ) as grade3",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-three",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-three"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:rapid_grade\" in ('3', '3+', '3-', '2;3','2-3','III') ) as grade3",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-three",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-three-rapid"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -171.75285364452353,
+        -55.26991586803774,
+        178.3574951566317,
+        69.58167997903816
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where \"whitewater:rapid_grade\" in ('3', '3+', '3-','III') ) as grade3",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19119440.21,-7414428.49,19854665.54,10933908.77",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-three-node",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-three-node"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -176.26052122747944,
+        -54.286404182968404,
+        178.61259486826026,
+        71.02734207672142
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where  \"whitewater:rapid_grade\" in ('4', '4+','4-', '3;4', '3; 4','IV') ) as grade4",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19621231.47,-7224585.5,19883063.11,11411627.55",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-four-rapid",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-four-rapid"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:section_grade\" in ('4', '4+','4-', '3;4', '3; 4','IV') ) as grade4",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik",
+        "id": "grade-four",
+        "project": "ww-style-2",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "grade-four",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-four"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -171.75285364452353,
+        -55.26991586803774,
+        178.3574951566317,
+        69.58167997903816
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where \"whitewater:rapid_grade\" in ('4', '4+', '4-','IV') ) as grade4",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19119440.21,-7414428.49,19854665.54,10933908.77",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-four-node",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-four-node"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:section_grade\" in ('5', '5+','5-', '4;5','V') ) as grade5\n",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-five",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-five"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:rapid_grade\" in ('5', '5+','5-', '4;5','V') ) as grade5\n",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-five",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-five-rapid"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -171.75285364452353,
+        -55.26991586803774,
+        178.3574951566317,
+        69.58167997903816
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where \"whitewater:rapid_grade\" in ('5', '5+', '5-','V') ) as grade5",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19119440.21,-7414428.49,19854665.54,10933908.77",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-five-node",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-five-node"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:section_grade\" in ('6', '6+','6-', '5;6', 'VI') ) as grade6",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-six",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-six"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where  \"whitewater:rapid_grade\" in ('6', '6+','6-', '5;6', 'VI') ) as grade6",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-six",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-six-rapid"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -171.75285364452353,
+        -55.26991586803774,
+        178.3574951566317,
+        69.58167997903816
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where \"whitewater:rapid_grade\" in ('6', '6+', '6-','VI') ) as grade6",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19119440.21,-7414428.49,19854665.54,10933908.77",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-six-node",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-six-node"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where \"whitewater:section_grade\" in ('X') or  \"whitewater:rapid_grade\" in ('X') ) as gradeX",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-X",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-X"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -171.75285364452353,
+        -55.26991586803774,
+        178.3574951566317,
+        69.58167997903816
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where \"whitewater:rapid_grade\" in ('X') ) as gradeX",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19119440.21,-7414428.49,19854665.54,10933908.77",
+        "dbname": "ww-mapnik"
+      },
+      "id": "grade-X-node",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "grade-X-node"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -176.26052122747944,
+        -54.286404182968404,
+        178.61259486826026,
+        71.02734207672142
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where whitewater = 'portage_way') as portage",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19621231.47,-7224585.5,19883063.11,11411627.55",
+        "dbname": "ww-mapnik"
+      },
+      "id": "portages",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "portages"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -171.75285364452353,
+        -55.26991586803774,
+        178.3574951566317,
+        69.58167997903816
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where waterway in ('dam', 'weir', 'lock', 'lock_gate') ) as dams",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19119440.21,-7414428.49,19854665.54,10933908.77",
+        "dbname": "ww-mapnik"
+      },
+      "id": "dams-point",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "dams-point"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where waterway in ('dam', 'weir', 'lock', 'lock_gate') ) as dams",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "dams",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "dams"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -156.46903319335414,
+        -41.476881690156226,
+        175.25215585318523,
+        67.95330338366637
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way, coalesce(\"whitewater:rapid_name\",\n\"whitewater:section_name\",\n\"whitewater:name\") as wwname\nfrom planet_osm_point \nwhere \n\"whitewater:rapid_name\" is not null or \n\"whitewater:section_name\" is not null or \n\"whitewater:name\" is not null  ) as names",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-17418053.1,-5082938.12,19508980.75,10433134.75",
+        "dbname": "ww-mapnik"
+      },
+      "id": "ww-names-point",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "ww-names-point"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way, coalesce(\"whitewater:rapid_name\",\n\"whitewater:section_name\",\n\"whitewater:name\") as wwname\nfrom planet_osm_line \nwhere \n\"whitewater:rapid_name\" is not null or \n\"whitewater:section_name\" is not null or \n\"whitewater:name\" is not null  ) as names",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "ww-names",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "ww-names"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -150.72949939341504,
+        -43.47241825496917,
+        175.45056019228716,
+        67.97953558740709
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where waterway in ('river', 'stream', 'canal') and name is not null ) as names",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-16779131.12,-5384157.41,19531067.02,10440918.72",
+        "dbname": "ww-mapnik"
+      },
+      "id": "river-names",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "river-names"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -156.46903319335414,
+        -41.476881690156226,
+        175.24522023037113,
+        67.95330338366637
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where whitewater in ('put_in',  'egress', 'egress;put_in', 'put_in;egress') ) as put_in_out",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-17418053.1,-5082938.12,19508208.68,10433134.75",
+        "dbname": "ww-mapnik"
+      },
+      "id": "put_in_out",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "put_in_out"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -156.46903319335414,
+        -41.476881690156226,
+        175.25215585318523,
+        67.95330338366637
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where waterway in ('hazard') or whitewater in ('hazard') ) as hazard",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-17418053.1,-5082938.12,19508980.75,10433134.75",
+        "dbname": "ww-mapnik"
+      },
+      "id": "hazard",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "hazard"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -176.26052122747944,
+        -54.286404182968404,
+        178.61259486826026,
+        71.02734207672142
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_line where bridge is not null) as bridges",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19621231.47,-7224585.5,19883063.11,11411627.55",
+        "dbname": "ww-mapnik"
+      },
+      "id": "bridges",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "bridges",
+      "status": "off"
+    }
+  ],
+  "scale": 1,
+  "metatile": 1,
+  "name": "ww-style",
+  "description": "",
+  "attribution": "",
+  "legend": "<div class='my-legend'>\n<div class='legend-title'>Legend</div>\n<div class='legend-scale'>\n  <ul class='legend-labels'>\n    <li><span style='background:#0080ff;'></span>0-I</li>\n    <li><span style='background:#ffd500;'></span>II</li>\n    <li><span style='background:#ff8000;'></span>III</li>\n    <li><span style='background:#d20000;'></span>IV</li>\n    <li><span style='background:#8e008e;'></span>V</li>\n    <li><span style='background:#3e0000;'></span>VI</li>\n    <li><span style='background:#3e0000;'></span>X</li>\n    <li><span style='background:#FFFFFF;'></span> </li>\n    <li><span style='background:#000000;height: 5px;'></span>dam</li>\n    <li><span style='background:#004386;height: 5px;'></span>weir</li>\n  </ul>\n</div>\n<div class='legend-source'>Source: <a href=\"#link to source\">Name of source</a></div>\n</div>\n\n<style type='text/css'>\n  .my-legend .legend-title {\n    text-align: left;\n    margin-bottom: 5px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n  .my-legend .legend-scale ul {\n    margin: 0;\n    margin-bottom: 5px;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .my-legend .legend-scale ul li {\n    font-size: 80%;\n    list-style: none;\n    margin-left: 0;\n    line-height: 18px;\n    }\n  .my-legend ul.legend-labels li span {\n    display: block;\n    float: left;\n    height: 4px;\n    width: 30px;\n    margin-right: 5px;\n    margin-left: 0;\n    margin-top: 5px;\n    /*border: 1px solid #999;*/\n    }\n  .my-legend .legend-source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .my-legend a {\n    color: #777;\n    }\n</style>"
+}
