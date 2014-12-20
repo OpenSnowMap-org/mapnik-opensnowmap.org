@@ -77,6 +77,7 @@
   <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
 </Parameters>
 
+<!--
 
 <Style name="waterways" filter-mode="first">
   <Rule>
@@ -94,9 +95,10 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
+-->
 
 <Style name="grade-zero" filter-mode="first">
   <Rule>
@@ -118,7 +120,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -143,7 +145,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -163,7 +165,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -187,7 +189,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -211,7 +213,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -231,7 +233,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -255,7 +257,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -280,7 +282,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -300,7 +302,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -325,7 +327,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19621231.47,-7224585.5,19883063.11,11411627.55]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -349,7 +351,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
        <Parameter name="id"><![CDATA[grade-four]]></Parameter>
        <Parameter name="project"><![CDATA[ww-style-2]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
@@ -372,7 +374,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -397,7 +399,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -423,7 +425,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -443,7 +445,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -467,7 +469,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -492,7 +494,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -512,7 +514,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -539,7 +541,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -559,7 +561,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -579,7 +581,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19621231.47,-7224585.5,19883063.11,11411627.55]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -605,7 +607,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19119440.21,-7414428.49,19854665.54,10933908.77]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -631,7 +633,7 @@
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -658,7 +660,7 @@ where
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-17418053.1,-5082938.12,19508980.75,10433134.75]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -685,7 +687,7 @@ where
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -709,7 +711,7 @@ where
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-16779131.12,-5384157.41,19531067.02,10440918.72]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -729,7 +731,7 @@ where
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-17418053.1,-5082938.12,19508208.68,10433134.75]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -749,7 +751,7 @@ where
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-17418053.1,-5082938.12,19508980.75,10433134.75]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -770,7 +772,7 @@ where
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19621231.47,-7224585.5,19883063.11,11411627.55]]></Parameter>
-       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter>
+       <Parameter name="dbname"><![CDATA[ww-mapnik]]></Parameter><Parameter name="user"><![CDATA[mapnik]]></Parameter>
     </Datasource>
   </Layer>
 
