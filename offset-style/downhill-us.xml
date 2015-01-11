@@ -169,13 +169,15 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<LineSymbolizer stroke-width="7.5" stroke="#FFFFFF" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
+		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"
+		stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
-		&maxscale_zoom15;
+		&maxscale_zoom16;
 		&minscale_zoom18;
-		<LineSymbolizer stroke-width="10" stroke="#FFFFFF" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="9.5" stroke="#FFFFFF" 
+		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"
+		stroke-dasharray="20,25"/>
 	</Rule>
 	<!--novice-->
 	<Rule>
@@ -959,14 +961,16 @@
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
-		<LineSymbolizer stroke-width="7.5" stroke="#FFFFFF"  stoke-opacity="0.5"
-		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#FFFFFF" 
+		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"
+		stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom18;
-		<LineSymbolizer stroke-width="9.5" stroke="#FFFFFF"  stoke-opacity="0.5"
-		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="9.5" stroke="#FFFFFF" 
+		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"
+		stroke-dasharray="20,25"/>
 	</Rule>
 	<!--novice-->
 	<Rule>
