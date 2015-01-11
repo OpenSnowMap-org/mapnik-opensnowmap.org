@@ -1,5 +1,5 @@
 <Layer name="nodes-downhill"
-srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+				srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>nodes-downhill</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -11,7 +11,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 <Layer name="nodes-downhill2"
-srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>nodes-downhill2</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -23,7 +23,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 <Layer name="nodes-nordic"
-srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>nodes-nordic</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -36,7 +36,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 <Layer name="nodes-nordic2"
-srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>nodes-nordic2</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -50,7 +50,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 </Layer>
 
 <Layer name="ne50mpopulatedplaces"
-	srs="+proj=longlat +ellps=WGS84 +no_defs">
+			srs="+proj=longlat +ellps=WGS84 +no_defs">
 	<StyleName>ne50mpopulatedplaces</StyleName>
 	<Datasource>
 		<Parameter name="file">../data/ne_50m_populated_places.shp</Parameter>
@@ -61,159 +61,329 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="downhill-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-casing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-casing</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'
+		(select * from planet_osm_line where "piste:type"='downhill'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-area-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-casing-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-casing-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type"='downhill'  
+		and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-us-casing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-us-casing</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type"='downhill'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-us-casing-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-us-casing-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type"='downhill'  and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="downhill-area-casing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-area-casing</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type"='downhill' and "area"='yes' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-us-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-us-casing</StyleName>
+<Layer name="downhill-area-casing-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-area-casing-backcountry</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill' 
-		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
-		order by z_order) as pistes
+		(select * from planet_osm_polygon where 
+		"piste:type"='downhill' and "area"='yes' 
+		and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-us-area-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-us-area-casing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-us-area-casing</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type"='downhill' and "area"='yes' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-overlay" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-us-area-casing-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-us-area-casing-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type"='downhill' and "area"='yes' 
+		and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="downhill-overlay" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-overlay</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'
+		(select * from planet_osm_line where "piste:type"='downhill' and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-us-overlay" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-us-overlay" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-us-overlay</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'
+		(select * from planet_osm_line where "piste:type"='downhill' and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-overlay-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type"='downhill' and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-us-overlay-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-us-overlay-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type"='downhill' and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
 
-<Layer name="area-eraser" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="area-eraser" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>area-eraser</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type"='downhill' and "area"='yes' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-area-border" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-area-border</StyleName>
+<Layer name="area-eraser-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>area-eraser-backcountry</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type"='downhill' and "area"='yes' 
+		and "piste:grooming"='backcountry'
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-area-border" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>area-eraser</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type"='downhill' and "area"='yes' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-area-border-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-area-border-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type"='downhill' and "area"='yes' 
+		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-us-area-border" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-us-area-border" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-us-area-border</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
 		(select * from planet_osm_polygon where
 		"piste:type"='downhill' and "area"='yes' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-overlay-thin" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-overlay-thin</StyleName>
+<Layer name="downhill-us-area-border-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-us-area-border-backcountry</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'
-		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
-		order by z_order) as pistes
-		</Parameter>
-	</Datasource>
-</Layer>
-<Layer name="downhill-us-overlay-thin" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-us-overlay-thin</StyleName>
-	<Datasource>
-		&datasource-settings;
-		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'
+		(select * from planet_osm_polygon where
+		"piste:type"='downhill' and "area"='yes' 
+		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
 
-<Layer name="downhill-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-overlay-thin" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-thin</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type"='downhill'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-us-overlay-thin" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-us-overlay-thin</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type"='downhill'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="downhill-area-fill" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-area-fill</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type"='downhill' and "area"='yes' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-us-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-area-fill-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-area-fill-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type"='downhill' and "area"='yes' 
+		and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-us-area-fill" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-us-area-fill</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type"='downhill' and "area"='yes' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-us-area-fill-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-us-area-fill-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type"='downhill' and "area"='yes' 
+		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
 
-<Layer name="diamonds" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+
+<Layer name="diamonds" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>diamonds</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -225,7 +395,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="diamonds-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="diamonds-area" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>diamonds-area</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -238,7 +409,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="snowshoeing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="snowshoeing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>snowshoeing</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -248,7 +420,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="skitour" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="skitour" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>skitour</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -257,7 +430,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="nordic-bg" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="nordic-bg" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>nordic-bg</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -268,7 +442,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="nordic" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="nordic" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>nordic</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -294,7 +469,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 -->
 
 <Layer name="relation-bg"
-srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>relation-bg</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -306,7 +481,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 </Layer>
 
 <Layer name="relation"
-srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>relation</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -317,7 +492,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="difficulty" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="difficulty" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>difficulty</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -327,7 +503,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="no-difficulty" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="no-difficulty" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>no-difficulty</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -337,7 +514,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="others" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="others" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>others</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -350,7 +528,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="ski_jump" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="ski_jump" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>ski_jump</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -364,7 +543,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 </Layer>
 
 
-<Layer name="ski_jump_area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="ski_jump_area" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>ski_jump_area</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -376,7 +556,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="others-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="others-area" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>others-area</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -389,7 +570,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 	
-<Layer name="aerialways" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="aerialways" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>aerialways</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -399,7 +581,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="others-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="others-icons" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>others-icons</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -411,7 +594,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="others-icons-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="others-icons-area" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>others-icons</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -424,7 +608,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="aerialways-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="aerialways-icons" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>aerialways-icons</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -438,7 +623,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="aerialways-icons-rev" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="aerialways-icons-rev" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>aerialways-icons-rev</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -453,7 +639,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="difficulty-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="difficulty-icons" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>difficulty-icons</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -462,7 +649,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="other-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="other-icons" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-icons</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -471,7 +659,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>text</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -481,7 +670,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-text</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -495,7 +685,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-area-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-area-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-text</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -509,7 +700,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-text-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-text-us" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-text-us</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -523,7 +715,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-area-text-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-area-text-us" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-text-us</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -537,7 +730,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="other-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="other-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>other-text</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -552,7 +746,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="other-area-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="other-area-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>other-text</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -566,7 +761,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="aerialways" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="aerialways-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>aerialways-text</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -576,7 +772,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
-<Layer name="ski_jump-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="ski_jump-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>ski_jump-text</StyleName>
 	<Datasource>
 		&datasource-settings;
@@ -590,7 +787,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 <Layer name="site_text" clear-label-cache="on"
-srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>site_text</StyleName>
 	<Datasource>
 		&datasource-settings;

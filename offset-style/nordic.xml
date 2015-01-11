@@ -93,32 +93,6 @@
 		 stroke="#FFFFFF"  smooth="0" stroke-gamma=".6"/>
 	</Rule>
 </Style>
-<!--eraser to remove way below semi-transparent areas-->
-<Style name="area-eraser" comp-op="dst-out">
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom18;
-		<PolygonSymbolizer fill="#FFFFFF"  gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom11;
-		&minscale_zoom12;
-		<LineSymbolizer stroke-width="2" stroke="#FFFFFF" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom13;
-		&minscale_zoom15;
-		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom15;
-		&minscale_zoom18;
-		<LineSymbolizer stroke-width="6" stroke="#FFFFFF" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-</Style>
 
 <!-- Difficulty overlay -->
 <!--
