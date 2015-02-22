@@ -677,11 +677,35 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		&datasource-settings;
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
-		from planet_osm_line 
-		where "piste:type"='downhill'
-		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0) 
-		order by z_order) as pistes
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN (tags -> 'highway')!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_line
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+				and "piste:type"='downhill'
+			) as refs
+		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -692,10 +716,34 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		&datasource-settings;
 		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
 		<Parameter name="table">
-		(select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
-		from planet_osm_polygon 
-		where "piste:type"='downhill' and "area"='yes' 
-		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN (tags -> 'highway')!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_polygon
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+				and "piste:type"='downhill' and "area"='yes' 
+			) as refs
 		) as pistes
 		</Parameter>
 	</Datasource>
@@ -707,11 +755,35 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		&datasource-settings;
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
-		from planet_osm_line 
-		where "piste:type"='downhill'
-		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
-		order by z_order) as pistes
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN (tags -> 'highway')!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_line
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
+				and "piste:type"='downhill'
+			) as refs
+		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -722,10 +794,34 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		&datasource-settings;
 		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
 		<Parameter name="table">
-		(select way, coalesce("piste:name",name) as name, gladed,lit,"piste:difficulty","piste:grooming","piste:lit" 
-		from planet_osm_polygon where 
-		"piste:type"='downhill' and "area"='yes' 
-		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN (tags -> 'highway')!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_polygon
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
+				and "piste:type"='downhill' and "area"='yes' 
+			) as refs
 		) as pistes
 		</Parameter>
 	</Datasource>
@@ -766,8 +862,36 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	<StyleName>aerialways-text</StyleName>
 	<Datasource>
 		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select * from planet_osm_line where "aerialway" is not null or "railway"='funicular' or "railway"='incline' order by z_order) as pistes
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN (tags -> 'highway')!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_line
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and ("aerialway" is not null or "railway"='funicular' or "railway"='incline')
+			) as refs
+		)as pistes
 		</Parameter>
 	</Datasource>
 </Layer>

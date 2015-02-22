@@ -29,7 +29,7 @@
 		halo-radius="1" 
 		placement="line" 
 		dy="8"
-		allow-overlap="false">[name]</TextSymbolizer>
+		allow-overlap="false">[PISTENAME]</TextSymbolizer>
 	</Rule>
 </Style>
 

@@ -15,13 +15,13 @@
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
-		<LineSymbolizer stroke-width="7.5" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
-		<LineSymbolizer stroke-width="9.5" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--novice-->
@@ -43,14 +43,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="6" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="9" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="8" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
@@ -75,14 +75,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="6" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="9" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="8" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
@@ -107,14 +107,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#222222" 
+		<LineSymbolizer stroke-width="6" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="9" stroke="#222222" 
+		<LineSymbolizer stroke-width="8" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
@@ -138,14 +138,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="6" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="9" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="8" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
@@ -168,14 +168,14 @@
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
-		<LineSymbolizer stroke-width="7.5" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"
 		stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom18;
-		<LineSymbolizer stroke-width="9.5" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="9" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"
 		stroke-dasharray="20,25"/>
 	</Rule>
@@ -205,7 +205,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="9.5" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="9" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 
@@ -237,7 +237,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="9.5" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="9" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 
@@ -269,7 +269,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="9.5" stroke="#222222" 
+		<LineSymbolizer stroke-width="9" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	
@@ -300,7 +300,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="9.5" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="9" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	
@@ -326,14 +326,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="5" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="4" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="6" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
@@ -342,28 +342,28 @@
 		&maxscale_zoom9;
 		&minscale_zoom11;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="1" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="3" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="4" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="6" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
@@ -386,14 +386,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="5" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="4" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="6" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
@@ -416,14 +416,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="4" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="6" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
@@ -434,7 +434,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="0.1" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
@@ -442,7 +442,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="0.1" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
@@ -450,7 +450,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="0.1" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
@@ -458,7 +458,7 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="0.1" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
@@ -477,21 +477,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="2" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="5" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="4" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="6" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
@@ -500,28 +500,28 @@
 		&maxscale_zoom9;
 		&minscale_zoom11;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="1" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="2" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="4" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="6" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
@@ -537,21 +537,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="2" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="5" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="4" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="6" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
@@ -567,21 +567,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="2" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="4" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="6" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 
@@ -597,7 +597,7 @@
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate'</Filter>
-		<PolygonSymbolizer fill="#8888F8"  gamma=".6" />
+		<PolygonSymbolizer fill="#889BF8"  gamma=".6" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom9;
@@ -630,14 +630,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="5" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="4" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="6" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
@@ -646,28 +646,28 @@
 		&maxscale_zoom9;
 		&minscale_zoom11;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="1" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="3" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="4" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="6" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
@@ -690,14 +690,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="5" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="4" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="6" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
@@ -720,14 +720,14 @@
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="4" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="6" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 
@@ -737,146 +737,26 @@
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<PolygonSymbolizer fill="#9CE49C"  gamma=".6" />
+		<PolygonSymbolizer fill="#9CE49C"  gamma=".6"  fill-opacity="0.7"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate'</Filter>
-		<PolygonSymbolizer fill="#8888F8"  gamma=".6" />
+		<PolygonSymbolizer fill="#889BF8"  gamma=".6"  fill-opacity="0.7"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<PolygonSymbolizer fill="#6A6868"  gamma=".6" />
+		<PolygonSymbolizer fill="#6A6868"  gamma=".6"  fill-opacity="0.7"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom9;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride'</Filter>
-		<PolygonSymbolizer fill="#FFF5A3"  gamma=".6" />
+		<PolygonSymbolizer fill="#FFF5A3"  gamma=".6"  fill-opacity="0.7"/>
 	</Rule>
-	<!--novice-->
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom11;
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom11;
-		&minscale_zoom12;
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom13;
-		&minscale_zoom15;
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom15;
-		&minscale_zoom18;
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<!--intermediate-->
-			
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom11;
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#8888F8" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom11;
-		&minscale_zoom12;
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#8888F8" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom13;
-		&minscale_zoom15;
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#8888F8" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom15;
-		&minscale_zoom18;
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#8888F8" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<!--advanced-->
-			
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom11;
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom11;
-		&minscale_zoom12;
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom13;
-		&minscale_zoom15;
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom15;
-		&minscale_zoom18;
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<!--freeride-->
-			
-	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom11;
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom11;
-		&minscale_zoom12;
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom13;
-		&minscale_zoom15;
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		&maxscale_zoom15;
-		&minscale_zoom18;
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" 
-		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
-	</Rule>
-
 </Style>
 
 	<!--TEXT-->
@@ -889,7 +769,7 @@
 		size="10" fill="#02B002" halo-fill= "#CCCCCC" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" 
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -899,7 +779,7 @@
 		size="10" fill="#1919DE" halo-fill= "#CCCCCC" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" 
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -909,7 +789,7 @@
 		size="10" fill="#02B002" halo-fill= "#CCCCCC" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -919,7 +799,7 @@
 		size="10" fill="#1919DE" halo-fill= "#CCCCCC" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -929,7 +809,7 @@
 		size="10" fill="#222222"  halo-fill= "#CCCCCC" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -939,7 +819,7 @@
 		size="10" fill="#FFE72D" halo-fill= "#CCCCCC" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 </Style>
 
@@ -961,14 +841,14 @@
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
-		<LineSymbolizer stroke-width="7.5" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"
 		stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom18;
-		<LineSymbolizer stroke-width="9.5" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"
 		stroke-dasharray="20,25"/>
 	</Rule>
@@ -984,21 +864,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="3" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
@@ -1016,21 +896,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="3" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
@@ -1048,21 +928,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#222222" 
+		<LineSymbolizer stroke-width="3" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#222222" 
+		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#222222" 
+		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
@@ -1079,21 +959,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="3" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
@@ -1110,19 +990,19 @@
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom12;
-		<LineSymbolizer stroke-width="4.5" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="3.5" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
-		<LineSymbolizer stroke-width="7.5" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
-		<LineSymbolizer stroke-width="10" stroke="#FFFFFF" 
+		<LineSymbolizer stroke-width="9" stroke="#FFFFFF" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--novice-->
@@ -1137,21 +1017,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="3" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#23CD23" 
+		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#23CD23" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 
@@ -1169,21 +1049,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="3" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#1919DE" 
+		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#1919DE" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 
@@ -1201,21 +1081,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#222222" 
+		<LineSymbolizer stroke-width="3" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#222222" 
+		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#222222" 
+		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#222222" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	
@@ -1232,21 +1112,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="3" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#FFE72D" 
+		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#FFE72D" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	
@@ -1265,7 +1145,7 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="2" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
@@ -1288,28 +1168,28 @@
 		&maxscale_zoom9;
 		&minscale_zoom11;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="1" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="2" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="20,25" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="3" stroke-dasharray="20,25" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
@@ -1325,7 +1205,7 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="2" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
@@ -1355,7 +1235,7 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="2" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
@@ -1387,21 +1267,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="2" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#9CE49C" 
+		<LineSymbolizer stroke-width="5" stroke-dasharray="20,25" stroke="#9CE49C" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
@@ -1410,28 +1290,28 @@
 		&maxscale_zoom9;
 		&minscale_zoom11;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="1" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="2" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#8888F8" 
+		<LineSymbolizer stroke-width="5" stroke-dasharray="20,25" stroke="#889BF8" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
@@ -1447,21 +1327,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="2" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#6A6868" 
+		<LineSymbolizer stroke-width="5" stroke-dasharray="20,25" stroke="#6A6868" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
@@ -1477,21 +1357,21 @@
 		&maxscale_zoom11;
 		&minscale_zoom12;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="2" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="15,20" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7" stroke-dasharray="20,25" stroke="#FFF5A3" 
+		<LineSymbolizer stroke-width="5" stroke-dasharray="20,25" stroke="#FFF5A3" 
 		stroke-linejoin="round" stroke-linecap="round"  stroke-gamma=".6"/>
 	</Rule>
 
