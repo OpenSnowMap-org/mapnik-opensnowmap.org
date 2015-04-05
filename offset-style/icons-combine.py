@@ -55,7 +55,7 @@ for i in range(1,len(activities)):
             &maxscale_zoom11;
             &minscale_zoom12;
             <Filter>[piste:type]='"""+rule+"""' and not ([entrance] = 'yes')</Filter>
-			<ShieldSymbolizer face-name="DejaVu Sans Oblique"
+			<ShieldSymbolizer fontset-name="book-fonts"
 			 size="10"
 			 fill="#003074" halo-fill= "white" halo-radius="1.5"
 			spacing="100" 
@@ -73,7 +73,7 @@ xml.write("""
             &maxscale_zoom7;
             &minscale_zoom10;
             <Filter>not ([entrance] = 'yes')</Filter>
-            <TextSymbolizer face-name="DejaVu Sans Oblique"
+            <TextSymbolizer fontset-name="book-fonts"
             size="8" fill='#003074' halo-fill= "white" halo-radius="1.5"
             placement="point" allow-overlap="false" spacing="10000"
             avoid-edges="true"
