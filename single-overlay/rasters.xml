@@ -28,7 +28,7 @@
     <RasterSymbolizer opacity="0.3"/>
   </Rule>
   <Rule>
-    &maxscale_zoom11;
+    &maxscale_zoom12;
     &minscale_zoom18;
     <RasterSymbolizer opacity="0.3" scaling="bilinear"/>
   </Rule>
