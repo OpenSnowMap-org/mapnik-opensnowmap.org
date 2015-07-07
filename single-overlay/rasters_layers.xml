@@ -2,10 +2,63 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade</StyleName>
 	<Datasource>
+	<Parameter name="file">../data/hillshade.tif</Parameter>
+	<Parameter name="type">gdal</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="hillshade12"
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	<StyleName>hillshade12</StyleName>
+	<Datasource>
+	<Parameter name="file">../data/hillshade.tif</Parameter>
+	<Parameter name="type">gdal</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="hillshade11"
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	<StyleName>hillshade11</StyleName>
+	<Datasource>
+	<Parameter name="file">../data/hillshade_d2.tif</Parameter>
+	<Parameter name="type">gdal</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="hillshade10"
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	<StyleName>hillshade10</StyleName>
+	<Datasource>
+	<Parameter name="file">../data/hillshade_d4.tif</Parameter>
+	<Parameter name="type">gdal</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="hillshade09"
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	<StyleName>hillshade09</StyleName>
+	<Datasource>
+	<Parameter name="file">../data/hillshade_d8.tif</Parameter>
+	<Parameter name="type">gdal</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="hillshade08"
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	<StyleName>hillshade08</StyleName>
+	<Datasource>
+	<Parameter name="file">../data/hillshade_d16.tif</Parameter>
+	<Parameter name="type">gdal</Parameter>
+	</Datasource>
+</Layer>
+<!--
+<Layer name="hillshade"
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	<StyleName>hillshade</StyleName>
+	<Datasource>
 	<Parameter name="file">../data/3857-alpha-blur5x5-small.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
+-->
 
 <Layer name="nem"
 	srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
