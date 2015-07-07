@@ -97,6 +97,15 @@
 	</Datasource>
 </Layer>
 
+<Layer name="watermarks"
+	srs="+proj=longlat +ellps=WGS84 +no_defs">
+	<StyleName>watermarks</StyleName>
+	<Datasource>
+		<Parameter name="file">../data/ne_10m_graticules_1.shp</Parameter>
+		<Parameter name="type">shape</Parameter>
+	</Datasource>
+</Layer>
+
 <Layer name="srtm_10" status="on">
 	<StyleName>contours10</StyleName>
 	<Datasource>

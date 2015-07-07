@@ -89,6 +89,14 @@
 </Style>
 -->
 
+<Style name="watermarks">
+  <Rule>
+	&maxscale_zoom10;
+	&minscale_zoom18;
+    <TextSymbolizer  opacity="0.8" size="11" face-name="DejaVu Sans Oblique" fill="#B9B9B9" placement="vertex" minimum-distance="200" character-spacing="5" >"www.opensnowmap.org"</TextSymbolizer>
+  </Rule>
+</Style>
+
 <Style name="nem" filter-mode="first" >
   <Rule>
 	&minscale_zoom6;
