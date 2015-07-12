@@ -54,7 +54,7 @@
   <Rule>
     &maxscale_zoom10;
     &minscale_zoom10;
-    <RasterSymbolizer opacity="0.5">
+    <RasterSymbolizer opacity="0.4">
     </RasterSymbolizer>
   </Rule>
 </Style>
@@ -62,7 +62,7 @@
   <Rule>
     &maxscale_zoom9;
     &minscale_zoom9;
-    <RasterSymbolizer opacity="0.5">
+    <RasterSymbolizer opacity="0.4">
     </RasterSymbolizer>
   </Rule>
 </Style>
@@ -70,7 +70,7 @@
   <Rule>
     &maxscale_zoom8;
     &minscale_zoom8;
-    <RasterSymbolizer opacity="0.5">
+    <RasterSymbolizer opacity="0.3">
     </RasterSymbolizer>
   </Rule>
 </Style>
