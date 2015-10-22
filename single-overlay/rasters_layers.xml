@@ -2,7 +2,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_2.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -10,7 +10,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade12</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_2.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -18,7 +18,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade11</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade_d2.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_d2.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -27,7 +27,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade10</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade_d4.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_d4.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -36,7 +36,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade09</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade_d8.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_d8.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -45,7 +45,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade08</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade_d16.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_d16.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -111,7 +111,7 @@
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
-		<Parameter name="dbname">contours</Parameter>
+		<Parameter name="dbname">contours2</Parameter>
 		<Parameter name="estimate_extent">true</Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 10 = 0 AND height::integer % 50 != 0 AND height::integer % 100 != 0) as "contours-10"</Parameter>
 	</Datasource>
@@ -121,7 +121,7 @@
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
-		<Parameter name="dbname">contours</Parameter>
+		<Parameter name="dbname">contours2</Parameter>
 		<Parameter name="estimate_extent">true</Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 50 = 0 AND height::integer % 100 != 0) as "contours-50"</Parameter>
 	</Datasource>
@@ -132,7 +132,7 @@
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
-		<Parameter name="dbname">contours</Parameter>
+		<Parameter name="dbname">contours2</Parameter>
 		<Parameter name="estimate_extent">true</Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 100 = 0) as "contours-100"</Parameter>
 	</Datasource>
