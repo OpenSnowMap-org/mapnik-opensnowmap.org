@@ -27,7 +27,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade10</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade/hillshade_d4.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_d2.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -36,7 +36,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade09</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade/hillshade_d8.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_d4.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
@@ -45,7 +45,7 @@
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade08</StyleName>
 	<Datasource>
-	<Parameter name="file">../data/hillshade/hillshade_d16.tif</Parameter>
+	<Parameter name="file">../data/hillshade/hillshade_d4.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>

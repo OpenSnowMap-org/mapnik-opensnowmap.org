@@ -62,15 +62,15 @@
   <Rule>
     &maxscale_zoom9;
     &minscale_zoom9;
-    <RasterSymbolizer opacity="0.4">
+    <RasterSymbolizer opacity="0.4" scaling="bilinear">
     </RasterSymbolizer>
   </Rule>
 </Style>
 <Style name="hillshade08">
   <Rule>
-    &maxscale_zoom8;
+    &maxscale_zoom7;
     &minscale_zoom8;
-    <RasterSymbolizer opacity="0.3">
+    <RasterSymbolizer opacity="0.3" scaling="bilinear">
     </RasterSymbolizer>
   </Rule>
 </Style>
