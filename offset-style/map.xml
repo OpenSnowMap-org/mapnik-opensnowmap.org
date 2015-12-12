@@ -13,6 +13,11 @@ font-directory="fonts\" >
 
 	&fontset-settings;
 	
+	&rasters;
+<!--
+	&contours;
+-->
+	
 	&nodes;
 	&nordic;
 	&relations;
@@ -24,6 +29,9 @@ font-directory="fonts\" >
 	&others;
 	&sites;
 	
+<!--
+	&rasters_layers;
+-->
 	&layers;
 
 </Map>

@@ -244,3 +244,12 @@
 		placement="point">' '</ShieldSymbolizer>
 	</Rule>
 </Style>
+
+<Style name="POIs">
+	<Rule>
+		&maxscale_zoom16;
+		&minscale_zoom18;
+		<Filter>[man_made]='snow_cannon'</Filter>
+		<PointSymbolizer file="pics/snow_cannon.png"/>
+	</Rule>
+</Style>
