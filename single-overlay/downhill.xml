@@ -2040,7 +2040,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#02B002" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true"
+		avoid-edges="false"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2050,7 +2050,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#1919DE" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true"
+		avoid-edges="false"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2060,7 +2060,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#E81F1F" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true"
+		avoid-edges="false"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2070,7 +2070,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#222222"  halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true"
+		avoid-edges="false"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2080,7 +2080,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#FFBB2D"   halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true"
+		avoid-edges="false"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	
@@ -2092,7 +2092,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#02B002" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true" dy="10"
+		avoid-edges="false" dy="10"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2102,7 +2102,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#1919DE" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true" dy="10"
+		avoid-edges="false" dy="10"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2112,7 +2112,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#E81F1F" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true" dy="10"
+		avoid-edges="false" dy="10"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2122,7 +2122,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#222222"  halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true" dy="10"
+		avoid-edges="false" dy="10"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2132,7 +2132,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#FFBB2D"   halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true" dy="10"
+		avoid-edges="false" dy="10"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -2142,7 +2142,7 @@
 		<TextSymbolizer fontset-name="book-fonts" 
 		size="10" fill="#9C8E1E" halo-fill= "#DDDDDD" halo-radius="0.5" 
 		placement="point" allow-overlap="false" spacing="10000" 
-		avoid-edges="true" dy="10"
+		avoid-edges="false" dy="10"
 		wrap-width="15" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 </Style>
