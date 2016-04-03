@@ -16,10 +16,12 @@
 		<LineSymbolizer stroke="#AA837B" stroke-width="0.6" stroke-opacity="0.7" smooth="1" gamma="1"/></Rule>
 </Style>
 <Style name="contours100">
+<!--
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom11;
 		<LineSymbolizer stroke="#B7928A" stroke-width="0.6" stroke-opacity="0.5" smooth="1" gamma="1"/></Rule>
+-->
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom13;
