@@ -59,7 +59,7 @@ for i in range(1,len(activities)):
 			 size="10"
 			 fill="#003074" halo-fill= "white" halo-radius="1.5"
 			spacing="100" 
-			min-distance="50"
+			
 			shield-dy="-25" shield-dx="-25"
 			dy="-24"
 			file="combinations/"""+name+""""
