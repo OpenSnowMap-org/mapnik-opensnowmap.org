@@ -1,5 +1,5 @@
 <Layer name="hillshade"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_2.tif</Parameter>
@@ -7,7 +7,7 @@
 	</Datasource>
 </Layer>
 <Layer name="hillshade12"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade12</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_2.tif</Parameter>
@@ -15,7 +15,7 @@
 	</Datasource>
 </Layer>
 <Layer name="hillshade11"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade11</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_d2.tif</Parameter>
@@ -24,7 +24,7 @@
 </Layer>
 
 <Layer name="hillshade10"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade10</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_d2.tif</Parameter>
@@ -33,7 +33,7 @@
 </Layer>
 
 <Layer name="hillshade09"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade09</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_d4.tif</Parameter>
@@ -42,7 +42,7 @@
 </Layer>
 
 <Layer name="hillshade08"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
+	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade08</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_d8.tif</Parameter>
@@ -79,8 +79,7 @@
 </Layer>
 
 <Layer name="mod10a2"
-	srs='+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs +over'
-	extent="-20037508,-19929239,20037508,19929239">
+	srs='+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs +over'>
 	<StyleName>mod10a2</StyleName>
 	<Datasource>
 		<Parameter name="file">../data/MOD10A2.005-3857-cubic-alpha.tif</Parameter>
@@ -88,8 +87,7 @@
 	</Datasource>
 </Layer>
 <Layer name="mod10a2"
-	srs='+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs +over'
-	extent="-20037508,-19929239,20037508,19929239">
+	srs='+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs +over'>
 	<StyleName>mod10a2-2</StyleName>
 	<Datasource>
 		<Parameter name="file">../data/MOD10A2.005-3857-cubic-alpha.tif</Parameter>
