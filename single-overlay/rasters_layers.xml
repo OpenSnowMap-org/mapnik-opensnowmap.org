@@ -86,6 +86,7 @@
 		<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
+<!--
 <Layer name="mod10a2"
 	srs='+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs +over'>
 	<StyleName>mod10a2-2</StyleName>
@@ -94,6 +95,7 @@
 		<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
+-->
 
 <Layer name="watermarks"
 	srs="+proj=longlat +ellps=WGS84 +no_defs">
@@ -109,7 +111,7 @@
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
-		<Parameter name="dbname">contours2</Parameter>
+		<Parameter name="dbname">contours</Parameter>
 		<Parameter name="estimate_extent">true</Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 10 = 0 AND height::integer % 50 != 0 AND height::integer % 100 != 0) as "contours-10"</Parameter>
 	</Datasource>
@@ -119,7 +121,7 @@
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
-		<Parameter name="dbname">contours2</Parameter>
+		<Parameter name="dbname">contours</Parameter>
 		<Parameter name="estimate_extent">true</Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 50 = 0 AND height::integer % 100 != 0) as "contours-50"</Parameter>
 	</Datasource>
@@ -130,7 +132,7 @@
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
-		<Parameter name="dbname">contours2</Parameter>
+		<Parameter name="dbname">contours</Parameter>
 		<Parameter name="estimate_extent">true</Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 100 = 0) as "contours-100"</Parameter>
 	</Datasource>

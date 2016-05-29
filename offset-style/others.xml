@@ -92,7 +92,7 @@
 		&minscale_zoom18;
 		<Filter>[piste:type]='sleigh' </Filter>
 		<ShieldSymbolizer file="pics/sleigh_bw.png" fontset-name="bold-fonts"
-		min-distance="5000" allow-overlap="false"
+		spacing="5000" allow-overlap="false"
 		placement="point">' '</ShieldSymbolizer>
 	</Rule>
 	<Rule>
@@ -191,7 +191,7 @@
 		wrap-width="15" >[takeoff]</TextSymbolizer>
 	</Rule>
 </Style>
-<Style name="ski_jump-area">
+<Style name="ski_jump_area">
 
 	<Rule>
 		&maxscale_zoom12;

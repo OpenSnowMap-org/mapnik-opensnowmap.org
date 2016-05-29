@@ -19,12 +19,12 @@
 </Style>
 -->
 
-<style name="void"></style>
+
 <Style name="hillshade">
   <Rule>
     &maxscale_zoom13;
     &minscale_zoom13;
-    <RasterSymbolizer opacity="0.5" scaling="bilinear8">
+    <RasterSymbolizer opacity="0.5" scaling="bilinear">
     </RasterSymbolizer>
   </Rule>
   <Rule>

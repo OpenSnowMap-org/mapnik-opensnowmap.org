@@ -19,13 +19,12 @@
 </Style>
 -->
 
-<style name="void"></style>
-<!--
+
 <Style name="hillshade">
   <Rule>
     &maxscale_zoom13;
     &minscale_zoom13;
-    <RasterSymbolizer opacity="0.5" scaling="bilinear8">
+    <RasterSymbolizer opacity="0.5" scaling="bilinear">
     </RasterSymbolizer>
   </Rule>
   <Rule>
@@ -75,8 +74,20 @@
     </RasterSymbolizer>
   </Rule>
 </Style>
+<!--
+<Style name="hillshade">
+  <Rule>
+    &maxscale_zoom8;
+    &minscale_zoom11;
+    <RasterSymbolizer opacity="0.3"/>
+  </Rule>
+  <Rule>
+    &maxscale_zoom12;
+    &minscale_zoom18;
+    <RasterSymbolizer opacity="0.3" scaling="bilinear"/>
+  </Rule>
+</Style>
 -->
-
 
 <Style name="watermarks">
   <Rule>

@@ -2,34 +2,34 @@
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom18;
-		<LineSymbolizer stroke="#B7928A" stroke-width="0.4" stroke-opacity="0.4" smooth="1" gamma="1"/>
+		<LineSymbolizer stroke="#B7928A" stroke-width="0.4" stroke-opacity="0.4" smooth="1" />
 	</Rule>
 </Style>
 <Style name="contours50">
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom13;
-		<LineSymbolizer stroke="#B7928A" stroke-width="0.6" stroke-opacity="0.5" smooth="1" gamma="1"/></Rule>
+		<LineSymbolizer stroke="#B7928A" stroke-width="0.6" stroke-opacity="0.5" smooth="1" /></Rule>
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom18;
-		<LineSymbolizer stroke="#AA837B" stroke-width="0.6" stroke-opacity="0.7" smooth="1" gamma="1"/></Rule>
+		<LineSymbolizer stroke="#AA837B" stroke-width="0.6" stroke-opacity="0.7" smooth="1" /></Rule>
 </Style>
 <Style name="contours100">
 <!--
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom11;
-		<LineSymbolizer stroke="#B7928A" stroke-width="0.6" stroke-opacity="0.5" smooth="1" gamma="1"/></Rule>
+		<LineSymbolizer stroke="#B7928A" stroke-width="0.6" stroke-opacity="0.5" smooth="1" /></Rule>
 -->
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom13;
-		<LineSymbolizer stroke="#AA837B" stroke-width="0.7" stroke-opacity="0.7" smooth="1" gamma="1"/></Rule>
+		<LineSymbolizer stroke="#AA837B" stroke-width="0.7" stroke-opacity="0.7" smooth="1" /></Rule>
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom18;
-		<LineSymbolizer stroke="#9F7B74" stroke-width="0.7" stroke-opacity="0.7" smooth="1" gamma="1"/></Rule>
+		<LineSymbolizer stroke="#9F7B74" stroke-width="0.7" stroke-opacity="0.7" smooth="1" /></Rule>
 </Style>
 <Style name="contours-text50">
         <Rule>

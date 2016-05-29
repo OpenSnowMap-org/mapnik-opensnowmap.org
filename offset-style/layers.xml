@@ -49,6 +49,7 @@
 	</Datasource>
 </Layer>
 
+<!--
 <Layer name="ne50mpopulatedplaces"
 			srs="+proj=longlat +ellps=WGS84 +no_defs">
 	<StyleName>ne50mpopulatedplaces</StyleName>
@@ -60,6 +61,7 @@
 		<Parameter name="type">shape</Parameter>
 	</Datasource>
 </Layer>
+-->
 
 <Layer name="downhill-casing" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
@@ -519,6 +521,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
+<!--
 <Layer name="difficulty" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>difficulty</StyleName>
@@ -529,6 +532,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
+-->
 
 <Layer name="no-difficulty" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
