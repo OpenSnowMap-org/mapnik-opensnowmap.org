@@ -85,21 +85,21 @@ Map { font-directory: url(./fonts); }
 @trunk_fill:        lighten(@trunk_line,1%);
 @trunk_case:        darken(@trunk_line,10%);
 
-@primary_line:      #FFD889;
+@primary_line:      #E6BB63;
 @primary_fill:      lighten(@primary_line,10%);
-@primary_case:      #FFCE89;
+@primary_case:      #E6B063;
 
-@secondary_line:    #FFEF9B;
+@secondary_line:    #D9CB84;
 @secondary_fill:    lighten(@secondary_line,10%);
-@secondary_case:    #FFE39B;
+@secondary_case:    #E6CD8C;
 
 /*
 @standard_line:     @land_grey * 0.85;
 @standard_fill:     @land_grey * 0.85;
 @standard_case:     @land_grey * 0.5;
 */
-@standard_line:     darken(@land_grey,15%);
-@standard_fill:     darken(@land_grey,10%);
+@standard_line:     darken(@land_grey,20%);
+@standard_fill:     darken(@land_grey,25%);
 @standard_case:     darken(@land_grey,40%);
 
 @pedestrian_line:   @standard_line;
