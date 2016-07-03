@@ -1,0 +1,5 @@
+{ 
+"tiles":["http://www.opensnowmap.org/tiles-pistes/{z}/{x}/{y}.png"],
+"minzoom":0,
+maxzoom":18
+}
