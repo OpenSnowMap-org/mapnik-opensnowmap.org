@@ -827,7 +827,8 @@
         "srs-name": "900913",
         "status": "on"
     },
-    {
+    {"name": "barrier_points",
+        "id": "barrier_points",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -840,12 +841,11 @@
         },
         "class": "",
         "geometry": "point",
-        "id": "barrier_points",
-        "name": "barrier_points",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913"
     },
-    {
+    {"name": "barrier_lines",
+        "id": "barrier_lines",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -861,12 +861,11 @@
         },
         "class": "",
         "geometry": "linestring",
-        "id": "barrier_lines",
-        "name": "barrier_lines",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913"
     },
-    {
+    {"name": "pistes_labels",
+        "id": "pistes_labels",
         "geometry": "linestring",
         "extent": [
           6.0639879732152355,
@@ -886,14 +885,13 @@
           "project": "snowmap",
           "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
         },
-        "id": "pistes_labels",
         "class": "",
         "srs-name": "900913",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {},
-        "name": "pistes_labels"
+        "advanced": {}
     },
-    {
+    {"name": "contours100_labels",
+        "id": "contours100_labels",
         "geometry": "linestring",
         "extent": [
           4.999583333333324,
@@ -910,15 +908,14 @@
           "extent": "556551.070845203,5617083.93951037,890571.387386666,6102257.93968849",
           "dbname": "contours"
         },
-        "id": "contours100_labels",
         "class": "",
         "srs-name": "900913",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "advanced": {},
-        "name": "contours100_labels",
         "status": "off"
     },
-    {
+    {"name": "place",
+        "id": "place",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -934,13 +931,12 @@
         },
         "class": "",
         "geometry": "point",
-        "id": "place",
-        "name": "place",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913",
         "status": "on"
     },
-    {
+    {"name": "land_nodes",
+        "id": "land_nodes",
         "geometry": "point",
         "extent": [
           5.959508388347697,
@@ -957,14 +953,14 @@
           "extent": "663409.439169108,5753260.34214658,1194021.34026539,6074004.61798401",
           "dbname": "imposm"
         },
-        "id": "land_nodes",
         "class": "",
         "srs-name": "900913",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {},
-        "name": "land_nodes"
+        "advanced": {}
+        
     },
-    {
+    {"name": "water_area_label",
+        "id": "water_area_label",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -980,13 +976,12 @@
         },
         "class": "",
         "geometry": "point",
-        "id": "water_area_label",
-        "name": "water_area_label",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913",
         "status": "on"
     },
-    {
+    {"name": "area_label",
+        "id": "area_label",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -1002,13 +997,12 @@
         },
         "class": "",
         "geometry": "point",
-        "id": "area_label",
-        "name": "area_label",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913",
         "status": "on"
     },
-    {
+    {"name": "motorway_label",
+        "id": "motorway_label",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -1024,13 +1018,12 @@
         },
         "class": "",
         "geometry": "linestring",
-        "id": "motorway_label",
-        "name": "motorway_label",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913",
         "status": "on"
     },
-    {
+    {"name": "mainroad_label",
+        "id": "mainroad_label",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -1046,13 +1039,12 @@
         },
         "class": "",
         "geometry": "linestring",
-        "id": "mainroad_label",
-        "name": "mainroad_label",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913",
         "status": "on"
     },
-    {
+    {"name": "minorroad_label",
+        "id": "minorroad_label",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -1068,13 +1060,12 @@
         },
         "class": "",
         "geometry": "linestring",
-        "id": "minorroad_label",
-        "name": "minorroad_label",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913",
         "status": "on"
     },
-    {
+    {"name": "waterway_label",
+        "id": "waterway_label",
         "Datasource": {
           "dbname": "imposm",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
@@ -1090,12 +1081,11 @@
         },
         "class": "",
         "geometry": "linestring",
-        "id": "waterway_label",
-        "name": "waterway_label",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "srs-name": "900913"
     },
-    {
+    {"name": "pistes",
+        "id": "pistes",
         "geometry": "linestring",
         "extent": [
           6.0639879732152355,
@@ -1115,12 +1105,11 @@
           "project": "snowmap",
           "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
         },
-        "id": "pistes",
         "class": "",
         "srs-name": "900913",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {},
-        "name": "pistes"
+        "advanced": {}
+        
     },
     {"name": "nodes_downhill_point",
         "id": "nodes_downhill_point",
