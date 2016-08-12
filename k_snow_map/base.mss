@@ -130,6 +130,7 @@ hillshade_d8.tif
 */
 #hillshade8[zoom=8]{
   raster-opacity: 0.4;
+  raster-scaling: bilinear;
   }
   
 #hillshade7[zoom=7]{
@@ -289,19 +290,46 @@ hillshade_d8.tif
 /* ================================================================== */
 
 Map { background-color: @ocean; }
-
-#water_gen0[zoom>3][zoom<=9]{
-  polygon-fill: @water;
-  /*line-color: @water;*/
-  /*line-width: 0.5;*/
+#ocean_background[zoom>3][zoom<=6]{
+  polygon-fill: @ocean;
 }
-#water_gen1[zoom>9][zoom<=12],
+#ocean_background[zoom=7]{
+  polygon-fill: @water2;
+}
+#ocean_background[zoom=8]{
+  polygon-fill: @water1;
+}
+#ocean_background[zoom>8]{
+  polygon-fill: @water;
+}
+
+#water_gen0[zoom>3][zoom<=6]{
+  polygon-fill: @ocean;
+}
+#water_gen0[zoom=7]{
+  polygon-fill: @water2;
+}
+#water_gen0[zoom=8]{
+  polygon-fill: @water1;
+}
+#water_gen0[zoom>8][zoom<=9]{
+  polygon-fill: @water;
+  line-color: darken(@water,10%);
+  line-width: 0.5;
+}
+#water_gen1[zoom>9][zoom<=12], {
+  polygon-fill: @water;
+  line-color: darken(@water,10%);
+  line-width: 0.5;
+}
+
 #water[zoom>12] {
   polygon-fill: @water;
-  /*line-color: @water*0.8;*/
-  /*line-width: 0.5;*/
+/*
+  line-color: darken(@water,20%);
+  line-width: 0.5;
+*/
 }
-
 /* ================================================================== */
 /* WATER WAYS
 /* ================================================================== */

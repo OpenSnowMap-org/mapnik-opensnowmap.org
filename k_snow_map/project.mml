@@ -28,6 +28,25 @@
     "pistes.mss"
   ],
   "Layer": [
+    {"name": "ocean_background",
+        "id": "ocean_background",
+        "Datasource": {
+          "dbname": "imposm",
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+          "geometry_field": "geometry",
+          "id": "landuse_gen0",
+          "key_field": "",
+          "password": "imposm",
+          "project": "snowmap",
+          "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+          "table": "( SELECT ST_MakeEnvelope(-20037508.34, -20037508.34,20037508.34, 20037508.34, 3857) as geometry) AS data",
+          "type": "postgis",
+          "user": "imposm"
+        },
+        "class": "",
+        "geometry": "polygon",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    },
     {"name": "land-low",
         "id": "land-low",
         "Datasource": {
@@ -40,20 +59,8 @@
           "project": "snowmap"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "extent": [
-          -180,
-          -85.051,
-          180,
-          83.6664731
-        ],
-        "layer": null,
-        "srs-name": "900913",
-        "advanced": {
-          "type": "shape"
-        }
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "layer": null
     },
     {"name": "land-high",
         "id": "land-high",
@@ -62,20 +69,8 @@
           "type": "shape"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "extent": [
-          -180,
-          -85.051,
-          180,
-          83.6664731
-        ],
-        "layer": null,
-        "srs-name": "900913",
-        "advanced": {
-          "type": "shape"
-        }
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "layer": null
     },
     {"name": "landuse_gen0",
         "id": "landuse_gen0",
@@ -94,29 +89,19 @@
         },
         "class": "",
         "geometry": "polygon",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "snowcover",
         "id": "snowcover",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -81.00341998832774,
-          179.8978617487303,
-          81
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/snow_cover/MOD10A2.005-3857-cubic-alpha.tif",
           "type": "gdal"
         },
         "layer": null,
-        "srs-name": "custom",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "landuse_gen1",
         "id": "landuse_gen1",
         "Datasource": {
@@ -133,10 +118,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "landuse",
         "id": "landuse",
@@ -154,11 +136,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "landuse_overlays",
         "id": "landuse_overlays",
@@ -173,37 +151,20 @@
           "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
           "table": "(select geometry, type, area\nfrom osm_landusages\norder by area desc) as landusages",
           "type": "postgis",
-          "user": "imposm",
-          "extent_cache": "auto"
+          "user": "imposm"
         },
-        "class": "",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "geometry": "polygon",
-        "extent": [
-          -179.9999999749438,
-          -85.051,
-          179.9999999749438,
-          85.051
-        ],
-        "srs-name": "900913",
-        "advanced": {}
+        "class": "",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "geometry": "polygon"
     },
     {"name": "land_features",
         "id": "land_features",
         "geometry": "linestring",
-        "extent": [
-          -179.9999999749438,
-          -85.051,
-          179.9999999749438,
-          85.051
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select geometry, type \nfrom osm_natural_ways ) as landusages",
           "key_field": "",
           "geometry_field": "geometry",
-          "extent_cache": "auto",
+          
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "imposm",
           "user": "imposm",
@@ -213,11 +174,7 @@
           "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     { "name": "contours10",
         "id": "contours10",
         "geometry": "linestring",
@@ -227,73 +184,46 @@
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 10 = 0 AND  height::integer % 50 != 0 AND height::integer % 100 != 0) as data",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
-          "extent": "556551.070845203,5617083.93951037,890571.387386666,6102257.93968849",
+          
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "contours"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {},
-        "status": "off"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "contours50",
         "id": "contours50",
         "geometry": "linestring",
-        "extent": [
-          4.999583333333324,
-          44.97180555555475,
-          8.000138888889692,
-          47.97236111111109
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 50 = 0 AND height::integer % 100 != 0) as data",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
+          
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "contours"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {},
-        "status": "off"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     { "name": "contours100",
         "id": "contours100",
         "geometry": "linestring",
-        "extent": [
-          4.999583333333324,
-          44.97180555555475,
-          8.000138888889692,
-          47.97236111111109
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 100 = 0) as data",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
+          
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "contours"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {},
-        "status": "off"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "hillshade40",
         "id": "hillshade40",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -81.00341998832774,
-          179.8978617487303,
-          81
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade_lowzoom/dem_c6_z1.tif",
@@ -301,20 +231,10 @@
           "band": "1"
         },
         "layer": null,
-        "srs-name": "custom",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "hillshade30",
         "id": "hillshade30",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -84.99585069012585,
-          179.90966990766964,
-          84.99999999999999
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade_lowzoom/dem_c6_z3.tif",
@@ -322,20 +242,10 @@
           "band": "1"
         },
         "layer": null,
-        "srs-name": "custom",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "hillshade20",
         "id": "hillshade20",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -85.051,
-          179.9965832759593,
-          85.051
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade_lowzoom/dem_c6_z4.tif",
@@ -343,20 +253,10 @@
           "band": "1"
         },
         "layer": null,
-        "srs-name": "custom",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "hillshade10",
         "id": "hillshade10",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -85.051,
-          179.99654660733825,
-          85.051
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade_lowzoom/dem_c6_z5.tif",
@@ -364,22 +264,10 @@
           "band": "1"
         },
         "layer": null,
-        "srs-name": "custom",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {
-          "type": "gdal"
-        }
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "hillshade7",
         "id": "hillshade7",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -85.051,
-          179.99654660733825,
-          85.051
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade_lowzoom/dem_c6_z10.tif",
@@ -387,99 +275,46 @@
           "band": "1"
         },
         "layer": null,
-        "srs-name": "custom",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {
-          "type": "gdal"
-        }
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     { "name": "hillshade8",
         "id": "hillshade8",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -85.051,
-          179.99654660733825,
-          85.051
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade/hillshade_d8.tif",
           "type": "gdal"
         },
         "layer": null,
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {
-          "type": "gdal"
-        }
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     { "name": "hillshade9",
         "id": "hillshade9",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -85.051,
-          179.99654660733825,
-          85.051
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade/hillshade_d4.tif",
           "type": "gdal"
         },
         "layer": null,
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {
-          "type": "gdal"
-        }
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     { "name": "hillshade11",
         "id": "hillshade11",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -85.051,
-          179.99654660733825,
-          85.051
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade/hillshade_d2.tif",
           "type": "gdal"
         },
         "layer": null,
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {
-          "type": "gdal"
-        },
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     { "name": "hillshade",
         "id": "hillshade",
         "geometry": "raster",
-        "extent": [
-          -180,
-          -85.051,
-          179.99654660733825,
-          85.051
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/Hillshade/hillshade_2.tif",
           "type": "gdal"
         },
-        "layer": null,
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "layer": null,        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "waterway_low",
         "id": "waterway_low",
         "Datasource": {
@@ -496,11 +331,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "waterway_med",
         "id": "waterway_med",
@@ -515,10 +346,8 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "waterway_high",
         "id": "waterway_high",
@@ -533,10 +362,8 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "water_gen0",
         "id": "water_gen0",
@@ -554,11 +381,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "water_gen1",
         "id": "water_gen1",
@@ -576,11 +399,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "water",
         "id": "water",
@@ -598,11 +417,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "admin",
         "id": "admin",
@@ -619,9 +434,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "buildings",
         "id": "buildings",
@@ -636,10 +449,8 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "polygon",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "geometry": "polygon",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "aeroway",
         "id": "aeroway",
@@ -657,11 +468,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "tunnel",
         "id": "tunnel",
@@ -676,10 +483,8 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "turning_circle_case",
         "id": "turning_circle_case",
@@ -694,10 +499,8 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "point",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "geometry": "point",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "roads_high",
         "id": "roads_high",
@@ -712,21 +515,10 @@
           "srs": null,
           "table": "( SELECT geometry, type, tunnel, bridge, access, 'fill' AS render,\n  CASE\n    WHEN type IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN type IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN type IN ('service') THEN 'service'\nWHEN type IN ('track') THEN 'track'\n    WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM osm_roads\n  WHERE bridge = 0\n    AND tunnel = 0\n  ORDER BY z_order\n) AS data",
           "type": "postgis",
-          "user": "imposm",
-          "extent_cache": "auto"
+          "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "extent": [
-          -179.9999999749438,
-          -85.051,
-          179.9999999749438,
-          85.051
-        ],
-        "advanced": {}
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "roads_med2",
         "id": "roads_med2",
@@ -741,10 +533,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "roads_med",
         "id": "roads_med",
@@ -759,10 +548,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "roads_low",
         "id": "roads_low",
@@ -777,11 +563,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "turning_circle_fill",
         "id": "turning_circle_fill",
@@ -797,8 +579,8 @@
         },
         "class": "",
         "geometry": "point",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "bridge",
         "id": "bridge",
@@ -816,11 +598,7 @@
           "user": "imposm"
         },
         "class": "",
-        "geometry": "linestring",
-        
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "barrier_points",
         "id": "barrier_points",
@@ -836,8 +614,8 @@
         },
         "class": "",
         "geometry": "point",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "barrier_lines",
         "id": "barrier_lines",
@@ -856,58 +634,39 @@
         },
         "class": "",
         "geometry": "linestring",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "pistes_labels",
         "id": "pistes_labels",
         "geometry": "linestring",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select type, geometry, 'x' as name from osm_pistes_ways\nUNION ALL \nselect type, geometry, 'xx' as name from osm_aerialways\n) as data",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
-          "extent": "675040.053354855,5759072.84618909,1163923.21533352,6047538.07102333",
+          
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "imposm",
           "id": "pistes_labels",
           "project": "snowmap",
           "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "contours100_labels",
         "id": "contours100_labels",
         "geometry": "linestring",
-        "extent": [
-          4.999583333333324,
-          44.97180555555475,
-          8.000138888889692,
-          47.97236111111109
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 100 = 0) as data",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
-          "extent": "556551.070845203,5617083.93951037,890571.387386666,6102257.93968849",
+          
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "contours"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {},
-        "status": "off"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "place",
         "id": "place",
@@ -926,34 +685,22 @@
         },
         "class": "",
         "geometry": "point",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "land_nodes",
         "id": "land_nodes",
         "geometry": "point",
-        "extent": [
-          5.959508388347697,
-          45.830701139881455,
-          10.726076195252755,
-          47.802162568675264
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select geometry, type, name \nfrom osm_natural_nodes ) as data",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
-          "extent": "663409.439169108,5753260.34214658,1194021.34026539,6074004.61798401",
+          
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "imposm"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "water_area_label",
         "id": "water_area_label",
         "Datasource": {
@@ -971,9 +718,7 @@
         },
         "class": "",
         "geometry": "point",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "area_label",
         "id": "area_label",
@@ -992,9 +737,7 @@
         },
         "class": "",
         "geometry": "point",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "motorway_label",
         "id": "motorway_label",
@@ -1013,9 +756,7 @@
         },
         "class": "",
         "geometry": "linestring",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "mainroad_label",
         "id": "mainroad_label",
@@ -1034,9 +775,7 @@
         },
         "class": "",
         "geometry": "linestring",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "minorroad_label",
         "id": "minorroad_label",
@@ -1055,9 +794,7 @@
         },
         "class": "",
         "geometry": "linestring",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913",
-        "status": "on"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
     {"name": "waterway_label",
         "id": "waterway_label",
@@ -1076,229 +813,85 @@
         },
         "class": "",
         "geometry": "linestring",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "srs-name": "900913"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
     },
     {"name": "pistes",
         "id": "pistes",
         "geometry": "linestring",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select type, geometry from osm_pistes_ways\nUNION ALL\nselect type, geometry from osm_aerialways\n) as data",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
-          "extent": "675040.053354855,5759072.84618909,1163923.21533352,6047538.07102333",
+          
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "imposm",
           "id": "pistes",
           "project": "snowmap",
           "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
-    {"name": "nodes_downhill_point",
-        "id": "nodes_downhill_point",
-        "geometry": "point",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
-        "Datasource": {
-          "type": "postgis",
-          "table": "(select point as geometry from osm_pistes_ways where \"type\"='downhill'\n\t\t) as nodes",
-          "key_field": "",
-          "geometry_field": "",
-          "extent_cache": "auto",
-          "dbname": "imposm"
-        },
-        "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
-    {"name": "nodes_downhill2_point",
-        "id": "nodes_downhill2_point",
-        "geometry": "point",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
-        "Datasource": {
-          "type": "postgis",
-          "table": "(select point as geometry from osm_pistes_ways where \"type\"='downhill'\n\t\t) as nodes",
-          "key_field": "",
-          "geometry_field": "",
-          "extent_cache": "auto",
-          "dbname": "imposm"
-        },
-        "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
-    {"name": "nodes_nordic_point",
-        "id": "nodes_nordic_point",
-        "geometry": "point",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
-        "Datasource": {
-          "type": "postgis",
-          "table": "(select point as geometry from osm_pistes_ways where \"type\"='nordic'\n\t\t) as nodes",
-          "key_field": "",
-          "geometry_field": "",
-          "extent_cache": "auto",
-          "dbname": "imposm"
-        },
-        "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
-    {"name": "nodes_nordic2_point",
-        "id": "nodes_nordic2_point",
-        "geometry": "point",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
-        "Datasource": {
-          "type": "postgis",
-          "table": "(select point as geometry from osm_pistes_ways where \"type\"='nordic'\n\t\t) as nodes",
-          "key_field": "",
-          "geometry_field": "",
-          "extent_cache": "auto",
-          "dbname": "imposm"
-        },
-        "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "nodes_downhill",
         "id": "nodes_downhill",
         "geometry": "linestring",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where \"type\"='downhill'\n\t\t) as nodes",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+          
           "dbname": "imposm"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "nodes_downhill2",
         "id": "nodes_downhill2",
         "geometry": "linestring",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where \"type\"='downhill'\n\t\t) as nodes",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+          
           "dbname": "imposm"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "nodes_nordic",
         "id": "nodes_nordic",
         "geometry": "linestring",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where \"type\"='nordic'\n\t\t) as nodes",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+          
           "dbname": "imposm"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "nodes_nordic2",
         "id": "nodes_nordic2",
         "geometry": "linestring",
-        "extent": [
-          6.0639879732152355,
-          45.867071391217735,
-          10.455700138756379,
-          47.642220098146666
-        ],
         "Datasource": {
           "type": "postgis",
           "table": "(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where \"type\"='nordic'\n\t\t) as nodes",
           "key_field": "",
           "geometry_field": "",
-          "extent_cache": "auto",
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+          
           "dbname": "imposm"
         },
         "class": "",
-        "srs-name": "900913",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
     {"name": "countries_ne2",
         "id": "countries_ne2",
         "geometry": "polygon",
-        "extent": [
-          -179.9999999999999,
-          -85.051,
-          180,
-          83.63410065300012
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/ne_shape/ne_10m_admin_0_countries.shp",
@@ -1308,20 +901,10 @@
           "type": "shape"
         },
         "layer": null,
-        "srs-name": "WGS84",
-        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"    },
     {"name": "countries_ne",
         "id": "countries_ne",
         "geometry": "polygon",
-        "extent": [
-          -180,
-          -85.051,
-          180,
-          83.59960937500006
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/ne_shape/ne_10m_admin_0_countries.shp",
@@ -1331,40 +914,20 @@
           "type": "shape"
         },
         "layer": null,
-        "srs-name": "WGS84",
-        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"    },
     {"name": "big_places_ne",
         "id": "big_places_ne",
         "geometry": "point",
-        "extent": [
-          -179.58997888396897,
-          -85.051,
-          179.38330358817018,
-          82.48332318035943
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/ne_shape/ne_10m_populated_places_simple.shp",
           "type": "shape"
         },
         "layer": null,
-        "srs-name": "WGS84",
-        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-        "advanced": {}
-        
-    },
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"    },
     {"name": "places_ne",
         "id": "places_ne",
         "geometry": "point",
-        "extent": [
-          -179.58997888396897,
-          -85.051,
-          179.38330358817018,
-          82.48332318035943
-        ],
         "class": "",
         "Datasource": {
           "file": "../data/ne_shape/ne_10m_populated_places_simple.shp",
@@ -1374,10 +937,6 @@
           "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
         },
         "layer": null,
-        "srs-name": "WGS84",
-        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-        "advanced": {}
-        
-    }
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"    }
   ]
 }

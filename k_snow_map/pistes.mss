@@ -22,7 +22,7 @@
 @piste_nodes:   0.3;
 @piste_node_line: 1;
 
-#nodes_nordic_point[zoom <=8][zoom >5] {
+#nodes_nordic[zoom <=8][zoom >5] {
   marker-fill: orange;
   marker-opacity: 0.5;
   marker-width: @piste_nodes;
@@ -35,7 +35,7 @@
   marker-placement: point;
   marker-ignore-placement: true;
   }
-#nodes_nordic2_point[zoom <=8][zoom >5]  {
+#nodes_nordic2[zoom <=8][zoom >5]  {
   marker-fill: orange;
   marker-opacity: 1;
   marker-width: @piste_nodes / 2;
@@ -50,7 +50,7 @@
   
   comp-op: color-dodge;
   }
-#nodes_downhill_point[zoom <=8][zoom >5]  {
+#nodes_downhill[zoom <=8][zoom >5]  {
   marker-fill: #1E70FF;
   marker-opacity: 0.5;
   marker-width: @piste_nodes;
@@ -63,7 +63,7 @@
   marker-placement: point;  
   marker-ignore-placement: true;
   }
-#nodes_downhill2_point[zoom <=8][zoom >5]  {
+#nodes_downhill2[zoom <=8][zoom >5]  {
   marker-fill: #1E70FF;
   marker-opacity: 1;
   marker-width: @piste_nodes / 2;
@@ -79,7 +79,7 @@
   comp-op: color-dodge;
   }
 
-#nodes_nordic_point[zoom <=5] {
+#nodes_nordic[zoom <=5] {
   marker-fill: orange;
   marker-opacity: 0.5;
   marker-width: @piste_nodes*0.75;
@@ -92,7 +92,7 @@
   marker-placement: point;
   marker-ignore-placement: true;
   }
-#nodes_nordic2_point[zoom <=5]  {
+#nodes_nordic2[zoom <=5]  {
   marker-fill: orange;
   marker-opacity: 1;
   marker-width: @piste_nodes*0.75 / 2;
@@ -107,7 +107,7 @@
   
   comp-op: color-dodge;
   }
-#nodes_downhill_point[zoom <=5]  {
+#nodes_downhill[zoom <=5]  {
   marker-fill: #1E70FF;
   marker-opacity: 0.5;
   marker-width: @piste_nodes*0.75;
@@ -120,7 +120,7 @@
   marker-placement: point;  
   marker-ignore-placement: true;
   }
-#nodes_downhill2_point[zoom <=5] {
+#nodes_downhill2[zoom <=5] {
   marker-fill: #1E70FF;
   marker-opacity: 1;
   marker-width: @piste_nodes*0.75 / 2;

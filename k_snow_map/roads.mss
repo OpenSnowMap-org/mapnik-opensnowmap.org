@@ -69,7 +69,7 @@ come in as well.
 #bridge[stylegroup='track'][render='3_inline'][zoom>=15][zoom<=20]{
   /* -- colors & styles -- */
 
-    line-color: darken(@standard_case,20%);
+    line-color: darken(@standard_case,40%);
     line-cap: butt;
     line-join: round;
 
@@ -104,7 +104,7 @@ come in as well.
 #bridge[stylegroup='track'][render='3_inline'][zoom>=15][zoom<=20]{
   /* -- colors & styles -- */
 
-    line-color: darken(@standard_case,20%);
+    line-color: darken(@standard_case,40%);
     line-cap: butt;
     line-join: round;
 
@@ -150,8 +150,8 @@ come in as well.
   }
   
   [zoom=14]{ 
-    line-width: @rdz14_min / 5; 
-    line-color: darken(@standard_case,20%);
+    line-width: @rdz14_min / 4; 
+    line-color: darken(@standard_case,50%);
   }
   [zoom=15] {
     line-width: @rdz15_min / 1.5 ; 

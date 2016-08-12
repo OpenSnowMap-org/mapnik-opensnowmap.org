@@ -633,21 +633,29 @@
   text-placement: line;
   text-fill: #9F7B74;
   text-size: 7.5;
-  text-opacity: 0.9;
+  text-opacity: 0.8;
   text-spacing: 500;
   text-min-distance: 300;
   text-label-position-tolerance:100;
-  text-halo-radius: 0.7;
-  text-halo-fill: @land;
+/*
+  text-halo-radius: 0.3;
+  text-halo-opacity: 0.7;
+  text-halo-fill: @land_grey;
+*/
+  comp-op: multiply;
   }
 #contours100_labels[zoom>=14]{
   text-name: [height];
   text-face-name: 'DejaVu Sans Bold';
   text-placement: line;
   text-fill: #9F7B74;
-  text-size: 8.5;
-  text-opacity: 0.9;
+  text-size: 7.5;
+  text-opacity: 0.8;
   text-spacing: 300;
-  text-halo-radius: 0.7;
-  text-halo-fill: @land;
+/*
+  text-halo-radius: 0.3;
+  text-halo-opacity: 0.7;
+  text-halo-fill: @land_grey;
+*/
+  comp-op: multiply;
   }

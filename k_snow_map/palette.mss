@@ -41,8 +41,10 @@ Map { font-directory: url(./fonts); }
 @land_int:          #F0EEE9;
 @land_low:          #E6E4DF;
 @land_grey:         #FAFAFA;
-@water:             #C2DAED;/*#BCDCF6;#99D0FF;*/
 @ocean:             #A6B8D5;
+@water2:             #b0c4dd;
+@water1:             #b8cee4;
+@water:             #C2DAED;/*#BCDCF6;#99D0FF;*/
 @hillshade_low:     #6c9cac;
 @grass:             @land;
 @beach:             @land;
