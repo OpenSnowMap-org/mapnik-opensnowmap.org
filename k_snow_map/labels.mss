@@ -599,14 +599,14 @@
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
-  text-size:8;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
-  text-halo-radius:1;
+  text-halo-radius:2;
   text-min-distance:60;
-  text-size:11;
+  text-size:9;
   text-placement-type: "simple";
   text-placements: "E,S,N,W";
+  [zoom>16] {text-size:12;}
 }
 
 /* ================================================================== */

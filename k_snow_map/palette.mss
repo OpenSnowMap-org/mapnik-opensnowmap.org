@@ -147,7 +147,7 @@ Map { font-directory: url(./fonts); }
 
 @poi_text:          #888;
 
-@road_text:         #777;
+@road_text:         #666;
 /*@road_halo:         #fff;*/
 @road_halo:        fadeout(#fff,34%);
 

@@ -68,11 +68,15 @@ come in as well.
 #tunnel[stylegroup='track'][render='3_inline'][zoom>=15][zoom<=20],
 #bridge[stylegroup='track'][render='3_inline'][zoom>=15][zoom<=20]{
   /* -- colors & styles -- */
-
-    line-color: darken(@standard_case,40%);
     line-cap: butt;
     line-join: round;
 
+  [zoom=15] {
+    line-color: darken(@standard_case,40%);
+  }
+  [zoom>15] {
+    line-color: darken(@standard_case,30%);
+  }
   [tunnel=1] {
     line-cap: butt;
   }
@@ -103,11 +107,15 @@ come in as well.
 #tunnel[stylegroup='track'][render='3_inline'][zoom>=15][zoom<=20],
 #bridge[stylegroup='track'][render='3_inline'][zoom>=15][zoom<=20]{
   /* -- colors & styles -- */
-
-    line-color: darken(@standard_case,40%);
     line-cap: butt;
     line-join: round;
 
+  [zoom=15] {
+    line-color: darken(@standard_case,40%);
+  }
+  [zoom>15] {
+    line-color: darken(@standard_case,30%);
+  }
   [tunnel=1] {
     line-cap: butt;
   }
