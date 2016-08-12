@@ -34,6 +34,57 @@
   <Font face-name="DejaVu Sans Oblique"/>
   <Font face-name="unifont Medium"/>
 </FontSet>
+
+<Style name="background-low" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#a6b8d5" />
+  </Rule>
+</Style>
+
+<Layer name="background-low"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>background-low</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+       <Parameter name="id"><![CDATA[background-low]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="password"><![CDATA[imposm]]></Parameter>
+       <Parameter name="project"><![CDATA[snowmap]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT ST_MakeEnvelope(-20037508.34, -20037508.34,20037508.34, 20037508.34, 3857) as geometry) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
+    </Datasource>
+  </Layer>
+  
+<Style name="background-high" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <PolygonSymbolizer fill="#c2daed" />
+  </Rule>
+</Style>
+
+<Layer name="background-high"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>background-high</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+       <Parameter name="id"><![CDATA[background-high]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="password"><![CDATA[imposm]]></Parameter>
+       <Parameter name="project"><![CDATA[snowmap]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT ST_MakeEnvelope(-20037508.34, -20037508.34,20037508.34, 20037508.34, 3857) as geometry) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
+    </Datasource>
+  </Layer>
+  
 <Style name="land-low" filter-mode="first">
   <Rule>
     <MinScaleDenominator>12500000</MinScaleDenominator>
@@ -485,52 +536,103 @@ from osm_natural_ways ) as landusages]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
     </Datasource>
   </Layer>
-
+<Style name="contours10" filter-mode="first" comp-op="difference">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke="#b7928a" stroke-width="0.25" stroke-opacity="0.4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.5" stroke="#b7928a" stroke-width="0.4" stroke-opacity="0.4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke="#b7928a" stroke-width="0.4" stroke-opacity="0.4" />
+  </Rule>
+</Style>
 <Layer name="contours10"
-  status="off"
+  
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    
+    <StyleName>contours10</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="table"><![CDATA[(select wkb_geometry, height from contours WHERE height::integer % 10 = 0 AND  height::integer % 50 != 0 AND height::integer % 100 != 0) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
-       <Parameter name="extent"><![CDATA[556551.070845203,5617083.93951037,890571.387386666,6102257.93968849]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[contours]]></Parameter>
     </Datasource>
   </Layer>
 
+<Style name="contours50" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.5" stroke="#aa837b" stroke-width="0.6" stroke-opacity="0.7" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <LineSymbolizer stroke="#b7928a" stroke-width="0.6" stroke-opacity="0.4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke="#aa837b" stroke-width="0.6" stroke-opacity="0.7" />
+  </Rule>
+</Style>
 <Layer name="contours50"
-  status="off"
+  
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    
+    <StyleName>contours50</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="table"><![CDATA[(select wkb_geometry, height from contours WHERE height::integer % 50 = 0 AND height::integer % 100 != 0) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
-       <Parameter name="extent"><![CDATA[556551.070845203,5617083.93951037,890571.387386666,6102257.93968849]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[contours]]></Parameter>
     </Datasource>
   </Layer>
 
+<Style name="contours100" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <LineSymbolizer stroke="#b7928a" stroke-width="0.6" stroke-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <LineSymbolizer stroke="#aa837b" stroke-width="0.7" stroke-opacity="0.6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke="#9f7b74" stroke-width="0.7" stroke-opacity="0.7" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer smooth="0.5" stroke="#9f7b74" stroke-width="0.7" stroke-opacity="0.7" />
+  </Rule>
+</Style>
 <Layer name="contours100"
-  status="off"
+  
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    
+    <StyleName>contours100</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="table"><![CDATA[(select wkb_geometry, height from contours WHERE height::integer % 100 = 0) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
-       <Parameter name="extent"><![CDATA[556551.070845203,5617083.93951037,890571.387386666,6102257.93968849]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[contours]]></Parameter>
     </Datasource>
   </Layer>
-
 <Style name="hillshade40" filter-mode="first" comp-op="multiply">
   <Rule>
     <MinScaleDenominator>50000000</MinScaleDenominator>
@@ -634,7 +736,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>1500000</MinScaleDenominator>
-    <RasterSymbolizer opacity="0.4" />
+    <RasterSymbolizer opacity="0.4" scaling="bilinear"/>
   </Rule>
 </Style>
 <Layer name="hillshade8"
@@ -17280,7 +17382,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([stylegroup] = 'noauto') and ([type] = 'secondary_link')</Filter>
+    <Filter>([type] = 'secondary_link')</Filter>
     <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#fff7ce" />
   </Rule>
   <Rule>
@@ -17322,7 +17424,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([stylegroup] = 'noauto') and ([type] = 'secondary')</Filter>
+    <Filter> ([type] = 'secondary')</Filter>
     <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#fff7ce" />
   </Rule>
   <Rule>
@@ -17364,7 +17466,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([stylegroup] = 'noauto') and ([type] = 'primary')</Filter>
+    <Filter>([type] = 'primary')</Filter>
     <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#ffe9bc" />
   </Rule>
   <Rule>
@@ -17406,7 +17508,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([stylegroup] = 'noauto') and ([type] = 'primary_link')</Filter>
+    <Filter>([type] = 'primary_link')</Filter>
     <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#ffe9bc" />
   </Rule>
   <Rule>
@@ -17448,7 +17550,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([stylegroup] = 'noauto') and ([type] = 'trunk_link')</Filter>
+    <Filter>([type] = 'trunk_link')</Filter>
     <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#fac6ac" />
   </Rule>
   <Rule>
@@ -17490,7 +17592,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([stylegroup] = 'noauto') and ([type] = 'trunk')</Filter>
+    <Filter>([type] = 'trunk')</Filter>
     <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#fac6ac" />
   </Rule>
   <Rule>
@@ -17532,7 +17634,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([stylegroup] = 'noauto') and ([type] = 'motorway_link')</Filter>
+    <Filter>([type] = 'motorway_link')</Filter>
     <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#f4bcbc" />
   </Rule>
   <Rule>
@@ -17574,7 +17676,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([stylegroup] = 'noauto') and ([type] = 'motorway')</Filter>
+    <Filter>([type] = 'motorway')</Filter>
     <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#f4bcbc" />
   </Rule>
   <Rule>
@@ -17617,7 +17719,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="0.25" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#545454" />
+    <LineSymbolizer stroke-width="0" stroke-dasharray="3, 2" stroke-linejoin="round" stroke="#545454" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
@@ -30761,6 +30863,7 @@ WHEN type IN ('track') THEN 'track'
     </Datasource>
   </Layer>
 
+<!--
 <Layer name="roads_med2"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     
@@ -30772,7 +30875,7 @@ WHEN type IN ('track') THEN 'track'
        <Parameter name="password"><![CDATA[imposm]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, tunnel, bridge, access, 'fill' AS render,
   CASE
-    WHEN type IN ('motorway', 'trunk') THEN 'motorway'
+    WHEN type IN ('motorway', 'trunk') THEN 'motorway'gen2
     WHEN type IN ('primary', 'secondary') THEN 'mainroad'
     WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
  WHEN type IN ('rail') THEN 'railway'
@@ -30784,6 +30887,7 @@ WHEN type IN ('track') THEN 'track'
        <Parameter name="user"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
+-->
 
 <Style name="roads_med" filter-mode="first">
   <Rule>
@@ -45989,7 +46093,7 @@ select type, geometry, 'xx' as name from osm_aerialways
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
-       <Parameter name="extent"><![CDATA[675040.053354855,5759072.84618909,1163923.21533352,6047538.07102333]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
        <Parameter name="id"><![CDATA[pistes_labels]]></Parameter>
        <Parameter name="project"><![CDATA[snowmap]]></Parameter>
@@ -46009,16 +46113,18 @@ select type, geometry, 'xx' as name from osm_aerialways
   </Rule>
 </Style>
 <Layer name="contours100_labels"
-  status="off"
+
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>contours100_labels</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="table"><![CDATA[(select wkb_geometry, height from contours WHERE height::integer % 100 = 0) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+
+       <Parameter name="geometry_field"><![CDATA[wkb_geometry]]></Parameter>
+       <Parameter name="srid"><![CDATA[3857]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
-       <Parameter name="extent"><![CDATA[556551.070845203,5617083.93951037,890571.387386666,6102257.93968849]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[contours]]></Parameter>
     </Datasource>
   </Layer>
@@ -46411,7 +46517,7 @@ from osm_natural_nodes ) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
-       <Parameter name="extent"><![CDATA[663409.439169108,5753260.34214658,1194021.34026539,6074004.61798401]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
@@ -49430,8 +49536,7 @@ select type, geometry from osm_aerialways
 ) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
-       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
-       <Parameter name="extent"><![CDATA[675040.053354855,5759072.84618909,1163923.21533352,6047538.07102333]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
        <Parameter name="id"><![CDATA[pistes]]></Parameter>
        <Parameter name="project"><![CDATA[snowmap]]></Parameter>
@@ -49450,11 +49555,11 @@ select type, geometry from osm_aerialways
     <StyleName>nodes_downhill_point</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
-       <Parameter name="table"><![CDATA[(select point as geometry from osm_pistes_ways where "type"='downhill'
+       <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where "type"='downhill'
 		) as nodes]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
-       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
@@ -49470,11 +49575,11 @@ select type, geometry from osm_aerialways
     <StyleName>nodes_downhill2_point</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
-       <Parameter name="table"><![CDATA[(select point as geometry from osm_pistes_ways where "type"='downhill'
+       <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where "type"='downhill'
 		) as nodes]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
-       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
@@ -49490,11 +49595,11 @@ select type, geometry from osm_aerialways
     <StyleName>nodes_nordic_point</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
-       <Parameter name="table"><![CDATA[(select point as geometry from osm_pistes_ways where "type"='nordic'
+       <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where "type"='nordic'
 		) as nodes]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
-       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
@@ -49510,14 +49615,15 @@ select type, geometry from osm_aerialways
     <StyleName>nodes_nordic2_point</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
-       <Parameter name="table"><![CDATA[(select point as geometry from osm_pistes_ways where "type"='nordic'
+       <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where "type"='nordic'
 		) as nodes]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
-       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
+<!--
 
 <Layer name="nodes_downhill"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -49574,6 +49680,7 @@ select type, geometry from osm_aerialways
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
+-->
 
 <Style name="countries_ne2" filter-mode="first">
   <Rule>

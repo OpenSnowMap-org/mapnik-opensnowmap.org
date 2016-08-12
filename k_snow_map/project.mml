@@ -221,12 +221,7 @@
     { "name": "contours10",
         "id": "contours10",
         "geometry": "linestring",
-        "extent": [
-          4.999583333333324,
-          44.97180555555475,
-          8.000138888889692,
-          47.97236111111109
-        ],
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "Datasource": {
           "type": "postgis",
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 10 = 0 AND  height::integer % 50 != 0 AND height::integer % 100 != 0) as data",
@@ -257,7 +252,7 @@
           "key_field": "",
           "geometry_field": "",
           "extent_cache": "auto",
-          "extent": "556551.070845203,5617083.93951037,890571.387386666,6102257.93968849",
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "contours"
         },
         "class": "",
@@ -281,7 +276,7 @@
           "key_field": "",
           "geometry_field": "",
           "extent_cache": "auto",
-          "extent": "556551.070845203,5617083.93951037,890571.387386666,6102257.93968849",
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "contours"
         },
         "class": "",

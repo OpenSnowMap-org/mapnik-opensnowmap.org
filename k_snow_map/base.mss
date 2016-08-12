@@ -52,12 +52,13 @@
 /* ================================================================== */
 /* CONTOURS
 /* ================================================================== */
-/*
+
 #contours10[zoom>=14]{
   line-color: #B7928A;
-  line-width: 0.4;
+  line-width: 0.25;
   line-opacity: 0.4;
   comp-op: difference;
+  [zoom>=15]{line-width: 0.4;}
   [zoom>=16]{line-smooth: 0.5;}
   }
 #contours50[zoom>=12][zoom<=13]{
@@ -81,13 +82,17 @@
   line-width: 0.7;
   line-opacity: 0.6;
   }
-#contours100[zoom>=14]{
-  line-color: #9F7B74;
+#contours100[zoom>=14][zoom<=15]{
+  line-color: #9f7b74;
+  line-width: 0.7;
+  line-opacity: 0.7;
+  }
+#contours100[zoom>=16]{
+  line-color: #9f7b74;
   line-width: 0.7;
   line-opacity: 0.7;
   [zoom>=16]{line-smooth: 0.5;}
   }
-*/
 /* ================================================================== */
 /* Hillshading
 /* ================================================================== */
