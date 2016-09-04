@@ -17,10 +17,12 @@
   polygon-fill: @land;
   polygon-gamma: 0.75;
 }
+/*
 #snowcover[zoom>=0][zoom<=10]{
   raster-opacity: 1;
   raster-scaling: bilinear;
 }
+*/
 /* ================================================================== */
 /* Low zoom
 /* ================================================================== */
