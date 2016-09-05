@@ -528,6 +528,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
     <StyleName>contours10</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[mapnik]]></Parameter>
        <Parameter name="table"><![CDATA[(select wkb_geometry, height from contours WHERE height::integer % 10 = 0 AND  height::integer % 50 != 0 AND height::integer % 100 != 0) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
@@ -557,6 +558,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
     <StyleName>contours50</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[mapnik]]></Parameter>
        <Parameter name="table"><![CDATA[(select wkb_geometry, height from contours WHERE height::integer % 50 = 0 AND height::integer % 100 != 0) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
@@ -591,6 +593,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
     <StyleName>contours100</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[mapnik]]></Parameter>
        <Parameter name="table"><![CDATA[(select wkb_geometry, height from contours WHERE height::integer % 100 = 0) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
@@ -46089,6 +46092,7 @@ select type, geometry, 'xx' as name from osm_aerialways
     <StyleName>contours100_labels</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[mapnik]]></Parameter>
        <Parameter name="table"><![CDATA[(select wkb_geometry, height from contours WHERE height::integer % 100 = 0) as data]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
