@@ -171,7 +171,7 @@
         "geometry": "linestring",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "Datasource": {
-          "type": "postgis",
+          "type": "postgis","user": "mapnik",
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 10 = 0 AND  height::integer % 50 != 0 AND height::integer % 100 != 0) as data",
           "key_field": "",
           "geometry_field": "",
@@ -186,7 +186,7 @@
         "id": "contours50",
         "geometry": "linestring",
         "Datasource": {
-          "type": "postgis",
+          "type": "postgis","user": "mapnik",
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 50 = 0 AND height::integer % 100 != 0) as data",
           "key_field": "",
           "geometry_field": "",
@@ -201,7 +201,7 @@
         "id": "contours100",
         "geometry": "linestring",
         "Datasource": {
-          "type": "postgis",
+          "type": "postgis","user": "mapnik",
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 100 = 0) as data",
           "key_field": "",
           "geometry_field": "",
@@ -648,7 +648,7 @@
         "id": "contours100_labels",
         "geometry": "linestring",
         "Datasource": {
-          "type": "postgis",
+          "type": "postgis","user": "mapnik",
           "table": "(select wkb_geometry, height from contours WHERE height::integer % 100 = 0) as data",
           "key_field": "",
           "geometry_field": "",
