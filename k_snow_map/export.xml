@@ -46466,6 +46466,7 @@ from osm_natural_nodes ) as data]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
 
