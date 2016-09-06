@@ -511,21 +511,6 @@
         "class": "",
         "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     },
-    {"name": "roads_med2",
-        "id": "roads_med2",
-        "Datasource": {
-          "dbname": "imposm",
-          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-          "geometry_field": "",
-          "key_field": "",
-          "password": "imposm",
-          "table": "( SELECT geometry, type, tunnel, bridge, access, 'fill' AS render,\n  CASE\n    WHEN type IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN type IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n WHEN type IN ('rail') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM osm_roads_gen2\n ORDER BY z_order\n) AS data",
-          "type": "postgis",
-          "user": "imposm"
-        },
-        "class": "",
-        "geometry": "linestring",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-    },
     {"name": "roads_med",
         "id": "roads_med",
         "Datasource": {
@@ -631,6 +616,7 @@
         "geometry": "linestring",
         "Datasource": {
           "type": "postgis",
+          "user": "imposm",
           "table": "(select type, geometry, 'x' as name from osm_pistes_ways\nUNION ALL \nselect type, geometry, 'xx' as name from osm_aerialways\n) as data",
           "key_field": "",
           "geometry_field": "",
@@ -818,6 +804,7 @@
           
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           "dbname": "imposm",
+          "user": "imposm",
           "id": "pistes",
           "project": "snowmap",
           "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -834,6 +821,7 @@
           "geometry_field": "",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           
+          "user": "imposm",
           "dbname": "imposm"
         },
         "class": "",
@@ -848,6 +836,7 @@
           "geometry_field": "",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           
+          "user": "imposm",
           "dbname": "imposm"
         },
         "class": "",
@@ -862,6 +851,7 @@
           "geometry_field": "",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           
+          "user": "imposm",
           "dbname": "imposm"
         },
         "class": "",
@@ -876,6 +866,7 @@
           "geometry_field": "",
           "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
           
+          "user": "imposm",
           "dbname": "imposm"
         },
         "class": "",

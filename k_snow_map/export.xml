@@ -30843,30 +30843,6 @@ WHEN type IN ('track') THEN 'track'
     </Datasource>
   </Layer>
 
-<Layer name="roads_med2"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    
-    <Datasource>
-       <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
-       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
-       <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="password"><![CDATA[imposm]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, tunnel, bridge, access, 'fill' AS render,
-  CASE
-    WHEN type IN ('motorway', 'trunk') THEN 'motorway'
-    WHEN type IN ('primary', 'secondary') THEN 'mainroad'
-    WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
- WHEN type IN ('rail') THEN 'railway'
-    ELSE 'other' END AS stylegroup
-  FROM osm_roads_gen2
- ORDER BY z_order
-) AS data]]></Parameter>
-       <Parameter name="type"><![CDATA[postgis]]></Parameter>
-       <Parameter name="user"><![CDATA[imposm]]></Parameter>
-    </Datasource>
-  </Layer>
-
 <Style name="roads_med" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -46062,6 +46038,7 @@ FROM osm_barrierways
     <StyleName>pistes_labels</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
        <Parameter name="table"><![CDATA[(select type, geometry, 'x' as name from osm_pistes_ways
 UNION ALL 
 select type, geometry, 'xx' as name from osm_aerialways
@@ -49532,6 +49509,7 @@ select type, geometry from osm_aerialways
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
        <Parameter name="id"><![CDATA[pistes]]></Parameter>
        <Parameter name="project"><![CDATA[snowmap]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
@@ -49559,6 +49537,7 @@ select type, geometry from osm_aerialways
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
@@ -49584,6 +49563,7 @@ select type, geometry from osm_aerialways
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
@@ -49609,6 +49589,7 @@ select type, geometry from osm_aerialways
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
@@ -49634,6 +49615,7 @@ select type, geometry from osm_aerialways
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
        <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
     </Datasource>
   </Layer>
