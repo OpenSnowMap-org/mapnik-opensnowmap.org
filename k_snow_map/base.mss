@@ -263,7 +263,7 @@ hillshade_d8.tif
     }*/
   }
 /* ---- BUILDINGS ---- */
-#buildings[zoom>=12][zoom<=16] {
+#buildings[zoom>12][zoom<=16] {
   polygon-fill:@building;
   [zoom>=14] {
     line-color:@building_outline;

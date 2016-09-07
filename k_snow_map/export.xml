@@ -1231,7 +1231,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
     <BuildingSymbolizer fill="#c1dbdc" height="1.25" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'hedge')</Filter>
     <PolygonSymbolizer fill="#999999" />
@@ -1256,7 +1256,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
     <BuildingSymbolizer fill="#999999" height="1.25" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] != 'hedge')</Filter>
     <PolygonSymbolizer fill="#999999" />
@@ -1274,7 +1274,7 @@ from osm_natural_ways ) as landusages]]></Parameter>
     <LineSymbolizer stroke="#aaaaaa" stroke-width="0.2" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <PolygonSymbolizer fill="#999999" />
   </Rule>
@@ -46081,23 +46081,6 @@ select type, geometry, 'xx' as name from osm_aerialways
 <Style name="place-small" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([type] = 'isolated_dwelling')</Filter>
-    <TextSymbolizer size="12" character-spacing="1" line-spacing="4" wrap-width="120" fontset-name="fontset-0" placement="point" fill="#aaaaaa" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'isolated_dwelling')</Filter>
-    <TextSymbolizer size="11" wrap-width="120" line-spacing="2" fontset-name="fontset-0" placement="point" fill="#aaaaaa" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'isolated_dwelling')</Filter>
-    <TextSymbolizer size="10" wrap-width="60" line-spacing="1" fontset-name="fontset-0" placement="point" fill="#aaaaaa" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
     <Filter>([type] = 'locality')</Filter>
     <TextSymbolizer size="12" character-spacing="1" line-spacing="4" wrap-width="120" fontset-name="fontset-0" placement="point" fill="#aaaaaa" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -46115,72 +46098,89 @@ select type, geometry, 'xx' as name from osm_aerialways
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
+    <Filter>([type] = 'isolated_dwelling')</Filter>
+    <TextSymbolizer size="12" character-spacing="1" line-spacing="4" wrap-width="120" fontset-name="fontset-0" placement="point" fill="#aaaaaa" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'isolated_dwelling')</Filter>
+    <TextSymbolizer size="11" wrap-width="120" line-spacing="2" fontset-name="fontset-0" placement="point" fill="#aaaaaa" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'isolated_dwelling')</Filter>
+    <TextSymbolizer size="10" wrap-width="60" line-spacing="1" fontset-name="fontset-0" placement="point" fill="#aaaaaa" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'hamlet')</Filter>
     <TextSymbolizer size="14" character-spacing="4" line-spacing="6" wrap-width="160" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
+    <Filter>([type] = 'hamlet')</Filter>
     <TextSymbolizer size="13" character-spacing="3" wrap-width="160" line-spacing="4" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
+    <Filter>([type] = 'hamlet')</Filter>
     <TextSymbolizer size="12" character-spacing="2" wrap-width="120" line-spacing="2" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
+    <Filter>([type] = 'hamlet')</Filter>
     <TextSymbolizer halo-radius="2" text-transform="uppercase" character-spacing="1" wrap-width="60" line-spacing="1" size="11" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
+    <Filter>([type] = 'hamlet')</Filter>
     <TextSymbolizer size="11" character-spacing="1" wrap-width="40" line-spacing="1" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
+    <Filter>([type] = 'hamlet')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#666666" size="10" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" wrap-width="30" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
+    <Filter>([type] = 'neighbourhood')</Filter>
     <TextSymbolizer size="14" character-spacing="4" line-spacing="6" wrap-width="160" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
+    <Filter>([type] = 'neighbourhood')</Filter>
     <TextSymbolizer size="13" character-spacing="3" wrap-width="160" line-spacing="4" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
+    <Filter>([type] = 'neighbourhood')</Filter>
     <TextSymbolizer size="12" character-spacing="2" wrap-width="120" line-spacing="2" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
+    <Filter>([type] = 'neighbourhood')</Filter>
     <TextSymbolizer halo-radius="2" text-transform="uppercase" character-spacing="1" wrap-width="60" line-spacing="1" size="11" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
+    <Filter>([type] = 'neighbourhood')</Filter>
     <TextSymbolizer size="11" character-spacing="1" wrap-width="40" line-spacing="1" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
+    <Filter>([type] = 'neighbourhood')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#666666" size="10" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" wrap-width="30" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -46220,37 +46220,37 @@ select type, geometry, 'xx' as name from osm_aerialways
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([type] = 'hamlet')</Filter>
+    <Filter>([type] = 'suburb')</Filter>
     <TextSymbolizer size="14" character-spacing="4" line-spacing="6" wrap-width="160" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'hamlet')</Filter>
+    <Filter>([type] = 'suburb')</Filter>
     <TextSymbolizer size="13" character-spacing="3" wrap-width="160" line-spacing="4" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'hamlet')</Filter>
+    <Filter>([type] = 'suburb')</Filter>
     <TextSymbolizer size="12" character-spacing="2" wrap-width="120" line-spacing="2" halo-radius="2" text-transform="uppercase" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'hamlet')</Filter>
+    <Filter>([type] = 'suburb')</Filter>
     <TextSymbolizer halo-radius="2" text-transform="uppercase" character-spacing="1" wrap-width="60" line-spacing="1" size="11" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'hamlet')</Filter>
+    <Filter>([type] = 'suburb')</Filter>
     <TextSymbolizer size="11" character-spacing="1" wrap-width="40" line-spacing="1" fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'hamlet')</Filter>
+    <Filter>([type] = 'suburb')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#666666" size="10" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" wrap-width="30" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
@@ -46374,83 +46374,83 @@ select type, geometry, 'xx' as name from osm_aerialways
 <Style name="land_nodes" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([type] = 'saddle')</Filter>
+    <Filter>([type] = 'peak')</Filter>
     <TextSymbolizer size="12" character-spacing="4" line-spacing="6" dy="16" wrap-width="160" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'saddle')</Filter>
+    <Filter>([type] = 'peak')</Filter>
     <TextSymbolizer size="12" character-spacing="3" wrap-width="160" line-spacing="4" dy="15" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'saddle')</Filter>
+    <Filter>([type] = 'peak')</Filter>
     <TextSymbolizer size="11" character-spacing="2" wrap-width="120" line-spacing="2" dy="14" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'saddle')</Filter>
+    <Filter>([type] = 'peak')</Filter>
     <TextSymbolizer size="10" character-spacing="1" wrap-width="60" line-spacing="1" dy="13" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'saddle')</Filter>
+    <Filter>([type] = 'peak')</Filter>
     <TextSymbolizer size="9" character-spacing="1" wrap-width="40" line-spacing="1" dy="13" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'saddle')</Filter>
+    <Filter>([type] = 'peak')</Filter>
     <PointSymbolizer file="img/peak.png" opacity="0.5" />
     <TextSymbolizer size="0" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" wrap-width="30" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([type] = 'peak')</Filter>
+    <Filter>([type] = 'saddle')</Filter>
     <TextSymbolizer size="12" character-spacing="4" line-spacing="6" dy="16" wrap-width="160" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'peak')</Filter>
+    <Filter>([type] = 'saddle')</Filter>
     <TextSymbolizer size="12" character-spacing="3" wrap-width="160" line-spacing="4" dy="15" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'peak')</Filter>
+    <Filter>([type] = 'saddle')</Filter>
     <TextSymbolizer size="11" character-spacing="2" wrap-width="120" line-spacing="2" dy="14" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'peak')</Filter>
+    <Filter>([type] = 'saddle')</Filter>
     <TextSymbolizer size="10" character-spacing="1" wrap-width="60" line-spacing="1" dy="13" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'peak')</Filter>
+    <Filter>([type] = 'saddle')</Filter>
     <TextSymbolizer size="9" character-spacing="1" wrap-width="40" line-spacing="1" dy="13" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/peak.png" opacity="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'peak')</Filter>
+    <Filter>([type] = 'saddle')</Filter>
     <PointSymbolizer file="img/peak.png" opacity="0.5" />
     <TextSymbolizer size="0" fontset-name="fontset-1" placement="point" fill="#582c36" halo-fill="rgba(255, 255, 255, 0.4)" halo-radius="1" wrap-width="30" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -46471,106 +46471,6 @@ from osm_natural_nodes ) as data]]></Parameter>
   </Layer>
 
 <Style name="water_area_label" filter-mode="first">
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>400000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <MinScaleDenominator>400000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>400000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'glacier') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="#ffffff" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
@@ -46724,124 +46624,42 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 102400000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'water')</Filter>
     <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 102400000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'water')</Filter>
     <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([area] &gt; 1600000) and ([type] = 'water')</Filter>
+    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 102400000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'water')</Filter>
     <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 102400000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'water')</Filter>
     <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 102400000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'water')</Filter>
     <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>400000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <MinScaleDenominator>400000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 102400000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>400000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'water') and ([area] &gt; 1600000)</Filter>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([area] &gt; 1600000) and ([type] = 'water')</Filter>
     <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -46954,102 +46772,14 @@ from osm_natural_nodes ) as data]]></Parameter>
     <TextSymbolizer fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 102400000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 102400000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 102400000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 102400000)</Filter>
-    <TextSymbolizer size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 102400000)</Filter>
-    <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 102400000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>400000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt; 102400000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <MinScaleDenominator>400000</MinScaleDenominator>
-    <Filter>([area] &gt; 102400000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>400000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([area] &gt; 1600000)</Filter>
     <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([area] &gt; 1600000)</Filter>
     <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -47071,8 +46801,14 @@ from osm_natural_nodes ) as data]]></Parameter>
     <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([area] &gt; 1600000)</Filter>
+    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([area] &gt; 1600000)</Filter>
     <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -47170,13 +46906,7 @@ from osm_natural_nodes ) as data]]></Parameter>
     <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 5000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([area] &gt; 5000)</Filter>
     <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -47199,25 +46929,23 @@ from osm_natural_nodes ) as data]]></Parameter>
        <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT type, name, area, 'land' AS stylegroup,
-    ST_PointOnSurface(geometry) AS geometry
+    ST_Centroid(geometry) AS geometry
   FROM osm_landusages
   WHERE name IS NOT NULL
     AND geometry && !bbox!
     AND type IN (
         'glacier' )
     AND geometry && !bbox!
-    AND ST_IsValid(geometry)
-
+    
   UNION ALL
 
   SELECT type, name, area, 'water' AS stylegroup,
-    ST_PointOnSurface(geometry) AS geometry
+    ST_Centroid(geometry) AS geometry
   FROM osm_waterareas
   WHERE name IS NOT NULL
     AND type in ( 'water', 'basin' )
     AND geometry && !bbox!
-    AND ST_IsValid(geometry)
-
+    
   ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="user"><![CDATA[imposm]]></Parameter>
@@ -47225,205 +46953,6 @@ from osm_natural_nodes ) as data]]></Parameter>
   </Layer>
 
 <Style name="area_label" filter-mode="first">
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'college') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'college') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'college') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'college') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'college') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'college') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'college') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'college') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
@@ -47577,169 +47106,182 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'university')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([area] &gt; 320000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([area] &gt; 80000) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 1600000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 1600000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 1600000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 1600000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 1600000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 1600000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt; 1600000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 1600000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 320000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 320000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 320000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 320000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'university')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 320000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 320000) and ([type] = 'university')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 20000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 20000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 20000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 20000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 5000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 5000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 5000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'school')</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'university') and ([area] &gt; 320000)</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -47819,193 +47361,179 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 20000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 20000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 20000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 20000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 5000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 5000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'school') and ([area] &gt; 5000)</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([area] &gt;= 0) and ([type] = 'school')</Filter>
+    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([area] &gt; 1600000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 1600000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 1600000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 320000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 320000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 320000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 320000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 320000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 320000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 20000)</Filter>
+    <Filter>([area] &gt; 20000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 20000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 20000)</Filter>
+    <Filter>([area] &gt; 20000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 20000)</Filter>
+    <Filter>([area] &gt; 20000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 5000)</Filter>
+    <Filter>([area] &gt; 5000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 5000)</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'hospital') and ([area] &gt; 5000)</Filter>
+    <Filter>([area] &gt; 5000) and ([type] = 'hospital')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -48016,53 +47544,6 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
     <Filter>([area] &gt; 1600000) and ([type] = 'cemetery')</Filter>
     <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -48178,13 +47659,7 @@ from osm_natural_nodes ) as data]]></Parameter>
     <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 20000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
     <Filter>([area] &gt; 20000) and ([type] = 'cemetery')</Filter>
     <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -48195,13 +47670,7 @@ from osm_natural_nodes ) as data]]></Parameter>
     <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 5000) and ([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([area] &gt; 5000) and ([type] = 'cemetery')</Filter>
     <TextSymbolizer fill="#a05062" halo-fill="#d3d3d3" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -48213,53 +47682,6 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
     <Filter>([area] &gt; 1600000) and ([type] = 'golf_course')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -48375,13 +47797,7 @@ from osm_natural_nodes ) as data]]></Parameter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 20000) and ([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
     <Filter>([area] &gt; 20000) and ([type] = 'golf_course')</Filter>
     <TextSymbolizer fill="#c16176" halo-fill="#fafafa" halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -48410,193 +47826,140 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="15" character-spacing="2" wrap-width="120" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 25600000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 25600000)</Filter>
+    <Filter>([area] &gt; 1600000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 1600000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 1600000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="15" character-spacing="2" wrap-width="120" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 1600000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 320000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 320000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 320000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="15" character-spacing="2" wrap-width="120" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 320000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 320000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 320000)</Filter>
+    <Filter>([area] &gt; 320000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="15" character-spacing="2" wrap-width="120" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 80000)</Filter>
+    <Filter>([area] &gt; 80000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 20000)</Filter>
+    <Filter>([area] &gt; 20000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="15" character-spacing="2" wrap-width="120" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 20000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 20000)</Filter>
+    <Filter>([area] &gt; 20000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([area] &gt; 20000) and ([type] = 'park')</Filter>
+    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 20000)</Filter>
+    <Filter>([area] &gt; 20000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 5000)</Filter>
+    <Filter>([area] &gt; 5000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 5000)</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt;= 0) and ([type] = 'park') and ([area] &gt; 5000)</Filter>
+    <Filter>([area] &gt; 5000) and ([type] = 'park')</Filter>
     <TextSymbolizer fontset-name="fontset-1" fill="#d96c81" halo-fill="#ffffff" halo-radius="1.5" size="11" wrap-width="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -48607,53 +47970,6 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="1.5" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="15" character-spacing="2" wrap-width="120" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([area] &gt; 25600000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
     <Filter>([area] &gt; 1600000)</Filter>
     <TextSymbolizer size="20" character-spacing="3" wrap-width="180" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -48769,13 +48085,7 @@ from osm_natural_nodes ) as data]]></Parameter>
     <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 20000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
     <Filter>([area] &gt; 20000)</Filter>
     <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -48786,13 +48096,7 @@ from osm_natural_nodes ) as data]]></Parameter>
     <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([area] &gt; 5000)</Filter>
-    <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([area] &gt; 5000)</Filter>
     <TextSymbolizer halo-radius="1.5" fontset-name="fontset-0" size="11" wrap-width="30" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -48815,7 +48119,7 @@ from osm_natural_nodes ) as data]]></Parameter>
        <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT type, name, area, 'land' AS stylegroup,
-    ST_PointOnSurface(geometry) AS geometry
+    ST_Centroid(geometry) AS geometry
   FROM osm_landusages
   WHERE name IS NOT NULL
     AND geometry && !bbox!
@@ -48824,17 +48128,15 @@ from osm_natural_nodes ) as data]]></Parameter>
         'hospital', 'industrial', 'library', 'park', 'pedestrian', 'place_of_worship',
         'playground', 'school', 'sports_center', 'stadium', 'theatre', 'university' )
     AND geometry && !bbox!
-    AND ST_IsValid(geometry)
-
+    
   UNION ALL
 
   SELECT 'building' AS type, name, area, 'building' AS stylegroup,
-    ST_PointOnSurface(geometry) AS geometry
+    ST_Centroid(geometry) AS geometry
   FROM osm_buildings
   WHERE name IS NOT NULL 
     AND geometry && !bbox!
-    AND ST_IsValid(geometry)
-
+    
   ORDER BY area DESC
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -49152,53 +48454,53 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
+    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(0.75)" file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
+    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(0.5)" file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
+    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
+    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
+    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(0.75)" file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
+    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(0.5)" file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
+    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
+    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -49247,53 +48549,53 @@ from osm_natural_nodes ) as data]]></Parameter>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(0.75)" placement="line" max-error="0.5" spacing="200" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(0.5)" placement="line" max-error="0.5" spacing="200" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(0.75)" placement="line" max-error="0.5" spacing="200" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(0.5)" placement="line" max-error="0.5" spacing="200" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -49320,12 +48622,12 @@ from osm_natural_nodes ) as data]]></Parameter>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <Filter>([type] = 'tertiary')</Filter>
+    <Filter>([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <Filter>([type] = 'secondary')</Filter>
+    <Filter>([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#666666" halo-fill="rgba(255, 255, 255, 0.66)" halo-radius="1" minimum-distance="60" size="9" placement-type="simple" placements="E,S,N,W" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
@@ -49436,23 +48738,6 @@ from osm_natural_nodes ) as data]]></Parameter>
 
 <Style name="waterway_label" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
-    <TextSymbolizer size="14" spacing="300" fontset-name="fontset-3" fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
-    <TextSymbolizer size="11" fontset-name="fontset-3" fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
-    <TextSymbolizer fontset-name="fontset-3" fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1" placement="line" minimum-distance="400" size="10" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'river')</Filter>
     <TextSymbolizer size="14" spacing="300" fontset-name="fontset-3" fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
@@ -49467,6 +48752,23 @@ from osm_natural_nodes ) as data]]></Parameter>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([type] = 'river')</Filter>
+    <TextSymbolizer fontset-name="fontset-3" fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1" placement="line" minimum-distance="400" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <TextSymbolizer size="14" spacing="300" fontset-name="fontset-3" fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
+    <TextSymbolizer size="11" fontset-name="fontset-3" fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'canal')</Filter>
     <TextSymbolizer fontset-name="fontset-3" fill="#3479af" halo-fill="rgba(233, 242, 249, 0.75)" halo-radius="1" placement="line" minimum-distance="400" size="10" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
