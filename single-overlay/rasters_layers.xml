@@ -101,7 +101,7 @@
 	srs="+proj=longlat +ellps=WGS84 +no_defs">
 	<StyleName>watermarks</StyleName>
 	<Datasource>
-		<Parameter name="file">../data/ne_10m_graticules_1.shp</Parameter>
+		<Parameter name="file">../data/graticules/ne_10m_graticules_1.shp</Parameter>
 		<Parameter name="type">shape</Parameter>
 	</Datasource>
 </Layer>
