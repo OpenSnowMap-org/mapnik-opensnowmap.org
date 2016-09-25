@@ -350,7 +350,7 @@ for c in colorList:
             size="10" fill='"""+str(color)+"""' halo-fill= "white" halo-radius="1" 
             placement="line" allow-overlap="false" spacing="10000" 
             avoid-edges="true"
-            wrap-width="10" dy="10">[route_name]</TextSymbolizer>
+            wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		""")
 f.write("""\
@@ -362,7 +362,7 @@ f.write("""\
 			size="10" fill="#44b2a3" halo-fill= "white" halo-radius="1" 
 			placement="line" allow-overlap="false" spacing="10000" 
 			avoid-edges="true"
-			wrap-width="10" dy="10">[route_name]</TextSymbolizer>
+			wrap-width="50" dy="10">[route_name]</TextSymbolizer>
 		</Rule>
 		""")
 
