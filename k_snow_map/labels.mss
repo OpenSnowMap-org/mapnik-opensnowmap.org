@@ -442,6 +442,10 @@
     text-fill: #888;
     text-halo-fill: #fff;
     /* Specific style overrides for different types of areas:*/
+    [type='parking']{
+    text-name: "P";
+    text-fill: @parking_line;
+    }
     [type='park'][zoom>=10] {
       text-face-name: @sans_lt_italic;
       text-fill: @park * 0.6;
@@ -659,3 +663,4 @@
 */
   comp-op: multiply;
   }
+

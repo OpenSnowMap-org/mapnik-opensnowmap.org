@@ -50,6 +50,7 @@ Map { font-directory: url(./fonts); }
 @beach:             @land;
 @park:              @land;
 @cemetery:          darken(@land_grey,25%);
+@wooded_low:        #bad4da; /* mix from wooded and ovelray png*/
 @wooded:            #C1DBDC;/*##ACDCDD;DCE6F3;#CDD7E7;*/
 @agriculture:       @land;
 @red:               #FF0000;
@@ -64,7 +65,8 @@ Map { font-directory: url(./fonts); }
 @residential:       darken(@land_grey,4%);
 @commercial:        darken(@land_grey,6%);
 @industrial:        darken(@land_grey,7%);
-@parking:           #EEE;
+@parking:           #F5F2D5;
+@parking_line:      #64A6D4;
 
 /* ================================================================== */
 /* ROAD COLORS

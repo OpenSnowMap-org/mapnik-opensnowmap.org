@@ -201,25 +201,36 @@ hillshade_d8.tif
 */
 #landuse[zoom>12] {
   [type='cemetery']      { polygon-fill: @cemetery; }
-  [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
-  [type='common']        { polygon-fill: @park; }
-  [type='forest']        { polygon-fill: @wooded; }
   [type='golf_course']   { polygon-fill: @sports; }
   [type='grass']         { polygon-fill: @grass; }
-  [type='hospital']      { polygon-fill: @hospital; }
   [type='industrial']    { polygon-fill: @industrial; }
   [type='park']          { polygon-fill: @park; }
-  [type='parking']       { polygon-fill: @parking; }
-  [type='pedestrian']    { polygon-fill: @pedestrian_fill; }
   [type='pitch']         { polygon-fill: @sports; }
-  [type='residential']   { polygon-fill: @residential; }
-  [type='school']        { polygon-fill: @school; }
   [type='sports_center'] { polygon-fill: @sports; }
   [type='stadium']       { polygon-fill: @sports; }
-  [type='university']    { polygon-fill: @school; }
   [type='wood']          { polygon-fill: @wooded; }
   [type='glacier']       { polygon-fill: @glacier; }
+}
+#landuse_gen0[zoom>5][zoom<=12] {
+  [type='forest']        { polygon-fill: @wooded_low; }
+}
+#landuse[zoom>12] {
+  [type='forest']        { polygon-fill: @wooded; }
+}
+#landuse[zoom>14] {
+  [type='college']       { polygon-fill: @school; }
+  [type='common']        { polygon-fill: @park; }
+  [type='hospital']      { polygon-fill: @hospital; }
+  [type='parking']       { 
+                          polygon-fill: @parking; 
+                          line-color: @parking_line;
+                          line-width: 0.5;
+                        }
+  [type='pedestrian']    { polygon-fill: @pedestrian_fill; }
+  [type='residential']   { polygon-fill: @residential; }
+  [type='school']        { polygon-fill: @school; }
+  [type='university']    { polygon-fill: @school; }
 }
 #landuse[zoom>12]{
   [type='forest'] { polygon-fill: @wooded; }
@@ -246,11 +257,11 @@ hillshade_d8.tif
   }
 #landuse_overlays[type='forest']{
     [zoom>12][zoom<=14]{ polygon-pattern-file:url(img/forest_small.png);}
-    [zoom>14]{ polygon-pattern-file:url(img/forest2.png);}
+    [zoom>14]{ polygon-pattern-file:url(img/forest_lite.png);}
 }
 #landuse_overlays[type='wood']{
     [zoom>12][zoom<=14]{ polygon-pattern-file:url(img/forest_small.png);}
-    [zoom>14]{ polygon-pattern-file:url(img/forest2.png);}
+    [zoom>14]{ polygon-pattern-file:url(img/forest_lite.png);}
 }
 #land_features[zoom>12] {
     opacity: 0.5;
