@@ -126,21 +126,21 @@ for id in Offsets:
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom9;
             &minscale_zoom11;
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*0.5*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom12;
             &minscale_zoom12;
-            <LineSymbolizer stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*1*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <Filter>[osm_id]="""+str(id)+""" </Filter>
             &maxscale_zoom13;
             &minscale_zoom14;
-            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" offset=\""""+str(Offsets[id]*1.5*1.1)+"""\" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
@@ -157,21 +157,21 @@ f.write("""\
 		    <ElseFilter/>
             &maxscale_zoom9;
             &minscale_zoom11;
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom12;
             &minscale_zoom12;
-            <LineSymbolizer stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom13;
             &minscale_zoom14;
-            <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+            <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
 			 stroke="#FFFFFF" stroke-opacity="0.9"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
@@ -301,28 +301,28 @@ f.write("""\
             &maxscale_zoom9;
             &minscale_zoom11;
             <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-			 stroke="#44b2a3"  smooth="0" stroke-gamma=".6"/>
+			 stroke="#29B29C"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom12;
             &minscale_zoom12;
             <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-			 stroke="#44b2a3"  smooth="0" stroke-gamma=".6"/>
+			 stroke="#29B29C"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom13;
             &minscale_zoom14;
             <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-			 stroke="#44b2a3"  smooth="0" stroke-gamma=".6"/>
+			 stroke="#29B29C"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
 		    <ElseFilter/>
             &maxscale_zoom15;
             &minscale_zoom18;
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" 
-			 stroke="#44b2a3"  smooth="0" stroke-gamma=".6"/>
+			 stroke="#29B29C"  smooth="0" stroke-gamma=".6"/>
         </Rule>
         """)
 		
@@ -359,7 +359,7 @@ f.write("""\
 			&minscale_zoom18;
 			<ElseFilter/>
 			<TextSymbolizer fontset-name="book-fonts"
-			size="10" fill="#44b2a3" halo-fill= "white" halo-radius="1" 
+			size="10" fill="#29B29C" halo-fill= "white" halo-radius="1" 
 			placement="line" allow-overlap="false" spacing="10000" 
 			avoid-edges="true"
 			wrap-width="50" dy="10">[route_name]</TextSymbolizer>
