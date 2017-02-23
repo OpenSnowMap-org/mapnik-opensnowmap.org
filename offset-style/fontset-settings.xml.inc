@@ -17,3 +17,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
   <Font face-name="DejaVu Sans Oblique" />
   <Font face-name="Unifont Medium" />
 </FontSet>
+<FontSet name="ski-fonts">
+  <Font face-name="Ski Medium" />
+</FontSet>

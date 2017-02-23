@@ -447,7 +447,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Rule>
 </Style>
 
-	<!-- 2017-02-23T13:52:20.575673 -->
+	<!-- 2017-02-23T13:52:01.706779 -->
 <Style name="relation-bg" filter-mode="first">
         <Rule>
 		    <Filter>[osm_id]=-2788187 </Filter>
@@ -23938,25 +23938,21 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 </Style>
 
 	
-	<!--
-<Layer name="hillshade"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
+	<Layer name="hillshade" srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_2.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="hillshade12"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
+<Layer name="hillshade12" srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade12</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_2.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="hillshade11"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
+<Layer name="hillshade11" srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade11</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_d2.tif</Parameter>
@@ -23964,8 +23960,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Datasource>
 </Layer>
 
-<Layer name="hillshade10"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
+<Layer name="hillshade10" srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade10</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_d2.tif</Parameter>
@@ -23973,8 +23968,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Datasource>
 </Layer>
 
-<Layer name="hillshade09"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
+<Layer name="hillshade09" srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade09</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_d4.tif</Parameter>
@@ -23982,15 +23976,14 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Datasource>
 </Layer>
 
-<Layer name="hillshade08"
-	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
+<Layer name="hillshade08" srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs +over">
 	<StyleName>hillshade08</StyleName>
 	<Datasource>
 	<Parameter name="file">../data/hillshade/hillshade_d8.tif</Parameter>
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
-
+<!--
 <Layer name="hillshade"
 	srs="+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ">
 	<StyleName>hillshade</StyleName>
@@ -23999,10 +23992,9 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
+-->
 
-
-<Layer name="nem"
-	srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+<Layer name="nem" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
 	<StyleName>nem</StyleName>
 	<Datasource>
 		<Parameter name="file">../data/ne-ocean-3857.tif</Parameter>
@@ -24010,8 +24002,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Datasource>
 </Layer>
 
-<Layer name="ne50madmin0countries"
-	srs="+proj=longlat +ellps=WGS84 +no_defs">
+<Layer name="ne50madmin0countries" srs="+proj=longlat +ellps=WGS84 +no_defs">
 	<StyleName>ne50madmin0countries</StyleName>
 	<Datasource>
 		<Parameter name="file">../data/ne_50m_admin_0_countries.shp</Parameter>
@@ -24019,15 +24010,14 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Datasource>
 </Layer>
 
-<Layer name="mod10a2"
-	srs='+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs +over'>
+<Layer name="mod10a2" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs +over">
 	<StyleName>mod10a2</StyleName>
 	<Datasource>
 		<Parameter name="file">../data/MOD10A2.005-3857-cubic-alpha.tif</Parameter>
 		<Parameter name="type">gdal</Parameter>
 	</Datasource>
 </Layer>
-
+<!--
 <Layer name="mod10a2"
 	srs='+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs +over'>
 	<StyleName>mod10a2-2</StyleName>
@@ -24046,7 +24036,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Datasource>
 </Layer>
 
-<!--
 <Layer name="srtm_10" status="on">
 	<StyleName>contours10</StyleName>
 	<Datasource>
@@ -24078,7 +24067,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 100 = 0) as "contours-100"</Parameter>
 	</Datasource>
 </Layer>
--->
 
 	<Layer name="nodes-downhill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>nodes-downhill</StyleName>
@@ -24163,19 +24151,16 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Datasource>
 </Layer>
 
-<!--
-<Layer name="ne50mpopulatedplaces"
-			srs="+proj=longlat +ellps=WGS84 +no_defs">
+<Layer name="ne50mpopulatedplaces" srs="+proj=longlat +ellps=WGS84 +no_defs">
 	<StyleName>ne50mpopulatedplaces</StyleName>
 	<Datasource>
 		<Parameter name="file">../data/ne_50m_populated_places.shp</Parameter>
 		<Parameter name="id">ne50mpopulatedplaces</Parameter>
 		<Parameter name="project">snow-cover</Parameter>
-		<Parameter name="srs"></Parameter>
+		<Parameter name="srs"/>
 		<Parameter name="type">shape</Parameter>
 	</Datasource>
 </Layer>
--->
 
 <Layer name="downhill-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-casing</StyleName>

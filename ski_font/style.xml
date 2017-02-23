@@ -1,0 +1,53 @@
+<GroupSymbolizer>
+    <SimpleLayout />
+    <GroupRule>
+        <Filter>[piste:type].match('downhill')</Filter>
+        <PointSymbolizer file="types/downhill.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('nordic')</Filter>
+        <PointSymbolizer file="types/nordic.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('snow_park')</Filter>
+        <PointSymbolizer file="types/snow_park.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('skitour')</Filter>
+        <PointSymbolizer file="types/skitour.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('ski_jump')</Filter>
+        <PointSymbolizer file="types/jump.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('hike')</Filter>
+        <PointSymbolizer file="types/hike.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('ice-skate')</Filter>
+        <PointSymbolizer file="types/ice-skate.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('playground')</Filter>
+        <PointSymbolizer file="types/playground.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('sled')</Filter>
+        <PointSymbolizer file="types/sled.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+    <GroupRule>
+        <Filter>[piste:type].match('sleigh')</Filter>
+        <PointSymbolizer file="types/sleigh.svg"/>
+        <TextSymbolizer>[site_name]</TextSymbolizer>
+    </GroupRule>
+</GroupSymbolizer>
