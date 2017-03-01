@@ -23011,65 +23011,65 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='snow_park' </Filter>
+		<Filter>[piste:type].match('.*snow_park.*') </Filter>
 		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='snow_park' </Filter>
+		<Filter>[piste:type].match('.*snow_park.*') </Filter>
 		<LineSymbolizer stroke-width="2" stroke="#0F6DD3" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='playground' </Filter>
+		<Filter>[piste:type].match('.*playground.*') </Filter>
 		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='playground' </Filter>
+		<Filter>[piste:type].match('.*playground.*') </Filter>
 		<LineSymbolizer stroke-width="2" stroke="#A6E05B" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='sled' </Filter>
+		<Filter>[piste:type].match('.*sled.*') </Filter>
 		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='sled' </Filter>
+		<Filter>[piste:type].match('.*sled.*') </Filter>
 		<LineSymbolizer stroke-width="1.5" stroke="#BAFF3A" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
+		<Filter>[piste:type].match('.*ice_skate.*') or [sport].match('.*skating.*')</Filter>
 		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
+		<Filter>[piste:type].match('.*ice_skate.*') or [sport].match('.*skating.*')</Filter>
 		<LineSymbolizer stroke-width="1.5" stroke="#6FC4D0" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='sleigh'</Filter>
+		<Filter>[piste:type].match('.*sleigh.*')</Filter>
 		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='sleigh'</Filter>
+		<Filter>[piste:type].match('.*sleigh.*')</Filter>
 		<LineSymbolizer stroke-width="1.5" stroke="#8F54D8" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
@@ -23078,31 +23078,31 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='snow_park'</Filter>
+		<Filter>[piste:type].match('.*snow_park.*')</Filter>
 		<PointSymbolizer file="pics/snow_park_bw.png"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='sled' </Filter>
+		<Filter>[piste:type].match('.*sled.*')</Filter>
 		<ShieldSymbolizer file="pics/sled_bw.png" fontset-name="bold-fonts" spacing="5000" allow-overlap="false" placement="point">' '</ShieldSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ice_skate' or [sport]='skating'</Filter>
+		<Filter>[piste:type].match('.*ice_skate.*') or [sport].match('.*skating.*')</Filter>
 		<MarkersSymbolizer file="pics/ice-skate.png" placement="point" spacing="400"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='sleigh' </Filter>
+		<Filter>[piste:type].match('.*sleigh.*')</Filter>
 		<ShieldSymbolizer file="pics/sleigh_bw.png" fontset-name="bold-fonts" spacing="5000" allow-overlap="false" placement="point">' '</ShieldSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='playground' </Filter>
+		<Filter>[piste:type].match('.*playground.*') </Filter>
 		<PointSymbolizer file="pics/playground_bw.png"/>
 	</Rule>
 
@@ -23130,13 +23130,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='snow_park'</Filter>
+		<Filter>[piste:type].match('.*snow_park.*')</Filter>
 		<PolygonSymbolizer fill="#0074F3" fill-opacity="0.5" smooth="0.5" gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='playground'</Filter>
+		<Filter>[piste:type].match('.*playground.*')</Filter>
 		<PolygonSymbolizer fill="#A6E05B" fill-opacity="0.5" smooth="0.5" gamma=".6"/>
 	</Rule>
 </Style>
@@ -23144,26 +23144,26 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='snow_park' </Filter>
+		<Filter>[piste:type].match('.*snow_park.*')</Filter>
 		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#005CC0" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dy="15" wrap-width="15">[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='playground' </Filter>
+		<Filter>[piste:type].match('.*playground.*')</Filter>
 		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#6CAD1A" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dy="15" wrap-width="15">[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='sled' </Filter>
+		<Filter>[piste:type].match('.*sled.*')</Filter>
 		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#70A808" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="1000" avoid-edges="true" dy="15" wrap-width="15">[name]</TextSymbolizer>
 	</Rule>
 
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ski_jump' or [piste:type]='jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
+		<Filter>[piste:type].match('.*ski_jump.*') or [piste:type].match('.*jump.*') or [sport].match('.*ski_jump.*') or [sport].match('.*ski_jump_take_off.*')</Filter>
 		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#655ABE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dx="-30" wrap-width="15">[name]</TextSymbolizer>
 	</Rule>
 </Style>
@@ -23180,7 +23180,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ski_jump_landing'</Filter>
+		<Filter>[piste:type].match('.*ski_jump_landing.*')</Filter>
 		<PolygonSymbolizer fill="#BCB7E1" fill-opacity="0.7" smooth="0.5" gamma=".6"/>
 	</Rule>
 </Style>
@@ -23189,38 +23189,38 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ski_jump_landing' and [area]='yes'</Filter>
+		<Filter>[piste:type].match('.*ski_jump_landing.*') and [area]='yes'</Filter>
 		<PolygonSymbolizer fill="#BCB7E1" fill-opacity="0.5" smooth="0.5" gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ski_jump' or [piste:type]='jump' or [piste:type]='ski_jump_landing' or [sport]='ski_jump_take_off' or [sport]='ski_jump' and not [area]='yes'</Filter>
+		<Filter>([piste:type].match('.*ski_jump.*') or [piste:type].match('.*jump.*') or [sport].match('.*ski_jump.*') or [sport].match('.*ski_jump_take_off.*')) and not [area]='yes'</Filter>
 		<LineSymbolizer stroke-width="2.5" stroke="#E7E3FF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ski_jump' or [piste:type]='jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
+		<Filter>[piste:type].match('.*ski_jump.*') or [piste:type].match('.*jump.*') or [sport].match('.*ski_jump.*') or [sport].match('.*ski_jump_take_off.*')</Filter>
 		<LineSymbolizer stroke-width="2" stroke="#655ABE" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ski_jump_landing' and not [area]='yes'</Filter>
+		<Filter>[piste:type].match('.*ski_jump_landing.*') and not [area]='yes'</Filter>
 		<LineSymbolizer stroke-width="2" stroke="#655ABE" smooth="0.5" stroke-gamma=".6" stroke-dasharray="6,6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ski_jump_landing' and [area]='yes'</Filter>
+		<Filter>[piste:type].match('.*ski_jump_landing.*') and [area]='yes'</Filter>
 		<LineSymbolizer stroke-width="1" stroke="#655ABE" smooth="0.5" stroke-gamma=".6" stroke-dasharray="6,6"/>
 	</Rule>
 	
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type]='ski_jump' or [sport]='ski_jump' or [sport]='ski_jump_take_off'</Filter>
+		<Filter>[piste:type].match('.*ski_jump.*') or [piste:type].match('.*jump.*') or [sport].match('.*ski_jump.*') or [sport].match('.*ski_jump_take_off.*')</Filter>
 		<ShieldSymbolizer file="pics/jump_bw.png" fontset-name="bold-fonts" spacing="10000" allow-overlap="false" placement="point">' '</ShieldSymbolizer>
 	</Rule>
 </Style>
@@ -24095,12 +24095,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='downhill'
+		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type" LIKE '%downhill%'
 		) as nodes
 		</Parameter>
 	</Datasource>
 </Layer>
 <Layer name="nodes-downhill2" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>nodes-downhill2</StyleName>
 	<StyleName>nodes-downhill2</StyleName>
 	<Datasource>
 		
@@ -24115,7 +24116,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='downhill'
+		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type" LIKE '%downhill%'
 		) as nodes
 		</Parameter>
 	</Datasource>
@@ -24136,7 +24137,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<!-- Select only the first node of each way, don't forget the 'as way' otherwise mapnik can't select points -->
 		<Parameter name="table">
-		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='nordic'
+		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type" LIKE '%nordic%'
 		) as nodes
 		</Parameter>
 	</Datasource>
@@ -24157,7 +24158,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<!-- Select only the first node of each way, don't forget the 'as way' otherwise mapnik can't select points -->
 		<Parameter name="table">
-		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type"='nordic'
+		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type" LIKE '%nordic%'
 		) as nodes
 		</Parameter>
 	</Datasource>
@@ -24191,7 +24192,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24211,7 +24212,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'  
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		order by z_order) as pistes
@@ -24232,7 +24233,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24252,7 +24253,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'  and "piste:grooming"='backcountry'
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24274,7 +24275,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill' 
+		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
@@ -24296,7 +24297,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill' 
+		"piste:type" LIKE '%downhill%' 
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
@@ -24318,7 +24319,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill' 
+		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
@@ -24340,7 +24341,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
@@ -24362,7 +24363,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill' and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%' and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24382,7 +24383,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill' and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%' and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24402,7 +24403,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill' and "piste:grooming"='backcountry'
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%' and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24422,7 +24423,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill' and "piste:grooming"='backcountry'
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%' and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24444,7 +24445,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		) as pistes
 		</Parameter>
@@ -24465,7 +24466,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
 		) as pistes
 		</Parameter>
@@ -24486,7 +24487,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%%downhill%%'
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		) as pistes
 		</Parameter>
@@ -24507,7 +24508,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill' 
+		"piste:type" LIKE '%%downhill%%' 
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
@@ -24529,7 +24530,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
@@ -24551,7 +24552,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
@@ -24573,7 +24574,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24593,7 +24594,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='downhill'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24615,7 +24616,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
@@ -24637,7 +24638,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
@@ -24659,7 +24660,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill' 
+		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
@@ -24681,7 +24682,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
@@ -24705,7 +24706,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_line where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
@@ -24726,7 +24727,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
-		"piste:type"='downhill'
+		"piste:type" LIKE '%downhill%'
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
@@ -24747,7 +24748,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='hike'order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%hike%'order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24766,7 +24767,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='skitour'order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%skitour%'order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24785,7 +24786,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='nordic' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24804,7 +24805,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='nordic' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24822,7 +24823,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_polygon where "piste:type"='nordic' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24835,7 +24836,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		&datasource-settings;
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 order by z_order) as routes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as routes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24855,7 +24856,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 order by z_order) as routes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as routes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24873,7 +24874,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 
 		<Parameter name="table">
-		(select * from planet_osm_polygon where "piste:type"='nordic' and osm_id &lt; 0 order by z_order) as routes
+		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as routes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24892,7 +24893,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) DESC) as routes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) DESC) as routes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24910,7 +24911,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 
 		<Parameter name="table">
-		(select * from planet_osm_polygon where "piste:type"='nordic' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) DESC) as routes
+		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) DESC) as routes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24922,7 +24923,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(SELECT * FROM planet_osm_line where "piste:type"='nordic' and osm_id &gt; 0 order by z_order) as pistes
+		(SELECT * FROM planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24942,7 +24943,13 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 
 		<Parameter name="table">
-		(SELECT * FROM planet_osm_line where "piste:type"='nordic' and ("piste:difficulty" not in ('novice','easy','intermediate','advanced','expert','freeride','extreme') or "piste:difficulty" is null) and osm_id &gt; 0 order by z_order) as pistes
+		(SELECT * FROM planet_osm_line where "piste:type" LIKE '%nordic%' 
+        and 
+            (
+            "piste:difficulty" not in ('novice','easy','intermediate','advanced','expert','freeride','extreme')
+             or "piste:difficulty" is null
+             )
+         and osm_id &gt; 0 order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -24962,7 +24969,13 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 		<Parameter name="table">
 		(select * from planet_osm_line 
-			where "piste:type" in ('ice_skate','playground','sled','snow_park','sleigh')
+			where 
+            "piste:type" LIKE '%ice_skate%' 
+            or "piste:type" LIKE '%playground%' 
+            or "piste:type" LIKE '%sled%' 
+            or "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%snow_park%' 
+            or "piste:type" LIKE '%sleigh%' 
 			or sport in ('skating') order by z_order
 		 ) as pistes
 		</Parameter>
@@ -24984,7 +24997,10 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 		<Parameter name="table">
 		(select * from planet_osm_line 
-			where "piste:type" in ('ski_jump','ski_jump_take_off','ski_jump_landing')
+			where 
+            "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%ski_jump_take_off%' 
+            or "piste:type" LIKE '%ski_jump_landing%' 
 			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
 		 ) as pistes
 		</Parameter>
@@ -25007,7 +25023,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon
-			where "piste:type" in ('ski_jump','ski_jump_landing')
+			where "piste:type" LIKE '%ski_jump%'
+            or "piste:type" LIKE '%ski_jump_landing%'
 		 ) as pistes
 		</Parameter>
 	</Datasource>
@@ -25028,7 +25045,8 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon 
-			where "piste:type" in ('playground','snow_park')
+			where "piste:type" LIKE '%playground%'
+            or "piste:type" LIKE '%snow_park%'
 			order by z_order
 		 ) as pistes
 		</Parameter>
@@ -25069,7 +25087,13 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 		<Parameter name="table">
 		(select * from planet_osm_line 
-			where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park','sleigh')
+			where 
+            "piste:type" LIKE '%ice_skate%' 
+            or "piste:type" LIKE '%playground%' 
+            or "piste:type" LIKE '%sled%' 
+            or "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%snow_park%' 
+            or "piste:type" LIKE '%sleigh%' 
 			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
 		 ) as pistes
 		</Parameter>
@@ -25090,7 +25114,13 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 		<Parameter name="table">
 		(select * from planet_osm_polygon 
-			where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park','downhill')
+			where 
+            "piste:type" LIKE '%ice_skate%' 
+            or "piste:type" LIKE '%playground%' 
+            or "piste:type" LIKE '%sled%' 
+            or "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%snow_park%' 
+            or "piste:type" LIKE '%sleigh%' 
 			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
 		 ) as pistes
 		</Parameter>
@@ -25179,7 +25209,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='nordic' and osm_id &gt; 0 order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -25216,7 +25246,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 order by z_order) as text
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as text
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -25261,7 +25291,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 				or "piste:ref"!='' 
 				or "ref"!='' )
 				and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
-				and "piste:type"='downhill'
+				and "piste:type" LIKE '%downhill%'
 			) as refs
 		) as pistes
 		</Parameter>
@@ -25308,7 +25338,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 				or "piste:ref"!='' 
 				or "ref"!='' )
 				and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
-				and "piste:type"='downhill' and "area"='yes' 
+				and "piste:type" LIKE '%downhill%' and "area"='yes' 
 			) as refs
 		) as pistes
 		</Parameter>
@@ -25355,7 +25385,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 				or "piste:ref"!='' 
 				or "ref"!='' )
 				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
-				and "piste:type"='downhill'
+				and "piste:type" LIKE '%downhill%'
 			) as refs
 		) as pistes
 		</Parameter>
@@ -25402,7 +25432,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 				or "piste:ref"!='' 
 				or "ref"!='' )
 				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
-				and "piste:type"='downhill' and "area"='yes' 
+				and "piste:type" LIKE '%downhill%' and "area"='yes' 
 			) as refs
 		) as pistes
 		</Parameter>
@@ -25425,7 +25455,11 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		<Parameter name="table">
 		(select  way, coalesce("piste:name",name) as name, "piste:type", sport
 		from planet_osm_line 
-			where "piste:type" in ('ice_skate','playground','sled','ski_jump','snow_park')
+			where "piste:type" LIKE '%ice_skate%'
+            or "piste:type" LIKE '%playground%'
+            or "piste:type" LIKE '%sled%'
+            or "piste:type" LIKE '%ski_jump%'
+            or "piste:type" LIKE '%snow_park%'
 			or sport in ('skating') 
 			order by z_order
 		  ) as pistes
@@ -25449,7 +25483,10 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		<Parameter name="table">
 		(select  way, coalesce("piste:name",name) as name, "piste:type", sport
 		from planet_osm_polygon
-			where "piste:type" in ('ice_skate','playground','sled','snow_park')
+			where "piste:type" LIKE '%ice_skate%'
+            or "piste:type" LIKE '%playground%'
+            or "piste:type" LIKE '%sled%'
+            or "piste:type" LIKE '%snow_park%'
 			or sport in ('skating') order by z_order
 		  ) as pistes
 		</Parameter>
