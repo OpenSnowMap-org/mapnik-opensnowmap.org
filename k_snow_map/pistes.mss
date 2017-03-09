@@ -135,3 +135,16 @@
   
   comp-op: color-dodge;
   }
+#downhill_white_overlay[zoom>=12]{
+    line-cap: round;
+    line-join: round;
+    line-color: #FFFFFF;
+    line-opacity: 0.6;
+    image-filters: agg-stack-blur(1,1);
+    line-smooth: 0.5;
+  [zoom=12] {line-width: 8;}
+  [zoom=13] {line-width: 9;}
+  [zoom=14] {line-width: 10;}
+  [zoom=15] {line-width: 12;}
+  [zoom>=16] {line-width: 14;}
+}
