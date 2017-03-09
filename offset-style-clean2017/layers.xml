@@ -1,0 +1,819 @@
+<Layer name="nodes-downhill"
+				srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>nodes-downhill</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type" LIKE '%downhill%'
+		) as nodes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="nodes-downhill2"
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>nodes-downhill2</StyleName>
+	<StyleName>nodes-downhill2</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type" LIKE '%downhill%'
+		) as nodes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="nodes-nordic"
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>nodes-nordic</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<!-- Select only the first node of each way, don't forget the 'as way' otherwise mapnik can't select points -->
+		<Parameter name="table">
+		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type" LIKE '%nordic%'
+		) as nodes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="nodes-nordic2"
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>nodes-nordic2</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<!-- Select only the first node of each way, don't forget the 'as way' otherwise mapnik can't select points -->
+		<Parameter name="table">
+		(select ST_StartPoint(way) as way from planet_osm_line where "piste:type" LIKE '%nordic%'
+		) as nodes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<!--
+<Layer name="ne50mpopulatedplaces"
+			srs="+proj=longlat +ellps=WGS84 +no_defs">
+	<StyleName>ne50mpopulatedplaces</StyleName>
+	<Datasource>
+		<Parameter name="file">../data/ne_50m_populated_places.shp</Parameter>
+		<Parameter name="id">ne50mpopulatedplaces</Parameter>
+		<Parameter name="project">snow-cover</Parameter>
+		<Parameter name="srs"></Parameter>
+		<Parameter name="type">shape</Parameter>
+	</Datasource>
+</Layer>
+-->
+<Layer name="skitour" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>skitour</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select ST_LineMerge(way)as way from planet_osm_line where "piste:type" LIKE '%skitour%'order by st_length(way) DESC)as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="downhill-casing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-casing</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-casing-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-casing-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  
+        and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="downhill-area-casing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-area-casing</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-area-casing-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-area-casing-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%' 
+		and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+
+<Layer name="overlay-eraser" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-eraser</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where 
+		"piste:type" LIKE '%downhill%'
+
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="area-eraser" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>area-eraser</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%'
+
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="downhill-area-fill" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-area-fill</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%'
+
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="downhill-overlay-thin" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-thin</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="diamonds" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>diamonds</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where 
+		"piste:type" LIKE '%downhill%'
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="diamonds-area" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>diamonds-area</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%'
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="snowshoeing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>snowshoeing</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%hike%'order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="nordic-bg" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>nordic-bg</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="nordic" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>nordic</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="nordic-pols" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>nordic</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<!--
+<Layer name="eraser"
+srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>eraser</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as routes
+		</Parameter>
+	</Datasource>
+</Layer>
+-->
+
+<Layer name="relation-bg"
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>relation-bg</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as routes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="relation-bg-pols"
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>relation-bg</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as routes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="relation"
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>relation</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) DESC) as routes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="relation-pols"
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>relation</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 ORDER BY ST_LENGTH(way) DESC) as routes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<!--
+<Layer name="difficulty" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>difficulty</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(SELECT * FROM planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+-->
+
+<Layer name="no-difficulty" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>no-difficulty</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(SELECT * FROM planet_osm_line where "piste:type" LIKE '%nordic%' 
+        and 
+            (
+            "piste:difficulty" not in ('novice','easy','intermediate','advanced','expert','freeride','extreme')
+             or "piste:difficulty" is null
+             )
+         and osm_id &gt; 0 order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="others" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>others</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line 
+			where 
+            "piste:type" LIKE '%ice_skate%' 
+            or "piste:type" LIKE '%playground%' 
+            or "piste:type" LIKE '%sled%' 
+            or "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%snow_park%' 
+            or "piste:type" LIKE '%sleigh%' 
+			or sport in ('skating') order by z_order
+		 ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="ski_jump" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>ski_jump</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line 
+			where 
+            "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%ski_jump_take_off%' 
+            or "piste:type" LIKE '%ski_jump_landing%' 
+			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+		 ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+
+<Layer name="ski_jump_area" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>ski_jump_area</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon
+			where "piste:type" LIKE '%ski_jump%'
+            or "piste:type" LIKE '%ski_jump_landing%'
+		 ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="others-area" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>others-area</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon 
+			where "piste:type" LIKE '%playground%'
+            or "piste:type" LIKE '%snow_park%'
+			order by z_order
+		 ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+	
+<Layer name="aerialways" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>aerialways</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "aerialway" is not null or "railway"='funicular' or "railway"='incline' order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="others-icons" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>others-icons</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line 
+			where 
+            "piste:type" LIKE '%ice_skate%' 
+            or "piste:type" LIKE '%playground%' 
+            or "piste:type" LIKE '%sled%' 
+            or "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%snow_park%' 
+            or "piste:type" LIKE '%sleigh%' 
+			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+		 ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="others-icons-area" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>others-icons</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon 
+			where 
+            "piste:type" LIKE '%ice_skate%' 
+            or "piste:type" LIKE '%playground%' 
+            or "piste:type" LIKE '%sled%' 
+            or "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%snow_park%' 
+            or "piste:type" LIKE '%sleigh%' 
+			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+		 ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="POIs" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>POIs</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_point 
+			where "man_made" in ('snow_cannon')
+			order by z_order
+		 ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="aerialways-icons" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>aerialways-icons</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(select way as way, aerialway, railway 
+		from planet_osm_line 
+		where ("aerialway" is not null or "railway"='funicular' or "railway"='incline' )
+		and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &lt; 180
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="aerialways-icons-rev" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>aerialways-icons-rev</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(select st_reverse(way) as way, aerialway, railway 
+		from planet_osm_line 
+		where ("aerialway" is not null or "railway"='funicular' or "railway"='incline')
+		and degrees(st_azimuth(st_startpoint(way), st_endpoint(way))) &gt; 180
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="difficulty-icons" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>difficulty-icons</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="other-icons" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-icons</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:difficulty"='freeride' or"piste:grooming"='mogul' or "gladed"='yes' or "lit"='yes' or "piste:lit"='yes' order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as text
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN "highway"!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_line
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+				and "piste:type" LIKE '%downhill%'
+			) as refs
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-area-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
+		<Parameter name="table">
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN "highway"!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_polygon
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
+				and "piste:type" LIKE '%downhill%' and "area"='yes' 
+			) as refs
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-text-us" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-text-us</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN "highway"!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_line
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
+				and "piste:type" LIKE '%downhill%'
+			) as refs
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="downhill-area-text-us" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-text-us</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
+		<Parameter name="table">
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN "highway"!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_polygon
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
+				and "piste:type" LIKE '%downhill%' and "area"='yes' 
+			) as refs
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="other-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>other-text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(select  way, coalesce("piste:name",name) as name, "piste:type", sport
+		from planet_osm_line 
+			where "piste:type" LIKE '%ice_skate%'
+            or "piste:type" LIKE '%playground%'
+            or "piste:type" LIKE '%sled%'
+            or "piste:type" LIKE '%ski_jump%'
+            or "piste:type" LIKE '%snow_park%'
+			or sport in ('skating') 
+			order by z_order
+		  ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="skitour-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>skitour-text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select ST_LineMerge(way)as way from planet_osm_line where "piste:type" LIKE '%skitour%'order by st_length(way) DESC)as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="other-area-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>other-text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
+		<Parameter name="table">
+		(select  way, coalesce("piste:name",name) as name, "piste:type", sport
+		from planet_osm_polygon
+			where "piste:type" LIKE '%ice_skate%'
+            or "piste:type" LIKE '%playground%'
+            or "piste:type" LIKE '%sled%'
+            or "piste:type" LIKE '%snow_park%'
+			or sport in ('skating') order by z_order
+		  ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="aerialways-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>aerialways-text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_line</Parameter>
+		<Parameter name="table">
+		(SELECT 
+			CASE 
+				WHEN n is not null and r is null
+					THEN n
+				WHEN n is null and r is not null
+					THEN r
+				WHEN r=n
+					THEN n
+				WHEN n is not null and r is not null
+					THEN concat(r,' - ',n)
+			END as "PISTENAME", *
+		FROM (
+			SELECT 
+			CASE 
+				WHEN "highway"!=''
+					THEN "piste:ref"
+					ELSE coalesce("piste:ref","ref")
+				END as r, coalesce("piste:name",name) as n, *
+			FROM planet_osm_line
+			WHERE
+				(
+				"piste:name"!='' 
+				or "name"!='' 
+				or "piste:ref"!='' 
+				or "ref"!='' )
+				and ("aerialway" is not null or "railway"='funicular' or "railway"='incline')
+			) as refs
+		)as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+<Layer name="ski_jump-text" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>ski_jump-text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_point</Parameter>
+		<Parameter name="table">
+		(select way, takeoff
+		from planet_osm_point
+			where takeoff is not null order by z_order
+		  ) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="site_text" clear-label-cache="on"
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>site_text</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="geometry_table">planet_osm_point</Parameter>
+<!--
+SnapToGrid permet de fusionner les sites proches (s'ils sont mappés 
+comme relation *et* landuse), de sorte qu'on ne se retrouve
+pas avec deux labels très proches
+-->
+		<Parameter name="table">
+(select site_name, "piste:type", ST_SnapToGrid(way,3000) as way
+from planet_osm_point 
+WHERE site_name is not null AND entrance is null
+ORDER BY char_length("piste:type") DESC, char_length(site_name) DESC
+) as text
+
+		</Parameter>
+	</Datasource>
+</Layer>
+

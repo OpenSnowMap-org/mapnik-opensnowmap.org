@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Map xmlns:xi="http://www.w3.org/2001/XInclude" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" background-color="transparent" font-directory="fonts\">
+
+<FontSet name="book-fonts">
+  <Font face-name="DejaVu Sans Book"/>
+  <Font face-name="Unifont Medium"/>
+</FontSet>
+<FontSet name="bold-fonts">
+  <Font face-name="DejaVu Sans Bold"/>
+  <Font face-name="Unifont Medium"/>
+</FontSet>
+<FontSet name="oblique-fonts">
+  <Font face-name="DejaVu Sans Oblique"/>
+  <Font face-name="Unifont Medium"/>
+</FontSet>
+
+
+<Style name="relation" filter-mode="first">
+        <Rule>
+            <MaxScaleDenominator>50000000</MaxScaleDenominator>
+            <LineSymbolizer stroke-width="6" stroke="rgb(250,10,10)" stroke-opacity="0.3" stroke-gamma=".6"/>
+        </Rule>
+</Style>
+
+<Layer name="relation" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>relation</StyleName>
+	<Datasource>
+        <Parameter name="dbname">pistes-mapnik</Parameter>
+        <Parameter name="type">postgis</Parameter>
+        <Parameter name="user">mapnik</Parameter>
+        <Parameter name="host">localhost</Parameter>
+        <Parameter name="password">mapnik</Parameter>
+        <Parameter name="port">5432</Parameter>
+        <Parameter name="estimate-extent">true</Parameter>
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type"='nordic' and osm_id &lt; 0 and (color is not null or colour is not null) ORDER BY ST_LENGTH(way) DESC) as routes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="relation-pols" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>relation</StyleName>
+	<Datasource>
+        <Parameter name="dbname">pistes-mapnik</Parameter>
+        <Parameter name="type">postgis</Parameter>
+        <Parameter name="user">mapnik</Parameter>
+        <Parameter name="host">localhost</Parameter>
+        <Parameter name="password">mapnik</Parameter>
+        <Parameter name="port">5432</Parameter>
+        <Parameter name="estimate-extent">true</Parameter>
+		<Parameter name="table">
+		(select * from planet_osm_polygon where "piste:type"='nordic' and osm_id &lt; 0 and (color is not null or colour is not null) ORDER BY ST_LENGTH(way) DESC) as routes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+
+</Map>

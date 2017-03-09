@@ -434,6 +434,50 @@ order by area desc) as landusages]]></Parameter>
     </Datasource>
   </Layer>
 
+<Style name="downhill_white_overlay" filter-mode="first" image-filters="agg-stack-blur(1,1)">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-opacity="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-opacity="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-opacity="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-opacity="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-opacity="0.6" smooth="0.5" />
+  </Rule>
+</Style>
+<Layer name="downhill_white_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>downhill_white_overlay</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select type, geometry from osm_pistes_ways where type='downhill'
+) as data]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
+       <Parameter name="id"><![CDATA[pistes]]></Parameter>
+       <Parameter name="project"><![CDATA[snowmap]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+    </Datasource>
+  </Layer>
+
 <Style name="land_features" filter-mode="first" opacity="0.5">
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
