@@ -147,6 +147,26 @@
         "class": "",        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "geometry": "polygon"
     },
+    
+    {"name": "downhill_white_overlay",
+        "id": "downhill_white_overlay",
+        "geometry": "linestring",
+        "Datasource": {
+          "type": "postgis",
+          "table": "(select type, geometry from osm_pistes_ways where type='downhill'\n) as data",
+          "key_field": "",
+          "geometry_field": "",
+          
+          "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+          "dbname": "imposm",
+          "user": "imposm",
+          "id": "pistes",
+          "project": "snowmap",
+          "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        },
+        "class": "",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"    },
+
     {"name": "land_features",
         "id": "land_features",
         "geometry": "linestring",
