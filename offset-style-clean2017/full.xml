@@ -23860,27 +23860,40 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 </Style>
 
-<Style name="downhill-overlay-eraser" comp-op="dst-out">
+<Style name="downhill-overlay-eraser1" comp-op="dst-out" opacity="0.3">
 	<!--all-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="0.2" stroke="#FFFFFF" stroke-opacity="0.3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="0.2" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
+	
+</Style>
+<Style name="downhill-overlay-eraser2" comp-op="dst-out" opacity="0.5">
+	<!--all-->
 	<Rule>
 		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="2" stroke="#FFFFFF" stroke-opacity="0.5" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
+	
+</Style>
+<Style name="downhill-overlay-eraser3" comp-op="dst-out" opacity="0.8">
+	<!--all-->
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" stroke-opacity="0.8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
+
+	
+</Style>
+<Style name="downhill-overlay-eraser4" comp-op="dst-out" opacity="0.95">
+	<!--all-->
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" stroke-opacity="0.95" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	
 </Style>
@@ -28029,7 +28042,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="downhill-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-casing</StyleName>
 	<Datasource>
@@ -28071,7 +28083,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="downhill-area-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-area-casing</StyleName>
 	<Datasource>
@@ -28089,6 +28100,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -28111,15 +28123,14 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-
-
-<Layer name="overlay-eraser" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-overlay-eraser</StyleName>
+<Layer name="overlay-eraser1" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-eraser1</StyleName>
 	<Datasource>
 		
 <Parameter name="dbname">pistes-mapnik</Parameter>
@@ -28139,7 +28150,69 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		</Parameter>
 	</Datasource>
 </Layer>
+<Layer name="overlay-eraser2" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-eraser2</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
 
+
+		<Parameter name="table">
+		(select * from planet_osm_line where 
+		"piste:type" LIKE '%downhill%'
+
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="overlay-eraser3" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-eraser3</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select * from planet_osm_line where 
+		"piste:type" LIKE '%downhill%'
+
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="overlay-eraser4" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-eraser4</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select * from planet_osm_line where 
+		"piste:type" LIKE '%downhill%'
+
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
 <Layer name="area-eraser" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>area-eraser</StyleName>
 	<Datasource>
@@ -28156,12 +28229,12 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
 
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="downhill-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-area-fill</StyleName>
 	<Datasource>
@@ -28178,13 +28251,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
 
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="downhill-overlay-thin" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-overlay-thin</StyleName>
 	<Datasource>
@@ -28205,7 +28278,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="diamonds" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>diamonds</StyleName>
 	<Datasource>
@@ -28249,6 +28321,11 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Datasource>
 </Layer>
 
+
+
+
+
+
 <Layer name="snowshoeing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>snowshoeing</StyleName>
 	<Datasource>
@@ -28263,7 +28340,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type" LIKE '%hike%'order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%hike%' order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -28550,7 +28627,11 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-	
+
+
+
+
+
 <Layer name="aerialways" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>aerialways</StyleName>
 	<Datasource>
@@ -28646,6 +28727,10 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
+
+
+
+
 <Layer name="aerialways-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>aerialways-icons</StyleName>
 	<Datasource>
@@ -28692,6 +28777,9 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
+
+
+
 
 <Layer name="difficulty-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>difficulty-icons</StyleName>

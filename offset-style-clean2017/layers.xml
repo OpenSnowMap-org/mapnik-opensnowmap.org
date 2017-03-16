@@ -73,7 +73,6 @@
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="downhill-casing" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-casing</StyleName>
@@ -99,7 +98,6 @@
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="downhill-area-casing" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-area-casing</StyleName>
@@ -109,6 +107,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -123,16 +122,15 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-
-
-<Layer name="overlay-eraser" 
+<Layer name="overlay-eraser1" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-overlay-eraser</StyleName>
+	<StyleName>downhill-overlay-eraser1</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
@@ -143,7 +141,45 @@
 		</Parameter>
 	</Datasource>
 </Layer>
+<Layer name="overlay-eraser2" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-eraser2</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where 
+		"piste:type" LIKE '%downhill%'
 
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="overlay-eraser3" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-eraser3</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where 
+		"piste:type" LIKE '%downhill%'
+
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="overlay-eraser4" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>downhill-overlay-eraser4</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where 
+		"piste:type" LIKE '%downhill%'
+
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
 <Layer name="area-eraser" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>area-eraser</StyleName>
@@ -152,12 +188,12 @@
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
 
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="downhill-area-fill" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-area-fill</StyleName>
@@ -166,13 +202,13 @@
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
 
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="downhill-overlay-thin" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-overlay-thin</StyleName>
@@ -185,7 +221,6 @@
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="diamonds" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>diamonds</StyleName>
@@ -213,13 +248,18 @@
 	</Datasource>
 </Layer>
 
+
+
+
+
+
 <Layer name="snowshoeing" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>snowshoeing</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type" LIKE '%hike%'order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%hike%' order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -410,7 +450,11 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-	
+
+
+
+
+
 <Layer name="aerialways" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>aerialways</StyleName>
@@ -474,6 +518,10 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 	</Datasource>
 </Layer>
 
+
+
+
+
 <Layer name="aerialways-icons" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>aerialways-icons</StyleName>
@@ -504,6 +552,9 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
+
+
+
 
 <Layer name="difficulty-icons" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">

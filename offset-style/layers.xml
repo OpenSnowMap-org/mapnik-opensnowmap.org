@@ -123,6 +123,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -137,6 +138,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -151,6 +153,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
@@ -165,6 +168,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
@@ -228,6 +232,7 @@
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		) as pistes
 		</Parameter>
@@ -241,6 +246,7 @@
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
 		and "piste:grooming"='backcountry'
 		) as pistes
 		</Parameter>
@@ -254,6 +260,7 @@
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%%downhill%%'
+        and ("piste:difficulty" is not null)
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		) as pistes
 		</Parameter>
@@ -267,6 +274,7 @@
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%%downhill%%' 
+        and ("piste:difficulty" is not null)
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
@@ -282,6 +290,7 @@
 		(select * from planet_osm_polygon where
 		"piste:type" LIKE '%downhill%'
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -296,6 +305,7 @@
 		(select * from planet_osm_polygon where
 		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -336,6 +346,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -350,6 +361,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -364,6 +376,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
@@ -378,6 +391,7 @@
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
