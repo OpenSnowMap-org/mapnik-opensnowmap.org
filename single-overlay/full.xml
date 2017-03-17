@@ -447,7 +447,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Rule>
 </Style>
 
-	<!-- 2017-02-23T13:52:01.706779 -->
+	<!-- 2017-03-17T20:53:26.809405 -->
 <Style name="relation-bg" filter-mode="first">
         <Rule>
 		    <Filter>[osm_id]=-2788187 </Filter>
@@ -15765,28 +15765,52 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(115,197,233)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+		    <Filter>[color]='#000099' or [colour]='#000099'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,167,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,180)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+		    <Filter>[color]='#000099' or [colour]='#000099'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,167,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,180)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+		    <Filter>[color]='#000099' or [colour]='#000099'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,167,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,180)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+		    <Filter>[color]='#000099' or [colour]='#000099'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,167,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,180)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+                <Rule>
+		    <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(230,197,226)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(230,197,226)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(230,197,226)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(230,197,226)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#ffffff' or [colour]='#ffffff'</Filter>
@@ -15813,28 +15837,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
+		    <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(208,76,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,197,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
+		    <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(208,76,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,197,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
+		    <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(208,76,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,197,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
+		    <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(208,76,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,197,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='black' or [colour]='black'</Filter>
@@ -16101,52 +16125,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(213,76,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
+		    <Filter>[color]='#000080' or [colour]='#000080'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,231)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,163)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
+		    <Filter>[color]='#000080' or [colour]='#000080'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,231)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,163)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
+		    <Filter>[color]='#000080' or [colour]='#000080'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,231)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,163)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
+		    <Filter>[color]='#000080' or [colour]='#000080'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,231)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-                <Rule>
-		    <Filter>[color]='#800000' or [colour]='#800000'</Filter>
-            <MaxScaleDenominator>1500000</MaxScaleDenominator>
-            <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,76)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#800000' or [colour]='#800000'</Filter>
-            <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,76)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#800000' or [colour]='#800000'</Filter>
-            <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,76)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#800000' or [colour]='#800000'</Filter>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,163)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#55FF55' or [colour]='#55FF55'</Filter>
@@ -16389,28 +16389,52 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(192,140,122)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
+		    <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(191,96,99)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
+		    <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(191,96,99)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
+		    <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(191,96,99)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
+		    <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(191,96,99)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,76)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+                <Rule>
+		    <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,226,76)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,226,76)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,226,76)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,226,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#6060ff' or [colour]='#6060ff'</Filter>
@@ -16725,28 +16749,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,163)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#000099' or [colour]='#000099'</Filter>
+		    <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,180)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,76,192)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#000099' or [colour]='#000099'</Filter>
+		    <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,180)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,76,192)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#000099' or [colour]='#000099'</Filter>
+		    <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,180)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,76,192)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#000099' or [colour]='#000099'</Filter>
+		    <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,180)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,76,192)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#00FF00' or [colour]='#00FF00'</Filter>
@@ -16845,28 +16869,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,177,99)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
+		    <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(142,76,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
+		    <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(142,76,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
+		    <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(142,76,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
+		    <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(142,76,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='deepskyblue' or [colour]='deepskyblue'</Filter>
@@ -16917,28 +16941,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(109,136,180)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
+		    <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,157,192)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,231)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
+		    <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,157,192)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,231)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
+		    <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,157,192)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,231)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
+		    <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,157,192)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,231)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='darkred' or [colour]='darkred'</Filter>
@@ -16965,28 +16989,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+		    <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(230,197,226)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,157,192)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+		    <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(230,197,226)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,157,192)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+		    <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(230,197,226)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,157,192)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+		    <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(230,197,226)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,157,192)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#FFFFFF' or [colour]='#FFFFFF'</Filter>
@@ -17035,6 +17059,30 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(109,106,110)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+                <Rule>
+		    <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,167,76)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,167,76)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,167,76)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,167,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#FFFF55' or [colour]='#FFFF55'</Filter>
@@ -17133,28 +17181,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
+		    <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,197,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(208,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
+		    <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,197,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(208,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
+		    <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,197,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(208,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
+		    <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,197,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(208,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#FF930D' or [colour]='#FF930D'</Filter>
@@ -17277,28 +17325,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(180,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
+		    <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(191,96,99)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
+		    <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(191,96,99)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
+		    <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(191,96,99)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
+		    <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,187,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(191,96,99)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#44dd99' or [colour]='#44dd99'</Filter>
@@ -17373,30 +17421,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
-            <MaxScaleDenominator>1500000</MaxScaleDenominator>
-            <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,76,192)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
-            <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,76,192)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
-            <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,76,192)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,76,192)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-                <Rule>
 		    <Filter>[color]='lime' or [colour]='lime'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
@@ -17419,6 +17443,30 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,76)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+                <Rule>
+		    <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,249)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,249)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,249)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#888888' or [colour]='#888888'</Filter>
@@ -17517,54 +17565,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,152,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
-            <MaxScaleDenominator>1500000</MaxScaleDenominator>
-            <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,209,222)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
-            <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,209,222)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
-            <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,209,222)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,209,222)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-                <Rule>
-		    <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
-            <MaxScaleDenominator>1500000</MaxScaleDenominator>
-            <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(174,126,161)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
-            <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(174,126,161)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
-            <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(174,126,161)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(174,126,161)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-                <Rule>
 		    <Filter>[color]='#FFFF44' or [colour]='#FFFF44'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
@@ -17587,6 +17587,54 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,122)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+                <Rule>
+		    <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,136,249)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,136,249)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,136,249)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,136,249)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+                <Rule>
+		    <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,209,222)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,209,222)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,209,222)" smooth="0" stroke-gamma=".6"/>
+        </Rule>
+        <Rule>
+		    <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,209,222)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='white' or [colour]='white'</Filter>
@@ -17613,28 +17661,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+		    <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,136,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+		    <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,136,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+		    <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,136,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+		    <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,136,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='olive' or [colour]='olive'</Filter>
@@ -17923,30 +17971,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,185)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-                <Rule>
-		    <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
-            <MaxScaleDenominator>1500000</MaxScaleDenominator>
-            <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,249)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
-            <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,249)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
-            <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,249)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(166,76,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='aqua' or [colour]='aqua'</Filter>
@@ -18381,28 +18405,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(163,199,232)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+		    <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,226,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(174,126,161)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+		    <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,226,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(174,126,161)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+		    <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,226,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(174,126,161)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+		    <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,226,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(174,126,161)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#dd4444' or [colour]='#dd4444'</Filter>
@@ -18453,28 +18477,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(119,177,238)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
+		    <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,133,141)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
+		    <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,133,141)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
+		    <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,133,141)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
+		    <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,228,249)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,133,141)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#107f10' or [colour]='#107f10'</Filter>
@@ -18501,28 +18525,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(86,152,87)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
+		    <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(142,76,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
+		    <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(142,76,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
+		    <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(142,76,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
+		    <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,228,76)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(142,76,249)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#8BD12B' or [colour]='#8BD12B'</Filter>
@@ -18717,30 +18741,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(180,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
-            <MaxScaleDenominator>1500000</MaxScaleDenominator>
-            <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,133,141)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
-            <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,133,141)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
-            <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,133,141)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-        <Rule>
-		    <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(241,133,141)" smooth="0" stroke-gamma=".6"/>
-        </Rule>
-                <Rule>
 		    <Filter>[color]='#F1CC37' or [colour]='#F1CC37'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
@@ -18789,28 +18789,28 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,152,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
-		    <Filter>[color]='#000080' or [colour]='#000080'</Filter>
+		    <Filter>[color]='#800000' or [colour]='#800000'</Filter>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>200000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,163)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#000080' or [colour]='#000080'</Filter>
+		    <Filter>[color]='#800000' or [colour]='#800000'</Filter>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,163)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#000080' or [colour]='#000080'</Filter>
+		    <Filter>[color]='#800000' or [colour]='#800000'</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             <MinScaleDenominator>25000</MinScaleDenominator>
-            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,163)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
         <Rule>
-		    <Filter>[color]='#000080' or [colour]='#000080'</Filter>
+		    <Filter>[color]='#800000' or [colour]='#800000'</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(76,76,163)" smooth="0" stroke-gamma=".6"/>
+            <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(159,76,76)" smooth="0" stroke-gamma=".6"/>
         </Rule>
                 <Rule>
 		    <Filter>[color]='#F00099' or [colour]='#F00099'</Filter>
@@ -18920,8 +18920,14 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,155,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#000099' or [colour]='#000099'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,51,169)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+        </Rule>
+		       <Rule>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(227,189,222)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -18932,8 +18938,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(201,51,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,189,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19004,14 +19010,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,178,228)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
-        </Rule>
-		       <Rule>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <Filter>[color]='#800000' or [colour]='#800000'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(145,51,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#000080' or [colour]='#000080'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,51,150)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19076,8 +19076,14 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(182,73,77)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,178,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+        </Rule>
+		       <Rule>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,222,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19160,8 +19166,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#000099' or [colour]='#000099'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,51,169)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,51,183)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19190,8 +19196,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(126,51,248)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,224,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19208,8 +19214,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,143,183)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#00BBE5' or [colour]='#00BBE5'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,178,228)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19220,8 +19226,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#eeccdd' or [colour]='#eeccdd'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(227,189,222)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#ff88aa' or [colour]='#ff88aa'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,143,183)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19234,6 +19240,12 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             
             <Filter>[color]='#333333' or [colour]='#333333'</Filter>
             <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(88,85,90)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+        </Rule>
+		       <Rule>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <Filter>[color]='#ff9900' or [colour]='#ff9900'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,155,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19262,8 +19274,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#ffcc00' or [colour]='#ffcc00'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,189,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#cc0000' or [colour]='#cc0000'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(201,51,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19298,8 +19310,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#00bb00' or [colour]='#00bb00'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,178,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#b22222' or [colour]='#b22222'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(182,73,77)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19322,14 +19334,14 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#FF00AA' or [colour]='#FF00AA'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,51,183)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='lime' or [colour]='lime'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,224,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='lime' or [colour]='lime'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,224,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(153,51,248)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19358,20 +19370,20 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,203,218)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
-        </Rule>
-		       <Rule>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(163,108,147)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
-        </Rule>
-		       <Rule>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
             <Filter>[color]='#FFFF44' or [colour]='#FFFF44'</Filter>
             <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,224,103)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+        </Rule>
+		       <Rule>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,119,248)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+        </Rule>
+		       <Rule>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            
+            <Filter>[color]='#01DFD7' or [colour]='#01DFD7'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,203,218)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19382,8 +19394,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#0066ff' or [colour]='#0066ff'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,119,248)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,224,248)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19456,12 +19468,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
             
             <Filter>[color]='#0000A0' or [colour]='#0000A0'</Filter>
             <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,51,175)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
-        </Rule>
-		       <Rule>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
-            <Filter>[color]='#8b00ff' or [colour]='#8b00ff'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(153,51,248)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19574,8 +19580,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#fffc00' or [colour]='#fffc00'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,222,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#98557D' or [colour]='#98557D'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(163,108,147)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19592,8 +19598,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#00FFFF' or [colour]='#00FFFF'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,224,248)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,115,125)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19604,8 +19610,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#FFFF00' or [colour]='#FFFF00'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,224,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#6600ff' or [colour]='#6600ff'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(126,51,248)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -19658,12 +19664,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#ff6060' or [colour]='#ff6060'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(239,115,125)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
-        </Rule>
-		       <Rule>
-            <MaxScaleDenominator>25000</MaxScaleDenominator>
-            
             <Filter>[color]='#F1CC37' or [colour]='#F1CC37'</Filter>
             <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(228,189,93)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
@@ -19676,8 +19676,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
             
-            <Filter>[color]='#000080' or [colour]='#000080'</Filter>
-            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(51,51,150)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
+            <Filter>[color]='#800000' or [colour]='#800000'</Filter>
+            <TextSymbolizer fontset-name="book-fonts" size="10" fill="rgb(145,51,51)" halo-fill="white" halo-radius="1" placement="line" allow-overlap="false" spacing="10000" avoid-edges="true" wrap-width="50" dy="10">[route_name]</TextSymbolizer>
         </Rule>
 		       <Rule>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -24265,6 +24265,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -24287,6 +24288,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -24309,6 +24311,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
@@ -24331,6 +24334,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
@@ -24434,6 +24438,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		) as pistes
 		</Parameter>
@@ -24455,6 +24460,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
 		and "piste:grooming"='backcountry'
 		) as pistes
 		</Parameter>
@@ -24476,6 +24482,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%%downhill%%'
+        and ("piste:difficulty" is not null)
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
 		) as pistes
 		</Parameter>
@@ -24497,6 +24504,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Parameter name="table">
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%%downhill%%' 
+        and ("piste:difficulty" is not null)
 		and "piste:grooming"='backcountry'
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
@@ -24520,6 +24528,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where
 		"piste:type" LIKE '%downhill%'
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24542,6 +24551,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where
 		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		order by z_order) as pistes
 		</Parameter>
@@ -24606,6 +24616,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -24628,6 +24639,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &gt; -4000000 or ST_y(ST_centroid(way)) &lt; 0)
 		) as pistes
 		</Parameter>
@@ -24650,6 +24662,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%' 
 		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
@@ -24672,6 +24685,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		(select * from planet_osm_polygon where 
 		"piste:type" LIKE '%downhill%'
 		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
 		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 		) as pistes
 		</Parameter>
