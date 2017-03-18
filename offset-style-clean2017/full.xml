@@ -26526,120 +26526,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 </Style>
 
 	<Style name="snowshoeing">
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#64FF64" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#64FF64" stroke-linejoin="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--easy-->
-	
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6969FF" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#6969FF" stroke-linejoin="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FF6060" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FF6060" stroke-linejoin="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#5A5A5A" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#5A5A5A" stroke-linejoin="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--expert-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFC751" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFC751" stroke-linejoin="round" stroke-gamma=".6"/>
-	</Rule>
 
-<!--                 balls                 -->
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#64FF64" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--easy-->
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#6969FF" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--intermediate-->
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#FF6060" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--advanced-->
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#5A5A5A" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--expert-->
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#FFC751" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
-		<Filter>([piste:difficulty]='novice' or [piste:difficulty]='easy'
-		or [piste:difficulty]='intermediate' or [piste:difficulty]='advanced'
-		or [piste:difficulty]='expert')</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
 	<!--no-difficulty-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
@@ -26651,19 +26538,19 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		
 		<ElseFilter/>
-		<LineSymbolizer stroke-width="2" stroke="#FF9FAF" stroke-linejoin="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke="#FF9FAF" stroke-linejoin="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		
 		<ElseFilter/>
-		<LineSymbolizer stroke-width="5" stroke="#FF9FAF" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#FF9FAF" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		
 		<ElseFilter/>
-		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 </Style>
 
