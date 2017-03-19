@@ -266,7 +266,7 @@
 		&datasource-settings;
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0  order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -277,7 +277,7 @@
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0  order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -287,7 +287,7 @@
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="table">
-		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &gt; 0  order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
