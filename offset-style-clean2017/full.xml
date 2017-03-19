@@ -26545,32 +26545,85 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 </Style>
 
 	<Style name="snowshoeing">
-
+<!--
+FF9FAF
+-->
 	<!--no-difficulty-->
+    <!-- erase relations already rendered, otherwise dashs looks ugly -->
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>25000</MinScaleDenominator>
+		<ElseFilter/>
+		<LineSymbolizer comp-op="dst-out" stroke-width="5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<ElseFilter/>
+		<LineSymbolizer comp-op="dst-out" stroke-width="7" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+    <!-- clear out tracks -->
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" stroke-opacity="0.3" stroke-linejoin="round" stroke-gamma="1"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="6" stroke="#FFFFFF" stroke-opacity="0.6" stroke-linejoin="round" stroke-gamma="1"/>
+	</Rule>
+<!-- line-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<ElseFilter/>
-		<LineSymbolizer stroke-width="1" stroke="#FF9FAF" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#E88193" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		
 		<ElseFilter/>
-		<LineSymbolizer stroke-width="2.5" stroke="#FF9FAF" stroke-linejoin="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1.5" stroke="#E88193" stroke-linejoin="round" stroke-gamma=".6"/>
 	</Rule>
+<!--    dash-->
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		
+		<MinScaleDenominator>25000</MinScaleDenominator>
 		<ElseFilter/>
-		<LineSymbolizer stroke-width="6" stroke="#FF9FAF" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#E88193" stroke-dasharray="1,15" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<ElseFilter/>
-		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" stroke-dasharray="1,10" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7" stroke="#E88193" stroke-dasharray="1,15" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
+<!--    white center at high zoom-->
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>25000</MinScaleDenominator>
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" stroke-dasharray="1,15" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" stroke-dasharray="1,15" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+</Style>
+<Style name="hike-text">
+    <!-- icon -->
+	<Rule>
+		<MaxScaleDenominator>50000</MaxScaleDenominator>
+		
+      <TextSymbolizer fontset-name="ski-fonts" size="22" opacity="1" fill="#E88193" halo-fill="rgba(255,255,255,0.5)" halo-radius="4" placement="point" repeat-distance="180" allow-overlap="false" avoid-edges="true">
+       j
+      </TextSymbolizer>
+    </Rule>
 </Style>
 
 	<Style name="aerialways">
@@ -28991,11 +29044,29 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select ST_LineMerge(way)as way from planet_osm_line where "piste:type" LIKE '%skitour%'order by st_length(way) DESC)as pistes
+		(select ST_LineMerge(way)as way from planet_osm_line where "piste:type" LIKE '%skitour%' order by st_length(way) DESC)as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
 
+<Layer name="hike-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>hike-text</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select ST_LineMerge(way)as way from planet_osm_line where "piste:type" LIKE '%hike%' order by st_length(way) DESC)as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
 <Layer name="other-area-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>other-text</StyleName>
 	<Datasource>
