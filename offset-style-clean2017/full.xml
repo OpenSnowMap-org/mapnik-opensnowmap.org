@@ -401,28 +401,47 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 </Style>
 
 <!--eraser to remove way below relations-->
-<!--
+
 <Style name="eraser" comp-op="dst-out">
 	<Rule>
-		&maxscale_zoom9;
-		&minscale_zoom12;
-		<LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-		 stroke="#FFFFFF"  smooth="0" stroke-gamma=".6"/>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>750000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" smooth="0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		&maxscale_zoom12;
-		&minscale_zoom14;
-		<LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-		 stroke="#FFFFFF"  smooth="0" stroke-gamma=".6"/>
+		<MaxScaleDenominator>750000</MaxScaleDenominator>
+		<MinScaleDenominator>400000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" smooth="0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		&maxscale_zoom14;
-		&minscale_zoom18;
-		<LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
-		 stroke="#FFFFFF"  smooth="0" stroke-gamma=".6"/>
+		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" smooth="0" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" smooth="0" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" smooth="0" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+		<Filter>[piste:grooming]='classic' or [piste:grooming]='skating' or [piste:grooming]='classic;skating'  or [piste:grooming]='classic+skating'</Filter>
+		<LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" smooth="0" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:grooming]='classic' or [piste:grooming]='skating' or [piste:grooming]='classic;skating'  or [piste:grooming]='classic+skating'</Filter>
+		<LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" smooth="0" stroke-gamma=".6"/>
 	</Rule>
 </Style>
--->
+
 
 <!-- Difficulty overlay -->
 <!--
@@ -28259,7 +28278,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0  order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -28278,7 +28297,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &gt; 0  order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
@@ -28296,24 +28315,30 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 
 		<Parameter name="table">
-		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &gt; 0 and member_of is null order by z_order) as pistes
+		(select * from planet_osm_polygon where "piste:type" LIKE '%nordic%' and osm_id &gt; 0  order by z_order) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
 
-<!--
-<Layer name="eraser"
-srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="eraser" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>eraser</StyleName>
 	<Datasource>
-		&datasource-settings;
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
 		<Parameter name="table">
 		(select * from planet_osm_line where "piste:type" LIKE '%nordic%' and osm_id &lt; 0 order by z_order) as routes
 		</Parameter>
 	</Datasource>
 </Layer>
--->
 
 <Layer name="relation-bg" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>relation-bg</StyleName>
