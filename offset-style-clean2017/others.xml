@@ -91,9 +91,13 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*sleigh.*')</Filter>
-		<ShieldSymbolizer file="pics/sleigh_bw.png" fontset-name="bold-fonts"
-		spacing="5000" allow-overlap="false"
-		placement="point">' '</ShieldSymbolizer>
+      <TextSymbolizer fontset-name="ski-fonts"
+       size="20" opacity="1" fill="#8F54D8" 
+       halo-fill= "rgba(255,255,255,0.5)" halo-radius="2"
+       placement="point" repeat-distance="200"
+       allow-overlap="false" avoid-edges="true">
+       h
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
