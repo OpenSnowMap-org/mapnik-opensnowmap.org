@@ -73,6 +73,7 @@
 		</Parameter>
 	</Datasource>
 </Layer>
+
 <Layer name="downhill-casing" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-casing</StyleName>
@@ -128,6 +129,65 @@
 		</Parameter>
 	</Datasource>
 </Layer>
+
+<Layer name="US-downhill-casing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-casing</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="US-downhill-casing-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-casing-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  
+        and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="US-downhill-area-casing" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-area-casing</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="US-downhill-area-casing-backcountry" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-area-casing-backcountry</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%' 
+		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+
+
 <Layer name="overlay-eraser1" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-overlay-eraser1</StyleName>
@@ -194,6 +254,7 @@
 		</Parameter>
 	</Datasource>
 </Layer>
+
 <Layer name="downhill-area-fill" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-area-fill</StyleName>
@@ -221,6 +282,34 @@
 		</Parameter>
 	</Datasource>
 </Layer>
+<Layer name="US-downhill-area-fill" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-area-fill</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="US-downhill-overlay-thin" 
+			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-overlay-thin</StyleName>
+	<Datasource>
+		&datasource-settings;
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+
 <Layer name="diamonds" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>diamonds</StyleName>
@@ -658,9 +747,9 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-text-us" 
+<Layer name="US-downhill-text" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-text-us</StyleName>
+	<StyleName>US-downhill-text</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -690,16 +779,16 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 				or "name"!='' 
 				or "piste:ref"!='' 
 				or "ref"!='' )
-				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
+                and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 				and "piste:type" LIKE '%downhill%'
 			) as refs
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-area-text-us" 
+<Layer name="US-downhill-area-text" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-text-us</StyleName>
+	<StyleName>US-downhill-text</StyleName>
 	<Datasource>
 		&datasource-settings;
 		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
@@ -729,7 +818,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 				or "name"!='' 
 				or "piste:ref"!='' 
 				or "ref"!='' )
-				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
+                and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 				and "piste:type" LIKE '%downhill%' and "area"='yes' 
 			) as refs
 		) as pistes

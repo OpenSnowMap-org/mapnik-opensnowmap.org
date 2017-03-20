@@ -23979,194 +23979,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	
 </Style>
 
-<Style name="downhill-casing-backcountry-bk">
-	<!--white-bg for gamma aliasing-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="4.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	<!--easy-->
-	
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	
-	<!--expert-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	
-	<!--freeride-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-</Style>
 <Style name="downhill-overlay-backcountry">
 	<!--novice-->
 	<Rule>
@@ -24693,196 +24505,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 
 </Style>
 
-
-<Style name="downhill-area-casing-backcountry-bk">
-	<!--white-bg for gamma aliasing-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="4.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="6.5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	<!--easy-->
-	
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="6.5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6.5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="6.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	
-	<!--expert-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-	
-	<!--freeride-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-
-</Style>
-
 <Style name="downhill-area-fill">
 	<!--novice-->
 	<Rule>
@@ -24999,205 +24621,6 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
         <PolygonSymbolizer fill="#FFE72D" fill-opacity="0.05" smooth="0.5" gamma="1"/>
 	</Rule>	
 </Style>
-<Style name="downhill-area-border-backcountry">
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	<!--easy-->
-	
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	<!--expert-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	<!--freeride-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="5" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	
-</Style>
-
-<Style name="downhill-area-fill-backcountry" opacity="0.8">
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice'</Filter>
-		<PolygonSymbolizer fill="#9CE49C" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='easy'</Filter>
-		<PolygonSymbolizer fill="#889BF8" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate'</Filter>
-		<PolygonSymbolizer fill="#FF8383" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced'</Filter>
-		<PolygonSymbolizer fill="#6A6868" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='expert'</Filter>
-		<PolygonSymbolizer fill="#FFD884" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride'</Filter>
-		<PolygonSymbolizer fill="#FFF5A3" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	
-</Style>
-
 
 <Style name="downhill-icons">
 	<Rule>
@@ -25357,140 +24780,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	</Rule>
 </Style>
 
-	<Style name="downhill-us-casing">
-	<!--white-bg for gamma aliasing-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="4.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="6" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="8" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-
-	
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="8" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-
-	
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="6" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="8" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	
-	<!--freeride-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="8" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	
-
-</Style>
-<Style name="downhill-us-area-casing">
+	<Style name="US-downhill-casing">
 	<!--white-bg for gamma aliasing-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
@@ -25498,49 +24788,71 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<LineSymbolizer stroke-width="4.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<LineSymbolizer stroke-width="9" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--novice-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
+		<Filter>[piste:difficulty]='novice' </Filter>
 		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
+		<Filter>[piste:difficulty]='novice' </Filter>
 		<LineSymbolizer stroke-width="4" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="6" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="9" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="7.5" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
-
-	
+	<!--easy-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="4" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="6" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="7.5" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
 	<!--intermediate-->
-			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
@@ -25548,7 +24860,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
 		<LineSymbolizer stroke-width="4" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
@@ -25557,45 +24869,66 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="9" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
-
-	
 	<!--advanced-->
 			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
+		<Filter>[piste:difficulty]='advanced' </Filter>
 		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
+		<Filter>[piste:difficulty]='advanced' </Filter>
 		<LineSymbolizer stroke-width="4" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="7" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="6" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="9" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="7.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
-	
+	<!--expert-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="4" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="6" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="7.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
 	<!--freeride-->
-			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
@@ -25603,7 +24936,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
 		<LineSymbolizer stroke-width="4" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
@@ -25612,144 +24945,227 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="9" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
-	
 
 </Style>
-<Style name="downhill-us-overlay">
+<Style name="US-downhill-casing-backcountry">
+	<!--white-bg for gamma aliasing-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="4.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<LineSymbolizer stroke-width="6.5" stroke-dasharray="15,5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<LineSymbolizer stroke-width="8.5" stroke-dasharray="20,8" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
 	<!--novice-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="4" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="6" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<!--easy-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="4" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
-			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="4" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
 			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="4" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="6" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<!--expert-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="4" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
-			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="4" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="butt" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
 </Style>
-<Style name="downhill-us-overlay-thin">
+
+<Style name="US-downhill-overlay-thin">
 	<!--novice-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
+		<Filter>[piste:difficulty]='novice' </Filter>
 		<LineSymbolizer stroke-width="0.1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<!--easy-->
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="0.1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="0.1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="0.1" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
+		<Filter>[piste:difficulty]='advanced' </Filter>
 		<LineSymbolizer stroke-width="0.1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<!--expert-->
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="0.1" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
 	<Rule>
@@ -25758,604 +25174,60 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<Filter>[piste:difficulty]='freeride' </Filter>
 		<LineSymbolizer stroke-width="0.1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
-
+	
 </Style>
 
-<Style name="downhill-us-area-border">
+<Style name="US-downhill-overlay-backcountry">
 	<!--novice-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="6" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="6" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--freeride-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-
-</Style>
-<Style name="downhill-us-area-fill" opacity="0.8">
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<PolygonSymbolizer fill="#9CE49C" gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate'</Filter>
-		<PolygonSymbolizer fill="#889BF8" gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<PolygonSymbolizer fill="#6A6868" gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride'</Filter>
-		<PolygonSymbolizer fill="#FFF5A3" gamma=".6"/>
-	</Rule>
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="6" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="4" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="6" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--freeride-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-
-</Style>
-<Style name="downhill-us-area-fill-backcountry" opacity="0.8">
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<PolygonSymbolizer fill="#9CE49C" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate'</Filter>
-		<PolygonSymbolizer fill="#889BF8" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<PolygonSymbolizer fill="#6A6868" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride'</Filter>
-		<PolygonSymbolizer fill="#FFF5A3" gamma=".6" fill-opacity="0.7"/>
-	</Rule>
-</Style>
-
-	<!--TEXT-->
-<Style name="downhill-text-us"> 
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#CCCCCC" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#CCCCCC" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#CCCCCC" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#CCCCCC" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert' </Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#CCCCCC" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#FFE72D" halo-fill="#CCCCCC" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
-	</Rule>
-</Style>
-
-
-<Style name="downhill-us-casing-backcountry">
-	<!--white-bg for gamma aliasing-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="4.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
-	</Rule>
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-
-	
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-
-	
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	
-	<!--freeride-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>12500</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
-	</Rule>
-	
-
-</Style>
-<Style name="downhill-us-area-casing-backcountry">
-	<!--white-bg for gamma aliasing-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<LineSymbolizer stroke-width="3.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<LineSymbolizer stroke-width="9" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-
-	
-	<!--intermediate-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-
-	
-	<!--advanced-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='advanced' or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	
-	<!--freeride-->
-			
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
-		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>100000</MaxScaleDenominator>
-		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="4" stroke-dasharray="15,20" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
-		
-		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="20,25" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
-	</Rule>
-	
-
-</Style>
-<Style name="downhill-us-overlay-backcountry">
-	<!--novice-->
-	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
+		<Filter>[piste:difficulty]='novice' </Filter>
 		<LineSymbolizer stroke-width="1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
+		<Filter>[piste:difficulty]='novice' </Filter>
 		<LineSymbolizer stroke-width="2" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="20,25" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+	</Rule>
+	<!--easy-->
+	
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	<!--intermediate-->
 			
@@ -26363,51 +25235,77 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="3" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="20,25" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="3" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	<!--advanced-->
 			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
+		<Filter>[piste:difficulty]='advanced' </Filter>
 		<LineSymbolizer stroke-width="1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
+		<Filter>[piste:difficulty]='advanced' </Filter>
 		<LineSymbolizer stroke-width="2" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="20,25" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+	</Rule>
+	<!--expert-->
+			
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="3" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="3" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	<!--freeride-->
 			
@@ -26427,122 +25325,574 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="20,25" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+	</Rule>
+	
+</Style>
+
+<Style name="US-downhill-area-casing">
+	<!--white-bg for gamma aliasing-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="1" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="1.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<LineSymbolizer stroke-width="2" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
-</Style>
-<Style name="downhill-us-area-border-backcountry">
 	<!--novice-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+
+		<LineSymbolizer stroke-width="1" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+
+		<LineSymbolizer stroke-width="1" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+
+		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='novice' or [piste:difficulty]='easy'</Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="20,25" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="2.5" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
+
+	<!--easy-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' </Filter>
+        <LineSymbolizer stroke-width="2.5" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
 	<!--intermediate-->
-			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="20,25" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
+
 	<!--advanced-->
-			
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="2" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<Filter>[piste:difficulty]='advanced'  or [piste:difficulty]='expert'</Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="20,25" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="2.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
-	<!--freeride-->
-			
+
+	<!--expert-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+        <LineSymbolizer stroke-width="1" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="2.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
+	<!--easy-->
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>400000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke-dasharray="15,20" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="5" stroke-dasharray="20,25" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+        <LineSymbolizer stroke-width="2.5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 
 </Style>
+<Style name="US-downhill-area-casing-backcountry">
+	<!--white-bg for gamma aliasing-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="1" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<LineSymbolizer stroke-width="1.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="15,5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<LineSymbolizer stroke-width="2" stroke-dasharray="20,8" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
+	<!--novice-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='novice' </Filter>
+
+		<LineSymbolizer stroke-width="1" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='novice' </Filter>
+
+		<LineSymbolizer stroke-width="1" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='novice' </Filter>
+
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='novice' </Filter>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
+	<!--easy-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' </Filter>
+        <LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#23CD23" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
+	<!--intermediate-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='intermediate' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='intermediate' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='intermediate' </Filter>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='intermediate' </Filter>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
+	<!--advanced-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='advanced' </Filter>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
+	<!--expert-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+        <LineSymbolizer stroke-width="1" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' </Filter>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
+	<!--freeride-->
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='freeride' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='freeride' </Filter>
+		<LineSymbolizer stroke-width="1" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='freeride' </Filter>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='freeride' </Filter>
+        <LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+
+</Style>
+
+
+<Style name="US-downhill-area-fill">
+	<!--novice-->
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='novice' </Filter>
+        <PolygonSymbolizer fill="#23CD23" fill-opacity="0.4" gamma="1"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='novice' </Filter>
+        <PolygonSymbolizer fill="#23CD23" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='novice' </Filter>
+        <PolygonSymbolizer fill="#23CD23" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+	</Rule>
+	<!--easy-->
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+        <PolygonSymbolizer fill="#23CD23" fill-opacity="0.4" gamma="1"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='easy' </Filter>
+        <PolygonSymbolizer fill="#23CD23" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' </Filter>
+        <PolygonSymbolizer fill="#23CD23" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+	</Rule>	
+    <!--intermediate-->
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='intermediate' </Filter>
+        <PolygonSymbolizer fill="#1919DE" fill-opacity="0.4" gamma="1"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='intermediate' </Filter>
+        <PolygonSymbolizer fill="#1919DE" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='intermediate' </Filter>
+        <PolygonSymbolizer fill="#1919DE" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+	</Rule>	
+    <!--advanced-->
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+        <PolygonSymbolizer fill="#222222" fill-opacity="0.4" gamma="1"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='advanced' </Filter>
+        <PolygonSymbolizer fill="#222222" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='advanced' </Filter>
+        <PolygonSymbolizer fill="#222222" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+	</Rule>	
+	<!--expert-->
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+        <PolygonSymbolizer fill="#222222" fill-opacity="0.4" gamma="1"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='expert' </Filter>
+        <PolygonSymbolizer fill="#222222" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' </Filter>
+        <PolygonSymbolizer fill="#222222" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+	</Rule>	
+    <!--freeride-->
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		<MinScaleDenominator>100000</MinScaleDenominator>
+		<Filter>[piste:difficulty]='freeride' </Filter>
+        <PolygonSymbolizer fill="#FFE72D" fill-opacity="0.4" gamma="1"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>100000</MaxScaleDenominator>
+		<MinScaleDenominator>12500</MinScaleDenominator>
+		<Filter>[piste:difficulty]='freeride' </Filter>
+        <PolygonSymbolizer fill="#FFE72D" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>12500</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='freeride' </Filter>
+        <PolygonSymbolizer fill="#FFE72D" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+	</Rule>	
+</Style>
+
+	<!--TEXT-->
+<Style name="US--downhill-text"> 
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='novice' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#23CD23" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='intermediate' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='advanced' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	
+	
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='novice' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='easy' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#23CD23" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='intermediate' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='advanced' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='expert' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[piste:difficulty]='freeride'</Filter>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#9C8E1E" halo-fill="#DDDDDD" halo-radius="0.5" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+	</Rule>
+</Style>
+
 
 	<Style name="snowshoeing">
 <!--
@@ -28020,6 +27370,7 @@ FF9FAF
 		</Parameter>
 	</Datasource>
 </Layer>
+
 <Layer name="downhill-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-casing</StyleName>
 	<Datasource>
@@ -28107,6 +27458,97 @@ FF9FAF
 		</Parameter>
 	</Datasource>
 </Layer>
+
+<Layer name="US-downhill-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-casing</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="US-downhill-casing-backcountry" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-casing-backcountry</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  
+        and "piste:grooming"='backcountry'
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="US-downhill-area-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-area-casing</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%' 
+		and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+        and ("piste:difficulty" is not null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="US-downhill-area-casing-backcountry" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-area-casing-backcountry</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%' 
+		and "piste:grooming"='backcountry'
+        and ("piste:difficulty" is not null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+
+
 <Layer name="overlay-eraser1" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-overlay-eraser1</StyleName>
 	<Datasource>
@@ -28213,6 +27655,7 @@ FF9FAF
 		</Parameter>
 	</Datasource>
 </Layer>
+
 <Layer name="downhill-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-area-fill</StyleName>
 	<Datasource>
@@ -28256,6 +27699,50 @@ FF9FAF
 		</Parameter>
 	</Datasource>
 </Layer>
+<Layer name="US-downhill-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-area-fill</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select * from planet_osm_polygon where 
+		"piste:type" LIKE '%downhill%'
+        and ("piste:difficulty" is not null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+<Layer name="US-downhill-overlay-thin" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-overlay-thin</StyleName>
+	<Datasource>
+		
+<Parameter name="dbname">pistes-mapnik</Parameter>
+<Parameter name="type">postgis</Parameter>
+<Parameter name="user">mapnik</Parameter>
+<Parameter name="host">localhost</Parameter>
+<Parameter name="password">mapnik</Parameter>
+<Parameter name="port">5432</Parameter>
+<Parameter name="estimate-extent">true</Parameter>
+
+
+		<Parameter name="table">
+		(select * from planet_osm_line where "piste:type" LIKE '%downhill%'  and ("piste:grooming" not in ('backcountry') or "piste:grooming" is null)
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+		order by z_order) as pistes
+		</Parameter>
+	</Datasource>
+</Layer>
+
+
 <Layer name="diamonds" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>diamonds</StyleName>
 	<Datasource>
@@ -28909,8 +28396,8 @@ FF9FAF
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-text-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-text-us</StyleName>
+<Layer name="US-downhill-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-text</StyleName>
 	<Datasource>
 		
 <Parameter name="dbname">pistes-mapnik</Parameter>
@@ -28949,15 +28436,15 @@ FF9FAF
 				or "name"!='' 
 				or "piste:ref"!='' 
 				or "ref"!='' )
-				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 				and "piste:type" LIKE '%downhill%'
 			) as refs
 		) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="downhill-area-text-us" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>downhill-text-us</StyleName>
+<Layer name="US-downhill-area-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>US-downhill-text</StyleName>
 	<Datasource>
 		
 <Parameter name="dbname">pistes-mapnik</Parameter>
@@ -28996,7 +28483,7 @@ FF9FAF
 				or "name"!='' 
 				or "piste:ref"!='' 
 				or "ref"!='' )
-				and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0) 
+		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 				and "piste:type" LIKE '%downhill%' and "area"='yes' 
 			) as refs
 		) as pistes
