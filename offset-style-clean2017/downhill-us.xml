@@ -1194,7 +1194,7 @@
 </Style>
 
 	<!--TEXT-->
-<Style name="US--downhill-text"> 
+<Style name="US-downhill-text"> 
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;

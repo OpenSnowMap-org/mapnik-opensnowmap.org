@@ -562,9 +562,34 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
             or "piste:type" LIKE '%ski_jump%' 
             or "piste:type" LIKE '%snow_park%' 
             or "piste:type" LIKE '%sleigh%' 
-			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+			or sport in ('skating','ski_jump','ski_jump_take_off')
+            or sport LIKE '%ice_skating%'
+
+            or sport LIKE '%ice_hockey%'
+            or sport LIKE '%curling%'
+            or sport LIKE '%ice_stock%'
+            order by z_order
 		 ) as pistes
 		</Parameter>
+<!--
+            or (sport LIKE '%skating%' and leisure='ice_rink')
+-->
+<!--
+Taginfo 2017
+            "piste:type" LIKE '%ice_skate%' 92
+            or "piste:type" LIKE '%playground%' 
+            or "piste:type" LIKE '%sled%' 
+            or "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%snow_park%' 
+            or "piste:type" LIKE '%sleigh%' 
+			or sport in ('skating','ski_jump','ski_jump_take_off')
+            or sport LIKE '%ice_skating%' 583
+            or sport LIKE '%skating%' 2493
+            
+            or sport LIKE '%curling%' 271
+            or sport LIKE '%ice_stock%' 526
+
+-->
 	</Datasource>
 </Layer>
 <Layer name="others-icons-area" 
@@ -648,7 +673,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="other-icons" 
+<Layer name="downhill-icons" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-icons</StyleName>
 	<Datasource>
@@ -658,6 +683,7 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
 		</Parameter>
 	</Datasource>
 </Layer>
+
 <Layer name="text" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>text</StyleName>
@@ -839,13 +865,15 @@ srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=
             or "piste:type" LIKE '%sled%'
             or "piste:type" LIKE '%ski_jump%'
             or "piste:type" LIKE '%snow_park%'
-			or sport in ('skating') 
+            or sport LIKE '%ice_skating%'
+            or sport LIKE '%ice_hockey%'
+            or sport LIKE '%curling%'
+            or sport LIKE '%ice_stock%'
 			order by z_order
 		  ) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="skitour-text" 
 			srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>skitour-text</StyleName>

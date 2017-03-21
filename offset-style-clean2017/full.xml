@@ -25822,7 +25822,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 </Style>
 
 	<!--TEXT-->
-<Style name="US--downhill-text"> 
+<Style name="US-downhill-text"> 
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
@@ -26263,8 +26263,26 @@ FF9FAF
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
-		<Filter>[piste:type].match('.*ice_skate.*') or [sport].match('.*skating.*')</Filter>
+		<Filter>[piste:type].match('.*skat.*') or [sport].match('.*skat.*')</Filter>
 		<MarkersSymbolizer file="pics/ice-skate.png" placement="point" spacing="400"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		
+		<Filter>[sport].match('.*curling.*')</Filter>
+		<MarkersSymbolizer file="pics/curling.png" placement="point" spacing="400"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		
+		<Filter>[sport].match('.*ice_stock.*')</Filter>
+		<MarkersSymbolizer file="pics/ice_stock.png" placement="point" spacing="400"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
+		
+		<Filter>[sport].match('.*hockey.*')</Filter>
+		<MarkersSymbolizer file="pics/hockey.png" placement="point" spacing="400"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -28139,9 +28157,34 @@ FF9FAF
             or "piste:type" LIKE '%ski_jump%' 
             or "piste:type" LIKE '%snow_park%' 
             or "piste:type" LIKE '%sleigh%' 
-			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+			or sport in ('skating','ski_jump','ski_jump_take_off')
+            or sport LIKE '%ice_skating%'
+
+            or sport LIKE '%ice_hockey%'
+            or sport LIKE '%curling%'
+            or sport LIKE '%ice_stock%'
+            order by z_order
 		 ) as pistes
 		</Parameter>
+<!--
+            or (sport LIKE '%skating%' and leisure='ice_rink')
+-->
+<!--
+Taginfo 2017
+            "piste:type" LIKE '%ice_skate%' 92
+            or "piste:type" LIKE '%playground%' 
+            or "piste:type" LIKE '%sled%' 
+            or "piste:type" LIKE '%ski_jump%' 
+            or "piste:type" LIKE '%snow_park%' 
+            or "piste:type" LIKE '%sleigh%' 
+			or sport in ('skating','ski_jump','ski_jump_take_off')
+            or sport LIKE '%ice_skating%' 583
+            or sport LIKE '%skating%' 2493
+            
+            or sport LIKE '%curling%' 271
+            or sport LIKE '%ice_stock%' 526
+
+-->
 	</Datasource>
 </Layer>
 <Layer name="others-icons-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
@@ -28265,7 +28308,7 @@ FF9FAF
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="other-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+<Layer name="downhill-icons" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>downhill-icons</StyleName>
 	<Datasource>
 		
@@ -28283,6 +28326,7 @@ FF9FAF
 		</Parameter>
 	</Datasource>
 </Layer>
+
 <Layer name="text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>text</StyleName>
 	<Datasource>
@@ -28436,7 +28480,7 @@ FF9FAF
 				or "name"!='' 
 				or "piste:ref"!='' 
 				or "ref"!='' )
-		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+                and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 				and "piste:type" LIKE '%downhill%'
 			) as refs
 		) as pistes
@@ -28483,7 +28527,7 @@ FF9FAF
 				or "name"!='' 
 				or "piste:ref"!='' 
 				or "ref"!='' )
-		and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
+                and (ST_X(ST_centroid(way)) &lt; -4000000 and ST_y(ST_centroid(way)) &gt; 0)
 				and "piste:type" LIKE '%downhill%' and "area"='yes' 
 			) as refs
 		) as pistes
@@ -28512,13 +28556,15 @@ FF9FAF
             or "piste:type" LIKE '%sled%'
             or "piste:type" LIKE '%ski_jump%'
             or "piste:type" LIKE '%snow_park%'
-			or sport in ('skating') 
+            or sport LIKE '%ice_skating%'
+            or sport LIKE '%ice_hockey%'
+            or sport LIKE '%curling%'
+            or sport LIKE '%ice_stock%'
 			order by z_order
 		  ) as pistes
 		</Parameter>
 	</Datasource>
 </Layer>
-
 <Layer name="skitour-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>skitour-text</StyleName>
 	<Datasource>

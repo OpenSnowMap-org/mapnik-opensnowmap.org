@@ -83,8 +83,29 @@
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
-		<Filter>[piste:type].match('.*ice_skate.*') or [sport].match('.*skating.*')</Filter>
+		<Filter>[piste:type].match('.*skat.*') or [sport].match('.*skat.*')</Filter>
 		<MarkersSymbolizer file="pics/ice-skate.png"
+		placement="point" spacing="400"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[sport].match('.*curling.*')</Filter>
+		<MarkersSymbolizer file="pics/curling.png"
+		placement="point" spacing="400"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<Filter>[sport].match('.*ice_stock.*')</Filter>
+		<MarkersSymbolizer file="pics/ice_stock.png"
+		placement="point" spacing="400"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>[sport].match('.*hockey.*')</Filter>
+		<MarkersSymbolizer file="pics/hockey.png"
 		placement="point" spacing="400"/>
 	</Rule>
 	<Rule>
