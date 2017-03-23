@@ -70,43 +70,80 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*snow_park.*')</Filter>
-		<PointSymbolizer file="pics/snow_park_bw.png" />
+
+        <TextSymbolizer fontset-name="ski-fonts"
+       size="20" opacity="1" fill="#000000" halo-fill= "rgba(0,116,243,0.3)"  halo-radius="4"
+      horizontal-alignment="middle" vertical-alignment="middle"
+      placement="point" label-position-tolerance="40"
+      allow-overlap="false" avoid-edges="true"
+      >i
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*sled.*')</Filter>
-		<ShieldSymbolizer file="pics/sled_bw.png" fontset-name="bold-fonts"
-		spacing="5000" allow-overlap="false"
-		placement="point">' '</ShieldSymbolizer>
+        <TextSymbolizer fontset-name="ski-fonts"
+       size="18" opacity="1" fill="#000000" halo-fill= "rgba(186,255,58,0.6)"  halo-radius="4"
+      horizontal-alignment="middle" vertical-alignment="middle"
+      placement="point" label-position-tolerance="40"
+      allow-overlap="false" avoid-edges="true"
+      >g
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*skat.*') or [sport].match('.*skat.*')</Filter>
+        <TextSymbolizer fontset-name="ski-fonts"
+       size="18" opacity="1" fill="#1A9CCC" halo-fill= "rgba(255,255,255,0.6)"  halo-radius="4"
+      horizontal-alignment="middle" vertical-alignment="middle"
+      placement="point" label-position-tolerance="40"
+      allow-overlap="false" avoid-edges="true"
+      >d
+      </TextSymbolizer>
+<!--
 		<MarkersSymbolizer file="pics/ice-skate.png"
 		placement="point" spacing="400"/>
+-->
 	</Rule>
 	<Rule>
-		&maxscale_zoom9;
+		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[sport].match('.*curling.*')</Filter>
-		<MarkersSymbolizer file="pics/curling.png"
-		placement="point" spacing="400"/>
+        <TextSymbolizer fontset-name="ski-fonts"
+       size="16" opacity="1" fill="#1A9CCC" halo-fill= "rgba(255,255,255,0.6)"  halo-radius="4"
+      horizontal-alignment="middle" vertical-alignment="middle"
+      placement="point" label-position-tolerance="40"
+      allow-overlap="false" avoid-edges="true"
+      >l
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
-		&maxscale_zoom9;
+		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[sport].match('.*ice_stock.*')</Filter>
-		<MarkersSymbolizer file="pics/ice_stock.png"
-		placement="point" spacing="400"/>
+
+        <TextSymbolizer fontset-name="ski-fonts"
+       size="16" opacity="1" fill="#1A9CCC" halo-fill= "rgba(255,255,255,0.6)"  halo-radius="4"
+      horizontal-alignment="middle" vertical-alignment="middle"
+      placement="point" label-position-tolerance="40"
+      allow-overlap="false" avoid-edges="true"
+      >m
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[sport].match('.*hockey.*')</Filter>
-		<MarkersSymbolizer file="pics/hockey.png"
-		placement="point" spacing="400"/>
+
+        <TextSymbolizer fontset-name="ski-fonts"
+       size="18" opacity="1" fill="#1A9CCC" halo-fill= "rgba(255,255,255,0.6)"  halo-radius="4"
+      horizontal-alignment="middle" vertical-alignment="middle"
+      placement="point" label-position-tolerance="40"
+      allow-overlap="false" avoid-edges="true"
+      >k
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -115,7 +152,8 @@
       <TextSymbolizer fontset-name="ski-fonts"
        size="20" opacity="1" fill="#8F54D8" 
        halo-fill= "rgba(255,255,255,0.5)" halo-radius="2"
-       placement="point" repeat-distance="200"
+       placement="point"  label-position-tolerance="40"
+       repeat-distance="200"
        allow-overlap="false" avoid-edges="true">
        h
       </TextSymbolizer>
@@ -124,7 +162,14 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*playground.*') </Filter>
-		<PointSymbolizer file="pics/playground_bw.png"/>
+      <TextSymbolizer fontset-name="ski-fonts"
+       size="20" opacity="1" fill="#000000" 
+       halo-fill= "rgba(166,224,91,0.3)" halo-radius="2"
+       placement="point"  label-position-tolerance="40"
+       repeat-distance="200"
+       allow-overlap="false" avoid-edges="true">
+       c
+      </TextSymbolizer>
 	</Rule>
 
 	<Rule>
@@ -170,7 +215,7 @@
 		size="10" fill="#005CC0" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="15"
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="25" >[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -180,17 +225,17 @@
 		size="10" fill="#6CAD1A" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="15"
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="25" >[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*sled.*')</Filter>
 		<TextSymbolizer fontset-name="book-fonts"
-		size="10" fill="#70A808" halo-fill= "#DDDDDD" halo-radius="1" 
+		size="10" fill="#568400" halo-fill= "#FFFFFF" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="1000" 
 		avoid-edges="true" dy="15"
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="25" >[name]</TextSymbolizer>
 	</Rule>
 
 	<Rule>
@@ -201,7 +246,7 @@
 		size="10" fill="#655ABE" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dx='-30'
-		wrap-width="15" >[name]</TextSymbolizer>
+		wrap-width="25" >[name]</TextSymbolizer>
 	</Rule>
 </Style>
 <Style name="ski_jump-text"> 
@@ -213,7 +258,7 @@
 		size="8" fill="#655ABE" halo-fill= "#DDDDDD" halo-radius="2" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="true" dy="10"
-		wrap-width="15" >[takeoff]</TextSymbolizer>
+		wrap-width="25" >[takeoff]</TextSymbolizer>
 	</Rule>
 </Style>
 <Style name="ski_jump_area">

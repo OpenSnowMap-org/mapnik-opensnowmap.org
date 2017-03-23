@@ -1203,7 +1203,7 @@
 		size="10" fill="#02B002" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1213,7 +1213,7 @@
 		size="10" fill="#23CD23" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1223,7 +1223,7 @@
 		size="10" fill="#1919DE" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1233,7 +1233,7 @@
 		size="10" fill="#222222"  halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1243,7 +1243,7 @@
 		size="10" fill="#222222"   halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	
 	
@@ -1255,7 +1255,7 @@
 		size="10" fill="#02B002" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false" dy="10"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1265,7 +1265,7 @@
 		size="10" fill="#23CD23" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false" dy="10"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1275,7 +1275,7 @@
 		size="10" fill="#1919DE" halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false" dy="10"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1285,7 +1285,7 @@
 		size="10" fill="#222222"  halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false" dy="10"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1295,7 +1295,7 @@
 		size="10" fill="#222222"   halo-fill= "#DDDDDD" halo-radius="1" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false" dy="10"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
@@ -1305,7 +1305,7 @@
 		size="10" fill="#9C8E1E" halo-fill= "#DDDDDD" halo-radius="0.5" 
 		placement="point" allow-overlap="false" spacing="10000" 
 		avoid-edges="false" dy="10"
-		wrap-width="15" >[PISTENAME]</TextSymbolizer>
+		wrap-width="25" >[PISTENAME]</TextSymbolizer>
 	</Rule>
 </Style>
 

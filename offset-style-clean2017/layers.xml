@@ -606,7 +606,13 @@ Taginfo 2017
             or "piste:type" LIKE '%ski_jump%' 
             or "piste:type" LIKE '%snow_park%' 
             or "piste:type" LIKE '%sleigh%' 
-			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+			or sport in ('skating','ski_jump','ski_jump_take_off')
+            or sport LIKE '%ice_skating%'
+
+            or sport LIKE '%ice_hockey%'
+            or sport LIKE '%curling%'
+            or sport LIKE '%ice_stock%'
+             order by z_order
 		 ) as pistes
 		</Parameter>
 	</Datasource>

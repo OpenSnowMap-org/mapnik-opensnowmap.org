@@ -24685,31 +24685,31 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#E81F1F" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#E81F1F" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#FFBB2D" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#FFBB2D" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	
 	
@@ -24717,37 +24717,37 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#E81F1F" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#E81F1F" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#FFBB2D" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#FFBB2D" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride'</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#9C8E1E" halo-fill="#DDDDDD" halo-radius="0.5" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#9C8E1E" halo-fill="#DDDDDD" halo-radius="0.5" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 </Style>
 
@@ -25827,31 +25827,31 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#23CD23" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#23CD23" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' and not ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	
 	
@@ -25859,37 +25859,37 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#02B002" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#23CD23" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#23CD23" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#1919DE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' and ([piste:grooming]='mogul' or [gladed]='yes' or [lit]='yes' or [piste:lit]='yes')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#222222" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride'</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#9C8E1E" halo-fill="#DDDDDD" halo-radius="0.5" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="15">[PISTENAME]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#9C8E1E" halo-fill="#DDDDDD" halo-radius="0.5" placement="point" allow-overlap="false" spacing="10000" avoid-edges="false" dy="10" wrap-width="25">[PISTENAME]</TextSymbolizer>
 	</Rule>
 </Style>
 
@@ -26252,43 +26252,56 @@ FF9FAF
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*snow_park.*')</Filter>
-		<PointSymbolizer file="pics/snow_park_bw.png"/>
+
+        <TextSymbolizer fontset-name="ski-fonts" size="20" opacity="1" fill="#000000" halo-fill="rgba(0,116,243,0.4)" halo-radius="4" horizontal-alignment="middle" vertical-alignment="middle" placement="point" label-position-tolerance="40" allow-overlap="false" avoid-edges="true">i
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*sled.*')</Filter>
-		<ShieldSymbolizer file="pics/sled_bw.png" fontset-name="bold-fonts" spacing="5000" allow-overlap="false" placement="point">' '</ShieldSymbolizer>
+        <TextSymbolizer fontset-name="ski-fonts" size="18" opacity="1" fill="#000000" halo-fill="rgba(186,255,58,0.6)" halo-radius="4" horizontal-alignment="middle" vertical-alignment="middle" placement="point" label-position-tolerance="40" allow-overlap="false" avoid-edges="true">g
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*skat.*') or [sport].match('.*skat.*')</Filter>
-		<MarkersSymbolizer file="pics/ice-skate.png" placement="point" spacing="400"/>
+        <TextSymbolizer fontset-name="ski-fonts" size="18" opacity="1" fill="#1A9CCC" halo-fill="rgba(255,255,255,0.6)" halo-radius="4" horizontal-alignment="middle" vertical-alignment="middle" placement="point" label-position-tolerance="40" allow-overlap="false" avoid-edges="true">d
+      </TextSymbolizer>
+<!--
+		<MarkersSymbolizer file="pics/ice-skate.png"
+		placement="point" spacing="400"/>
+-->
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[sport].match('.*curling.*')</Filter>
-		<MarkersSymbolizer file="pics/curling.png" placement="point" spacing="400"/>
+        <TextSymbolizer fontset-name="ski-fonts" size="16" opacity="1" fill="#1A9CCC" halo-fill="rgba(255,255,255,0.6)" halo-radius="4" horizontal-alignment="middle" vertical-alignment="middle" placement="point" label-position-tolerance="40" allow-overlap="false" avoid-edges="true">l
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[sport].match('.*ice_stock.*')</Filter>
-		<MarkersSymbolizer file="pics/ice_stock.png" placement="point" spacing="400"/>
+
+        <TextSymbolizer fontset-name="ski-fonts" size="16" opacity="1" fill="#1A9CCC" halo-fill="rgba(255,255,255,0.6)" halo-radius="4" horizontal-alignment="middle" vertical-alignment="middle" placement="point" label-position-tolerance="40" allow-overlap="false" avoid-edges="true">m
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[sport].match('.*hockey.*')</Filter>
-		<MarkersSymbolizer file="pics/hockey.png" placement="point" spacing="400"/>
+
+        <TextSymbolizer fontset-name="ski-fonts" size="18" opacity="1" fill="#1A9CCC" halo-fill="rgba(255,255,255,0.6)" halo-radius="4" horizontal-alignment="middle" vertical-alignment="middle" placement="point" label-position-tolerance="40" allow-overlap="false" avoid-edges="true">k
+      </TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*sleigh.*')</Filter>
-      <TextSymbolizer fontset-name="ski-fonts" size="20" opacity="1" fill="#8F54D8" halo-fill="rgba(255,255,255,0.5)" halo-radius="2" placement="point" repeat-distance="200" allow-overlap="false" avoid-edges="true">
+      <TextSymbolizer fontset-name="ski-fonts" size="20" opacity="1" fill="#8F54D8" halo-fill="rgba(255,255,255,0.5)" halo-radius="2" placement="point" label-position-tolerance="40" repeat-distance="200" allow-overlap="false" avoid-edges="true">
        h
       </TextSymbolizer>
 	</Rule>
@@ -26296,7 +26309,9 @@ FF9FAF
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*playground.*') </Filter>
-		<PointSymbolizer file="pics/playground_bw.png"/>
+      <TextSymbolizer fontset-name="ski-fonts" size="20" opacity="1" fill="#000000" halo-fill="rgba(166,224,91,0.5)" halo-radius="2" placement="point" label-position-tolerance="40" repeat-distance="200" allow-overlap="false" avoid-edges="true">
+       c
+      </TextSymbolizer>
 	</Rule>
 
 	<Rule>
@@ -26338,26 +26353,26 @@ FF9FAF
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*snow_park.*')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#005CC0" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dy="15" wrap-width="15">[name]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#005CC0" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dy="15" wrap-width="25">[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*playground.*')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#6CAD1A" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dy="15" wrap-width="15">[name]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#6CAD1A" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dy="15" wrap-width="25">[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*sled.*')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#70A808" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="1000" avoid-edges="true" dy="15" wrap-width="15">[name]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#568400" halo-fill="#FFFFFF" halo-radius="1" placement="point" allow-overlap="false" spacing="1000" avoid-edges="true" dy="15" wrap-width="25">[name]</TextSymbolizer>
 	</Rule>
 
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*ski_jump.*') or [piste:type].match('.*jump.*') or [sport].match('.*ski_jump.*') or [sport].match('.*ski_jump_take_off.*')</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#655ABE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dx="-30" wrap-width="15">[name]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="10" fill="#655ABE" halo-fill="#DDDDDD" halo-radius="1" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dx="-30" wrap-width="25">[name]</TextSymbolizer>
 	</Rule>
 </Style>
 <Style name="ski_jump-text"> 
@@ -26365,7 +26380,7 @@ FF9FAF
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>not [takeoff]=''</Filter>
-		<TextSymbolizer fontset-name="book-fonts" size="8" fill="#655ABE" halo-fill="#DDDDDD" halo-radius="2" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dy="10" wrap-width="15">[takeoff]</TextSymbolizer>
+		<TextSymbolizer fontset-name="book-fonts" size="8" fill="#655ABE" halo-fill="#DDDDDD" halo-radius="2" placement="point" allow-overlap="false" spacing="10000" avoid-edges="true" dy="10" wrap-width="25">[takeoff]</TextSymbolizer>
 	</Rule>
 </Style>
 <Style name="ski_jump_area">
@@ -28209,7 +28224,13 @@ Taginfo 2017
             or "piste:type" LIKE '%ski_jump%' 
             or "piste:type" LIKE '%snow_park%' 
             or "piste:type" LIKE '%sleigh%' 
-			or sport in ('skating','ski_jump','ski_jump_take_off') order by z_order
+			or sport in ('skating','ski_jump','ski_jump_take_off')
+            or sport LIKE '%ice_skating%'
+
+            or sport LIKE '%ice_hockey%'
+            or sport LIKE '%curling%'
+            or sport LIKE '%ice_stock%'
+             order by z_order
 		 ) as pistes
 		</Parameter>
 	</Datasource>
