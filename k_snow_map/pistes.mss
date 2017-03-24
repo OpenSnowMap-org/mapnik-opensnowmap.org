@@ -139,12 +139,22 @@
     line-cap: round;
     line-join: round;
     line-color: #FFFFFF;
-    line-opacity: 0.6;
+    line-opacity: 0.5;
     image-filters: agg-stack-blur(1,1);
     line-smooth: 0.5;
-  [zoom=12] {line-width: 8;}
-  [zoom=13] {line-width: 9;}
-  [zoom=14] {line-width: 10;}
-  [zoom=15] {line-width: 12;}
-  [zoom>=16] {line-width: 14;}
+  [zoom=12] {line-width: 6;}
+  [zoom>=13] {line-width: 8;}
+  [zoom>=16] {line-width: 10;}
 }
+#downhill_white_overlay_area[zoom>=12]{
+    image-filters: agg-stack-blur(1,1);
+    line-smooth: 0.5;
+    polygon-fill: #FFFFFF;
+    polygon-opacity: 0.2;
+    line-opacity: 0;
+    line-width: 1;
+    line-color: #FFFFFF;
+
+}
+
+
