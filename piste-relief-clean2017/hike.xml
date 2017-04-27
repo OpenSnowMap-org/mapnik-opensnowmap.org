@@ -1,0 +1,100 @@
+<Style name="snowshoeing">
+<!--
+FF9FAF
+-->
+	<!--no-difficulty-->
+    <!-- erase relations already rendered, otherwise dashs looks ugly -->
+	<Rule>
+		&maxscale_zoom13;
+		&minscale_zoom14;
+		<ElseFilter/>
+		<LineSymbolizer comp-op="dst-out" stroke-width="5" stroke="#FFFFFF" 
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<ElseFilter/>
+		<LineSymbolizer comp-op="dst-out" stroke-width="7" stroke="#FFFFFF" 
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+    <!-- clear out tracks -->
+	<Rule>
+		&maxscale_zoom13;
+		&minscale_zoom15;
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" 
+        stroke-opacity="0.3"
+		stroke-linejoin="round" stroke-gamma="1"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom16;
+		&minscale_zoom18;
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="6" stroke="#FFFFFF" 
+        stroke-opacity="0.6"
+		stroke-linejoin="round" stroke-gamma="1"/>
+	</Rule>
+<!-- line-->
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom12;
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="1" stroke="#E88193" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom13;
+		&minscale_zoom18;
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="1.5" stroke="#E88193" 
+		stroke-linejoin="round" stroke-gamma=".6"/>
+	</Rule>
+<!--    dash-->
+	<Rule>
+		&maxscale_zoom13;
+		&minscale_zoom14;
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="6" stroke="#E88193" 
+		stroke-dasharray="1,15"
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="7" stroke="#E88193" 
+		stroke-dasharray="1,15"
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+<!--    white center at high zoom-->
+	<Rule>
+		&maxscale_zoom13;
+		&minscale_zoom14;
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" 
+		stroke-dasharray="1,15"
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<ElseFilter/>
+		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" 
+		stroke-dasharray="1,15"
+		stroke-linejoin="round" stroke-linecap="round" stroke-gamma=".6"/>
+	</Rule>
+</Style>
+<Style name="hike-text">
+    <!-- icon -->
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom18;
+      <TextSymbolizer fontset-name="ski-fonts"
+       size="22" opacity="1" fill="#E88193" 
+       halo-fill= "rgba(255,255,255,0.5)" halo-radius="4"
+       placement="point" repeat-distance="180"
+       allow-overlap="false" avoid-edges="true">
+       j
+      </TextSymbolizer>
+    </Rule>
+</Style>
