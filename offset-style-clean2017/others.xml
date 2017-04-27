@@ -27,12 +27,24 @@
 	
 	<Rule>
 		&maxscale_zoom9;
-		&minscale_zoom18;
+		&minscale_zoom11;
 		<Filter>[piste:type].match('.*sled.*') </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom9;
+		&minscale_zoom11;
+		<Filter>[piste:type].match('.*sled.*') </Filter>
+		<LineSymbolizer stroke-width=".5" stroke="#BAFF3A" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom18;
+		<Filter>[piste:type].match('.*sled.*') </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*sled.*') </Filter>
 		<LineSymbolizer stroke-width="1.5" stroke="#BAFF3A" smooth="0.5" stroke-gamma=".6"/>
@@ -53,12 +65,24 @@
 	
 	<Rule>
 		&maxscale_zoom9;
+		&minscale_zoom11;
+		<Filter>[piste:type].match('.*sleigh.*')</Filter>
+		<LineSymbolizer stroke-width="1" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom11;
+		<Filter>[piste:type].match('.*sleigh.*')</Filter>
+		<LineSymbolizer stroke-width="0.5" stroke="#8F54D8" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*sleigh.*')</Filter>
 		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		&maxscale_zoom9;
+		&maxscale_zoom12;
 		&minscale_zoom18;
 		<Filter>[piste:type].match('.*sleigh.*')</Filter>
 		<LineSymbolizer stroke-width="1.5" stroke="#8F54D8" smooth="0.5" stroke-gamma=".6"/>
