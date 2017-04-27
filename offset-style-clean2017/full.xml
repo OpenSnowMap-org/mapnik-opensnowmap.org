@@ -26209,12 +26209,24 @@ FF9FAF
 	
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
-		
+		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:type].match('.*sled.*') </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:type].match('.*sled.*') </Filter>
+		<LineSymbolizer stroke-width=".5" stroke="#BAFF3A" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
+		
+		<Filter>[piste:type].match('.*sled.*') </Filter>
+		<LineSymbolizer stroke-width="2" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*sled.*') </Filter>
 		<LineSymbolizer stroke-width="1.5" stroke="#BAFF3A" smooth="0.5" stroke-gamma=".6"/>
@@ -26235,12 +26247,24 @@ FF9FAF
 	
 	<Rule>
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:type].match('.*sleigh.*')</Filter>
+		<LineSymbolizer stroke-width="1" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MinScaleDenominator>200000</MinScaleDenominator>
+		<Filter>[piste:type].match('.*sleigh.*')</Filter>
+		<LineSymbolizer stroke-width="0.5" stroke="#8F54D8" smooth="0.5" stroke-gamma=".6"/>
+	</Rule>
+	<Rule>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*sleigh.*')</Filter>
 		<LineSymbolizer stroke-width="3" stroke="#FFFFFF" smooth="0.5" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
-		<MaxScaleDenominator>1500000</MaxScaleDenominator>
+		<MaxScaleDenominator>200000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*sleigh.*')</Filter>
 		<LineSymbolizer stroke-width="1.5" stroke="#8F54D8" smooth="0.5" stroke-gamma=".6"/>
@@ -26253,7 +26277,7 @@ FF9FAF
 		
 		<Filter>[piste:type].match('.*snow_park.*')</Filter>
 
-        <TextSymbolizer fontset-name="ski-fonts" size="20" opacity="1" fill="#000000" halo-fill="rgba(0,116,243,0.4)" halo-radius="4" horizontal-alignment="middle" vertical-alignment="middle" placement="point" label-position-tolerance="40" allow-overlap="false" avoid-edges="true">i
+        <TextSymbolizer fontset-name="ski-fonts" size="20" opacity="1" fill="#000000" halo-fill="rgba(0,116,243,0.3)" halo-radius="4" horizontal-alignment="middle" vertical-alignment="middle" placement="point" label-position-tolerance="40" allow-overlap="false" avoid-edges="true">i
       </TextSymbolizer>
 	</Rule>
 	<Rule>
@@ -26309,7 +26333,7 @@ FF9FAF
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:type].match('.*playground.*') </Filter>
-      <TextSymbolizer fontset-name="ski-fonts" size="20" opacity="1" fill="#000000" halo-fill="rgba(166,224,91,0.5)" halo-radius="2" placement="point" label-position-tolerance="40" repeat-distance="200" allow-overlap="false" avoid-edges="true">
+      <TextSymbolizer fontset-name="ski-fonts" size="20" opacity="1" fill="#000000" halo-fill="rgba(166,224,91,0.3)" halo-radius="2" placement="point" label-position-tolerance="40" repeat-distance="200" allow-overlap="false" avoid-edges="true">
        c
       </TextSymbolizer>
 	</Rule>
