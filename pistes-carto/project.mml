@@ -1,0 +1,98 @@
+bounds: &world
+    - -180
+    - -85.0511
+    - 180
+    - 85.0511
+  
+center: 
+    - 6.42
+    - 46.84
+    - 13
+format: png24
+interactivity: false
+minzoom: 0
+maxzoom: 18
+srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+scale: 1
+metatile: 8
+attribution: "Data © OpenStreetMap (and) contributors, OdBL; map (c) Opensnowmap.org, CC-BY-SA"
+description: ""
+name: pistes-carto
+
+Stylesheet:
+    - base.mss
+    - fonts.mss
+    - pistes.mss
+    - routes.mss
+
+# Various parts to be included later on
+_parts:
+  # Extents are used for tilemill, and don't actually make it to the generated XML
+  extents: &extents
+    extent: *world
+    srs-name: "900913"
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+  extents84: &extents84
+    extent: *world
+    srs-name: "WGS84"
+    srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+  imposm: &imposm
+    type: "postgis"
+    dbname: "imposm"
+    key_field: ""
+    geometry_field: ""
+
+Layer:
+    - id: pistes
+      geometry: linestring
+      class: pistes
+      <<:*extents
+      Datasource :
+        <<: *imposm
+        table: |-
+          (SELECT 
+            geometry
+          FROM 
+            osm_pistes_ways
+          ) as data
+      properties:
+        minzoom: 10
+        
+    - id: relation-bg
+      geometry: linestring
+      class: pistes
+      <<:*extents
+      Datasource :
+        <<: *imposm
+        table: |-
+          (SELECT 
+            geometry, osm_id
+          FROM 
+            pistes_routes
+          WHERE
+            tags->'piste:type'='nordic'
+          ) as data
+      properties:
+        minzoom: 10
+        
+    - id: relation
+      geometry: linestring
+      class: pistes
+      <<:*extents
+      Datasource :
+        <<: *imposm
+        table: |-
+          (SELECT 
+            geometry, osm_id, 
+            coalesce(tags->'color', tags->'colour') as color, 
+            coalesce(tags->'piste:name', tags->'name') as name
+          FROM 
+            pistes_routes
+          WHERE
+            tags->'piste:type'='nordic'
+          ORDER BY
+            st_length(geometry) desc
+          ) as data
+      properties:
+        minzoom: 10
+        
