@@ -54,7 +54,7 @@ replacement characters, but cannot be used because Mapnik does not
 support SBIT TTF.
 */
 
-@ski-fonts:    "Ski";
+@ski-fonts:    "Ski Medium";
 /*
 A regular style.
 */
