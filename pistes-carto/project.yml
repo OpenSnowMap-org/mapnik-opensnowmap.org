@@ -20,9 +20,9 @@ description: ""
 name: pistes-carto
 
 Stylesheet:
+    - ../fonts-carto/fonts.mss
     - base.mss
     - others.mss
-    - fonts.mss
     - pistes.mss
     - downhill.mss
     - nordic.mss
@@ -1139,14 +1139,14 @@ Layer:
                 members_types~'sleigh' as sleigh,
                 array_length(array(select distinct unnest(string_to_array(members_types,';'))),1) as cnt
               FROM 
-                landuse_ressorts
+                landuse_resorts
               WHERE ST_Area(geometry)>500000
               AND geometry && !bbox!
               )
               
               ORDER BY cnt DESC
               
-            ) as ressorts
+            ) as resorts
           ) as data
       properties:
         minzoom: 9

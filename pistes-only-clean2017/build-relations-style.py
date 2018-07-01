@@ -112,6 +112,12 @@ for c in colorList:
 		color=lighten(deluma(color,0.25),0.3)
 		f.write(c+' '+str(color)+'\n')
 f.close()
+f=open('initial_colors.csv','w')
+for c in colorList:
+	if isColor(c):
+		color=mapnik.Color(c)
+		f.write(str(color)+'\n')
+f.close()
 
 f=open('relations-style.xml','w')
 f.write("<!-- "+datetime.datetime.now().isoformat()+" -->\n")
