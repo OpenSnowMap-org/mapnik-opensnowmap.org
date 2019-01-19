@@ -44,14 +44,14 @@ Map { font-directory: url(./fonts); }
 @ocean:             #A6B8D5;
 @water2:             #b0c4dd;
 @water1:             #b8cee4;
-@water:             #C2DAED;/*#BCDCF6;#99D0FF;*/
+@water:             #A8C7E6;/*#C2DAED #BCDCF6;#99D0FF;*/
 @hillshade_low:     #6c9cac;
 @grass:             @land;
 @beach:             @land;
 @park:              @land;
 @cemetery:          darken(@land_grey,25%);
-@wooded_low:        #bad4da; /* mix from wooded and ovelray png*/
-@wooded:            #C1DBDC;/*##ACDCDD;DCE6F3;#CDD7E7;*/
+@wooded_low:        #C9DAE1; /* #bad4da  mix from wooded and ovelray png*/
+@wooded:            #D6E3E3;/*##C1DBDC  #ACDCDD;DCE6F3;#CDD7E7;*/
 @agriculture:       @land;
 @red:               #FF0000;
 @glacier:           #E0FFFE;
@@ -139,26 +139,26 @@ Map { font-directory: url(./fonts); }
 @state_text:        #546;
 @state_halo:        @place_halo;
 
-@city_text:         #444;
+@city_text:         #333;
 @city_halo:         @place_halo;
 
-@town_text:         #555;
+@town_text:         #444;
 @town_halo:         @place_halo;
 
-@poi_text:          #888;
+@poi_text:          #777;
 
-@road_text:         #666;
+@road_text:         #555;
 /*@road_halo:         #fff;*/
 @road_halo:        fadeout(#fff,34%);
 
-@other_text:        #666;
+@other_text:        #555;
 @other_halo:        @lite_halo;
 
-@locality_text:     #aaa;
+@locality_text:     #999;
 @locality_halo:     @lite_halo;
 
 /* Also used for other small places: hamlets, suburbs, localities */
-@village_text:      #888;
+@village_text:      #777;
 @village_halo:      @lite_halo;
 
 /* ****************************************************************** */
