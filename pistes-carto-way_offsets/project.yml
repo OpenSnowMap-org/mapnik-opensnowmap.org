@@ -56,16 +56,16 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-                
-                (select geometry, type from osm_pistes_area
+                (select geometry, piste_type from osm_pistes_area
                 where 
-                type LIKE '%ice_skate%' 
-                or type LIKE '%playground%' 
-                or type LIKE '%sled%' 
-                or type LIKE '%ski_jump%' 
-                or type LIKE '%snow_park%' 
-                or type LIKE '%sleigh%' 
-                or type LIKE '%hike%'
-                or type LIKE '%skitour%'
+                piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%'
                 
                 ) as pistes
       properties:
@@ -81,7 +81,7 @@ Layer:
                 (select geometry, difficulty, grooming 
                 from osm_pistes_ways
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 AND geometry && !bbox!
@@ -91,7 +91,7 @@ Layer:
                 select geometry, difficulty, grooming 
                 from pistes_routes
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                 AND geometry && !bbox!
                 AND
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
@@ -110,7 +110,7 @@ Layer:
                 (select geometry, difficulty, grooming 
                 from osm_pistes_ways
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 AND geometry && !bbox!
@@ -120,7 +120,7 @@ Layer:
                 select geometry, difficulty, grooming 
                 from pistes_routes
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                  
                 AND geometry && !bbox!
                 AND (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
@@ -139,7 +139,7 @@ Layer:
                 (select geometry, difficulty, grooming 
                 from osm_pistes_ways
                 where 
-                (type LIKE '%downhill%' and grooming='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming='backcountry')
                 AND geometry && !bbox!
                 AND (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 
@@ -148,7 +148,7 @@ Layer:
                 select geometry, difficulty, grooming 
                 from pistes_routes
                 where 
-                (type LIKE '%downhill%' and grooming='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming='backcountry')
                 AND geometry && !bbox!
                 AND (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 
@@ -166,7 +166,7 @@ Layer:
                 (select geometry, difficulty, grooming 
                 from osm_pistes_ways
                 where 
-                (type LIKE '%downhill%' and grooming='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming='backcountry')
                 AND geometry && !bbox!
                 AND (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 
@@ -175,7 +175,7 @@ Layer:
                 select geometry, difficulty, grooming 
                 from pistes_routes
                 where 
-                (type LIKE '%downhill%' and grooming='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming='backcountry')
                 AND geometry && !bbox!
                 AND (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 
@@ -192,7 +192,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_area 
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 ) as pistes
@@ -208,7 +208,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_area 
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 ) as pistes
@@ -225,7 +225,7 @@ Layer:
                 (select geometry, difficulty, grooming 
                 from osm_pistes_ways
                 where 
-                (type LIKE '%downhill%' and grooming='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming='backcountry')
                 AND geometry && !bbox!
                 AND (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 
@@ -234,7 +234,7 @@ Layer:
                 select geometry, difficulty, grooming 
                 from pistes_routes
                 where 
-                (type LIKE '%downhill%' and grooming='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming='backcountry')
                 AND geometry && !bbox!
                 AND (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 
@@ -252,7 +252,7 @@ Layer:
                 (select geometry, difficulty, grooming 
                 from osm_pistes_ways
                 where 
-                (type LIKE '%downhill%' and grooming='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming='backcountry')
                 AND geometry && !bbox!
                 AND
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
@@ -262,7 +262,7 @@ Layer:
                 select geometry, difficulty, grooming 
                 from pistes_routes
                 where 
-                (type LIKE '%downhill%' and grooming='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming='backcountry')
                 AND geometry && !bbox!
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
@@ -281,14 +281,14 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                type LIKE '%downhill%'
+                piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 
                 UNION
                 
                 select geometry, difficulty, grooming from pistes_routes 
                 where 
-                type LIKE '%downhill%'
+                piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 
                 ) as pistes
@@ -303,14 +303,14 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                type LIKE '%downhill%'
+                piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 
                 UNION
                 
                 select geometry, difficulty, grooming from pistes_routes 
                 where 
-                type LIKE '%downhill%'
+                piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 
                 ) as pistes
@@ -325,14 +325,14 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                type LIKE '%downhill%'
+                piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 
                 UNION
                 
                 select geometry, difficulty, grooming from pistes_routes 
                 where 
-                type LIKE '%downhill%'
+                piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 
                 ) as pistes
@@ -348,14 +348,14 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                type LIKE '%downhill%'
+                piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 
                 UNION
                 
                 select geometry, difficulty, grooming from pistes_routes 
                 where 
-                type LIKE '%downhill%'
+                piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 
                 ) as pistes
@@ -372,7 +372,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_area 
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                 ) as pistes
       properties:
         minzoom: 9
@@ -386,7 +386,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_area 
                 where 
-                (type LIKE '%downhill%' and grooming ='backcountry')
+                ( piste_type LIKE '%downhill%' and grooming ='backcountry')
                 ) as pistes
       properties:
         minzoom: 9
@@ -400,7 +400,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_area 
                 where 
-                type LIKE '%downhill%' 
+                piste_type LIKE '%downhill%' 
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 ) as pistes
@@ -417,7 +417,7 @@ Layer:
                 (select geometry, difficulty, grooming 
                 from osm_pistes_ways
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 AND geometry && !bbox!
@@ -427,7 +427,7 @@ Layer:
                 select geometry, difficulty, grooming 
                 from pistes_routes
                 where 
-                (type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 AND geometry && !bbox!
@@ -447,7 +447,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from pistes_routes 
                 where 
-                type LIKE '%hike%'
+                piste_type LIKE '%hike%'
                 ) as pistes
       properties:
         minzoom: 9
@@ -462,7 +462,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                type LIKE '%hike%'
+                piste_type LIKE '%hike%'
                 ) as pistes
       properties:
         minzoom: 9
@@ -477,7 +477,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                type LIKE '%hike%'
+                piste_type LIKE '%hike%'
                 ) as pistes
       properties:
         minzoom: 9
@@ -492,7 +492,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from pistes_routes 
                 where 
-                type LIKE '%skitour%'
+                piste_type LIKE '%skitour%'
                 ) as pistes
       properties:
         minzoom: 9
@@ -507,7 +507,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                type LIKE '%skitour%'
+                piste_type LIKE '%skitour%'
                 ) as pistes
       properties:
         minzoom: 9
@@ -522,7 +522,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                type LIKE '%skitour%'
+                piste_type LIKE '%skitour%'
                 ) as pistes
       properties:
         minzoom: 9
@@ -535,54 +535,54 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, type from osm_pistes_ways 
+                (select geometry, piste_type from osm_pistes_ways 
                 where 
-                (type LIKE '%ice_skate%' 
-                or type LIKE '%playground%' 
-                or type LIKE '%sled%' 
-                or type LIKE '%ski_jump%' 
-                or type LIKE '%snow_park%' 
-                or type LIKE '%sleigh%' 
-                or type LIKE '%hike%'
-                or type LIKE '%skitour%')
+                ( piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%')
                 AND geometry && !bbox!
                 
                 UNION
                 
-                select geometry, type from pistes_routes 
+                select geometry, piste_type from pistes_routes 
                 where 
-                (type LIKE '%ice_skate%' 
-                or type LIKE '%playground%' 
-                or type LIKE '%sled%' 
-                or type LIKE '%ski_jump%' 
-                or type LIKE '%snow_park%' 
-                or type LIKE '%sleigh%' 
-                or type LIKE '%hike%'
-                or type LIKE '%skitour%')
+                ( piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%')
                 AND geometry && !bbox!
                 
                 UNION
                 
-                select geometry, type from osm_sport_ways 
+                select geometry, piste_type from osm_sport_ways 
                 where 
-                (type LIKE '%skating%'
-                or type LIKE '%ski_jump%'
-                or type LIKE '%ice_skating%'
-                or type LIKE '%ice_hockey%'
-                or type LIKE '%curling%'
-                or type LIKE '%ice_stock%')
+                ( piste_type LIKE '%skating%'
+                or piste_type LIKE '%ski_jump%'
+                or piste_type LIKE '%ice_skating%'
+                or piste_type LIKE '%ice_hockey%'
+                or piste_type LIKE '%curling%'
+                or piste_type LIKE '%ice_stock%')
                 AND geometry && !bbox!
                 
                 UNION
                 
-                select geometry, type from osm_sport_nodes 
+                select geometry, piste_type from osm_sport_nodes 
                 where 
-                (type LIKE '%skating%'
-                or type LIKE '%ski_jump%'
-                or type LIKE '%ice_skating%'
-                or type LIKE '%ice_hockey%'
-                or type LIKE '%curling%'
-                or type LIKE '%ice_stock%')
+                ( piste_type LIKE '%skating%'
+                or piste_type LIKE '%ski_jump%'
+                or piste_type LIKE '%ice_skating%'
+                or piste_type LIKE '%ice_hockey%'
+                or piste_type LIKE '%curling%'
+                or piste_type LIKE '%ice_stock%')
                 AND geometry && !bbox!
                 
                 ) as pistes
@@ -592,51 +592,100 @@ Layer:
     ## NORDIC ##
     - id: nordic-bg
       geometry: linestring
-      class: nordic-bg
+      #~ class: nordic-bg
       <<: *extents
       Datasource:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, grooming, offseter
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
             FROM 
             osm_pistes_ways
             WHERE
-            type like '%nordic%'
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
                 AND geometry && !bbox!
             )
+            
+            UNION
+            
+            SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            FROM 
+            osm_pistes_route_members
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
           ) as data
       properties:
         minzoom: 9
         
-    - id: nordic-pols-bg
-      geometry: polygons
-      class: nordic-bg
+    #~ - id: nordic-pols-bg
+      #~ geometry: polygons
+      #~ class: nordic-bg
+      #~ <<: *extents
+      #~ Datasource:
+        #~ <<: *imposm
+        #~ table: |-
+          #~ (SELECT 
+            #~ geometry, grooming, offseter
+            #~ FROM 
+            #~ osm_pistes_area
+            #~ WHERE
+            #~ piste_type like '%nordic%'
+            #~ AND osm_id NOT IN (
+                #~ SELECT member
+                #~ FROM osm_pistes_route_members
+                #~ WHERE piste_type like '%nordic%'
+                #~ AND geometry && !bbox!
+            #~ )
+          #~ ) as data
+      #~ properties:
+        #~ minzoom: 9
+        
+    - id: nordic-difficulty-bg
+      geometry: linestring
+      #~ class: nordic-bg
       <<: *extents
       Datasource:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, grooming, offseter
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
             FROM 
-            osm_pistes_area
+            osm_pistes_ways
             WHERE
-            type like '%nordic%'
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            AND difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
                 AND geometry && !bbox!
             )
+            
+            UNION
+            
+            SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            FROM 
+            osm_pistes_route_members
+            WHERE
+            piste_type like '%nordic%'
+            AND difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
+            AND geometry && !bbox!
           ) as data
       properties:
         minzoom: 9
         
-    - id: nordic
+        
+    - id: nordic-way 
+       ways not in route members only
       geometry: linestring
       class: nordic
       <<: *extents
@@ -644,39 +693,127 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, grooming, offseter
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
             FROM 
             osm_pistes_ways
             WHERE
-            type like '%nordic%'
-
-          ) as data
-      properties:
-        minzoom: 9
-        
-    - id: nordic-pols
-      geometry: polygons
-      class: nordic
-      <<: *extents
-      Datasource:
-        <<: *imposm
-        table: |-
-          (SELECT 
-            geometry, grooming, offseter
-            FROM 
-            osm_pistes_area
-            WHERE
-            type like '%nordic%'
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
                 AND geometry && !bbox!
             )
+            
+            UNION
+            
+            SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
+            FROM 
+            pistes_routes
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
           ) as data
       properties:
         minzoom: 9
         
+    #~ - id: nordic-routes 
+    #~     route relation geometries
+      #~ geometry: linestring
+      #~ class: nordic
+      #~ <<: *extents
+      #~ Datasource:
+        #~ <<: *imposm
+        #~ table: |-
+          #~ (SELECT 
+            #~ geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            #~ FROM 
+            #~ osm_pistes_route_members
+            
+            
+            #~ ORDER BY nordic_route_length DESC
+
+          #~ ) as data
+      #~ properties:
+        #~ minzoom: 9
+        
+    #~ - id: nordic-pols
+      #~ geometry: polygons
+      #~ class: nordic
+      #~ <<: *extents
+      #~ Datasource:
+        #~ <<: *imposm
+        #~ table: |-
+          #~ (SELECT 
+            #~ geometry, grooming, offseter
+            #~ FROM 
+            #~ osm_pistes_area
+            #~ WHERE
+            #~ piste_type like '%nordic%'
+            #~ AND osm_id NOT IN (
+                #~ SELECT member
+                #~ FROM osm_pistes_route_members
+                #~ WHERE piste_type like '%nordic%'
+                #~ AND geometry && !bbox!
+            #~ )
+          #~ ) as data
+      #~ properties:
+        #~ minzoom: 9
+        
+    #~ - id: nordic-way-grooming-ol
+    #~    ways not in route members only
+      #~ geometry: linestring
+      #~ class: nordic-bg
+      #~ <<: *extents
+      #~ Datasource:
+        #~ <<: *imposm
+        #~ table: |-
+          #~ (SELECT 
+            #~ geometry, 
+            #~ FROM 
+            #~ osm_pistes_ways
+            #~ WHERE
+            #~ piste_type like '%nordic%'
+            #~ AND osm_id NOT IN (
+                #~ SELECT member
+                #~ FROM osm_pistes_route_members
+                #~ WHERE piste_type like '%nordic%'
+                #~ AND geometry && !bbox!
+            #~ )
+          #~ ) as data
+      #~ properties:
+        #~ minzoom: 9
+
+    #~ - id: nordic-routes-grooming-ol
+    #~    route members only
+      #~ geometry: linestring
+      #~ class: nordic-bg
+      #~ <<: *extents
+      #~ Datasource:
+        #~ <<: *imposm
+        #~ table: |-
+          #~ (SELECT 
+            #~ geometry, 
+            #~ FROM 
+            #~ osm_pistes_ways
+            #~ WHERE
+            #~ piste_type like '%nordic%'
+            #~ AND osm_id NOT IN (
+                #~ SELECT member
+                #~ FROM osm_pistes_route_members
+                #~ WHERE piste_type like '%nordic%'
+                #~ AND geometry && !bbox!
+            #~ )
+          #~ ) as data
+      #~ properties:
+        #~ minzoom: 9
+        
+
+
+
+
     #~ - id: nordic-eraser
       #~ geometry: linestring
       #~ class: ''
@@ -744,7 +881,7 @@ Layer:
           FROM 
             osm_pistes_ways
           WHERE
-            type LIKE '%nordic%'
+            piste_type LIKE '%nordic%'
           ) as data
       properties:
         minzoom: 9
@@ -761,7 +898,7 @@ Layer:
           FROM 
             osm_pistes_ways
           WHERE
-            type LIKE '%nordic%' 
+            piste_type LIKE '%nordic%' 
             and difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
           ) as data
       properties:
@@ -776,19 +913,11 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, type, name
+            geometry, piste_type, name
           FROM 
             osm_aerialways
             WHERE geometry && !bbox!
           
-          UNION
-          SELECT
-            geometry, type, name
-          FROM
-            osm_roads
-          WHERE
-            type IN ('incline', 'funicular')
-            AND geometry && !bbox!
           ) as data
       properties:
         minzoom: 9
@@ -802,7 +931,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-             type, name,
+             piste_type, name,
             (CASE 
                 WHEN st_x(st_startpoint(geometry)) < st_x(st_endpoint(geometry))
                 THEN geometry 
@@ -810,20 +939,6 @@ Layer:
             END) as geometry
           FROM 
             osm_aerialways
-          
-          UNION
-          SELECT
-            type, name,
-            (CASE 
-                WHEN st_x(st_startpoint(geometry)) < st_x(st_endpoint(geometry))
-                THEN geometry 
-                ELSE st_reverse(geometry)
-            END) as geometry
-          FROM
-            osm_roads
-          WHERE
-            type IN ('incline', 'funicular')
-            AND geometry && !bbox!
           ) as data
       properties:
         minzoom: 9
@@ -867,7 +982,7 @@ Layer:
                 (select geometry, difficulty, grooming, (lit1 or lit2) as lit, gladed
                 from osm_pistes_ways
                 where 
-                type LIKE '%downhill%' and (grooming='mogul' or gladed=true or lit1=true or lit2=true or difficulty='freeride')
+                piste_type LIKE '%downhill%' and (grooming='mogul' or gladed=true or lit1=true or lit2=true or difficulty='freeride')
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 AND geometry && !bbox!
@@ -877,7 +992,7 @@ Layer:
                 select geometry, difficulty, grooming, (lit1 or lit2) as lit, gladed
                 from pistes_routes
                 where 
-                type LIKE '%downhill%' and (grooming='mogul' or gladed=true or lit1=true or lit2=true or difficulty='freeride')
+                piste_type LIKE '%downhill%' and (grooming='mogul' or gladed=true or lit1=true or lit2=true or difficulty='freeride')
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 AND geometry && !bbox!
@@ -893,68 +1008,68 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, type from osm_pistes_ways 
+                (select geometry, piste_type from osm_pistes_ways 
                 where 
-                (type LIKE '%ice_skate%' 
-                or type LIKE '%playground%' 
-                or type LIKE '%sled%' 
-                or type LIKE '%ski_jump%' 
-                or type LIKE '%snow_park%' 
-                or type LIKE '%sleigh%' 
-                or type LIKE '%hike%'
-                or type LIKE '%skitour%')
+                ( piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%')
                 AND geometry && !bbox!
                 
                 UNION
                 
-                select geometry, type from osm_pistes_area
+                select geometry, piste_type from osm_pistes_area
                 where 
-                (type LIKE '%ice_skate%' 
-                or type LIKE '%playground%' 
-                or type LIKE '%sled%' 
-                or type LIKE '%ski_jump%' 
-                or type LIKE '%snow_park%' 
-                or type LIKE '%sleigh%' 
-                or type LIKE '%hike%'
-                or type LIKE '%skitour%')
+                ( piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%')
                 AND geometry && !bbox!
                 
                 UNION
                 
-                select geometry, type from pistes_routes 
+                select geometry, piste_type from pistes_routes 
                 where 
-                (type LIKE '%ice_skate%' 
-                or type LIKE '%playground%' 
-                or type LIKE '%sled%' 
-                or type LIKE '%ski_jump%' 
-                or type LIKE '%snow_park%' 
-                or type LIKE '%sleigh%' 
-                or type LIKE '%hike%'
-                or type LIKE '%skitour%')
+                ( piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%')
                 AND geometry && !bbox!
                 
                 UNION
                 
-                select geometry, type from osm_sport_ways 
+                select geometry, piste_type from osm_sport_ways 
                 where 
-                (type LIKE '%skating%'
-                or type LIKE '%ski_jump%'
-                or type LIKE '%ice_skating%'
-                or type LIKE '%ice_hockey%'
-                or type LIKE '%curling%'
-                or type LIKE '%ice_stock%')
+                ( piste_type LIKE '%skating%'
+                or piste_type LIKE '%ski_jump%'
+                or piste_type LIKE '%ice_skating%'
+                or piste_type LIKE '%ice_hockey%'
+                or piste_type LIKE '%curling%'
+                or piste_type LIKE '%ice_stock%')
                 AND geometry && !bbox!
                 
                 UNION
                 
-                select geometry, type from osm_sport_nodes 
+                select geometry, piste_type from osm_sport_nodes 
                 where 
-                (type LIKE '%skating%'
-                or type LIKE '%ski_jump%'
-                or type LIKE '%ice_skating%'
-                or type LIKE '%ice_hockey%'
-                or type LIKE '%curling%'
-                or type LIKE '%ice_stock%')
+                ( piste_type LIKE '%skating%'
+                or piste_type LIKE '%ski_jump%'
+                or piste_type LIKE '%ice_skating%'
+                or piste_type LIKE '%ice_hockey%'
+                or piste_type LIKE '%curling%'
+                or piste_type LIKE '%ice_stock%')
                 AND geometry && !bbox!
                 
                 ) as pistes
@@ -969,68 +1084,68 @@ Layer:
       #~ Datasource:
         #~ <<: *imposm
         #~ table: |-
-                #~ (select geometry, type from osm_pistes_ways 
+                #~ (select geometry, piste_type from osm_pistes_ways 
                 #~ where 
-                #~ (type LIKE '%ice_skate%' 
-                #~ or type LIKE '%playground%' 
-                #~ or type LIKE '%sled%' 
-                #~ or type LIKE '%ski_jump%' 
-                #~ or type LIKE '%snow_park%' 
-                #~ or type LIKE '%sleigh%' 
-                #~ or type LIKE '%hike%'
-                #~ or type LIKE '%skitour%')
+                #~ ( piste_type LIKE '%ice_skate%' 
+                #~ or piste_type LIKE '%playground%' 
+                #~ or piste_type LIKE '%sled%' 
+                #~ or piste_type LIKE '%ski_jump%' 
+                #~ or piste_type LIKE '%snow_park%' 
+                #~ or piste_type LIKE '%sleigh%' 
+                #~ or piste_type LIKE '%hike%'
+                #~ or piste_type LIKE '%skitour%')
                 #~ AND geometry && !bbox!
                 
                 #~ UNION
                 
-                #~ select geometry, type from osm_pistes_area
+                #~ select geometry, piste_type from osm_pistes_area
                 #~ where 
-                #~ (type LIKE '%ice_skate%' 
-                #~ or type LIKE '%playground%' 
-                #~ or type LIKE '%sled%' 
-                #~ or type LIKE '%ski_jump%' 
-                #~ or type LIKE '%snow_park%' 
-                #~ or type LIKE '%sleigh%' 
-                #~ or type LIKE '%hike%'
-                #~ or type LIKE '%skitour%')
+                #~ ( piste_type LIKE '%ice_skate%' 
+                #~ or piste_type LIKE '%playground%' 
+                #~ or piste_type LIKE '%sled%' 
+                #~ or piste_type LIKE '%ski_jump%' 
+                #~ or piste_type LIKE '%snow_park%' 
+                #~ or piste_type LIKE '%sleigh%' 
+                #~ or piste_type LIKE '%hike%'
+                #~ or piste_type LIKE '%skitour%')
                 #~ AND geometry && !bbox!
                 
                 #~ UNION
                 
-                #~ select geometry, type from pistes_routes 
+                #~ select geometry, piste_type from pistes_routes 
                 #~ where 
-                #~ (type LIKE '%ice_skate%' 
-                #~ or type LIKE '%playground%' 
-                #~ or type LIKE '%sled%' 
-                #~ or type LIKE '%ski_jump%' 
-                #~ or type LIKE '%snow_park%' 
-                #~ or type LIKE '%sleigh%' 
-                #~ or type LIKE '%hike%'
-                #~ or type LIKE '%skitour%')
+                #~ ( piste_type LIKE '%ice_skate%' 
+                #~ or piste_type LIKE '%playground%' 
+                #~ or piste_type LIKE '%sled%' 
+                #~ or piste_type LIKE '%ski_jump%' 
+                #~ or piste_type LIKE '%snow_park%' 
+                #~ or piste_type LIKE '%sleigh%' 
+                #~ or piste_type LIKE '%hike%'
+                #~ or piste_type LIKE '%skitour%')
                 #~ AND geometry && !bbox!
                 
                 #~ UNION
                 
-                #~ select geometry, type from osm_sport_ways 
+                #~ select geometry, piste_type from osm_sport_ways 
                 #~ where 
-                #~ (type LIKE '%skating%'
-                #~ or type LIKE '%ski_jump%'
-                #~ or type LIKE '%ice_skating%'
-                #~ or type LIKE '%ice_hockey%'
-                #~ or type LIKE '%curling%'
-                #~ or type LIKE '%ice_stock%')
+                #~ ( piste_type LIKE '%skating%'
+                #~ or piste_type LIKE '%ski_jump%'
+                #~ or piste_type LIKE '%ice_skating%'
+                #~ or piste_type LIKE '%ice_hockey%'
+                #~ or piste_type LIKE '%curling%'
+                #~ or piste_type LIKE '%ice_stock%')
                 #~ AND geometry && !bbox!
                 
                 #~ UNION
                 
-                #~ select geometry, type from osm_sport_nodes 
+                #~ select geometry, piste_type from osm_sport_nodes 
                 #~ where 
-                #~ (type LIKE '%skating%'
-                #~ or type LIKE '%ski_jump%'
-                #~ or type LIKE '%ice_skating%'
-                #~ or type LIKE '%ice_hockey%'
-                #~ or type LIKE '%curling%'
-                #~ or type LIKE '%ice_stock%')
+                #~ ( piste_type LIKE '%skating%'
+                #~ or piste_type LIKE '%ski_jump%'
+                #~ or piste_type LIKE '%ice_skating%'
+                #~ or piste_type LIKE '%ice_hockey%'
+                #~ or piste_type LIKE '%curling%'
+                #~ or piste_type LIKE '%ice_stock%')
                 #~ AND geometry && !bbox!
                 
                 #~ ) as pistes
@@ -1047,7 +1162,7 @@ Layer:
                 (select geometry, difficulty, grooming, coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name, (lit1 or lit2) as lit, gladed
                 from osm_pistes_ways
                 where 
-                type LIKE '%downhill%' 
+                piste_type LIKE '%downhill%' 
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 AND geometry && !bbox!
@@ -1057,7 +1172,7 @@ Layer:
                 select geometry, difficulty, grooming, coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name, (lit1 or lit2) as lit, gladed
                 from pistes_routes
                 where 
-                type LIKE '%downhill%' 
+                piste_type LIKE '%downhill%' 
                 and 
                 (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                 AND geometry && !bbox!
@@ -1094,14 +1209,14 @@ Layer:
           
           --get only the first result, even for the 3 mapping of 'les trois or 3 Vallées', snaptogrid is needed too
           
-            geometry, name, type, osm_id,
+            geometry, name, piste_type, osm_id,
             downhill, nordic, sled, hike, snowpark, jump, playground, skitour, skat, sleigh,
             cnt
           FROM
           (
               (SELECT 
                 ST_SnapToGrid(st_centroid(geometry),3000) as geometry,
-                name as name, members_types as type, osm_id,
+                name as name, members_types as piste_type, osm_id,
                 members_types~'downhill' as downhill,
                 members_types~'nordic' as nordic,
                 members_types~'sled' as sled,
@@ -1121,7 +1236,7 @@ Layer:
               UNION
               (SELECT 
                 ST_SnapToGrid(st_centroid(geometry),3000) as geometry,
-                name as name, members_types as type, osm_id,
+                name as name, members_types as piste_type, osm_id,
                 members_types~'downhill' as downhill,
                 members_types~'nordic' as nordic,
                 members_types~'sled' as sled,

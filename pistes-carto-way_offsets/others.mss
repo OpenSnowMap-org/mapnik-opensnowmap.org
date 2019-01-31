@@ -118,15 +118,15 @@ opacity: 0.95;
     line-gamma: 0.6;
     line-smooth: 0.5;
     
-    [type=~".*snow_park.*"][zoom>=9]{
+    [piste_type=~".*snow_park.*"][zoom>=9]{
         line-width: 2.5;
         line-color: #FFFFFF;
     }
-    [type=~".*playground.*"][zoom>=15]{
+    [piste_type=~".*playground.*"][zoom>=15]{
         line-width: 2.5;
         line-color: #FFFFFF;
     }
-    [type=~".*sled.*"][zoom>=15]{
+    [piste_type=~".*sled.*"][zoom>=15]{
         line-color: #FFFFFF;
         [zoom>=9][zoom<=11]{
         line-width: 2;
@@ -135,23 +135,23 @@ opacity: 0.95;
         line-width: 2;
         }
     }
-    [type=~".*skat.*"][zoom>=9]{
+    [piste_type=~".*skat.*"][zoom>=9]{
         line-color: #FFFFFF;
         line-width: 3;
     }
-    [type=~".*curling.*"][zoom>=9]{
+    [piste_type=~".*curling.*"][zoom>=9]{
         line-color: #FFFFFF;
         line-width: 3;
     }
-    [type=~".*ice_stock.*"][zoom>=9]{
+    [piste_type=~".*ice_stock.*"][zoom>=9]{
         line-color: #FFFFFF;
         line-width: 3;
     }
-    [type=~".*hockey.*"][zoom>=9]{
+    [piste_type=~".*hockey.*"][zoom>=9]{
         line-color: #FFFFFF;
         line-width: 3;
     }
-    [type=~".*sleigh.*"][zoom>=15]{
+    [piste_type=~".*sleigh.*"][zoom>=15]{
         line-color: #FFFFFF;
         [zoom>=9][zoom<=11]{
         line-width: 2;
@@ -169,15 +169,15 @@ opacity: 0.90;
     line-gamma: 0.6;
     line-smooth: 0.5;
     
-    [type=~".*snow_park.*"][zoom>=9]{
+    [piste_type=~".*snow_park.*"][zoom>=9]{
     line-width: 2;
     line-color: #0F6DD3;
     }
-    [type=~".*playground.*"][zoom>=15]{
+    [piste_type=~".*playground.*"][zoom>=15]{
     line-width: 2;
     line-color: #A6E05B;
     }
-    [type=~".*sled.*"]{
+    [piste_type=~".*sled.*"]{
         [zoom>=9][zoom<=11]{
         line-color: #BAFF3A;
         }
@@ -186,23 +186,23 @@ opacity: 0.90;
         line-color: #BAFF3A;
         }
     }
-    [type=~".*skat.*"][zoom>=9]{
+    [piste_type=~".*skat.*"][zoom>=9]{
         line-width: 1.5;
         line-color: #6FC4D0;
     }
-    [type=~".*curling.*"][zoom>=9]{
+    [piste_type=~".*curling.*"][zoom>=9]{
         line-width: 1.5;
         line-color: #6FC4D0;
     }
-    [type=~".*ice_stock.*"][zoom>=9]{
+    [piste_type=~".*ice_stock.*"][zoom>=9]{
         line-width: 1.5;
         line-color: #6FC4D0;
     }
-    [type=~".*hockey.*"][zoom>=9]{
+    [piste_type=~".*hockey.*"][zoom>=9]{
         line-width: 1.5;
         line-color: #6FC4D0;
     }
-    [type=~".*sleigh.*"][zoom>=15]{
+    [piste_type=~".*sleigh.*"][zoom>=15]{
         [zoom>=9][zoom<=11]{
         line-color: #8F54D8;
         }
@@ -224,17 +224,17 @@ opacity: 0.90;
     line-smooth: 0.5;
     line-width: 0.5;
     
-    [type=~".*snow_park.*"][zoom>=14]{
+    [piste_type=~".*snow_park.*"][zoom>=14]{
         line-color: #0F6DD3;
         polygon-fill: #0074F3;
         polygon-opacity: 0.5;
     }
-    [type=~".*playground.*"][zoom>=14]{
+    [piste_type=~".*playground.*"][zoom>=14]{
         polygon-fill: #A6E05B;
         line-color: #A6E05B;
         polygon-opacity: 0.4;
     }
-    [type=~".*sled.*"][zoom>=14]{
+    [piste_type=~".*sled.*"][zoom>=14]{
         polygon-fill: #BAFF3A;
         line-color: #BAFF3A;
         polygon-opacity: 0.4;
@@ -256,19 +256,19 @@ opacity: 0.90;
     text-halo-fill:rgba(0,0,0,0);
     text-fill:rgba(0,0,0,0);
     
-    [type=~".*snow_park.*"][zoom>=15]{
+    [piste_type=~".*snow_park.*"][zoom>=15]{
         text-fill:#005CC0;
         text-halo-fill:#DDDDDD;
     }
-    [type=~".*playground.*"][zoom>=15]{
+    [piste_type=~".*playground.*"][zoom>=15]{
         text-fill:#6CAD1A;
         text-halo-fill:#DDDDDD;
     }
-    [type=~".*sled.*"][zoom>=15]{
+    [piste_type=~".*sled.*"][zoom>=15]{
         text-fill:#568400;
         text-halo-fill:#DDDDDD;
     }
-    [type=~".*jump.*"][zoom>=15]{
+    [piste_type=~".*jump.*"][zoom>=15]{
         text-fill:#655ABE;
         text-halo-fill:#DDDDDD;
     }
@@ -285,13 +285,13 @@ opacity: 0.90;
     text-allow-overlap:false;
     text-repeat-distance: 200;
     
-    [type=~".*hike.*"][zoom>=13]{
+    [piste_type=~".*hike.*"][zoom>=13]{
         text-name:'j';
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#E88193;
         text-size: 22;
     }
-    [type=~".*skitour.*"][zoom>=14]{
+    [piste_type=~".*skitour.*"][zoom>=14]{
         text-name:'f';
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#C42C1C;
@@ -301,7 +301,7 @@ opacity: 0.90;
         text-label-position-tolerance:40;
         text-halo-radius:2;
     }
-    [type=~".*snow_park.*"][zoom>=15]{
+    [piste_type=~".*snow_park.*"][zoom>=15]{
         text-repeat-distance: 50;
         text-name:'i';
         text-halo-fill:rgba(0,116,243,0.3);
@@ -311,7 +311,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
     }
-    [type=~".*playground.*"][zoom>=15]{
+    [piste_type=~".*playground.*"][zoom>=15]{
         text-name:'c';
         text-halo-fill:rgba(166,224,91,0.3);
         text-fill:#000000;
@@ -320,7 +320,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
     }
-    [type=~".*sled.*"][zoom>=15]{
+    [piste_type=~".*sled.*"][zoom>=15]{
         text-name:'g';
         text-halo-fill:rgba(186,255,58,0.6);
         text-fill:#000000;
@@ -329,7 +329,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
     }
-    [type=~".*skat.*"][zoom>=15]{
+    [piste_type=~".*skat.*"][zoom>=15]{
         text-name:'d';
         text-halo-fill:rgba(255,255,255,0.6);
         text-fill:#1A9CCC;
@@ -338,7 +338,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
     }
-    [type=~".*curling.*"][zoom>=15]{
+    [piste_type=~".*curling.*"][zoom>=15]{
         text-name:'l';
         text-halo-fill:rgba(255,255,255,0.6);
         text-fill:#1A9CCC;
@@ -347,7 +347,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
     }
-    [type=~".*ice_stock.*"][zoom>=15]{
+    [piste_type=~".*ice_stock.*"][zoom>=15]{
         text-name:'m';
         text-halo-fill:rgba(255,255,255,0.6);
         text-fill:#1A9CCC;
@@ -356,7 +356,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
     }
-    [type=~".*hockey.*"][zoom>=15]{
+    [piste_type=~".*hockey.*"][zoom>=15]{
         text-name:'k';
         text-halo-fill:rgba(255,255,255,0.6);
         text-fill:#1A9CCC;
@@ -365,7 +365,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
     }
-    [type=~".*sleigh.*"][zoom>=15]{
+    [piste_type=~".*sleigh.*"][zoom>=15]{
         text-name:'h';
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#8F54D8;
@@ -375,7 +375,7 @@ opacity: 0.90;
         text-label-position-tolerance:40;
         text-halo-radius:2;
     }
-    [type=~".*jump.*"][zoom>=15]{
+    [piste_type=~".*jump.*"][zoom>=15]{
         text-name:'e';
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#000;

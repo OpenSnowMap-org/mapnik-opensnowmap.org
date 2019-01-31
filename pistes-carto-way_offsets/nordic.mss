@@ -10,7 +10,7 @@
 */
 
 
-.nordic-bg{
+#nordic-bg{
     line-cap: round;
     line-join: round;
     line-color: #FFFFFF;
@@ -18,47 +18,33 @@
     [zoom=9]{line-width: 2;line-gamma: 0.6;}
     [zoom=10]{line-width: 3;}
     [zoom>=11][zoom<=12]{line-width: 3.5;}
-    [zoom>=13][zoom<=14]{line-width: 3;}
-    [zoom>=15]{line-width: 4;}
-    
-    [grooming=~".*classic.*"]{
-        [zoom>=13][zoom<=14]{line-width: 5;line-offset: 5.0*[offseter];}
-        [zoom>=15]{line-width: 6;line-offset: 6.0*[offseter];}
-    }
-    [grooming=~".*skating.*"]{
-        [zoom>=13][zoom<=14]{line-width: 5;line-offset: 5.0*[offseter];}
-        [zoom>=15]{line-width: 6;line-offset: 6.0*[offseter];}
-    }
+    [zoom>=13][zoom<=14]{line-width: 5;line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    [zoom>=15]{line-width: 6;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
+}
+#nordic-difficulty-bg{
+    line-cap: round;
+    line-join: round;
+    line-color: #FDE067;
+    line-gamma: 1;
+    [zoom>13][zoom<=14]{line-width: 4;line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    [zoom>=15]{line-width: 5;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
 }
 .nordic{
     line-cap: round;
     line-join: round;
+    line-gamma: 0.5;
+    
     line-color: #29B29C;
-    line-gamma: 1;
+    [nordic_route_render_colour != ''] {
+        line-color: [nordic_route_render_colour]
+    }
     
     [zoom=9]{line-width: 0.5;line-gamma: 0.6;}
     [zoom=10]{line-width: 1;}
-    
     [zoom>=11][zoom<=12]{line-width: 1;}
+    [zoom>=13][zoom<=14]{line-width: 1.5;line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    [zoom>=15]{line-width: 2;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
     
-    [zoom>=13][zoom<=14]{
-        line-width: 1;
-        line-dasharray: 5, 3;
-        }
-    [zoom>=15]{
-        line-width: 1.5;
-        line-dasharray: 8, 6;
-        }
-    
-    [grooming=~".*classic.*"]{
-    
-        [zoom>=13][zoom<=14]{line-width: 1.5;line-dasharray: 10, 0;line-offset: 3.0*[offseter];}
-        [zoom>=15]{line-width: 2;line-dasharray: 10, 0;line-offset: 4.0*[offseter];}
-    }
-    [grooming=~".*skating.*"]{
-        [zoom>=13][zoom<=14]{line-width: 1.5;line-dasharray: 10, 0;line-offset: 3.0*[offseter];}
-        [zoom>=15]{line-width: 2;line-dasharray: 10, 0;line-offset: 4.0*[offseter];}
-    }
 }
 
 #nordic-eraser{
