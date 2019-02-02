@@ -29,7 +29,7 @@
     [zoom>13][zoom<=14]{line-width: 4;line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 5;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
 }
-.nordic{
+#nordic-way{
     line-cap: round;
     line-join: round;
     line-gamma: 0.5;
@@ -44,9 +44,65 @@
     [zoom>=11][zoom<=12]{line-width: 1;}
     [zoom>=13][zoom<=14]{line-width: 1.5;line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 2;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
-    
 }
+#nordic-grooming{
+    line-cap: round;
+    line-join: round;
+    line-gamma: 0.5;
+    line-opacity: 0;
+    line-color: #FFFFFF;
 
+    [grooming='classic;'] {
+        line-dasharray:2, 6;
+        line-opacity: 1;
+        [zoom>=13][zoom<=14]{line-width: 0.5;
+            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+        [zoom>=15]{line-width: 1;
+            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    }
+    [grooming='skating'] {
+        line-dasharray:2.5, 28;
+        line-opacity: 1;
+        [zoom>=13][zoom<=14]{line-width: 0.5;
+            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+        [zoom>=15]{line-width: 1;
+            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}}
+            
+    [grooming='scooter'] {
+        line-dasharray:9, 6.5;
+        line-opacity: 1;
+        [zoom>=13][zoom<=14]{line-width: 1.0;
+            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+        [zoom>=15]{line-width: 2.0;
+            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    }
+    [grooming='backcountry'] {
+        line-dasharray:9, 4.5;
+        line-opacity: 1;
+        [zoom>=13][zoom<=14]{line-width: 1.0;
+            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+        [zoom>=15]{line-width: 2.0;
+            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    }
+    [grooming=''] {
+        line-opacity: 0.4;
+        [zoom>=13][zoom<=14]{line-width: 1.0;
+            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+        [zoom>=15]{line-width: 2.0;
+            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    line-opacity: 1;}
+}
+#nordic-no-difficulty{
+    line-cap: round;
+    line-join: round;
+    line-gamma: 0.5;
+    line-color: #FFFFFF;
+    line-opacity: 0.4;
+    [zoom>=13][zoom<=14]{line-width: 1.0;
+        line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    [zoom>=15]{line-width: 2.0;
+        line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
+}
 #nordic-eraser{
     comp-op: dst-out;
     line-cap: round;
@@ -60,18 +116,6 @@
     [zoom>=13][zoom<=14]{line-width: 5;}
     [zoom>=15]{line-width: 6;}
     
-}
-
-#nordic-no-difficulty[difficulty=''][zoom>=15]{
-    comp-op: dst-out;
-    
-    line-cap: butt;
-    line-join: round;
-    line-color: #FFFFFF;
-    line-gamma: 1;
-    line-width: 15;
-    line-opacity: 0.2;
-    line-dasharray: 2,5;
 }
 
 #nordic-difficulty-markers[zoom>=14]{

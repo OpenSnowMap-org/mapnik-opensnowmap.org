@@ -661,7 +661,7 @@ Layer:
             WHERE
             piste_type like '%nordic%'
             AND geometry && !bbox!
-            AND difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
+            AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
@@ -677,7 +677,7 @@ Layer:
             osm_pistes_route_members
             WHERE
             piste_type like '%nordic%'
-            AND difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
+            AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
             AND geometry && !bbox!
           ) as data
       properties:
@@ -685,15 +685,14 @@ Layer:
         
         
     - id: nordic-way 
-       ways not in route members only
       geometry: linestring
-      class: nordic
       <<: *extents
       Datasource:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            grooming
             FROM 
             osm_pistes_ways
             WHERE
@@ -709,7 +708,8 @@ Layer:
             UNION
             
             SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
+            geometry, nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+            grooming
             FROM 
             pistes_routes
             WHERE
@@ -719,6 +719,75 @@ Layer:
       properties:
         minzoom: 9
         
+    - id: nordic-grooming
+      geometry: linestring
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+          (SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            grooming
+            FROM 
+            osm_pistes_ways
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            AND osm_id NOT IN (
+                SELECT member
+                FROM osm_pistes_route_members
+                WHERE piste_type like '%nordic%'
+                AND geometry && !bbox!
+            )
+            
+            UNION
+            
+            SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            grooming
+            FROM 
+            osm_pistes_route_members
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+          ) as data
+      properties:
+        minzoom: 9
+
+    - id: nordic-no-difficulty
+      geometry: linestring
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+          (SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            FROM 
+            osm_pistes_ways
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            AND difficulty NOT IN ('novice', 'easy', 'intermediate', 'advanced', 'expert', 'freeride','extreme')
+            AND osm_id NOT IN (
+                SELECT member
+                FROM osm_pistes_route_members
+                WHERE piste_type like '%nordic%'
+                AND geometry && !bbox!
+            )
+            
+            UNION
+            
+            SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            FROM 
+            osm_pistes_route_members
+            WHERE
+            piste_type like '%nordic%'
+            AND difficulty NOT IN ('novice', 'easy', 'intermediate', 'advanced', 'expert', 'freeride','extreme')
+            AND geometry && !bbox!
+          ) as data
+      properties:
+        minzoom: 9
     #~ - id: nordic-routes 
     #~     route relation geometries
       #~ geometry: linestring
@@ -869,22 +938,7 @@ Layer:
       #~ properties:
         #~ minzoom: 9
         
-    - id: nordic-no-difficulty
-      geometry: linestring
-      class: ''
-      <<: *extents
-      Datasource:
-        <<: *imposm
-        table: |-
-          (SELECT 
-            geometry, difficulty
-          FROM 
-            osm_pistes_ways
-          WHERE
-            piste_type LIKE '%nordic%'
-          ) as data
-      properties:
-        minzoom: 9
+
         
     - id: nordic-difficulty-markers
       geometry: linestring
