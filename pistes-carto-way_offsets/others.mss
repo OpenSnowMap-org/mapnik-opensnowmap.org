@@ -85,13 +85,30 @@
     [zoom>=15]{line-width: 8;}
 }
 .skitour[zoom>=9]{
-opacity: 0.95;
+    opacity: 0.95;
     ::dash{  
         line-cap: round;
         line-join: round;
-        line-color: #C42C1C;
         line-gamma: 0.6;
-
+        line-color: #C42C1C;
+        [us="1"] {
+            [difficulty="novice"]{line-color: #23CD23;}
+            [difficulty="easy"]{line-color: #23CD23;}
+            [difficulty="intermediate"]{line-color: #1919DE;}
+            [difficulty="advanced"]{line-color: #222222;}
+            [difficulty="expert"]{line-color: #222222;}
+            [difficulty="freeride"]{line-color: #FFE72D;}
+        }
+    
+        [us="0"] {
+            [difficulty="novice"]{line-color: #2AB62A;}
+            [difficulty="easy"]{line-color: #1919DE;}
+            [difficulty="intermediate"]{line-color: #E81F1F;}
+            [difficulty="advanced"]{line-color: #222222;}
+            [difficulty="expert"]{line-color: #FFBB2D;}
+            [difficulty="freeride"]{line-color: #FFE72D;}
+        }
+    
         [zoom>=9][zoom<=11]{line-width: 1.5;line-dasharray: 1,4;}
         [zoom=12]{line-width: 4;line-dasharray: 1,9;}
         [zoom>=13][zoom<=14]{line-width: 6;line-dasharray: 1,12;}
@@ -292,6 +309,16 @@ opacity: 0.90;
         text-size: 22;
     }
     [piste_type=~".*skitour.*"][zoom>=14]{
+        text-name:'f';
+        text-halo-fill:rgba(255,255,255,0.5);
+        text-fill:#C42C1C;
+        text-size: 20;
+        text-horizontal-alignment:'middle';
+        text-vertical-alignment:'middle';
+        text-label-position-tolerance:40;
+        text-halo-radius:2;
+    }
+    [piste_type=~".*downhill.*"][zoom>=14]{
         text-name:'f';
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#C42C1C;

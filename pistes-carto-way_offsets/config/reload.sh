@@ -22,10 +22,12 @@ echo "$(date) - importing: $inputpbf "
     -connection $PG_CONNECT
 #Fix imported geometries, otherwise we have issue with 
 #collection of polygons at the output of ST_LineMerge
+echo "UPDATE osm_pistes_route_members ..."
 echo "UPDATE osm_pistes_route_members
         SET geometry=ST_ExteriorRing(geometry)
         WHERE ST_GeometryType(osm_pistes_route_members.geometry)='ST_Polygon'
     ;" |psql -d imposm
+echo "CREATE TABLE pistes_routes ..."
 echo "CREATE TABLE pistes_routes AS (
     SELECT 
         osm_pistes_routes.osm_id as osm_id,
@@ -68,7 +70,7 @@ echo "ANALYSE pistes_routes;" |psql -d imposm
 #~ Execution time: 0.311 ms
 #~ Et puis de temps en temps:
 #~ echo "REFRESH MATERIALIZED VIEW pistes_routes;" |psql -d imposm
-
+echo "CREATE TABLE pistes_sites ..."
 echo "CREATE TABLE pistes_sites AS (
     SELECT 
         osm_pistes_sites.osm_id as osm_id,
@@ -115,6 +117,7 @@ echo "CLUSTER pistes_sites USING idx_sites_geom;" |psql -d imposm
 echo "ANALYSE pistes_sites;" |psql -d imposm
 
 # landuse_ressorts
+echo "CREATE TABLE landuse_resorts ..."
 echo "CREATE TABLE landuse_resorts AS SELECT * FROM osm_resorts;
 
 ALTER TABLE landuse_resorts ADD members_types text;
@@ -165,7 +168,7 @@ echo "CREATE INDEX idx_landuse_resorts_geom ON landuse_resorts USING gist (geome
 echo "CLUSTER landuse_resorts USING idx_landuse_resorts_geom;" |psql -d imposm
 echo "ANALYSE landuse_resorts;" |psql -d imposm
 
-
+echo "ALTER TABLE osm_pistes_route_members ..."
 echo "ALTER TABLE osm_pistes_route_members
 ADD COLUMN nordic_route_offset integer DEFAULT 0,
 ADD COLUMN nordic_route_colour text DEFAULT '',
@@ -173,7 +176,7 @@ ADD COLUMN nordic_route_length integer DEFAULT 1000000,
 ADD COLUMN nordic_route_render_colour text DEFAULT '',
 ADD COLUMN direction_to_route integer DEFAULT 0;
 " |psql -d imposm
-
+echo "ALTER TABLE osm_pistes_ways ..."
 echo "ALTER TABLE osm_pistes_ways
 ADD COLUMN nordic_route_offset integer DEFAULT 0,
 ADD COLUMN nordic_route_colour text DEFAULT '',
@@ -181,10 +184,10 @@ ADD COLUMN nordic_route_length integer DEFAULT 1000000,
 ADD COLUMN nordic_route_render_colour text DEFAULT '',
 ADD COLUMN direction_to_route integer DEFAULT 0;
 " |psql -d imposm
-
+echo "UPDATE osm_pistes_route_members ..."
 echo "UPDATE osm_pistes_route_members
 SET 
-  nordic_route_offset = floor(random() * (-3-(3)+1) + 3)::int,
+  nordic_route_offset = 0,
   nordic_route_colour = (SELECT coalesce(osm_pistes_routes.colour,osm_pistes_routes.color)
                             FROM osm_pistes_routes 
                             WHERE osm_pistes_routes.osm_id=osm_pistes_route_members.osm_id),
@@ -211,5 +214,5 @@ SET
                             WHERE pistes_routes.osm_id=osm_pistes_route_members.osm_id)
                             ;
 " |psql -d imposm
-
+echo "build-relations-DB ..."
 ./build-relations-DB.py ../../offset_lists/
