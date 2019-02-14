@@ -1,10 +1,10 @@
 #lit[zoom>=14]{
     shield-file: url('pics/light.png');
-    shield-placement: 'line';
-    shield-spacing: 400;
+    shield-placement: line;
     shield-face-name:@bold-fonts;
     shield-name:'';
-    shield-label-position-tolerance: 50;
+    shield-spacing: 100;
+    shield-min-distance: 80;
 }
 #snowshoeing-eraser[zoom>=13]{
         comp-op: dst-out;
@@ -16,7 +16,7 @@
         [zoom>=15]{line-width: 7;}
 }
 .snowshoeing[zoom>=13]{
-opacity: 0.95;
+    opacity: 0.95;
     ::bg[zoom>=13]{
         line-cap: round;
         line-join: round;
@@ -275,15 +275,15 @@ opacity: 0.90;
 }
 
 #various-icons{
-opacity: 0.90;
+    opacity: 0.90;
     text-name:'';
     text-face-name:'Ski Medium';
     text-halo-radius:4;
     text-size: 22;
-    text-placement: point;
+    text-placement: line;
     text-avoid-edges: true;
     text-allow-overlap:false;
-    text-repeat-distance: 200;
+    text-repeat-distance: 150;
     
     [piste_type=~".*hike.*"][zoom>=13]{
         text-name:'j';

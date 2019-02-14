@@ -5,8 +5,8 @@ bounds: &world
     - 85.0511
   
 center: 
-    - 6.42
-    - 46.84
+    - 6.3390
+    - 46.7398
     - 13
 format: png24
 interactivity: false
@@ -14,7 +14,7 @@ minzoom: 0
 maxzoom: 18
 srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
 scale: 1
-metatile: 2
+metatile: 8
 attribution: "Data © OpenStreetMap (and) contributors, OdBL; map (c) Opensnowmap.org, CC-BY-SA"
 description: ""
 name: pistes-carto
@@ -598,7 +598,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
             FROM 
             osm_pistes_ways
             WHERE
@@ -655,7 +655,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
             FROM 
             osm_pistes_ways
             WHERE
@@ -691,7 +691,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
             grooming
             FROM 
             osm_pistes_ways
@@ -726,7 +726,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
             grooming
             FROM 
             osm_pistes_ways
@@ -761,7 +761,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
             FROM 
             osm_pistes_ways
             WHERE

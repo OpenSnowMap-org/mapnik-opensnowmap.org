@@ -255,9 +255,6 @@ opacity: 0.9;
         shield-transform: scale(0.4,0.4);
         shield-file: url('pics/danger-red.svg');
     }
-    [lit=true]{
-        shield-file: url('pics/light.png');
-    }
     [gladed=true]{
         shield-transform: scale(0.6,0.6);
         shield-file: url('pics/gladed.svg');

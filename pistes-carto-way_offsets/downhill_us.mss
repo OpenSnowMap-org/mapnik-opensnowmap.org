@@ -156,9 +156,6 @@ opacity: 0.95;
         shield-file: url('pics/diamonds.svg');
         shield-spacing: 300;
     }
-    [lit=true]{
-        shield-file: url('pics/light.png');
-    }
     [gladed=true]{
         shield-transform: scale(0.6,0.6);
         shield-file: url('pics/gladed.svg');

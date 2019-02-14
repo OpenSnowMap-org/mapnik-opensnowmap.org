@@ -18,7 +18,7 @@
     [zoom=9]{line-width: 2;line-gamma: 0.6;}
     [zoom=10]{line-width: 3;}
     [zoom>=11][zoom<=12]{line-width: 3.5;}
-    [zoom>=13][zoom<=14]{line-width: 5;line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    [zoom>=13][zoom<=14]{line-width: 5;line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 6;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
 }
 #nordic-difficulty-bg{
@@ -26,7 +26,7 @@
     line-join: round;
     line-color: #FDE067;
     line-gamma: 1;
-    [zoom>13][zoom<=14]{line-width: 4;line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    [zoom>13][zoom<=14]{line-width: 4;line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 5;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
 }
 #nordic-way{
@@ -42,7 +42,7 @@
     [zoom=9]{line-width: 0.5;line-gamma: 0.6;}
     [zoom=10]{line-width: 1;}
     [zoom>=11][zoom<=12]{line-width: 1;}
-    [zoom>=13][zoom<=14]{line-width: 1.5;line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+    [zoom>=13][zoom<=14]{line-width: 1.5;line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 2;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
 }
 #nordic-grooming{
@@ -56,7 +56,7 @@
         line-dasharray:2, 6;
         line-opacity: 1;
         [zoom>=13][zoom<=14]{line-width: 0.5;
-            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
         [zoom>=15]{line-width: 1;
             line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
     }
@@ -64,7 +64,7 @@
         line-dasharray:2.5, 28;
         line-opacity: 1;
         [zoom>=13][zoom<=14]{line-width: 0.5;
-            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
         [zoom>=15]{line-width: 1;
             line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}}
             
@@ -72,7 +72,7 @@
         line-dasharray:9, 6.5;
         line-opacity: 1;
         [zoom>=13][zoom<=14]{line-width: 1.0;
-            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
         [zoom>=15]{line-width: 2.0;
             line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
     }
@@ -80,14 +80,14 @@
         line-dasharray:9, 4.5;
         line-opacity: 1;
         [zoom>=13][zoom<=14]{line-width: 1.0;
-            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
         [zoom>=15]{line-width: 2.0;
             line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
     }
     [grooming=''] {
         line-opacity: 0.4;
         [zoom>=13][zoom<=14]{line-width: 1.0;
-            line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
         [zoom>=15]{line-width: 2.0;
             line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
     line-opacity: 1;}
@@ -99,7 +99,7 @@
     line-color: #FFFFFF;
     line-opacity: 0.4;
     [zoom>=13][zoom<=14]{line-width: 1.0;
-        line-offset: 1.5*1.2*[nordic_route_offset]*[direction_to_route];}
+        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 2.0;
         line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
 }
