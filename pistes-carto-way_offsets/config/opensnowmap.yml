@@ -134,6 +134,9 @@ tables:
     mapping:
       aerialway:
       - __any__
+      railway:
+      - funicular
+      - incline
     type: linestring
     fields:
     - key: null
@@ -144,6 +147,9 @@ tables:
       type: geometry
     - key: name
       name: name
+      type: string
+    - key: ref
+      name: ref
       type: string
     - key: null
       name: piste_type
@@ -269,8 +275,7 @@ tables:
     - key: name
       name: name
       type: string
-      from_member: true
-      
+      from_member: true      
     - key: piste:name
       name: piste_name
       type: string
@@ -360,6 +365,8 @@ tables:
     mapping:
       sport:
       - __any__
+      man_made:
+      - snow_cannon
     type: point
     fields:
     - key: null

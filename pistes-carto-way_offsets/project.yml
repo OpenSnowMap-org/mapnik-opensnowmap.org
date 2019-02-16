@@ -5,8 +5,8 @@ bounds: &world
     - 85.0511
   
 center: 
-    - 6.6546
-    - 45.3944
+    - 10.2355
+    - 46.9803
     - 13
 format: png24
 interactivity: false
@@ -1070,13 +1070,25 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-          (SELECT 
-            *
-          FROM 
-            osm_aerialways
-          ORDER BY
-            st_length(geometry) desc
-          ) as data
+          (SELECT geometry, piste_type, 
+            CASE 
+                WHEN n is not null and r is null
+                    THEN n
+                WHEN n is null and r is not null
+                    THEN r
+                WHEN r=n
+                    THEN n
+                WHEN n is not null and r is not null
+                    THEN concat(r,' - ',n)
+            END as name
+          FROM (
+              SELECT geometry, piste_type, name as n, ref as r
+              FROM
+                osm_aerialways
+              ORDER BY
+                st_length(geometry) desc
+              ) as data
+          ) as pistes
       properties:
         minzoom: 9
     - id: sites
