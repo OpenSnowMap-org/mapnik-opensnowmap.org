@@ -39,6 +39,8 @@ echo "CREATE TABLE pistes_routes AS (
         bool_and(osm_pistes_routes.patrolled) as patrolled,
         bit_and(osm_pistes_routes.oneway) as oneway,
         string_agg(distinct osm_pistes_routes.piste_name,';') as piste_name,
+        string_agg(distinct osm_pistes_routes.piste_ref,';') as piste_ref,
+        string_agg(distinct osm_pistes_routes.ref,';') as ref,
         string_agg(distinct osm_pistes_routes.color,';') as color,
         string_agg(distinct osm_pistes_routes.colour,';') as colour,
         string_agg(distinct osm_pistes_routes.color,';') as nordic_route_render_colour,

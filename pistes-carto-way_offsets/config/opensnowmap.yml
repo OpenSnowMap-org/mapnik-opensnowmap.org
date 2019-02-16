@@ -25,6 +25,12 @@ tables:
     - key: piste:name
       name: piste_name
       type: string
+    - key: piste:ref
+      name: piste_ref
+      type: string
+    - key: ref
+      name: ref
+      type: string
     - key: piste:grooming
       name: grooming
       type: string
@@ -72,6 +78,12 @@ tables:
       type: mapping_value
     - key: piste:name
       name: piste_name
+      type: string
+    - key: piste:ref
+      name: piste_ref
+      type: string
+    - key: ref
+      name: ref
       type: string
     - key: piste:grooming
       name: grooming
@@ -175,6 +187,12 @@ tables:
     - key: null
       name: route_type
       type: mapping_value
+    - key: piste:ref
+      name: piste_ref
+      type: string
+    - key: ref
+      name: ref
+      type: string
     - key: piste:name
       name: piste_name
       type: string
@@ -241,6 +259,12 @@ tables:
       type: string
     - key: name
       name: relname
+      type: string
+    - key: piste:ref
+      name: piste_ref
+      type: string
+    - key: ref
+      name: ref
       type: string
     - key: name
       name: name

@@ -241,17 +241,17 @@ opacity: 0.90;
     line-smooth: 0.5;
     line-width: 0.5;
     
-    [piste_type=~".*snow_park.*"][zoom>=14]{
+    [piste_type=~".*snow_park.*"][zoom>=13]{
         line-color: #0F6DD3;
         polygon-fill: #0074F3;
         polygon-opacity: 0.5;
     }
-    [piste_type=~".*playground.*"][zoom>=14]{
+    [piste_type=~".*playground.*"][zoom>=13]{
         polygon-fill: #A6E05B;
         line-color: #A6E05B;
         polygon-opacity: 0.4;
     }
-    [piste_type=~".*sled.*"][zoom>=14]{
+    [piste_type=~".*sled.*"][zoom>=13]{
         polygon-fill: #BAFF3A;
         line-color: #BAFF3A;
         polygon-opacity: 0.4;
@@ -307,6 +307,7 @@ opacity: 0.90;
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#E88193;
         text-size: 22;
+        text-repeat-distance: 180;
     }
     [piste_type=~".*skitour.*"][zoom>=14]{
         text-name:'f';
@@ -337,6 +338,7 @@ opacity: 0.90;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
+        text-placement: point;
     }
     [piste_type=~".*playground.*"][zoom>=15]{
         text-name:'c';

@@ -198,7 +198,7 @@ opacity: 0.9;
 }
 
 #downhill-text[zoom>=15]{
-    text-name:'[name]';
+    text-name:'[pistename]';
     text-face-name:@book-fonts;
     text-halo-radius:1;
     text-size: 10;
