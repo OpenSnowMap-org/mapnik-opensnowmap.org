@@ -10,7 +10,7 @@
 */
 
 
-#nordic-bg{
+.nordic-bg{
     line-cap: round;
     line-join: round;
     line-color: #FFFFFF;
@@ -29,7 +29,7 @@
     [zoom>13][zoom<=14]{line-width: 4;line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 5;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
 }
-#nordic-way{
+.nordic-way{
     line-cap: round;
     line-join: round;
     line-gamma: 0.5;
@@ -120,12 +120,36 @@
 
 #nordic-difficulty-markers[zoom>=14]{
     shield-file: url('pics/danger-red.svg');
+    [difficulty='intermediate']{shield-file: url('pics/danger-black.svg');}
     shield-placement: 'line';
     shield-spacing: 200;
+    shield-min-distance: 50;
     shield-transform: scale(0.4,0.4);
     shield-face-name:@bold-fonts;
     shield-name:'';
-    [difficulty='intermediate']{shield-file: url('pics/danger-black.svg');}
 }
 
+#nordic-text{
 
+    [zoom>=15]{
+    text-name:'[name]';
+    text-face-name:@bold-fonts;
+    text-halo-fill:white;
+    text-halo-radius:1;
+    text-size: 10;
+    text-dy: 7;
+    text-placement: line;
+    text-avoid-edges: true;
+    text-allow-overlap:false;
+    text-min-distance:500;
+    text-spacing: 250;
+    text-label-position-tolerance: 100;
+    text-max-char-angle-delta: 15;
+    text-upright: auto;
+    
+    text-fill: #29B29C;
+    [nordic_route_render_colour != ''] {
+        text-fill: [nordic_route_render_colour]
+    }
+    }
+}

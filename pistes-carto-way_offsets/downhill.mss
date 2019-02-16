@@ -54,7 +54,7 @@ opacity: 0.9;
     [zoom>=9][zoom<=11]{line-width: 1;}
     [zoom=12]{line-width: 1.5;}
     [zoom>=13][zoom<=15]{line-width: 2.5;}
-    [zoom>=16]{line-width: 3;}
+    [zoom>=16]{line-width: 2;}
 }
 
 #downhill-area-casing{
@@ -96,23 +96,23 @@ opacity: 0.9;
     [zoom>=13][zoom<=15]{polygon-opacity: 0.2; polygon-gamma: 0.6; polygon-smooth:0.5;}
     [zoom>=16]{polygon-opacity: 0.05;polygon-gamma: 1; polygon-smooth:0.5;}
     
-    line-color: #FFFFFF;
+    polygon-fill: #FFFFFF;
         [us="1"] {
-            [difficulty="novice"]{line-color: #23CD23;}
-            [difficulty="easy"]{line-color: #23CD23;}
-            [difficulty="intermediate"]{line-color: #1919DE;}
-            [difficulty="advanced"]{line-color: #222222;}
-            [difficulty="expert"]{line-color: #222222;}
-            [difficulty="freeride"]{line-color: #FFE72D;}
+            [difficulty="novice"]{polygon-fill: #23CD23;}
+            [difficulty="easy"]{polygon-fill: #23CD23;}
+            [difficulty="intermediate"]{polygon-fill: #1919DE;}
+            [difficulty="advanced"]{polygon-fill: #222222;}
+            [difficulty="expert"]{polygon-fill: #222222;}
+            [difficulty="freeride"]{polygon-fill: #FFE72D;}
         }
     
         [us="0"] {
-            [difficulty="novice"]{line-color: #2AB62A;}
-            [difficulty="easy"]{line-color: #1919DE;}
-            [difficulty="intermediate"]{line-color: #E81F1F;}
-            [difficulty="advanced"]{line-color: #222222;}
-            [difficulty="expert"]{line-color: #FFBB2D;}
-            [difficulty="freeride"]{line-color: #FFE72D;}
+            [difficulty="novice"]{polygon-fill: #2AB62A;}
+            [difficulty="easy"]{polygon-fill: #1919DE;}
+            [difficulty="intermediate"]{polygon-fill: #E81F1F;}
+            [difficulty="advanced"]{polygon-fill: #222222;}
+            [difficulty="expert"]{polygon-fill: #FFBB2D;}
+            [difficulty="freeride"]{polygon-fill: #FFE72D;}
         }
 }
 /*Overlay erasers */
@@ -174,8 +174,9 @@ opacity: 0.9;
     line-join: round;
     line-gamma: 0.6;
     line-smooth: 0.5;
-    line-width: 0.1;
+    line-width: 2;
     line-color: #FFFFFF;
+    line-opacity: 0.05;
     
         [us="1"] {
             [difficulty="novice"]{line-color: #23CD23;}
