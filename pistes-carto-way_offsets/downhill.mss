@@ -209,7 +209,7 @@ opacity: 0.9;
     text-spacing: 10000;
     
     text-halo-fill:#DFE9F0;
-    text-fill:#888888;
+    text-fill:#666666;
     
         [us="1"] {
             [difficulty="novice"]{text-fill: #23CD23;}
@@ -217,7 +217,7 @@ opacity: 0.9;
             [difficulty="intermediate"]{text-fill: #1919DE;}
             [difficulty="advanced"]{text-fill: #222222;}
             [difficulty="expert"]{text-fill: #222222;}
-            [difficulty="freeride"]{text-fill: #FFE72D;text-dy: 10;}
+            [difficulty="freeride"]{text-fill: #887F37;text-dy: 10;}
         }
     
         [us="0"] {
@@ -226,7 +226,7 @@ opacity: 0.9;
             [difficulty="intermediate"]{text-fill: #E81F1F;}
             [difficulty="advanced"]{text-fill: #222222;}
             [difficulty="expert"]{text-fill: #FFBB2D;}
-            [difficulty="freeride"]{text-fill: #FFE72D;text-dy: 10;}
+            [difficulty="freeride"]{text-fill: #887F37;text-dy: 10;}
         }
     
     [grooming='mogul']{text-dy: 10;}
@@ -241,6 +241,7 @@ opacity: 0.9;
     shield-face-name:@bold-fonts;
     shield-name:'';
     shield-allow-overlap: false;
+    shield-label-position-tolerance: 150;
     
     [difficulty='freeride']{
         shield-transform: scale(0.4,0.4);
@@ -254,7 +255,7 @@ opacity: 0.9;
         shield-transform: scale(0.6,0.6);
         shield-file: url('pics/mogul.svg');
     }
-        [us="1"] {
+    [us="1"] {
         [difficulty='advanced']{
             shield-transform: scale(0.25,0.25);
             shield-file: url('pics/diamonds.svg');

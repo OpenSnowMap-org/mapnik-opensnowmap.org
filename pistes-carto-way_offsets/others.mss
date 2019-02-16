@@ -3,8 +3,8 @@
     shield-placement: line;
     shield-face-name:@bold-fonts;
     shield-name:'';
-    shield-spacing: 100;
-    shield-min-distance: 80;
+    shield-spacing: 150;
+    shield-min-distance: 120;
 }
 #snowshoeing-eraser[zoom>=13]{
         comp-op: dst-out;
@@ -357,6 +357,7 @@ opacity: 0.90;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
+        text-placement: point;
     }
     [piste_type=~".*skat.*"][zoom>=15]{
         text-name:'d';
