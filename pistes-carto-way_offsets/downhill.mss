@@ -3,7 +3,7 @@
     line-join: round;
     line-color: #FFFFFF;
     line-gamma: 0.6;
-    line-smooth: 0.5;
+    line-smooth: 0.2;
     [difficulty='freeride']{line-color: #DDDDDD;}
     
     [zoom>=9][zoom<=11]{line-width: 2.5;}
@@ -17,7 +17,7 @@ opacity: 0.9;
     line-cap: round;
     line-join: round;
     line-gamma: 0.6;
-    line-smooth: 0.5;
+    line-smooth: 0.2;
     
     [zoom>=9][zoom<=11]{line-width: 2;}
     [zoom=12]{line-width: 4;}
@@ -50,7 +50,7 @@ opacity: 0.9;
     line-join: round;
     line-color: #FFFFFF;
     line-gamma: 0.6;
-    line-smooth: 0.5;
+    line-smooth: 0.2;
     [zoom>=9][zoom<=11]{line-width: 1;}
     [zoom=12]{line-width: 1.5;}
     [zoom>=13][zoom<=15]{line-width: 2.5;}
@@ -62,7 +62,7 @@ opacity: 0.9;
     line-cap: round;
     line-join: round;
     line-gamma: 0.6;
-    line-smooth: 0.5;
+    line-smooth: 0.2;
     
     [zoom>=9][zoom<=11]{line-width: 1;}
     [zoom=12]{line-width: 1;}
@@ -89,12 +89,16 @@ opacity: 0.9;
         }
 }
 
-#downhill-area-fill{
+#downhill-area-fill[zoom>=12]{
 opacity: 0.9;
     
     [zoom=12]{polygon-opacity: 0.4; polygon-gamma: 1;}
-    [zoom>=13][zoom<=15]{polygon-opacity: 0.2; polygon-gamma: 0.6; polygon-smooth:0.5;}
-    [zoom>=16]{polygon-opacity: 0.05;polygon-gamma: 1; polygon-smooth:0.5;}
+    [zoom>=13][zoom<=15]{polygon-opacity: 0.2; polygon-gamma: 0.6; 
+    polygon-smooth:0.2;
+    }
+    [zoom>=16]{polygon-opacity: 0.05;polygon-gamma: 1; 
+    polygon-smooth:0.2;
+    }
     
     polygon-fill: #FFFFFF;
         [us="1"] {
@@ -145,7 +149,7 @@ opacity: 0.9;
     line-join: round;
     line-gamma: 0.6;
     line-width: 4;
-    line-smooth: 0.5;
+    line-smooth: 0.2;
 }
 #downhill-overlay-eraser4[zoom>=16]{
     comp-op: dst-out;
@@ -156,7 +160,7 @@ opacity: 0.9;
     line-join: round;
     line-gamma: 0.6;
     line-width: 5;
-    line-smooth: 0.5;
+    line-smooth: 0.2;
 }
 
 #downhill-area-eraser{
@@ -164,8 +168,12 @@ opacity: 0.9;
     
     polygon-fill: #FFFFFF;
     [zoom=12]{polygon-opacity: 1; polygon-gamma: 0.6;}
-    [zoom>=13][zoom<=15]{polygon-opacity: 1; polygon-gamma: 0.6; polygon-smooth:0.5;}
-    [zoom>=16]{polygon-opacity: 1; polygon-gamma: 1; polygon-smooth:0.5;}
+    [zoom>=13][zoom<=15]{polygon-opacity: 1; polygon-gamma: 0.6; 
+    polygon-smooth:0.2;
+    }
+    [zoom>=16]{polygon-opacity: 1; polygon-gamma: 1; 
+    polygon-smooth:0.2;
+    }
 
 }
 
@@ -173,7 +181,7 @@ opacity: 0.9;
     line-cap: round;
     line-join: round;
     line-gamma: 0.6;
-    line-smooth: 0.5;
+    line-smooth: 0.2;
     line-width: 2;
     line-color: #FFFFFF;
     line-opacity: 0.05;
@@ -233,38 +241,63 @@ opacity: 0.9;
     [gladed=true]{text-dy: 10;}
     [lit=true]{text-dy: 10;}
     
+    [us="1"] {
+        [difficulty='advanced']{
+            shield-placement: 'line';
+            shield-spacing: 400;
+            shield-face-name:@bold-fonts;
+            shield-name:'';
+            shield-allow-overlap: false;
+            shield-label-position-tolerance: 150;
+            shield-transform: scale(0.25,0.25);
+            shield-file: url('pics/diamond.svg');
+            shield-spacing: 300;
+        }
+        [difficulty='expert']{
+            shield-placement: 'line';
+            shield-spacing: 400;
+            shield-face-name:@bold-fonts;
+            shield-name:'';
+            shield-allow-overlap: false;
+            shield-label-position-tolerance: 150;
+            shield-transform: scale(0.25,0.25);
+            shield-file: url('pics/diamonds.svg');
+            shield-spacing: 300;
+        }
+    }
+    
 }
 #downhill-icons[zoom>=14]{
-    shield-placement: 'line';
-    shield-spacing: 400;
-    shield-file: url('pics/light.png');
-    shield-face-name:@bold-fonts;
-    shield-name:'';
-    shield-allow-overlap: false;
-    shield-label-position-tolerance: 150;
     
     [difficulty='freeride']{
+        shield-placement: 'line';
+        shield-spacing: 400;
+        shield-face-name:@bold-fonts;
+        shield-name:'';
+        shield-allow-overlap: false;
+        shield-label-position-tolerance: 200;
         shield-transform: scale(0.4,0.4);
         shield-file: url('pics/danger-red.svg');
     }
     [gladed=true]{
+        shield-placement: 'line';
+        shield-spacing: 400;
+        shield-face-name:@bold-fonts;
+        shield-name:'';
+        shield-allow-overlap: false;
+        shield-label-position-tolerance: 200;
         shield-transform: scale(0.6,0.6);
         shield-file: url('pics/gladed.svg');
     }
     [grooming='mogul']{
+        shield-placement: 'line';
+        shield-spacing: 400;
+        shield-face-name:@bold-fonts;
+        shield-name:'';
+        shield-allow-overlap: false;
+        shield-label-position-tolerance: 200;
         shield-transform: scale(0.6,0.6);
         shield-file: url('pics/mogul.svg');
     }
-    [us="1"] {
-        [difficulty='advanced']{
-            shield-transform: scale(0.25,0.25);
-            shield-file: url('pics/diamonds.svg');
-            shield-spacing: 300;
-        }
-        [difficulty='expert']{
-            shield-transform: scale(0.25,0.25);
-            shield-file: url('pics/diamonds.svg');
-            shield-spacing: 300;
-        }
-    }
+
 }

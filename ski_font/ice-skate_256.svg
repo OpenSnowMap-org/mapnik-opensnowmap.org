@@ -98,11 +98,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="-0.28780913"
-     inkscape:cy="197.39666"
+     inkscape:zoom="4.7567055"
+     inkscape:cx="112.59806"
+     inkscape:cy="13.063411"
      inkscape:document-units="px"
-     inkscape:current-layer="g3832"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1865"
      inkscape:window-height="1056"
@@ -112,7 +112,24 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="159.27583,16.99404"
+       orientation="0,1"
+       id="guide4162" />
+    <sodipodi:guide
+       position="146.10902,10.20513"
+       orientation="1,0"
+       id="guide4164" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -121,7 +138,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -133,18 +150,6 @@
     <g
        id="g3832"
        transform="matrix(14.746255,0,0,14.746255,291.04227,302.51211)">
-      <rect
-         inkscape:export-ydpi="2.3142858"
-         inkscape:export-xdpi="2.3142858"
-         inkscape:export-filename="/home/yves/Images/alpine.png"
-         ry="3"
-         rx="3"
-         y="-1.5065663"
-         x="5.023313"
-         height="17.36034"
-         width="17.36034"
-         id="rect3020"
-         style="opacity:0.8;fill:#003c8c;fill-opacity:1;stroke:none" />
       <flowRoot
          transform="translate(53.437489,-1022.5961)"
          style="font-style:normal;font-weight:normal;font-size:40px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
@@ -170,20 +175,17 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:500px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
            id="flowPara2840" /></flowRoot>    </g>
     <path
-       inkscape:connector-curvature="0"
-       style="fill:#ffffff;fill-opacity:1"
-       d="m 523.10937,455.37995 -18.86646,-20.22674 c -21.54698,-21.86569 -27.18355,-32.92508 -31.08206,-37.02108 2.92297,-4.38692 7.67707,-5.9061 18.1813,-15.93984 8.67548,-8.2869 17.7781,-17.97376 17.7781,-18.91894 0,-0.94538 -11.21938,4.04845 -30.17124,2.85257 -33.84796,-2.13523 -51.04018,1.56343 -51.04018,-5.34455 0,-1.49394 -0.576,-0.43154 1.33668,-2.34295 2.94199,-2.94199 17.54533,-4.04791 58.60645,-8.17243 21.31255,-2.1409 45.14523,-9.99114 53.59012,-8.47726 15.61765,2.79972 15.49129,10.15753 15.49129,21.22276 0,5.93518 1.44092,9.74336 -15.21609,26.7297 l -24.64256,20.5824 11.4176,16.06509 c 4.64805,6.11548 8.39881,9.41788 13.04686,20.29075 1.31109,2.02788 -0.0731,14.83428 -0.10971,22.25133 -5.2352,22.89189 -4.14428,43.40773 -12.27155,44.672 -8.12745,1.26355 -4.45019,-34.94601 -2.53787,-47.10985 -1.09714,-8.12763 -1.08252,-8.28672 -3.51068,-11.11296 z m -118.64045,27.54432 c -5.98912,-6.92004 35.43241,-23.07127 46.95424,-37.20393 7.49275,-19.46075 12.44251,-34.18441 21.87977,-47.73943 l 21.27689,25.05436 -32.14153,37.60109 c -21.4667,12.98103 -51.04476,30.28901 -57.96937,22.28791 z"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 174.56445,61.314453 c -9.65476,-0.377105 -31.84957,6.649156 -51.83007,8.65625 -41.061145,4.12452 -55.663484,5.229885 -58.605474,8.171875 -1.91268,1.91141 -1.33789,0.84981 -1.33789,2.34375 0,6.90798 17.193059,3.20852 51.041014,5.34375 18.95186,1.19588 30.16992,-3.798896 30.16992,-2.853516 0,0.94518 -9.10186,10.633038 -17.77734,18.919918 -31.285039,19.77069 -32.550789,33.91525 -39.917969,63.52735 -10.119006,5.81416 -41.758732,25.11358 -53.440288,38.13146 l -6.06487,-8.10167 -4.888728,3.2498 23.144531,33.86914 c 6.439948,8.92292 16.754756,9.80895 24.08471,1.06645 l -2.966501,-3.74915 c -4.356157,3.64844 -7.397338,5.14303 -11.79229,2.66322 l -2.177779,-2.41929 c 13.400788,-7.41754 -4.699591,-21.55175 -2.294612,-22.43194 12.125246,-4.43768 34.378287,-19.48201 47.409503,-27.36206 l 31.015623,-36.95312 -0.0234,-0.0293 c 3.08114,3.45036 6.64204,7.26785 10.8125,11.5 l 18.86719,20.22656 c 2.42816,2.82624 -0.56047,5.06683 0.53667,13.19446 -1.29609,8.24417 -0.56056,39.5453 0.74693,50.72757 l -13.16681,0 0,6.78891 c 14.51432,-0.0362 29.02909,0.055 43.54332,-0.0116 9.1786,0.77341 15.05509,-8.2809 13.84536,-16.83028 l -4.72312,-0.24048 c -0.55128,4.64727 -1.22416,10.51404 -6.95472,10.29345 l -2.5033,0 c 2.46864,-9.93402 -17.70734,-9.01774 -17.36001,-10.99887 1.43586,-8.18971 0.504,-27.13449 3.16675,-38.77788 0.0366,-7.41705 2.60971,-20.8187 1.29862,-22.84658 -4.64806,-10.87287 -8.39883,-14.17358 -13.04688,-20.28906 l -13.05375,-17.42956 24.09732,-21.39992 c 16.65701,-16.986331 17.39784,-18.614246 17.39784,-24.549426 0,-11.06523 0.12546,-18.422941 -15.49219,-21.222656 -0.52781,-0.09462 -1.11612,-0.152595 -1.75977,-0.177735 z"
+       transform="translate(365.11733,280.2959)"
        id="path2818-2"
-       sodipodi:nodetypes="cccssssssssccccczccsccccs"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <circle
-       style="fill:#ffffff"
-       id="path3350"
-       cx="573.86823"
-       cy="-328.25903"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscscsccccccccccsccccccccccccccscccccsssc" />
+    <path
        transform="scale(1,-1)"
-       r="20.571428" />
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 594.43965,-328.25903 a 20.571428,20.571428 0 0 1 -20.57142,20.57143 20.571428,20.571428 0 0 1 -20.57143,-20.57143 20.571428,20.571428 0 0 1 20.57143,-20.57143 20.571428,20.571428 0 0 1 20.57142,20.57143 z"
+       id="path3350" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot2875-6"
@@ -207,39 +209,5 @@
            x="1227.2727"
            y="-1188.2031" /></flowRegion><flowPara
          id="flowPara2840-9"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:500px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'" /></flowRoot>    <g
-       id="g3444"
-       transform="matrix(18.285714,0,0,18.285714,-6230.3994,-9256.372)">
-      <rect
-         y="533.83588"
-         x="368.52405"
-         height="0.5"
-         width="2.25"
-         id="rect3352"
-         style="fill:#ffffff" />
-      <path
-         sodipodi:nodetypes="cccccc"
-         id="path3602-6"
-         d="m 371.25135,533.25262 0.41116,0.16221 c -0.15244,0.42989 -0.5004,0.93551 -0.89506,0.92416 l -9.3e-4,-0.50192 c 0.18153,-0.0162 0.38283,-0.38907 0.48487,-0.58445 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
-    </g>
-    <g
-       transform="matrix(10.316909,15.097309,-15.097309,10.316909,4658.3498,-10606.847)"
-       id="g3448">
-      <rect
-         style="fill:#ffffff"
-         id="rect3450"
-         width="2.25"
-         height="0.5"
-         x="368.52405"
-         y="533.83588" />
-      <path
-         inkscape:connector-curvature="0"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         d="m 371.25135,533.25262 0.41116,0.16221 c -0.15244,0.42989 -0.5004,0.93551 -0.89506,0.92416 l -9.3e-4,-0.50192 c 0.18153,-0.0162 0.38283,-0.38907 0.48487,-0.58445 z"
-         id="path3452"
-         sodipodi:nodetypes="cccccc" />
-    </g>
-  </g>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:500px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'" /></flowRoot>  </g>
 </svg>

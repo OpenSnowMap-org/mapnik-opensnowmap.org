@@ -5,9 +5,9 @@ bounds: &world
     - 85.0511
   
 center: 
-    - 10.2355
-    - 46.9803
-    - 13
+    - -123.1105
+    - 50.1350
+    - 16
 format: png24
 interactivity: false
 minzoom: 0
@@ -703,7 +703,7 @@ Layer:
       properties:
         minzoom: 9
 
-    - id: nordic-no-difficulty
+    - id: nordic-no-difficulty-no-grooming
       geometry: linestring
       <<: *extents
       Datasource:
@@ -716,7 +716,10 @@ Layer:
             WHERE
             piste_type like '%nordic%'
             AND geometry && !bbox!
-            AND difficulty NOT IN ('novice', 'easy', 'intermediate', 'advanced', 'expert', 'freeride','extreme')
+            AND 
+                (difficulty NOT IN ('novice', 'easy', 'intermediate', 'advanced', 'expert', 'freeride','extreme')
+                OR
+                grooming ='')
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
@@ -732,7 +735,10 @@ Layer:
             osm_pistes_area
             WHERE
             piste_type like '%nordic%'
-            AND difficulty NOT IN ('novice', 'easy', 'intermediate', 'advanced', 'expert', 'freeride','extreme')
+            AND 
+                (difficulty NOT IN ('novice', 'easy', 'intermediate', 'advanced', 'expert', 'freeride','extreme')
+                OR
+                grooming ='')
             AND geometry && !bbox!
             AND osm_id NOT IN (
                 SELECT member
@@ -740,8 +746,7 @@ Layer:
                 WHERE piste_type like '%nordic%'
                 AND geometry && !bbox!
             )
-            
-            UNION
+                        UNION
             
             SELECT 
             geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
@@ -749,11 +754,16 @@ Layer:
             osm_pistes_route_members
             WHERE
             piste_type like '%nordic%'
-            AND difficulty NOT IN ('novice', 'easy', 'intermediate', 'advanced', 'expert', 'freeride','extreme')
+            AND 
+                (difficulty NOT IN ('novice', 'easy', 'intermediate', 'advanced', 'expert', 'freeride','extreme')
+                OR
+                grooming ='')
             AND geometry && !bbox!
+            
           ) as data
       properties:
         minzoom: 9
+        opacity: 0.4
 
        
     - id: nordic-difficulty-markers
@@ -783,20 +793,62 @@ Layer:
             and difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
             AND geometry && !bbox!
             
-            UNION
-            
-            SELECT 
-            geometry, difficulty
-            FROM 
-            pistes_routes
-            WHERE
-            piste_type like '%nordic%'
-            and difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
-            AND geometry && !bbox!
           ) as data
       properties:
         minzoom: 9
         
+    - id: nordic-grooming-icons
+      geometry: linestring
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+          (SELECT 
+            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+            grooming
+            FROM 
+            osm_pistes_ways
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            AND osm_id NOT IN (
+                SELECT member
+                FROM osm_pistes_route_members
+                WHERE piste_type like '%nordic%'
+                AND geometry && !bbox!
+            )
+            
+            UNION
+            
+            SELECT 
+            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route,
+            grooming
+            FROM 
+            osm_pistes_area
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            AND osm_id NOT IN (
+                SELECT member
+                FROM osm_pistes_route_members
+                WHERE piste_type like '%nordic%'
+                AND geometry && !bbox!
+            )
+            UNION
+            
+            SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            grooming
+            FROM 
+            osm_pistes_route_members
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+          ) as data
+      properties:
+        minzoom: 9
+
+
     ## AERIALWAYS ##
     - id: aerialways
       geometry: linestring
@@ -1241,8 +1293,6 @@ Layer:
                 or piste_type LIKE '%snow_park%' 
                 or piste_type LIKE '%sleigh%' 
                 or piste_type LIKE '%hike%'
-                or piste_type LIKE '%skitour%'
-                or (piste_type LIKE '%downhill%' and grooming='backcountry')
                 )
                 AND geometry && !bbox!
                 

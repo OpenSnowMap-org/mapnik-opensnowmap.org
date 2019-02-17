@@ -52,7 +52,7 @@
     line-opacity: 0;
     line-color: #FFFFFF;
 
-    [grooming='classic;'] {
+    [grooming='classic'] {
         line-dasharray:2, 6;
         line-opacity: 1;
         [zoom>=13][zoom<=14]{line-width: 0.5;
@@ -84,20 +84,65 @@
         [zoom>=15]{line-width: 2.0;
             line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
     }
+/*
     [grooming=''] {
+    * Taken care in #nordic-no-difficulty-no-grooming
         line-opacity: 0.4;
         [zoom>=13][zoom<=14]{line-width: 1.0;
             line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
         [zoom>=15]{line-width: 2.0;
             line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
     line-opacity: 1;}
+*/
 }
-#nordic-no-difficulty{
+#nordic-grooming-icons[zoom>=16]{
+    opacity: 0.90;
+    text-name:'';
+    text-face-name:'Ski Medium';
+    text-halo-radius:4;
+    text-size: 18;
+    text-placement: point;
+    text-avoid-edges: true;
+    text-allow-overlap:false;
+    text-repeat-distance: 300;
+    text-spacing: 200;
+        text-halo-fill:rgba(255,255,255,0.4);
+        text-fill:#333333;
+        text-size: 20;
+        text-horizontal-alignment:'middle';
+        text-vertical-alignment:'middle';
+        text-label-position-tolerance:40;
+        text-halo-radius:2;
+
+    [grooming='classic'] {
+        text-name:'b';
+    }
+    [grooming='skating'] {
+        text-name:'n';
+    }
+    [grooming='classic+skating'] {
+        text-name:'bn';
+    }
+    [grooming='classic;skating'] {
+        text-name:'bn';
+    }
+    [grooming='scooter'] {
+        text-name:'o';
+    }
+    [grooming='backcountry'] {
+        text-name:'o';
+    }
+    [grooming=''] {
+        text-size: 12;
+        text-name:'p';
+    }
+}
+#nordic-no-difficulty-no-grooming{
+    opacity: 0.5;
     line-cap: round;
     line-join: round;
     line-gamma: 0.5;
     line-color: #FFFFFF;
-    line-opacity: 0.4;
     [zoom>=13][zoom<=14]{line-width: 1.0;
         line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 2.0;
