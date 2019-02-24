@@ -22396,12 +22396,12 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="8.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--novice-->
 	<Rule>
@@ -22420,13 +22420,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--easy-->
 	<Rule>
@@ -22445,13 +22445,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
 	<Rule>
@@ -22470,13 +22470,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
 			
@@ -22496,13 +22496,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--expert-->
 	<Rule>
@@ -22521,13 +22521,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
 	<Rule>
@@ -22546,13 +22546,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 </Style>
@@ -22571,12 +22571,12 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="6.5" stroke-dasharray="15,5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6.5" stroke-dasharray="15,5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<LineSymbolizer stroke-width="8.5" stroke-dasharray="20,8" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="8.5" stroke-dasharray="20,8" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--novice-->
 	<Rule>
@@ -22595,13 +22595,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--easy-->
 	<Rule>
@@ -22620,13 +22620,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
 	<Rule>
@@ -22645,13 +22645,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
 			
@@ -22671,13 +22671,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#222222" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--expert-->
 	<Rule>
@@ -22696,13 +22696,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="7.5" stroke-dasharray="20,8" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
 	<Rule>
@@ -22721,13 +22721,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="6" stroke-dasharray="15,5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="butt" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 </Style>
@@ -22755,7 +22755,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="4" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	
@@ -22765,7 +22765,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	
 </Style>
@@ -22775,42 +22775,42 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="0.1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="0.1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--easy-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="0.1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="0.1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--intermediate-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="0.1" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="0.1" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--advanced-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="0.1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="0.1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--expert-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="0.1" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="0.1" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<!--freeride-->
 	<Rule>
 		<MaxScaleDenominator>25000</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="0.1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="0.1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	
 </Style>
@@ -22821,25 +22821,25 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+		<LineSymbolizer stroke-width="3" stroke="#9CE49C" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	<!--easy-->
 	
@@ -22847,25 +22847,25 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+		<LineSymbolizer stroke-width="3" stroke="#889BF8" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	<!--intermediate-->
 			
@@ -22873,25 +22873,25 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+		<LineSymbolizer stroke-width="3" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+		<LineSymbolizer stroke-width="3" stroke="#FF8383" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	<!--advanced-->
 			
@@ -22899,25 +22899,25 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+		<LineSymbolizer stroke-width="3" stroke="#6A6868" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	<!--expert-->
 			
@@ -22925,25 +22925,25 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFD884" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	<!--freeride-->
 			
@@ -22951,25 +22951,25 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>1500000</MaxScaleDenominator>
 		<MinScaleDenominator>200000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="1" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>400000</MaxScaleDenominator>
 		<MinScaleDenominator>100000</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="15,20"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="15,20"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6" stroke-dasharray="20,25"/>
+		<LineSymbolizer stroke-width="3" stroke="#FFF5A3" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6" stroke-dasharray="20,25"/>
 	</Rule>
 	
 </Style>
@@ -22989,12 +22989,12 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<LineSymbolizer stroke-width="2" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--novice-->
@@ -23017,13 +23017,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='novice' </Filter>
 
-		<LineSymbolizer stroke-width="2" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="2.5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--easy-->
@@ -23043,13 +23043,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' </Filter>
-        <LineSymbolizer stroke-width="2.5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+        <LineSymbolizer stroke-width="2.5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--intermediate-->
@@ -23069,13 +23069,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2.5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--advanced-->
@@ -23095,13 +23095,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--expert-->
@@ -23121,13 +23121,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="2.5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--easy-->
@@ -23147,13 +23147,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-        <LineSymbolizer stroke-width="2.5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+        <LineSymbolizer stroke-width="2.5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 </Style>
@@ -23172,12 +23172,12 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-		<LineSymbolizer stroke-width="2.5" stroke-dasharray="15,5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="15,5" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-		<LineSymbolizer stroke-width="2" stroke-dasharray="20,8" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="20,8" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--novice-->
@@ -23200,13 +23200,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='novice' </Filter>
 
-		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' </Filter>
-		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#2AB62A" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--easy-->
@@ -23226,13 +23226,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='easy' </Filter>
-		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' </Filter>
-        <LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+        <LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#1919DE" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--intermediate-->
@@ -23252,13 +23252,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#E81F1F" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--advanced-->
@@ -23278,13 +23278,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' </Filter>
-		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#222222" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--expert-->
@@ -23304,13 +23304,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' </Filter>
-		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#FFBB2D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 	<!--easy-->
@@ -23330,13 +23330,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+		<LineSymbolizer stroke-width="2" stroke-dasharray="15,5" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-        <LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.5" stroke-gamma=".6"/>
+        <LineSymbolizer stroke-width="2.5" stroke-dasharray="20,8" stroke="#FFE72D" stroke-linejoin="round" stroke-linecap="round" smooth="0.0" stroke-gamma=".6"/>
 	</Rule>
 
 </Style>
@@ -23353,13 +23353,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='novice' </Filter>
-        <PolygonSymbolizer fill="#2AB62A" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+        <PolygonSymbolizer fill="#2AB62A" fill-opacity="0.2" smooth="0.0" gamma="0.6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='novice' </Filter>
-        <PolygonSymbolizer fill="#2AB62A" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+        <PolygonSymbolizer fill="#2AB62A" fill-opacity="0.05" smooth="0.0" gamma="1"/>
 	</Rule>
 	<!--easy-->
 	<Rule>
@@ -23372,13 +23372,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='easy' </Filter>
-        <PolygonSymbolizer fill="#1919DE" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+        <PolygonSymbolizer fill="#1919DE" fill-opacity="0.2" smooth="0.0" gamma="0.6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='easy' </Filter>
-        <PolygonSymbolizer fill="#1919DE" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+        <PolygonSymbolizer fill="#1919DE" fill-opacity="0.05" smooth="0.0" gamma="1"/>
 	</Rule>	
     <!--intermediate-->
 	<Rule>
@@ -23391,13 +23391,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-        <PolygonSymbolizer fill="#E81F1F" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+        <PolygonSymbolizer fill="#E81F1F" fill-opacity="0.2" smooth="0.0" gamma="0.6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='intermediate' </Filter>
-        <PolygonSymbolizer fill="#E81F1F" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+        <PolygonSymbolizer fill="#E81F1F" fill-opacity="0.05" smooth="0.0" gamma="1"/>
 	</Rule>	
     <!--advanced-->
 	<Rule>
@@ -23410,13 +23410,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='advanced' </Filter>
-        <PolygonSymbolizer fill="#222222" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+        <PolygonSymbolizer fill="#222222" fill-opacity="0.2" smooth="0.0" gamma="0.6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='advanced' </Filter>
-        <PolygonSymbolizer fill="#222222" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+        <PolygonSymbolizer fill="#222222" fill-opacity="0.05" smooth="0.0" gamma="1"/>
 	</Rule>	
 	<!--expert-->
 	<Rule>
@@ -23429,13 +23429,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='expert' </Filter>
-        <PolygonSymbolizer fill="#FFBB2D" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+        <PolygonSymbolizer fill="#FFBB2D" fill-opacity="0.2" smooth="0.0" gamma="0.6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='expert' </Filter>
-        <PolygonSymbolizer fill="#FFBB2D" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+        <PolygonSymbolizer fill="#FFBB2D" fill-opacity="0.05" smooth="0.0" gamma="1"/>
 	</Rule>	
     <!--freeride-->
 	<Rule>
@@ -23448,13 +23448,13 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
 		<Filter>[piste:difficulty]='freeride' </Filter>
-        <PolygonSymbolizer fill="#FFE72D" fill-opacity="0.2" smooth="0.5" gamma="0.6"/>
+        <PolygonSymbolizer fill="#FFE72D" fill-opacity="0.2" smooth="0.0" gamma="0.6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
 		<Filter>[piste:difficulty]='freeride' </Filter>
-        <PolygonSymbolizer fill="#FFE72D" fill-opacity="0.05" smooth="0.5" gamma="1"/>
+        <PolygonSymbolizer fill="#FFE72D" fill-opacity="0.05" smooth="0.0" gamma="1"/>
 	</Rule>	
 </Style>
 
@@ -23599,12 +23599,12 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<Rule>
 		<MaxScaleDenominator>100000</MaxScaleDenominator>
 		<MinScaleDenominator>12500</MinScaleDenominator>
-        <PolygonSymbolizer fill="#FFFFFF" fill-opacity="1" smooth="0.5" gamma="0.6"/>
+        <PolygonSymbolizer fill="#FFFFFF" fill-opacity="1" smooth="0.0" gamma="0.6"/>
 	</Rule>
 	<Rule>
 		<MaxScaleDenominator>12500</MaxScaleDenominator>
 		
-        <PolygonSymbolizer fill="#FFFFFF" fill-opacity="1" smooth="0.5" gamma="1"/>
+        <PolygonSymbolizer fill="#FFFFFF" fill-opacity="1" smooth="0.0" gamma="1"/>
 	</Rule>
 </Style>
 
