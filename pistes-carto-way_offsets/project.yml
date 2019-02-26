@@ -953,91 +953,6 @@ Layer:
         minzoom: 9
     
     # Texts
-    - id: various-text
-      geometry: geometry
-      class: ''
-      <<: *extents
-      Datasource:
-        <<: *imposm
-        table: |-
-                (select geometry, piste_type,
-                coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
-                from osm_pistes_ways 
-                where 
-                ( piste_type LIKE '%ice_skate%' 
-                or piste_type LIKE '%playground%' 
-                or piste_type LIKE '%sled%' 
-                or piste_type LIKE '%ski_jump%' 
-                or piste_type LIKE '%snow_park%' 
-                or piste_type LIKE '%sleigh%' 
-                or piste_type LIKE '%hike%'
-                or piste_type LIKE '%skitour%')
-                AND geometry && !bbox!
-                
-                UNION
-                
-                select geometry, piste_type,
-                coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
-                from osm_pistes_area
-                where 
-                ( piste_type LIKE '%ice_skate%' 
-                or piste_type LIKE '%playground%' 
-                or piste_type LIKE '%sled%' 
-                or piste_type LIKE '%ski_jump%' 
-                or piste_type LIKE '%snow_park%' 
-                or piste_type LIKE '%sleigh%' 
-                or piste_type LIKE '%hike%'
-                or piste_type LIKE '%skitour%')
-                AND geometry && !bbox!
-                
-                UNION
-                
-                select geometry, piste_type,
-                coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
-                from pistes_routes 
-                where 
-                ( piste_type LIKE '%ice_skate%' 
-                or piste_type LIKE '%playground%' 
-                or piste_type LIKE '%sled%' 
-                or piste_type LIKE '%ski_jump%' 
-                or piste_type LIKE '%snow_park%' 
-                or piste_type LIKE '%sleigh%' 
-                or piste_type LIKE '%hike%'
-                or piste_type LIKE '%skitour%')
-                AND geometry && !bbox!
-                
-                UNION
-                
-                select geometry, piste_type,
-                coalesce(NULLIF(name,'')) as name
-                from osm_sport_ways 
-                where 
-                ( piste_type LIKE '%skating%'
-                or piste_type LIKE '%ski_jump%'
-                or piste_type LIKE '%ice_skating%'
-                or piste_type LIKE '%ice_hockey%'
-                or piste_type LIKE '%curling%'
-                or piste_type LIKE '%ice_stock%')
-                AND geometry && !bbox!
-                
-                UNION
-                
-                select geometry, piste_type,
-                coalesce(NULLIF(name,'')) as name
-                from osm_sport_nodes 
-                where 
-                ( piste_type LIKE '%skating%'
-                or piste_type LIKE '%ski_jump%'
-                or piste_type LIKE '%ice_skating%'
-                or piste_type LIKE '%ice_hockey%'
-                or piste_type LIKE '%curling%'
-                or piste_type LIKE '%ice_stock%')
-                AND geometry && !bbox!
-                
-                ) as pistes
-      properties:
-        minzoom: 9
-        
     - id: downhill-text
       geometry: linestring
       class: ''
@@ -1339,4 +1254,89 @@ Layer:
                 ) as pistes
       properties:
         minzoom: 9
+    - id: various-text
+      geometry: geometry
+      class: ''
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+                (select geometry, piste_type,
+                coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
+                from osm_pistes_ways 
+                where 
+                ( piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%')
+                AND geometry && !bbox!
+                
+                UNION
+                
+                select geometry, piste_type,
+                coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
+                from osm_pistes_area
+                where 
+                ( piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%')
+                AND geometry && !bbox!
+                
+                UNION
+                
+                select geometry, piste_type,
+                coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
+                from pistes_routes 
+                where 
+                ( piste_type LIKE '%ice_skate%' 
+                or piste_type LIKE '%playground%' 
+                or piste_type LIKE '%sled%' 
+                or piste_type LIKE '%ski_jump%' 
+                or piste_type LIKE '%snow_park%' 
+                or piste_type LIKE '%sleigh%' 
+                or piste_type LIKE '%hike%'
+                or piste_type LIKE '%skitour%')
+                AND geometry && !bbox!
+                
+                UNION
+                
+                select geometry, piste_type,
+                coalesce(NULLIF(name,'')) as name
+                from osm_sport_ways 
+                where 
+                ( piste_type LIKE '%skating%'
+                or piste_type LIKE '%ski_jump%'
+                or piste_type LIKE '%ice_skating%'
+                or piste_type LIKE '%ice_hockey%'
+                or piste_type LIKE '%curling%'
+                or piste_type LIKE '%ice_stock%')
+                AND geometry && !bbox!
+                
+                UNION
+                
+                select geometry, piste_type,
+                coalesce(NULLIF(name,'')) as name
+                from osm_sport_nodes 
+                where 
+                ( piste_type LIKE '%skating%'
+                or piste_type LIKE '%ski_jump%'
+                or piste_type LIKE '%ice_skating%'
+                or piste_type LIKE '%ice_hockey%'
+                or piste_type LIKE '%curling%'
+                or piste_type LIKE '%ice_stock%')
+                AND geometry && !bbox!
+                
+                ) as pistes
+      properties:
+        minzoom: 9
         
+

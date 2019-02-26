@@ -168,10 +168,14 @@ opacity: 0.95;
         line-color: #FFFFFF;
         line-width: 3;
     }
-    [piste_type=~".*sleigh.*"][zoom>=15]{
+    [piste_type=~".*jump.*"][zoom>=9]{
+        line-color: #FFFFFF;
+        line-width: 2.5;
+    }
+    [piste_type=~".*sleigh.*"][zoom>=9]{
         line-color: #FFFFFF;
         [zoom>=9][zoom<=11]{
-        line-width: 2;
+        line-width: 1;
         }
         [zoom>=12]{
         line-width: 2;
@@ -219,8 +223,13 @@ opacity: 0.90;
         line-width: 1.5;
         line-color: #6FC4D0;
     }
-    [piste_type=~".*sleigh.*"][zoom>=15]{
+    [piste_type=~".*ski_jump.*"][zoom>=9]{
+        line-width: 1.5;
+        line-color: #655ABE;
+    }
+    [piste_type=~".*sleigh.*"][zoom>=9]{
         [zoom>=9][zoom<=11]{
+        line-width: 0.5;
         line-color: #8F54D8;
         }
         [zoom>=12]{
@@ -256,6 +265,11 @@ opacity: 0.90;
         line-color: #BAFF3A;
         polygon-opacity: 0.4;
     }
+    [piste_type=~".*ski_jump_landing.*"][zoom>=13]{
+        polygon-fill: #BCB7E1;
+        line-color: #BCB7E1;
+        polygon-opacity: 0.7;
+    }
 }
 
 #various-text[zoom>=15]{
@@ -269,6 +283,7 @@ opacity: 0.90;
     text-wrap-width: 25;
     text-spacing: 10000;
     text-dy: 18;
+    text-label-position-tolerance: 20;
     
     text-halo-fill:rgba(0,0,0,0);
     text-fill:rgba(0,0,0,0);
@@ -286,6 +301,8 @@ opacity: 0.90;
         text-halo-fill:#DDDDDD;
     }
     [piste_type=~".*jump.*"][zoom>=15]{
+        text-dy: 5;
+        text-label-position-tolerance: 20;
         text-fill:#655ABE;
         text-halo-fill:#DDDDDD;
     }
@@ -308,6 +325,7 @@ opacity: 0.90;
         text-fill:#E88193;
         text-size: 22;
         text-repeat-distance: 180;
+        text-placement: point;
     }
     [piste_type=~".*skitour.*"][zoom>=14]{
         text-name:'f';
@@ -318,6 +336,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
         text-halo-radius:2;
+        text-placement: point;
     }
     [piste_type=~".*downhill.*"][zoom>=14]{
         text-name:'f';
@@ -407,12 +426,15 @@ opacity: 0.90;
     }
     [piste_type=~".*jump.*"][zoom>=15]{
         text-name:'e';
+        text-placement: point;
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#000;
-        text-size: 18;
+        text-size: 12;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
-        text-label-position-tolerance:40;
+        text-label-position-tolerance:25;
+        text-dx: 30;
+        text-repeat-distance: 200;
     }
 }
 
