@@ -347,6 +347,7 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
         text-halo-radius:2;
+        text-placement: point;
     }
     [piste_type=~".*snow_park.*"][zoom>=15]{
         text-repeat-distance: 50;

@@ -15,8 +15,8 @@
     line-join: round;
     line-color: #FFFFFF;
     line-gamma: 1;
-    [zoom=9]{line-width: 2;line-gamma: 0.6;}
-    [zoom=10]{line-width: 3;}
+    [zoom=9]{line-width: 1.5;line-gamma: 0.6;}
+    [zoom=10]{line-width: 2;}
     [zoom>=11][zoom<=12]{line-width: 3.5;}
     [zoom>=13][zoom<=14]{line-width: 5;line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 6;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
@@ -45,45 +45,43 @@
     [zoom>=13][zoom<=14]{line-width: 1.5;line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
     [zoom>=15]{line-width: 2;line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
 }
-#nordic-grooming{
+#nordic-grooming[zoom>=12]{
     line-cap: round;
     line-join: round;
     line-gamma: 0.5;
     line-opacity: 0;
     line-color: #FFFFFF;
 
+    [zoom>=12][zoom<=13]{
+        line-width: 0.5;
+        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+        }
+    [zoom>=13][zoom<=14]{
+        line-width: 0.5;
+        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+        }
+    [zoom>=15]{
+        line-width: 1;
+        line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+        }
+        
     [grooming='classic'] {
         line-dasharray:2, 6;
         line-opacity: 1;
-        [zoom>=13][zoom<=14]{line-width: 0.5;
-            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
-        [zoom>=15]{line-width: 1;
-            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
-    }
+        }
     [grooming='skating'] {
-        line-dasharray:2.5, 28;
+        line-dasharray:2.5, 10;
         line-opacity: 1;
-        [zoom>=13][zoom<=14]{line-width: 0.5;
-            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
-        [zoom>=15]{line-width: 1;
-            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}}
+        }
             
     [grooming='scooter'] {
         line-dasharray:9, 6.5;
         line-opacity: 1;
-        [zoom>=13][zoom<=14]{line-width: 1.0;
-            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
-        [zoom>=15]{line-width: 2.0;
-            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
-    }
+        }
     [grooming='backcountry'] {
         line-dasharray:9, 4.5;
         line-opacity: 1;
-        [zoom>=13][zoom<=14]{line-width: 1.0;
-            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
-        [zoom>=15]{line-width: 2.0;
-            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
-    }
+        }
 /*
     [grooming=''] {
     * Taken care in #nordic-no-difficulty-no-grooming
