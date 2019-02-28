@@ -12,7 +12,7 @@
     }
 */
 
-    ::name[zoom>=10][zoom<=14]{
+    ::name[zoom>=10][zoom<=12]{
         text-name:"'        '";
         text-face-name:@book-fonts;
         text-halo-radius:1.5;
@@ -26,7 +26,7 @@
         
         text-halo-fill:rgba(255,255,255,0.6);
         text-fill:#003074;
-        [zoom>=11][zoom<=14]{text-name:'[name]';}
+        [zoom>=11][zoom<=12]{text-name:'[name]';}
     }
 
         
@@ -299,7 +299,7 @@
 
 
 
-    ::downhill[zoom>=11][zoom<=14]{
+    ::downhill[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -325,7 +325,7 @@
         }
     }
     
-    ::nordic[zoom>=11][zoom<=14]{
+    ::nordic[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -351,7 +351,7 @@
         }
     }
     
-    ::sled[zoom>=11][zoom<=14]{
+    ::sled[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -377,7 +377,7 @@
         }
     }
     
-    ::hike[zoom>=11][zoom<=14]{
+    ::hike[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -403,7 +403,7 @@
         }
     }
     
-    ::snowpark[zoom>=11][zoom<=14]{
+    ::snowpark[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -429,7 +429,7 @@
         }
     }
     
-    ::jump[zoom>=11][zoom<=14]{
+    ::jump[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -455,7 +455,7 @@
         }
     }
     
-    ::playground[zoom>=11][zoom<=14]{
+    ::playground[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -481,7 +481,7 @@
         }
     }
     
-    ::skitour[zoom>=11][zoom<=14]{
+    ::skitour[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -507,7 +507,7 @@
         }
     }
     
-    ::skat[zoom>=11][zoom<=14]{
+    ::skat[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;
@@ -533,7 +533,7 @@
         }
     }
     
-    ::sleigh[zoom>=11][zoom<=14]{
+    ::sleigh[zoom>=11][zoom<=12]{
         text-name:'';
         text-face-name:'Ski Medium';
         text-halo-radius:4;

@@ -1,4 +1,11 @@
 SECONDS=0
+#Fix imported geometries, otherwise we have issue with 
+#collection of polygons at the output of ST_LineMerge
+echo "UPDATE osm_pistes_route_members
+        SET geometry=ST_ExteriorRing(geometry)
+        WHERE ST_Geometry='Polygon'
+    ;" |psql -d imposm
+
 echo "CREATE MATERIALIZED VIEW pistes_routes AS (
     SELECT 
         osm_pistes_routes.osm_id as osm_id,
@@ -15,7 +22,9 @@ echo "CREATE MATERIALIZED VIEW pistes_routes AS (
         string_agg(distinct osm_pistes_routes.difficulty,';') as difficulty,
         bool_and(osm_pistes_routes.lit1) as lit1,
         bool_and(osm_pistes_routes.lit2) as lit2,
-        ST_LineMerge(ST_Collect(osm_pistes_route_members.geometry))::geometry(Geometry, 3857) AS geometry
+        ST_LineMerge(ST_CollectionExtract(
+                        ST_Collect(osm_pistes_route_members.geometry))
+        ,2)::geometry(Geometry, 3857) AS geometry
     FROM 
     osm_pistes_routes
     JOIN
