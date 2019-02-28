@@ -49,6 +49,66 @@ _parts:
     extent: "-20037508,-20037508,20037508,20037508"
 
 Layer:
+    ## skitour ##
+    - id: skitour-routes
+      geometry: geometry
+      class: skitour
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+                (select geometry, difficulty, grooming ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from pistes_routes 
+                where 
+                piste_type LIKE '%skitour%'
+                or (piste_type LIKE '%downhill%' and grooming='backcountry')
+                ) as pistes
+      properties:
+        minzoom: 9
+    
+    - id: skitour-eraser
+      # erase relations already rendered, otherwise dashs looks ugly
+      geometry: geometry
+      class: ''
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+                (select geometry, difficulty, grooming from osm_pistes_ways 
+                where 
+                piste_type LIKE '%skitour%'
+                or (piste_type LIKE '%downhill%' and grooming='backcountry')
+                ) as pistes
+      properties:
+        minzoom: 9
+        
+    - id: skitour
+      # erase relations already rendered, otherwise dashs looks ugly
+      geometry: geometry
+      class: skitour
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+                (select geometry, difficulty, grooming ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from osm_pistes_ways 
+                where 
+                piste_type LIKE '%skitour%'
+                or (piste_type LIKE '%downhill%' and grooming='backcountry')
+                ) as pistes
+      properties:
+        minzoom: 9
+    
     - id: various-areas
       geometry: polygon
       class: ''
@@ -375,66 +435,6 @@ Layer:
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
                 piste_type LIKE '%hike%'
-                ) as pistes
-      properties:
-        minzoom: 9
-    
-    ## skitour ##
-    - id: skitour-routes
-      geometry: geometry
-      class: skitour
-      <<: *extents
-      Datasource:
-        <<: *imposm
-        table: |-
-                (select geometry, difficulty, grooming ,
-                (case 
-                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
-                    then '0' 
-                    else '1' 
-                end) as us
-                from pistes_routes 
-                where 
-                piste_type LIKE '%skitour%'
-                or (piste_type LIKE '%downhill%' and grooming='backcountry')
-                ) as pistes
-      properties:
-        minzoom: 9
-    
-    - id: skitour-eraser
-      # erase relations already rendered, otherwise dashs looks ugly
-      geometry: geometry
-      class: ''
-      <<: *extents
-      Datasource:
-        <<: *imposm
-        table: |-
-                (select geometry, difficulty, grooming from osm_pistes_ways 
-                where 
-                piste_type LIKE '%skitour%'
-                or (piste_type LIKE '%downhill%' and grooming='backcountry')
-                ) as pistes
-      properties:
-        minzoom: 9
-        
-    - id: skitour
-      # erase relations already rendered, otherwise dashs looks ugly
-      geometry: geometry
-      class: skitour
-      <<: *extents
-      Datasource:
-        <<: *imposm
-        table: |-
-                (select geometry, difficulty, grooming ,
-                (case 
-                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
-                    then '0' 
-                    else '1' 
-                end) as us
-                from osm_pistes_ways 
-                where 
-                piste_type LIKE '%skitour%'
-                or (piste_type LIKE '%downhill%' and grooming='backcountry')
                 ) as pistes
       properties:
         minzoom: 9
