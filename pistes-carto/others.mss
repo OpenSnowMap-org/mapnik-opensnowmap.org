@@ -270,6 +270,11 @@ opacity: 0.90;
         line-color: #BCB7E1;
         polygon-opacity: 0.7;
     }
+    [piste_type=~".*skat.*"][zoom>=13]{
+        polygon-fill: #6FC4D0;
+        line-color: #6FC4D0;
+        polygon-opacity: 0.5;
+    }
 }
 
 #various-text[zoom>=15]{
@@ -368,6 +373,7 @@ opacity: 0.90;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
+        text-placement: point;
     }
     [piste_type=~".*sled.*"][zoom>=15]{
         text-name:'g';
@@ -387,6 +393,7 @@ opacity: 0.90;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
+        text-placement: point;
     }
     [piste_type=~".*curling.*"][zoom>=15]{
         text-name:'l';
@@ -396,6 +403,7 @@ opacity: 0.90;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
+        text-placement: point;
     }
     [piste_type=~".*ice_stock.*"][zoom>=15]{
         text-name:'m';
@@ -405,6 +413,7 @@ opacity: 0.90;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
+        text-placement: point;
     }
     [piste_type=~".*hockey.*"][zoom>=15]{
         text-name:'k';
@@ -414,6 +423,7 @@ opacity: 0.90;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
+        text-placement: point;
     }
     [piste_type=~".*sleigh.*"][zoom>=15]{
         text-name:'h';
