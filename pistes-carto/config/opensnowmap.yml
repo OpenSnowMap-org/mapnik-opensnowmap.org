@@ -47,7 +47,10 @@ tables:
       name: lit2
       type: bool
     - key: piste:abandoned
-      name: abandoned
+      name: abandoned1
+      type: bool
+    - key: abandoned
+      name: abandoned2
       type: bool
     - key: gladed
       name: gladed
@@ -101,7 +104,10 @@ tables:
       name: lit2
       type: bool
     - key: piste:abandoned
-      name: abandoned
+      name: abandoned1
+      type: bool
+    - key: abandoned
+      name: abandoned2
       type: bool
     - key: gladed
       name: gladed
@@ -154,6 +160,12 @@ tables:
     - key: null
       name: piste_type
       type: mapping_value
+    - key: piste:abandoned
+      name: abandoned1
+      type: bool
+    - key: abandoned
+      name: abandoned2
+      type: bool
   pistes_sites:
     mapping:
       site:
@@ -227,7 +239,10 @@ tables:
       name: lit2
       type: bool
     - key: piste:abandoned
-      name: abandoned
+      name: abandoned1
+      type: bool
+    - key: abandoned
+      name: abandoned2
       type: bool
     - key: gladed
       name: gladed
@@ -301,7 +316,11 @@ tables:
       type: bool
       from_member: true
     - key: piste:abandoned
-      name: abandoned
+      name: abandoned1
+      type: bool
+      from_member: true
+    - key: abandoned
+      name: abandoned2
       type: bool
       from_member: true
     - key: gladed
