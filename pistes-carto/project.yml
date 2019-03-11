@@ -147,7 +147,7 @@ Layer:
                 (select geometry, difficulty, grooming 
                 from osm_pistes_ways
                 where 
-                (piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 

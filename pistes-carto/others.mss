@@ -211,6 +211,10 @@ opacity: 0.90;
         line-width: 1.5;
         line-color: #6FC4D0;
     }
+    [piste_type=~".*ice_.*"][zoom>=9]{
+        line-width: 1.5;
+        line-color: #6FC4D0;
+    }
     [piste_type=~".*curling.*"][zoom>=9]{
         line-width: 1.5;
         line-color: #6FC4D0;
