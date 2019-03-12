@@ -5,8 +5,8 @@ bounds: &world
     - 85.0511
   
 center: 
-    - -123.1105
-    - 50.1350
+    - 6.0928
+    - 46.4319
     - 16
 format: png24
 interactivity: false
@@ -156,7 +156,7 @@ Layer:
                 select geometry, difficulty, grooming 
                 from pistes_routes
                 where 
-                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 
@@ -180,7 +180,7 @@ Layer:
                 end) as us
                 from osm_pistes_ways
                 where 
-                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 )
@@ -195,7 +195,7 @@ Layer:
                 end) as us
                 from pistes_routes
                 where 
-                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 )
@@ -213,7 +213,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_area 
                 where 
-                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 and not (abandoned1 or abandoned2)
                 ) as pistes
       properties:
@@ -234,7 +234,7 @@ Layer:
                 end) as us
                 from osm_pistes_area 
                 where 
-                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 and not (abandoned1 or abandoned2)
                 ) as pistes
       properties:
@@ -257,7 +257,7 @@ Layer:
                 
                 select geometry, difficulty, grooming from pistes_routes 
                 where 
-                piste_type LIKE '%downhill%'
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 
@@ -273,7 +273,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                piste_type LIKE '%downhill%'
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 
@@ -281,7 +281,7 @@ Layer:
                 
                 select geometry, difficulty, grooming from pistes_routes 
                 where 
-                piste_type LIKE '%downhill%'
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 
@@ -297,7 +297,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                piste_type LIKE '%downhill%'
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 
@@ -305,7 +305,7 @@ Layer:
                 
                 select geometry, difficulty, grooming from pistes_routes 
                 where 
-                piste_type LIKE '%downhill%'
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 
@@ -322,7 +322,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_ways 
                 where 
-                piste_type LIKE '%downhill%'
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 
@@ -330,7 +330,7 @@ Layer:
                 
                 select geometry, difficulty, grooming from pistes_routes 
                 where 
-                piste_type LIKE '%downhill%'
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 
@@ -348,7 +348,7 @@ Layer:
         table: |-
                 (select geometry, difficulty, grooming from osm_pistes_area 
                 where 
-                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 and not (abandoned1 or abandoned2)
                 ) as pistes
       properties:
@@ -370,7 +370,7 @@ Layer:
                 end) as us
                 from osm_pistes_area
                 where 
-                piste_type LIKE '%downhill%' 
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 and not (abandoned1 or abandoned2)
                 ) as pistes
       properties:
@@ -392,7 +392,7 @@ Layer:
                 end) as us
                 from osm_pistes_ways
                 where 
-                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 )
@@ -407,7 +407,7 @@ Layer:
                 end) as us
                 from pistes_routes
                 where 
-                ( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
                 )

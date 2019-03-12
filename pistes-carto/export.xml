@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-123.1105,50.135,16</Parameter>
+  <Parameter name="center">6.0928,46.4319,16</Parameter>
   <Parameter name="format">png24</Parameter>
   <Parameter name="minzoom">0</Parameter>
   <Parameter name="maxzoom">18</Parameter>
@@ -1077,7 +1077,7 @@ and not (abandoned1 or abandoned2)
        <Parameter name="table"><![CDATA[(select geometry, difficulty, grooming 
 from osm_pistes_ways
 where 
-(piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -1086,7 +1086,7 @@ UNION
 select geometry, difficulty, grooming 
 from pistes_routes
 where 
-( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -1475,7 +1475,7 @@ and not (abandoned1 or abandoned2)
 end) as us
 from osm_pistes_ways
 where 
-( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 )
@@ -1490,7 +1490,7 @@ UNION
 end) as us
 from pistes_routes
 where 
-( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 )
@@ -1537,7 +1537,7 @@ ORDER BY ord DESC
        <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
        <Parameter name="table"><![CDATA[(select geometry, difficulty, grooming from osm_pistes_area 
 where 
-( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 and not (abandoned1 or abandoned2)
 ) as pistes]]></Parameter>
     </Datasource>
@@ -1923,7 +1923,7 @@ and not (abandoned1 or abandoned2)
 end) as us
 from osm_pistes_area 
 where 
-( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 and not (abandoned1 or abandoned2)
 ) as pistes]]></Parameter>
     </Datasource>
@@ -1957,7 +1957,7 @@ UNION
 
 select geometry, difficulty, grooming from pistes_routes 
 where 
-piste_type LIKE '%downhill%'
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -1985,7 +1985,7 @@ and not (abandoned1 or abandoned2)
        <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
        <Parameter name="table"><![CDATA[(select geometry, difficulty, grooming from osm_pistes_ways 
 where 
-piste_type LIKE '%downhill%'
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -1993,7 +1993,7 @@ UNION
 
 select geometry, difficulty, grooming from pistes_routes 
 where 
-piste_type LIKE '%downhill%'
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -2021,7 +2021,7 @@ and not (abandoned1 or abandoned2)
        <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
        <Parameter name="table"><![CDATA[(select geometry, difficulty, grooming from osm_pistes_ways 
 where 
-piste_type LIKE '%downhill%'
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -2029,7 +2029,7 @@ UNION
 
 select geometry, difficulty, grooming from pistes_routes 
 where 
-piste_type LIKE '%downhill%'
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -2056,7 +2056,7 @@ and not (abandoned1 or abandoned2)
        <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
        <Parameter name="table"><![CDATA[(select geometry, difficulty, grooming from osm_pistes_ways 
 where 
-piste_type LIKE '%downhill%'
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -2064,7 +2064,7 @@ UNION
 
 select geometry, difficulty, grooming from pistes_routes 
 where 
-piste_type LIKE '%downhill%'
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 
@@ -2105,7 +2105,7 @@ and not (abandoned1 or abandoned2)
        <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
        <Parameter name="table"><![CDATA[(select geometry, difficulty, grooming from osm_pistes_area 
 where 
-( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 and not (abandoned1 or abandoned2)
 ) as pistes]]></Parameter>
     </Datasource>
@@ -2350,7 +2350,7 @@ and not (abandoned1 or abandoned2)
 end) as us
 from osm_pistes_area
 where 
-piste_type LIKE '%downhill%' 
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 and not (abandoned1 or abandoned2)
 ) as pistes]]></Parameter>
     </Datasource>
@@ -2452,7 +2452,7 @@ and not (abandoned1 or abandoned2)
 end) as us
 from osm_pistes_ways
 where 
-( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 )
@@ -2467,7 +2467,7 @@ UNION
 end) as us
 from pistes_routes
 where 
-( piste_type LIKE '%downhill%' and grooming not in ('backcountry') or grooming is null)
+(piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
 AND geometry && !bbox!
 and not (abandoned1 or abandoned2)
 )
@@ -2766,6 +2766,38 @@ and not (abandoned1 or abandoned2)
   <Rule>
     <MaxScaleDenominator>1500000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*sleigh.*')) and ([piste_type].match('.*ice_.*')) and ([piste_type].match('.*playground.*'))</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#8f54d8" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([piste_type].match('.*sleigh.*')) and ([piste_type].match('.*ice_.*')) and ([piste_type].match('.*playground.*'))</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#8f54d8" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*sleigh.*')) and ([piste_type].match('.*ice_.*')) and ([piste_type].match('.*playground.*'))</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="rgba(0, 0, 0, 0)" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*sleigh.*')) and ([piste_type].match('.*ice_.*'))</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#8f54d8" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([piste_type].match('.*sleigh.*')) and ([piste_type].match('.*ice_.*'))</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#8f54d8" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*sleigh.*')) and ([piste_type].match('.*ice_.*'))</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="rgba(0, 0, 0, 0)" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([piste_type].match('.*sleigh.*')) and ([piste_type].match('.*skat.*')) and ([piste_type].match('.*playground.*'))</Filter>
     <LineSymbolizer stroke-width="0.5" stroke="#8f54d8" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
   </Rule>
@@ -3049,6 +3081,38 @@ and not (abandoned1 or abandoned2)
   <Rule>
     <MinScaleDenominator>1500000</MinScaleDenominator>
     <Filter>([piste_type].match('.*sled.*')) and ([piste_type].match('.*curling.*'))</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="rgba(0, 0, 0, 0)" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*sled.*')) and ([piste_type].match('.*ice_.*')) and ([piste_type].match('.*playground.*'))</Filter>
+    <LineSymbolizer stroke="#baff3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([piste_type].match('.*sled.*')) and ([piste_type].match('.*ice_.*')) and ([piste_type].match('.*playground.*'))</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#6fc4d0" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*sled.*')) and ([piste_type].match('.*ice_.*')) and ([piste_type].match('.*playground.*'))</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="rgba(0, 0, 0, 0)" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*sled.*')) and ([piste_type].match('.*ice_.*'))</Filter>
+    <LineSymbolizer stroke="#baff3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([piste_type].match('.*sled.*')) and ([piste_type].match('.*ice_.*'))</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#6fc4d0" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*sled.*')) and ([piste_type].match('.*ice_.*'))</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="rgba(0, 0, 0, 0)" stroke-gamma="0.6" smooth="0.5" />
   </Rule>
   <Rule>
@@ -3225,6 +3289,26 @@ and not (abandoned1 or abandoned2)
   <Rule>
     <MinScaleDenominator>1500000</MinScaleDenominator>
     <Filter>([piste_type].match('.*curling.*'))</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="rgba(0, 0, 0, 0)" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <Filter>([piste_type].match('.*ice_.*')) and ([piste_type].match('.*playground.*'))</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#6fc4d0" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*ice_.*')) and ([piste_type].match('.*playground.*'))</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="rgba(0, 0, 0, 0)" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <Filter>([piste_type].match('.*ice_.*'))</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#6fc4d0" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.6" smooth="0.5" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([piste_type].match('.*ice_.*'))</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="rgba(0, 0, 0, 0)" stroke-gamma="0.6" smooth="0.5" />
   </Rule>
   <Rule>
