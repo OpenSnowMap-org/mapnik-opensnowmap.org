@@ -77,32 +77,32 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
         <Rule>
             <MaxScaleDenominator>250000000000</MaxScaleDenominator>
             <MinScaleDenominator>1500000</MinScaleDenominator>
-            <Filter>[distance]&lt;2000.001 </Filter>
+            <Filter>[distance]&lt;5000.001 </Filter>
             <PolygonSymbolizer fill="#5FCD00" fill-opacity="1"/>
         </Rule>
         <Rule>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <Filter>[distance]&lt;2000.001 </Filter>
+            <Filter>[distance]&lt;5000.001 </Filter>
             <PolygonSymbolizer fill="#5FCD00" fill-opacity="0.7"/>
         </Rule>
         <Rule>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             
-            <Filter>[distance]&lt;2000.001 </Filter>
+            <Filter>[distance]&lt;5000.001 </Filter>
             <PolygonSymbolizer fill="#5FCD00" fill-opacity="0.3"/>
         </Rule>	
 
         <Rule>
             <MaxScaleDenominator>250000000000</MaxScaleDenominator>
             <MinScaleDenominator>12500000</MinScaleDenominator>
-            <Filter>[distance]&lt;2000.001 </Filter>
+            <Filter>[distance]&lt;5000.001 </Filter>
             <MarkersSymbolizer fill="#5FCD00" opacity="1" width="5" height="5" stroke="#5FCD00" stroke-width="0" stroke-opacity="1" placement="point" marker-type="ellipse" allow-overlap="true"/>
         </Rule>
         <Rule>
             <MaxScaleDenominator>12500000</MaxScaleDenominator>
             <MinScaleDenominator>1500000</MinScaleDenominator>
-            <Filter>[distance]&lt;2000.001 </Filter>
+            <Filter>[distance]&lt;5000.001 </Filter>
             <MarkersSymbolizer fill="#5FCD00" opacity="1" width="6" height="6" stroke="#5FCD00" stroke-width="0" stroke-opacity="1" placement="point" marker-type="ellipse" allow-overlap="true"/>
         </Rule>
     </Style>
@@ -111,32 +111,32 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
         <Rule>
             <MaxScaleDenominator>100000000</MaxScaleDenominator>
             <MinScaleDenominator>1500000</MinScaleDenominator>
-            <Filter>[distance]&gt;2000 </Filter>
+            <Filter>[distance]&gt;5000 </Filter>
             <PolygonSymbolizer fill="#DE3119" fill-opacity="1"/>
         </Rule>
         <Rule>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
             <MinScaleDenominator>100000</MinScaleDenominator>
-            <Filter>[distance]&gt;2000 </Filter>
+            <Filter>[distance]&gt;5000 </Filter>
             <PolygonSymbolizer fill="#DE3119" fill-opacity="0.7"/>
         </Rule>
         <Rule>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
             
-            <Filter>[distance]&gt;2000 </Filter>
+            <Filter>[distance]&gt;5000 </Filter>
             <PolygonSymbolizer fill="#DE3119" fill-opacity="0.3"/>
         </Rule>	
 
         <Rule>
             <MaxScaleDenominator>250000000000</MaxScaleDenominator>
             <MinScaleDenominator>12500000</MinScaleDenominator>
-            <Filter>[distance]&gt;2000 </Filter>
+            <Filter>[distance]&gt;5000 </Filter>
             <MarkersSymbolizer fill="#DE3119" opacity="1" width="3" height="3" stroke="#DE3119" stroke-width="0" stroke-opacity="1" placement="point" marker-type="ellipse" allow-overlap="true"/>
         </Rule>
         <Rule>
             <MaxScaleDenominator>12500000</MaxScaleDenominator>
             <MinScaleDenominator>1500000</MinScaleDenominator>
-            <Filter>[distance]&gt;2000 </Filter>
+            <Filter>[distance]&gt;5000 </Filter>
             <MarkersSymbolizer fill="#DE3119" opacity="1" width="4" height="4" stroke="#DE3119" stroke-width="0" stroke-opacity="1" placement="point" marker-type="ellipse" allow-overlap="true"/>
         </Rule>
     </Style>
@@ -159,8 +159,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
         </Rule>
     </Style>
 
-<Layer name="osm_downhill_areas_ok" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>osm_ski_areas_ok</StyleName>
+<Layer name="osm_downhill_areas_fill_ko" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>osm_ski_areas_ko</StyleName>
 	<Datasource>
 		
 <Parameter name="dbname">gis</Parameter>
@@ -178,8 +178,8 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 		</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="osm_downhill_areas_fill_ko" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-	<StyleName>osm_ski_areas_ko</StyleName>
+<Layer name="osm_downhill_areas_ok" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+	<StyleName>osm_ski_areas_ok</StyleName>
 	<Datasource>
 		
 <Parameter name="dbname">gis</Parameter>
@@ -189,6 +189,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 <Parameter name="password"/>
 <Parameter name="port">5432</Parameter>
 <Parameter name="estimate-extent">true</Parameter>
+<Parameter name="geometry_field">geom</Parameter>
 
 
 		<Parameter name="geometry_table">osm_downhill_areas</Parameter>
@@ -222,6 +223,7 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 <Parameter name="password"/>
 <Parameter name="port">5432</Parameter>
 <Parameter name="estimate-extent">true</Parameter>
+<Parameter name="geometry_field">geom</Parameter>
 
 
 		<Parameter name="geometry_table">skimaps</Parameter>
