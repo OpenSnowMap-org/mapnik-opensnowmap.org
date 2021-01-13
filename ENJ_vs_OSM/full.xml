@@ -212,11 +212,11 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<StyleName>osm</StyleName>
 	<Datasource>
 		
-<Parameter name="dbname">gis</Parameter>
+<Parameter name="dbname">gis_enj</Parameter>
 <Parameter name="type">postgis</Parameter>
 <Parameter name="user">admin</Parameter>
 <Parameter name="host">localhost</Parameter>
-<Parameter name="password"/>
+<Parameter name="password">admin</Parameter>
 <Parameter name="port">5432</Parameter>
 <Parameter name="estimate-extent">true</Parameter>
 
@@ -231,11 +231,11 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<StyleName>enj-bg</StyleName>
 	<Datasource>
 		
-<Parameter name="dbname">gis</Parameter>
+<Parameter name="dbname">gis_enj</Parameter>
 <Parameter name="type">postgis</Parameter>
 <Parameter name="user">admin</Parameter>
 <Parameter name="host">localhost</Parameter>
-<Parameter name="password"/>
+<Parameter name="password">admin</Parameter>
 <Parameter name="port">5432</Parameter>
 <Parameter name="estimate-extent">true</Parameter>
 
@@ -250,11 +250,11 @@ ls `python -c "import mapnik;print mapnik.fontscollectionpath"`-->
 	<StyleName>enj</StyleName>
 	<Datasource>
 		
-<Parameter name="dbname">gis</Parameter>
+<Parameter name="dbname">gis_enj</Parameter>
 <Parameter name="type">postgis</Parameter>
 <Parameter name="user">admin</Parameter>
 <Parameter name="host">localhost</Parameter>
-<Parameter name="password"/>
+<Parameter name="password">admin</Parameter>
 <Parameter name="port">5432</Parameter>
 <Parameter name="estimate-extent">true</Parameter>
 
