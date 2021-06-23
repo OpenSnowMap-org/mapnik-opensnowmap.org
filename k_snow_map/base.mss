@@ -219,6 +219,11 @@ hillshade_d8.tif
   [type='forest'] { 
     polygon-smooth: 0.4;
     polygon-gamma: 0.5;
+    /* line below masks the artefact between smoothed polygons*/
+    line-color: @wooded_low; 
+    line-width:2.5;
+    line-join:round;
+    line-join:1;
     }
   }
 

@@ -50,8 +50,8 @@ Map { font-directory: url(./fonts); }
 @beach:             @land;
 @park:              @land;
 @cemetery:          darken(@land_grey,25%);
-@wooded_low:        #C9DAE1; /* #bad4da  mix from wooded and ovelray png*/
-@wooded:            #D6E3E3;/*##C1DBDC  #ACDCDD;DCE6F3;#CDD7E7;*/
+@wooded_low:        #C9D3E1; /* #bad4da  mix from wooded and ovelray png*/
+@wooded:            #D6DDE3;/*##C1DBDC  #ACDCDD;DCE6F3;#CDD7E7;*/
 @agriculture:       @land;
 @red:               #FF0000;
 @glacier:           #E0FFFE;
