@@ -1,0 +1,716 @@
+bounds: &world
+    - -180
+    - -85.0511
+    - 180
+    - 85.0511
+center: 
+    - 6.0928
+    - 46.4319
+    - 16
+    
+format: png24
+interactivity: false
+minzoom: 0
+maxzoom: 18
+srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+scale: 1
+metatile: 4
+attribution: "Data © OpenStreetMap (and) contributors, OdBL; map (c) Opensnowmap.org, CC-BY-SA"
+description: ""
+name: Snow_Map
+
+overlay:
+    url: 'http://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png?'
+    #~ url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    active: true
+    opacity: 1
+    position: 1
+
+Stylesheet:
+- palette.mss
+- base.mss
+- roads.mss
+- labels.mss
+- pistes.mss
+
+# Various parts to be included later on
+_parts:
+  extents: &extents
+    extent: *world
+    srs-name: "3857"
+ 
+  extents84: &extents84
+    extent: *world
+    srs-name: "WGS84"
+    srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+  imposm: &imposm
+    type: "postgis"
+    dbname: "imposm"
+    user: "imposm"
+    key_field: ""
+    geometry_field: ""
+    extent: "-20037508,-20037508,20037508,20037508"
+Layer:
+  - id: ocean_background
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT ST_MakeEnvelope(-20037508.34, -20037508.34,20037508.34, 20037508.34,
+        3857) as geometry) AS data
+    geometry: polygon
+  - id: land-low
+    Datasource:
+      <<: *extents
+      file: "../data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp"
+      type: shape
+    geometry: polygon
+  - id: land-high
+    Datasource:
+      <<: *extents
+      file: "../data/land-polygons-split-3857/land_polygons.shp"
+      type: shape
+    geometry: polygon
+
+  - id: landuse_gen0
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      id: landuse_gen0
+      table: |-
+        ( SELECT geometry, type, area
+          FROM osm_landusages_gen0
+          ORDER BY area DESC
+        ) AS data
+    geometry: polygon
+  - id: landuse_gen1
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type, area
+          FROM osm_landusages_gen1
+          ORDER BY area DESC
+        ) AS data
+    geometry: polygon
+  - id: landuse
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type, area
+          FROM osm_landusages
+          ORDER BY area DESC
+        ) AS data
+    geometry: polygon
+  - id: landuse_overlays
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        (select geometry, type, area
+        from osm_landusages
+        order by area desc) as landusages
+    geometry: polygon
+    
+  - id: land_features
+    geometry: linestring
+    Datasource:
+      table: |-
+        (select geometry, type from osm_natural_ways ) as landusages
+      geometry_field: geometry
+      <<: *extents
+      <<: *imposm
+    
+
+  #~ - id: contours10
+    #~ geometry: linestring
+    #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    #~ Datasource:
+      #~ type: postgis
+      #~ user: mapnik
+      #~ table: |-
+       #~ (select wkb_geometry, height from contours 
+       #~ WHERE height::integer % 10 =0 
+       #~ AND  height::integer % 50 != 0 
+       #~ AND height::integer % 100 != 0) as data
+      #~ key_field: ''
+      #~ geometry_field: ''
+      #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      #~ dbname: contours
+    #~ class: ''
+    #~ srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+  #~ - id: contours50
+    #~ geometry: linestring
+    #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    #~ Datasource:
+      #~ type: postgis
+      #~ user: mapnik
+      #~ table: |-
+       #~ (select wkb_geometry, height from contours 
+       #~ WHERE height::integer % 50 = 0 
+       #~ AND height::integer % 100 != 0) as data
+      #~ key_field: ''
+      #~ geometry_field: ''
+      #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      #~ dbname: contours
+    #~ class: ''
+    #~ srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+  #~ - id: contours100
+    #~ geometry: linestring
+    #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    #~ Datasource:
+      #~ type: postgis
+      #~ user: mapnik
+      #~ table: |-
+       #~ (select wkb_geometry, height from contours 
+       #~ WHERE height::integer % 100 = 0) as data
+      #~ key_field: ''
+      #~ geometry_field: ''
+      #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      #~ dbname: contours
+    #~ class: ''
+    #~ srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+
+  - id: hillshade40
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade_lowzoom/dem_c6_z1.tif"
+      type: gdal
+      band: '1'
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+      +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: hillshade30
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade_lowzoom/dem_c6_z3.tif"
+      type: gdal
+      band: '1'
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+      +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: hillshade20
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade_lowzoom/dem_c6_z4.tif"
+      type: gdal
+      band: '1'
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+      +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: hillshade10
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade_lowzoom/dem_c6_z5.tif"
+      type: gdal
+      band: '1'
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+      +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: hillshade7
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade_lowzoom/dem_c6_z10.tif"
+      type: gdal
+      band: '1'
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+      +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: hillshade8
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade/hillshade_d8.tif"
+      type: gdal
+  - id: hillshade9
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade/hillshade_d4.tif"
+      type: gdal
+  - id: hillshade11
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade/hillshade_d2.tif"
+      type: gdal
+  - id: hillshade
+    geometry: raster
+    Datasource:
+      file: "../data/Hillshade/hillshade_2.tif"
+      type: gdal
+
+  - id: waterway_low
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type
+          FROM osm_waterways
+          WHERE type IN ('river', 'canal') AND tunnel = 0
+        ) AS data
+    geometry: linestring
+    
+  - id: waterway_med
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type
+          FROM osm_waterways
+          WHERE type IN ('river', 'canal', 'stream') AND tunnel = 0
+        ) AS data
+    geometry: linestring
+    
+  - id: waterway_high
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type
+          FROM osm_waterways
+          WHERE type IN ('river', 'canal', 'stream', 'ditch', 'drain') AND tunnel = 0
+        ) AS data
+    geometry: linestring
+    
+  - id: water_gen0
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry
+          FROM osm_waterareas
+          WHERE area > 10000
+        ) AS data
+    geometry: polygon
+  - id: water_gen1
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry
+          FROM osm_waterareas
+          WHERE area > 1000
+        ) AS data
+    geometry: polygon
+    
+  - id: water
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry
+          FROM osm_waterareas
+        ) AS data
+    geometry: polygon
+    
+  - id: admin
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      table: osm_admin
+    geometry: polygon
+    
+  - id: buildings
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type, name, area
+            FROM osm_buildings
+          ORDER BY ST_YMin(ST_Envelope(geometry)) DESC
+        ) AS data
+    geometry: polygon
+    
+  - id: aeroway
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      id: aeroway
+      table: |-
+        ( SELECT geometry, type
+          FROM osm_aeroways
+        ) AS data
+    geometry: linestring
+    
+  - id: tunnel
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type, 0 as bridge, access, render, layer, tunnel,
+          CASE
+            WHEN type IN ('motorway', 'trunk') THEN 'motorway'
+            WHEN type IN ('primary', 'secondary') THEN 'mainroad'
+            WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
+            WHEN type IN ('service', 'track') THEN 'service'
+            WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
+            WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
+            ELSE 'other' END AS stylegroup
+          FROM (
+            SELECT *, '1_outline' AS render FROM osm_roads WHERE tunnel = 1
+            UNION ALL
+            SELECT *, '2_line' AS render FROM osm_roads WHERE tunnel = 1
+            UNION ALL
+            SELECT *, '3_inline' AS render FROM osm_roads WHERE tunnel = 1
+          ) AS tunnels
+          ORDER BY layer ASC, render ASC
+        ) AS data
+    geometry: linestring
+    
+  - id: turning_circle_case
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+       ( SELECT geometry    FROM osm_transport_points    WHERE type = 'turning_circle' )
+        AS data
+    geometry: point
+  - id: roads_high
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      table: |-
+        ( SELECT geometry, type, tunnel, bridge, access, 'fill' AS render,
+          CASE
+            WHEN type IN ('motorway', 'trunk') THEN 'motorway'
+            WHEN type IN ('primary', 'secondary') THEN 'mainroad'
+            WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
+            WHEN type IN ('service') THEN 'service'
+        WHEN type IN ('track') THEN 'track'
+            WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
+            WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
+            ELSE 'other' END AS stylegroup
+          FROM osm_roads
+          WHERE bridge = 0
+            AND tunnel = 0
+          ORDER BY z_order
+        ) AS data
+    geometry: linestring
+    
+  - id: roads_med
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      table: |-
+        ( SELECT geometry, type
+          FROM osm_roads_gen1
+          WHERE type IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')
+        ) AS data
+    geometry: linestring
+  - id: roads_low
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type
+          FROM osm_roads_gen0
+        ) AS data
+    geometry: linestring
+    
+  - id: turning_circle_fill
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+       ( SELECT geometry    FROM osm_transport_points    WHERE type = 'turning_circle' )
+        AS data
+    geometry: point
+   
+  - id: bridge
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type, bridge, access, render, layer, 0 as tunnel,
+          CASE
+            WHEN type IN ('motorway', 'trunk') THEN 'motorway'
+            WHEN type IN ('primary', 'secondary') THEN 'mainroad'
+            WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
+            WHEN type IN ('service', 'track') THEN 'service'
+            WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
+            WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
+            ELSE 'other' END AS stylegroup
+          FROM (
+            SELECT *, '1_outline' AS render FROM osm_roads WHERE bridge = 1
+            UNION ALL
+            SELECT *, '2_line' AS render FROM osm_roads WHERE bridge = 1
+            UNION ALL
+            SELECT *, '3_inline' AS render FROM osm_roads WHERE bridge = 1
+          ) as bridges
+          ORDER BY layer ASC, render ASC
+        ) AS data
+    geometry: linestring
+    
+  - id: barrier_points
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+       (select geometry, type,  CASE   WHEN type IN ('toll_booth', 'stile',
+        'gate', 'horse_stile','lift_gate', 'kissing_gate','cattle_grid','entrance')
+        THEN 'gate'   WHEN type IN ('block', 'bollard', 'chain', 'cycle_barrier',
+        'spikes', 'fence', 'wire_fence','yes') THEN 'divider'  END AS stylegroup FROM
+        osm_barrierpoints ) AS data
+    geometry: point
+    
+  - id: barrier_lines
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+       (SELECT geometry, type,  CASE    WHEN type IN ('city_wall', 'fence',
+        'retaining_wall', 'wall', 'wire_fence', 'yes') THEN 'fence'   WHEN type IN
+        ('gate', 'spikes', 'bollard', 'lift_gate', 'kissing_gate') THEN 'gate'   WHEN
+        type IN ('hedge') THEN 'hedge'  END AS stylegroup FROM osm_barrierways )
+        AS data
+    geometry: linestring
+    
+  - id: pistes_labels
+    geometry: linestring
+    Datasource:
+      table: |-
+       (select type, geometry, 'x' as name from osm_pistes_ways UNION ALL  select
+        type, geometry, 'xx' as name from osm_aerialways UNION ALL  select type, geometry,
+        'xx' as name from osm_pistes_area ) as data
+      <<: *extents
+      <<: *imposm
+      id: pistes_labels
+    
+
+  #~ - id: contours100_labels
+    #~ geometry: linestring
+    #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    #~ Datasource:
+      #~ type: postgis
+      #~ user: mapnik
+      #~ table: |-
+       #~ (select wkb_geometry, height from contours 
+       #~ WHERE height::integer % 100 = 0) as data"
+      #~ key_field: ''
+      #~ geometry_field: ''
+      #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      #~ dbname: contours
+    #~ class: ''
+    #~ srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+
+  - id: place
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      id: place
+      table: |-
+        ( SELECT geometry, type, name, z_order, population
+          FROM osm_places
+          ORDER BY z_order, population DESC NULLS LAST
+        ) AS data
+    geometry: point
+    
+  - id: land_nodes
+    geometry: point
+    Datasource:
+      table: |-
+       (select geometry, type, name  from osm_natural_nodes ) as data
+      <<: *extents
+      <<: *imposm
+    
+  - id: water_area_label
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      id: water_area_label
+      table: |-
+       ( SELECT type, name, area, 'land' AS stylegroup,     ST_Centroid(geometry)
+        AS geometry   FROM osm_landusages   WHERE name IS NOT NULL     AND geometry
+        && !bbox!     AND type IN (         'glacier' )     AND geometry && !bbox! 
+              UNION ALL    SELECT type, name, area, 'water' AS stylegroup,     ST_Centroid(geometry)
+        AS geometry   FROM osm_waterareas   WHERE name IS NOT NULL     AND type in
+        ( 'water', 'basin' )     AND geometry && !bbox!        ) AS data
+    geometry: point
+    
+  - id: area_label
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+       ( SELECT type, name, area, 'land' AS stylegroup,     ST_Centroid(geometry)
+        AS geometry   FROM osm_landusages   WHERE name IS NOT NULL     AND geometry
+        && !bbox!     AND type IN (         'cemetery', 'college', 'commercial', 'common',
+        'garden', 'golf_course',         'hospital', 'industrial', 'library', 'park',
+        'pedestrian', 'place_of_worship',         'playground', 'school', 'sports_center',
+        'stadium', 'theatre', 'university','parking' )     AND geometry && !bbox! 
+              UNION ALL    SELECT 'building' AS type, name, area, 'building' AS
+        stylegroup,     ST_Centroid(geometry) AS geometry   FROM osm_buildings   WHERE
+        name IS NOT NULL      AND geometry && !bbox!        ORDER BY area DESC )
+        AS data
+    geometry: point
+    
+  - id: motorway_label
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type, name, ref, oneway, CHAR_LENGTH(ref) AS reflen
+            FROM osm_motorways
+            WHERE type IN ('motorway', 'trunk')
+                AND (name IS NOT NULL OR ref IS NOT NULL)
+        ) AS data
+    geometry: linestring
+    
+  - id: mainroad_label
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type, name, oneway
+          FROM osm_mainroads
+          WHERE name IS NOT NULL OR oneway <> 0
+        ) AS data
+    geometry: linestring
+    
+  - id: minorroad_label
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        ( SELECT geometry, type, name, oneway
+          FROM osm_minorroads
+          WHERE name IS NOT NULL OR oneway <> 0
+        ) AS data
+    geometry: linestring
+    
+  - id: waterway_label
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+       ( SELECT geometry, type, name   FROM osm_waterways   WHERE type IN ('canal',
+        'river', 'stream')      AND name IS NOT NULL AND tunnel = 0 ) AS data
+    geometry: linestring
+    
+  - id: pistes
+    geometry: linestring
+    Datasource:
+      table: |-
+        (select type, geometry from osm_pistes_ways
+        UNION ALL
+        select type, geometry from osm_aerialways
+        ) as data
+      <<: *extents
+      <<: *imposm
+    
+  - id: nodes_downhill
+    geometry: linestring
+    Datasource:
+      table: |-
+       (select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
+        "type"='downhill'   ) as nodes
+      <<: *extents
+      <<: *imposm
+    
+  - id: nodes_downhill2
+    geometry: linestring
+    Datasource:
+      table: |-
+       (select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
+        "type"='downhill'   ) as nodes
+      <<: *extents
+      <<: *imposm
+    
+  - id: nodes_nordic
+    geometry: linestring
+    Datasource:
+      table: |-
+       (select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
+        "type"='nordic'   ) as nodes
+      <<: *extents
+      <<: *imposm
+    
+  - id: nodes_nordic2
+    geometry: linestring
+    Datasource:
+      table: |-
+       (select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
+        "type"='nordic'   ) as nodes
+      <<: *extents
+      <<: *imposm
+    
+
+  - id: countries_ne2
+    geometry: polygon
+    Datasource:
+      file: "../data/ne_shape/ne_10m_admin_0_countries.shp"
+      srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      type: shape
+    srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+    
+  - id: countries_ne
+    geometry: polygon
+    Datasource:
+      file: "../data/ne_shape/ne_10m_admin_0_countries.shp"
+      srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      type: shape
+    srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+    
+  - id: big_places_ne
+    geometry: point
+    Datasource:
+      file: "../data/ne_shape/ne_10m_populated_places_simple.shp"
+      type: shape
+      srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+    srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+    
+  - id: places_ne
+    geometry: point
+    Datasource:
+      file: "../data/ne_shape/ne_10m_populated_places_simple.shp"
+      type: shape
+      id: places_ne
+      srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+    srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+    
+
+  - id: downhill_white_overlay
+    geometry: linestring
+    Datasource:
+      table: |-
+        (select type, geometry from osm_pistes_ways where type='downhill'
+        ) as data
+      <<: *extents
+      <<: *imposm
+      id: pistes
+    
+  - id: downhill_white_overlay_area
+    geometry: linestring
+    Datasource:
+      table: |-
+        (select type, geometry from osm_pistes_area where type='downhill'
+        ) as data
+      <<: *extents
+      <<: *imposm
+      id: pistes
+    
