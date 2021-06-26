@@ -280,10 +280,33 @@ hillshade_d8.tif
     [type='cliff']{
       line-pattern-file: url(img/cliff2.png);
     }
-    /*[type='tree_row']{ 
+}
+#single_trees[zoom>=12] {
+    [type='tree_row']{ 
       line-color: @wooded;
       line-width: 2
-    }*/
+    }
+    [type='tree']{ 
+	  marker-width: 0.5;
+	  marker-height: 0.5;
+	  marker-line-width: 1.5;	  
+	  marker-fill: #9EB0CC;
+	  marker-line-color: @wooded;
+	  marker-type: ellipse;
+	  marker-allow-overlap : true;
+	  marker-placement: point;
+	  marker-ignore-placement: true;
+	  [zoom>=14]{
+	  marker-width: 3.5;
+	  marker-height: 3.5;
+	  marker-line-width: 2;	
+	  }
+	  [zoom>=16]{
+		  marker-width: 5.5;
+		  marker-height: 5.5;
+		  marker-line-width: 3;	  
+	  }
+    }
   }
 /* ---- BUILDINGS ---- */
 #buildings[zoom>12][zoom<=16] {
