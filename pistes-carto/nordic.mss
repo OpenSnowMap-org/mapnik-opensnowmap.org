@@ -186,23 +186,24 @@
         text-name:'p';
     }
 }
-#nordic-no-difficulty-no-grooming{
+#nordic-no-difficulty-no-grooming[zoom>=13]{
     opacity: 0.8;
     line-cap: round;
     line-join: round;
     line-gamma: 0.5;
     line-color: #FFFFFF;
     [zoom>=13][zoom<=14]{
-        opacity: 0.3;
+        opacity: 0;
         line-width: 1.0;
         line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
         }
     [zoom>=15]{
-        opacity: 0.7;
+        opacity: 0;
         line-width: 2.0;
         line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
         }
 }
+/*
 #nordic-eraser{
     comp-op: dst-out;
     line-cap: round;
@@ -217,6 +218,7 @@
     [zoom>=15]{line-width: 6;}
     
 }
+*/
 
 #nordic-difficulty-markers[zoom>=14]{
     shield-file: url('pics/danger-red.svg');
