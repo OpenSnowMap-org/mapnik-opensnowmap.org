@@ -195,7 +195,7 @@ opacity: 0.9;
     line-smooth: 0.2;
 }
 
-#downhill-area-eraser{
+#downhill-area-eraser[zoom>=12]{
     comp-op: dst-out;
     
     polygon-fill: #FFFFFF;
