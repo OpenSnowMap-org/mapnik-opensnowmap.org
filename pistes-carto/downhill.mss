@@ -26,21 +26,37 @@ opacity: 0.9;
     
     line-color: #FFFFFF;
         [us="1"] {
-            [difficulty="novice"]{line-color: #23CD23;}
-            [difficulty="easy"]{line-color: #23CD23;}
+            [difficulty="novice"]{line-color: #26A626;}
+            [difficulty="easy"]{line-color: #26A626;}
             [difficulty="intermediate"]{line-color: #1919DE;}
             [difficulty="advanced"]{line-color: #222222;}
             [difficulty="expert"]{line-color: #222222;}
             [difficulty="freeride"]{line-color: #FFE72D;}
+            [zoom>=9][zoom<=10]{
+            [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="easy"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="intermediate"]{line-color: lighten(desaturate(#1919DE,10%), 10%);}
+            [difficulty="advanced"]{line-color: lighten(desaturate(#222222,10%), 10%);}
+            [difficulty="expert"]{line-color: lighten(desaturate(#222222,10%), 10%);}
+            [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 10%);}
+            }
         }
     
         [us="0"] {
-            [difficulty="novice"]{line-color: #2AB62A;}
+            [difficulty="novice"]{line-color: #26A626;}
             [difficulty="easy"]{line-color: #1919DE;}
             [difficulty="intermediate"]{line-color: #E81F1F;}
             [difficulty="advanced"]{line-color: #222222;}
             [difficulty="expert"]{line-color: #FFBB2D;}
             [difficulty="freeride"]{line-color: #FFE72D;}
+            [zoom>=9][zoom<=10]{
+            [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="easy"]{line-color: lighten(desaturate(#1919DE,10%), 3%);}
+            [difficulty="intermediate"]{line-color: lighten(desaturate(#E81F1F,25%), 3%);}
+            [difficulty="advanced"]{line-color: lighten(desaturate(#222222,10%), 10%);}
+            [difficulty="expert"]{line-color: lighten(desaturate(#FFBB2D,10%), 3%);}
+            [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 3%);}
+            }
         }
 }
 
@@ -52,7 +68,7 @@ opacity: 0.9;
     line-gamma: 0.6;
     line-smooth: 0.2;
     [zoom>=9][zoom<=11]{line-width: 1;}
-    [zoom=12]{line-width: 1.5;}
+    [zoom=12]{line-width: 2.0;}
     [zoom>=13][zoom<=15]{line-width: 2.5;}
     [zoom>=16]{line-width: 2;}
 }
@@ -65,27 +81,43 @@ opacity: 0.9;
     line-smooth: 0.2;
     
     [zoom>=9][zoom<=11]{line-width: 1;}
-    [zoom=12]{line-width: 1;}
+    [zoom=12]{line-width: 1.5;}
     [zoom>=13][zoom<=15]{line-width: 2;}
     [zoom>=16]{line-width: 2.5;}
     
     line-color: #FFFFFF;
         [us="1"] {
-            [difficulty="novice"]{line-color: #23CD23;}
-            [difficulty="easy"]{line-color: #23CD23;}
+            [difficulty="novice"]{line-color: #26A626;}
+            [difficulty="easy"]{line-color: #26A626;}
             [difficulty="intermediate"]{line-color: #1919DE;}
             [difficulty="advanced"]{line-color: #222222;}
             [difficulty="expert"]{line-color: #222222;}
             [difficulty="freeride"]{line-color: #FFE72D;}
+            [zoom>=9][zoom<=10]{
+            [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="easy"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="intermediate"]{line-color: lighten(desaturate(#1919DE,10%), 10%);}
+            [difficulty="advanced"]{line-color: lighten(desaturate(#222222,10%), 10%);}
+            [difficulty="expert"]{line-color: lighten(desaturate(#222222,10%), 10%);}
+            [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 10%);}
+            }
         }
     
         [us="0"] {
-            [difficulty="novice"]{line-color: #2AB62A;}
+            [difficulty="novice"]{line-color: #26A626;}
             [difficulty="easy"]{line-color: #1919DE;}
             [difficulty="intermediate"]{line-color: #E81F1F;}
             [difficulty="advanced"]{line-color: #222222;}
             [difficulty="expert"]{line-color: #FFBB2D;}
             [difficulty="freeride"]{line-color: #FFE72D;}
+            [zoom>=9][zoom<=10]{
+            [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="easy"]{line-color: lighten(desaturate(#1919DE,10%), 3%);}
+            [difficulty="intermediate"]{line-color: lighten(desaturate(#E81F1F,25%), 3%);}
+            [difficulty="advanced"]{line-color: lighten(desaturate(#222222,10%), 10%);}
+            [difficulty="expert"]{line-color: lighten(desaturate(#FFBB2D,10%), 3%);}
+            [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 3%);}
+            }
         }
 }
 
@@ -102,8 +134,8 @@ opacity: 0.9;
     
     polygon-fill: #FFFFFF;
         [us="1"] {
-            [difficulty="novice"]{polygon-fill: #23CD23;}
-            [difficulty="easy"]{polygon-fill: #23CD23;}
+            [difficulty="novice"]{polygon-fill: #26A626;}
+            [difficulty="easy"]{polygon-fill: #26A626;}
             [difficulty="intermediate"]{polygon-fill: #1919DE;}
             [difficulty="advanced"]{polygon-fill: #222222;}
             [difficulty="expert"]{polygon-fill: #222222;}
@@ -111,7 +143,7 @@ opacity: 0.9;
         }
     
         [us="0"] {
-            [difficulty="novice"]{polygon-fill: #2AB62A;}
+            [difficulty="novice"]{polygon-fill: #26A626;}
             [difficulty="easy"]{polygon-fill: #1919DE;}
             [difficulty="intermediate"]{polygon-fill: #E81F1F;}
             [difficulty="advanced"]{polygon-fill: #222222;}
@@ -187,8 +219,8 @@ opacity: 0.9;
     line-opacity: 0.05;
     
         [us="1"] {
-            [difficulty="novice"]{line-color: #23CD23;}
-            [difficulty="easy"]{line-color: #23CD23;}
+            [difficulty="novice"]{line-color: #26A626;}
+            [difficulty="easy"]{line-color: #26A626;}
             [difficulty="intermediate"]{line-color: #1919DE;}
             [difficulty="advanced"]{line-color: #222222;}
             [difficulty="expert"]{line-color: #222222;}
@@ -196,7 +228,7 @@ opacity: 0.9;
         }
     
         [us="0"] {
-            [difficulty="novice"]{line-color: #2AB62A;}
+            [difficulty="novice"]{line-color: #26A626;}
             [difficulty="easy"]{line-color: #1919DE;}
             [difficulty="intermediate"]{line-color: #E81F1F;}
             [difficulty="advanced"]{line-color: #222222;}
@@ -220,21 +252,21 @@ opacity: 0.9;
     text-fill:#666666;
     
         [us="1"] {
-            [difficulty="novice"]{text-fill: #23CD23;}
-            [difficulty="easy"]{text-fill: #23CD23;}
+            [difficulty="novice"]{text-fill: #26A626;}
+            [difficulty="easy"]{text-fill: #26A626;}
             [difficulty="intermediate"]{text-fill: #1919DE;}
             [difficulty="advanced"]{text-fill: #222222;}
             [difficulty="expert"]{text-fill: #222222;}
-            [difficulty="freeride"]{text-fill: #887F37;text-dy: 10;}
+            [difficulty="freeride"]{text-fill: #FFE72D;}
         }
     
         [us="0"] {
-            [difficulty="novice"]{text-fill: #2AB62A;}
+            [difficulty="novice"]{text-fill: #26A626;}
             [difficulty="easy"]{text-fill: #1919DE;}
             [difficulty="intermediate"]{text-fill: #E81F1F;}
             [difficulty="advanced"]{text-fill: #222222;}
             [difficulty="expert"]{text-fill: #FFBB2D;}
-            [difficulty="freeride"]{text-fill: #887F37;text-dy: 10;}
+            [difficulty="freeride"]{text-fill: #FFE72D;}
         }
     
     [grooming='mogul']{text-dy: 10;}
