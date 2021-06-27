@@ -746,7 +746,9 @@ Layer:
     geometry: linestring
     Datasource:
       table: |-
-        (select type, geometry from osm_pistes_ways where type='downhill'
+        (select type, geometry from osm_pistes_ways 
+        where type LIKE '%downhill%'
+        and not (abandoned or abandoned2)
         ) as data
       <<: *extents
       <<: *imposm
@@ -756,7 +758,9 @@ Layer:
     geometry: linestring
     Datasource:
       table: |-
-        (select type, geometry from osm_pistes_area where type='downhill'
+        (select type, geometry from osm_pistes_area 
+        where type LIKE '%downhill%'
+        and not (abandoned or abandoned2)
         ) as data
       <<: *extents
       <<: *imposm
