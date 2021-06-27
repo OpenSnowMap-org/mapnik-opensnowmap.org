@@ -118,6 +118,28 @@ Layer:
         order by area desc) as landusages
     geometry: polygon
     
+  - id: single_trees
+    Datasource:
+      table: |-
+        (select geometry, type from osm_natural_ways where type IN ('tree_row', 'hedge')
+        union
+        select geometry, type from osm_natural_nodes where type = 'tree') as landusages
+      geometry_field: geometry
+      <<: *extents
+      <<: *imposm
+      
+  - id: reserves
+    Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
+      table: |-
+        (select geometry, type, protect_class
+        from osm_reserves
+        where protect_class in ('1', '1a', '1b', '2', '4')
+        ) as reserves
+    geometry: polygon
+    
   - id: land_features
     Datasource:
       table: |-

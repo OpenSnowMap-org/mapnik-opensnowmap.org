@@ -254,14 +254,6 @@ hillshade_d8.tif
     [type='bare_rock']{polygon-pattern-file: url(img/scree.png);polygon-pattern-opacity: 0.5;}
     [type='glacier']          { line-color: #2D2A74; line-width: 0.1;}
   }
-#landuse_overlays[type='nature_reserve'][zoom>12] {
-  line-color: darken(@wooded,25%);
-  line-opacity:  0.3;
-  line-dasharray: 1,1;
-  polygon-fill: darken(@wooded,25%);
-  polygon-opacity: 0.1;
-  [zoom>=12] { line-width: 2.0; }
-}
  
 #landuse_overlays[type='wetland']{
   [zoom>12][zoom<=14] { polygon-pattern-file:url(img/wetland.png); }
@@ -518,3 +510,18 @@ Map { background-color: @ocean; }
     marker-file: url(img/shelter.svg);
   }
 }
+#reserves[zoom>=10] {
+    ::wideline {
+      line-color: darken(#9ECCB3,25%);
+      line-width: 4;
+      line-offset: -2;
+      line-opacity:  0.2;
+    }
+    ::narrowline {
+      line-color: darken(#9ECCB3,25%);
+      line-width: 1;
+      line-dasharray: 1,1;
+      line-opacity:  0.8;
+    }
+}
+
