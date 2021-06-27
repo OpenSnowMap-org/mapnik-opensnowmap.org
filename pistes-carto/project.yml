@@ -637,6 +637,60 @@ Layer:
         minzoom: 9
         
         
+    - id: nordic-way-fadein
+      geometry: linestring
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+            (SELECT st_collect(geometry) as geometry
+            FROM
+              (SELECT 
+                geometry
+                FROM 
+                osm_pistes_ways
+                WHERE
+                piste_type like '%nordic%'
+                AND geometry && !bbox!
+                and not (abandoned1 or abandoned2)
+                AND osm_id NOT IN (
+                    SELECT member
+                    FROM osm_pistes_route_members
+                    WHERE piste_type like '%nordic%'
+                    AND geometry && !bbox!
+                )
+                
+                UNION
+                
+                SELECT 
+                geometry
+                FROM 
+                osm_pistes_area
+                WHERE
+                piste_type like '%nordic%'
+                AND geometry && !bbox!
+                and not (abandoned1 or abandoned2)
+                AND osm_id NOT IN (
+                    SELECT member
+                    FROM osm_pistes_route_members
+                    WHERE piste_type like '%nordic%'
+                    AND geometry && !bbox!
+                )
+                
+                UNION
+                
+                SELECT 
+                geometry
+                FROM 
+                pistes_routes
+                WHERE
+                piste_type like '%nordic%'
+                and not (abandoned1 or abandoned2)
+                AND geometry && !bbox!
+              ) as lines
+            ) as data
+      properties:
+        minzoom: 9
     - id: nordic-way 
       geometry: linestring
       class: nordic-way
@@ -644,57 +698,63 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-          (SELECT 
-            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+            (SELECT geometry,
+            nordic_route_offset, nordic_route_render_colour, direction_to_route,
             grooming, ST_Length(geometry) as length
-            FROM 
-            osm_pistes_ways
-            WHERE
-            piste_type like '%nordic%'
-            AND geometry && !bbox!
-            and not (abandoned1 or abandoned2)
-            AND osm_id NOT IN (
-                SELECT member
-                FROM osm_pistes_route_members
-                WHERE piste_type like '%nordic%'
+            FROM
+              (SELECT 
+                geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+                grooming
+                FROM 
+                osm_pistes_ways
+                WHERE
+                piste_type like '%nordic%'
                 AND geometry && !bbox!
-            )
-            
-            UNION
-            
-            SELECT 
-            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route,
-            grooming, ST_Length(geometry) as length
-            FROM 
-            osm_pistes_area
-            WHERE
-            piste_type like '%nordic%'
-            AND geometry && !bbox!
-            and not (abandoned1 or abandoned2)
-            AND osm_id NOT IN (
-                SELECT member
-                FROM osm_pistes_route_members
-                WHERE piste_type like '%nordic%'
+                and not (abandoned1 or abandoned2)
+                AND osm_id NOT IN (
+                    SELECT member
+                    FROM osm_pistes_route_members
+                    WHERE piste_type like '%nordic%'
+                    AND geometry && !bbox!
+                )
+                
+                UNION
+                
+                SELECT 
+                geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route,
+                grooming
+                FROM 
+                osm_pistes_area
+                WHERE
+                piste_type like '%nordic%'
                 AND geometry && !bbox!
-            )
-            
-            UNION
-            
-            SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
-            grooming, ST_Length(geometry) as length
-            FROM 
-            pistes_routes
-            WHERE
-            piste_type like '%nordic%'
-            and not (abandoned1 or abandoned2)
-            AND geometry && !bbox!
-            
+                and not (abandoned1 or abandoned2)
+                AND osm_id NOT IN (
+                    SELECT member
+                    FROM osm_pistes_route_members
+                    WHERE piste_type like '%nordic%'
+                    AND geometry && !bbox!
+                )
+                
+                UNION
+                
+                SELECT 
+                geometry, nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+                grooming
+                FROM 
+                pistes_routes
+                WHERE
+                piste_type like '%nordic%'
+                and not (abandoned1 or abandoned2)
+                AND geometry && !bbox!
+                
+                
+              ) as lines
             ORDER BY length DESC
-          ) as data
+            ) as data
       properties:
-        minzoom: 9
-        
+        minzoom: 12
+
     - id: nordic-grooming
       geometry: linestring
       <<: *extents
