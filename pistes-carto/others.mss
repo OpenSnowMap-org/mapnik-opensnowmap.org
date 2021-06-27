@@ -199,7 +199,10 @@ opacity: 0.90;
     line-color: #A6E05B;
     }
     [piste_type=~".*sled.*"]{
-        [zoom>=9][zoom<=11]{
+        [zoom=9]{
+        line-color: #AED95F;
+        }
+        [zoom>=10][zoom<=11]{
         line-color: #BAFF3A;
         }
         [zoom>=12]{
