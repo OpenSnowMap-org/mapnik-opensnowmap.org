@@ -129,7 +129,7 @@ Layer:
   - id: single_trees
     Datasource:
       table: |-
-        (select geometry, type from osm_natural_ways where type = 'tree_row'
+        (select geometry, type from osm_natural_ways where type IN ('tree_row', 'hedge')
         union
         select geometry, type from osm_natural_nodes where type = 'tree') as landusages
       geometry_field: geometry
@@ -491,13 +491,46 @@ Layer:
          WHEN type IN
             ('gate', 'spikes', 'bollard', 'lift_gate', 'kissing_gate') 
          THEN 'gate'   
-         WHEN type IN 
-           ('hedge') 
-         THEN 'hedge'  
          END AS stylegroup FROM osm_barrierways )
         AS data
     geometry: linestring
     
+  - id: power_lines
+    geometry: linestring
+    Datasource:
+      table: |-
+       (select geometry, type from osm_power_lines ) as data
+      <<: *extents
+      <<: *imposm
+        
+  - id: huts
+    geometry: point
+    Datasource:
+      table: |-
+       (SELECT geometry, 
+           CASE 
+           WHEN type IN  ('alpine_hut', 'wilderness_hut')
+           THEN 'hut'
+           ELSE 'shelter'
+           END AS type
+       FROM osm_amenities 
+       WHERE type IN ('alpine_hut', 'wilderness_hut', 'shelter')
+       AND shelter_type != 'public_transport'
+       
+       UNION
+       
+       SELECT st_centroid(geometry) as geometry,
+           CASE 
+           WHEN type IN  ('alpine_hut', 'wilderness_hut')
+           THEN 'hut'
+           ELSE 'shelter'
+           END AS type
+       FROM osm_buildings
+       WHERE type IN ('alpine_hut', 'wilderness_hut', 'shelter')
+       AND shelter_type != 'public_transport') as data
+      <<: *extents
+      <<: *imposm
+      
   - id: pistes_labels
     geometry: linestring
     Datasource:
@@ -509,7 +542,6 @@ Layer:
       <<: *imposm
       id: pistes_labels
     
-
   #~ - id: contours100_labels
     #~ geometry: linestring
     #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"

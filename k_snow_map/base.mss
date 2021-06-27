@@ -282,30 +282,48 @@ hillshade_d8.tif
     }
 }
 #single_trees[zoom>=12] {
-    [type='tree_row']{ 
+    [type='tree_row']{
+      line-join: round;
+      line-cap: round;
       line-color: @wooded;
-      line-width: 2
+      line-width: 2;
+      [zoom>=14]{
+          line-width: 5;
+      }
+      [zoom>=16]{
+          line-width: 7.5;
+      }
+    [type='tree_row'][zoom>=14]{
+      line-pattern-file: url(img/forest_lite_line.png);
+      }
+    }
+    [type='hedge'][zoom>=14]{ 
+      line-color: @wooded;
+      line-width: 2;
+      [zoom>=16]{
+          line-width: 4;
+      }
     }
     [type='tree']{ 
-	  marker-width: 0.5;
-	  marker-height: 0.5;
-	  marker-line-width: 1.5;	  
-	  marker-fill: #9EB0CC;
-	  marker-line-color: @wooded;
-	  marker-type: ellipse;
-	  marker-allow-overlap : true;
-	  marker-placement: point;
-	  marker-ignore-placement: true;
-	  [zoom>=14]{
-	  marker-width: 3.5;
-	  marker-height: 3.5;
-	  marker-line-width: 2;	
-	  }
-	  [zoom>=16]{
-		  marker-width: 5.5;
-		  marker-height: 5.5;
-		  marker-line-width: 3;	  
-	  }
+       marker-width: 0.5;
+       marker-height: 0.5;
+       marker-line-width: 1.5;       
+       marker-fill: #9EB0CC;
+       marker-line-color: @wooded;
+       marker-type: ellipse;
+       marker-allow-overlap : true;
+       marker-placement: point;
+       marker-ignore-placement: true;
+       [zoom>=14]{
+           marker-width: 3.5;
+           marker-height: 3.5;
+           marker-line-width: 2;     
+       }
+       [zoom>=16]{
+            marker-width: 5.5;
+            marker-height: 5.5;
+            marker-line-width: 3;       
+       }
     }
   }
 /* ---- BUILDINGS ---- */
@@ -323,15 +341,11 @@ hillshade_d8.tif
 // At the highest zoom levels, render buildings in fancy pseudo-3D.
 // Ordering polygons by their Y-position is necessary for this effect
 // so we use a separate layer that does this for us.
-#buildings[zoom>=17][type != 'hedge'] {
+#buildings[zoom>=17] {
   building-fill:@building;
   building-height:1.25;
 }
 
-#buildings[zoom>=17][type = 'hedge'] {
-  building-fill:@wooded;
-  building-height:1.25;
-}
 
 /* ================================================================== */
 /* WATER AREAS
@@ -480,4 +494,27 @@ Map { background-color: @ocean; }
   line-width:3;
   line-color:darken(@park,5%);
 
+}
+
+#power_lines[zoom>=14]{
+    [type='line']{
+    line-pattern-file: url(img/power_line.svg);
+    }
+    [type='minor_line']{
+    line-pattern-file: url(img/power_line_thin.svg);
+    }
+}
+#huts[zoom>=14]{
+  marker-height: 8;
+  marker-ignore-placement:true;
+  marker-line-color: #78869C;
+  [zoom>=15]{
+    marker-height: 10;
+  }
+  [type='hut']{
+    marker-file: url(img/hut.svg);
+  }
+  [type='shelter']{
+    marker-file: url(img/shelter.svg);
+  }
 }
