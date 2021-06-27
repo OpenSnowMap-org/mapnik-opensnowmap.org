@@ -1191,17 +1191,17 @@ Layer:
         <<: *imposm
         table: |-
           (
-          SELECT distinct on (geometry) 
+          SELECT distinct name,
           
           --get only the first result, even for the 3 mapping of 'les trois or 3 Vallées', snaptogrid is needed too
           
-            geometry, name, piste_type, osm_id,
+            geometry, piste_type, osm_id,
             downhill, nordic, sled, hike, snowpark, jump, playground, skitour, skat, sleigh,
             cnt
           FROM
           (
               (SELECT 
-                ST_SnapToGrid(st_centroid(geometry),3000) as geometry,
+                ST_SnapToGrid(st_centroid(geometry),4000) as geometry,
                 name as name, members_types as piste_type, osm_id,
                 members_types~'downhill' as downhill,
                 members_types~'nordic' as nordic,
@@ -1221,7 +1221,7 @@ Layer:
               
               UNION
               (SELECT 
-                ST_SnapToGrid(st_centroid(geometry),3000) as geometry,
+                ST_SnapToGrid(st_centroid(geometry),4000) as geometry,
                 name as name, members_types as piste_type, osm_id,
                 members_types~'downhill' as downhill,
                 members_types~'nordic' as nordic,
