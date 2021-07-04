@@ -121,7 +121,7 @@
         line-opacity: 1;
         }
     [grooming='skating'] {
-        line-dasharray:2.5, 10;
+        line-dasharray:0.5, 15;
         line-opacity: 1;
         }
             
@@ -162,7 +162,9 @@
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
         text-halo-radius:2;
-
+	[zoom>=15]{
+        text-size: 22;
+    }
     [grooming='classic'] {
         text-name:'b';
     }
