@@ -57,7 +57,7 @@
             line-dasharray: 1,15;
         }
     }
-    ::dash-inner[zoom>=13]{  
+    ::dash-inner[zoom>=13][grooming!="classic"]{  
         line-cap: round;
         line-join: round;
         line-color: #FFFFFF;
