@@ -236,25 +236,54 @@
 }
 
 /* ---- Other small places ------------------------------------------ */
-#place::small[type='village'][zoom>=12],
+#place::small[type='village'][zoom>=10],
 #place::small[type='suburb'][zoom>=13] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
   text-fill:@other_text;
-  text-size:10;
   text-halo-fill:@other_halo;
   text-halo-radius:1;
-  text-wrap-width: 30;
+  text-wrap-width: 40;
+  text-align: center;
   text-placement-type: "simple";
-  text-placements: "E,S,N,W";
+  text-placements: "N,S,E,W,NE,SE,NW,SW";
+  text-min-padding: 1;
+  text-label-position-tolerance: 50;
+  
+  [zoom=10] {
+    text-dx: 20;
+    text-dy: 15;
+    text-min-distance : 40;
+    text-size:9;
+  }
+  [zoom>=11] {
+    text-dx: 15;
+    text-dy: 10;
+    text-size:10;
+    text-min-distance : 30;
+  }
+  [zoom>=12] {
+    text-dx: 10;
+    text-dy: 10;
+    text-size:10;
+    text-min-distance : 7;
+  }
+  [zoom>=13] {
+    text-size:11;
+    text-dx: 20;
+    text-dy: 6;
+    text-min-distance : 4;
+  }
   [zoom>=14] {
+    text-dx: 20;
+    text-dy: 10;
     text-size:11;
     text-character-spacing: 1;
-    text-wrap-width: 40;
     text-line-spacing: 1;
   }
   [zoom>=15] {
+    text-size:12;
     text-transform: uppercase;
     text-halo-radius: 2;
     text-character-spacing: 1;
@@ -262,7 +291,6 @@
     text-line-spacing: 1;
   }
   [zoom>=16] {
-    text-size:12;
     text-character-spacing: 2;
     text-wrap-width: 120;
     text-line-spacing: 2;

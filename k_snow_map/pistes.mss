@@ -12,13 +12,19 @@
   text-fill: @red;
   text-opacity: 0;
   text-name:'[name]';
-  text-size:30;
+  text-size:15;
   text-face-name:@sans;
   text-placement:line;
-  text-spacing: 5;
+  text-spacing: 1;
   text-max-char-angle-delta: 90;
+  text-allow-overlap: true;
+  [zoom>=13]{text-size:20;}
+  [zoom>=15]{text-size:30;}
 }
 
+/*
+Low-zoom cluster effect nodes
+*/
 @piste_nodes:   0.3;
 @piste_node_line: 1;
 #nodes_nordic[zoom =8] {
@@ -190,6 +196,10 @@
   
   comp-op: color-dodge;
   }
+
+/*
+White overlay cuts below downhillpistes
+*/
 #downhill_white_overlay[zoom>=12]{
     line-cap: round;
     line-join: round;

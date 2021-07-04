@@ -557,9 +557,18 @@ Layer:
     geometry: linestring
     Datasource:
       table: |-
-       (select type, geometry, 'x' as name from osm_pistes_ways UNION ALL  select
-        type, geometry, 'xx' as name from osm_aerialways UNION ALL  select type, geometry,
-        'xx' as name from osm_pistes_area ) as data
+       (select type, geometry, 'o' as name 
+       from osm_pistes_ways 
+       Where geometry && !bbox!
+       UNION ALL  
+       select type, geometry, 'o' as name 
+       from osm_aerialways 
+       Where geometry && !bbox!
+       UNION ALL  
+       select type, geometry,'o' as name 
+       from osm_pistes_area 
+       Where geometry && !bbox!
+       ) as data
       <<: *extents
       <<: *imposm
       id: pistes_labels
@@ -609,12 +618,19 @@ Layer:
       geometry_field: geometry
       id: water_area_label
       table: |-
-       ( SELECT type, name, area, 'land' AS stylegroup,     ST_Centroid(geometry)
-        AS geometry   FROM osm_landusages   WHERE name IS NOT NULL     AND geometry
-        && !bbox!     AND type IN (         'glacier' )     AND geometry && !bbox! 
-              UNION ALL    SELECT type, name, area, 'water' AS stylegroup,     ST_Centroid(geometry)
-        AS geometry   FROM osm_waterareas   WHERE name IS NOT NULL     AND type in
-        ( 'water', 'basin' )     AND geometry && !bbox!        ) AS data
+       ( SELECT type, name, area, 'land' AS stylegroup, ST_Centroid(geometry) AS geometry   
+        FROM osm_landusages   
+        WHERE name IS NOT NULL     
+        AND geometry && !bbox!     
+        AND type IN ('glacier' )     
+        AND geometry && !bbox! 
+              UNION ALL    
+        SELECT type, name, area, 'water' AS stylegroup,     ST_Centroid(geometry) AS geometry   
+        FROM osm_waterareas   
+        WHERE name IS NOT NULL     
+        AND type in( 'water', 'basin' )     
+        AND geometry && !bbox!
+        ) AS data
     geometry: point
     
   - id: area_label
