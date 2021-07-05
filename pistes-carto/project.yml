@@ -1183,68 +1183,83 @@ Layer:
       properties:
         minzoom: 9
     - id: sites
-      geometry: polygon
+      geometry: point
+      geometry_field: "geometry"
       class: ''
       <<: *extents
       Datasource:
         <<: *imposm
         table: |-
-          (
-          SELECT distinct name,
-          
-          --get only the first result, even for the 3 mapping of 'les trois or 3 Vallées', snaptogrid is needed too
-          
+          ( SELECT name,
             geometry, piste_type, osm_id,
-            downhill, nordic, sled, hike, snowpark, jump, playground, skitour, skat, sleigh,
-            cnt
-          FROM
-          (
-              (SELECT 
-                ST_SnapToGrid(st_centroid(geometry),4000) as geometry,
-                name as name, members_types as piste_type, osm_id,
-                members_types~'downhill' as downhill,
-                members_types~'nordic' as nordic,
-                members_types~'sled' as sled,
-                members_types~'hike' as hike,
-                members_types~'snow_park' as snowpark,
-                members_types~'jump' as jump,
-                members_types~'playground' as playground,
-                members_types~'skitour' as skitour,
-                members_types~'skat' as skat,
-                members_types~'sleigh' as sleigh,
-                array_length(array(select distinct unnest(string_to_array(members_types,';'))),1) as cnt
-              FROM 
-                pistes_sites
-              WHERE geometry && !bbox!
-              )
-              
-              UNION
-              (SELECT 
-                ST_SnapToGrid(st_centroid(geometry),4000) as geometry,
-                name as name, members_types as piste_type, osm_id,
-                members_types~'downhill' as downhill,
-                members_types~'nordic' as nordic,
-                members_types~'sled' as sled,
-                members_types~'hike' as hike,
-                members_types~'snow_park' as snowpark,
-                members_types~'jump' as jump,
-                members_types~'playground' as playground,
-                members_types~'skitour' as skitour,
-                members_types~'skat' as skat,
-                members_types~'sleigh' as sleigh,
-                array_length(array(select distinct unnest(string_to_array(members_types,';'))),1) as cnt
-              FROM 
-                landuse_resorts
-              WHERE ST_Area(geometry)>500000
-              AND geometry && !bbox!
-              )
-              
-              ORDER BY cnt DESC
-              
-            ) as resorts
+            concat_ws('',t0,t1,t2,t3,t4,t5,t6,t7,t8,t9) as pic_label,
+            cnt, area
+            FROM 
+            (
+              SELECT distinct ON (name) name, 
+                geometry, piste_type, osm_id,
+                CASE WHEN downhill THEN 'A' ELSE '' END t0,
+                CASE WHEN nordic THEN 'B' ELSE '' END t1,
+                CASE WHEN sled THEN 'G' ELSE '' END t2,
+                CASE WHEN hike THEN 'J' ELSE '' END t3,
+                CASE WHEN snowpark THEN 'I' ELSE '' END t4,
+                CASE WHEN jump THEN 'E' ELSE '' END t5,
+                CASE WHEN playground THEN 'C' ELSE '' END t6,
+                CASE WHEN skitour THEN 'F' ELSE '' END t7,
+                CASE WHEN skat THEN 'D' ELSE '' END t8,
+                CASE WHEN sleigh THEN 'H' ELSE '' END t9,
+                cnt, area
+              FROM
+              (
+                  (SELECT 
+                    st_centroid(geometry) as geometry,
+                    name as name, members_types as piste_type, osm_id,
+                    members_types~'downhill' as downhill,
+                    members_types~'nordic' as nordic,
+                    members_types~'sled' as sled,
+                    members_types~'hike' as hike,
+                    members_types~'snow_park' as snowpark,
+                    members_types~'jump' as jump,
+                    members_types~'playground' as playground,
+                    members_types~'skitour' as skitour,
+                    members_types~'skat' as skat,
+                    members_types~'sleigh' as sleigh,
+                    array_length(array(select distinct unnest(string_to_array(members_types,';'))),1) as cnt,
+                    st_Area(geometry) as area
+                  FROM 
+                    pistes_sites
+                  WHERE geometry && !bbox!
+                  )
+                  
+                  UNION
+                  (SELECT 
+                    st_centroid(geometry) as geometry,
+                    name as name, members_types as piste_type, osm_id,
+                    members_types~'downhill' as downhill,
+                    members_types~'nordic' as nordic,
+                    members_types~'sled' as sled,
+                    members_types~'hike' as hike,
+                    members_types~'snow_park' as snowpark,
+                    members_types~'jump' as jump,
+                    members_types~'playground' as playground,
+                    members_types~'skitour' as skitour,
+                    members_types~'skat' as skat,
+                    members_types~'sleigh' as sleigh,
+                    array_length(array(select distinct unnest(string_to_array(members_types,';'))),1) as cnt,
+                    st_Area(geometry) as area
+                  FROM 
+                    landuse_resorts
+                  WHERE ST_Area(geometry)>500000
+                  AND geometry && !bbox!
+                  )
+                  
+                ) as resorts
+            ) as tmp
+            ORDER BY cnt DESC
           ) as data
       properties:
         minzoom: 9
+        geometry_field: "geometry"
     
     
     - id: nordic-text
