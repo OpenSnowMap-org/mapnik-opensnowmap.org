@@ -122,8 +122,10 @@ Layer:
     Datasource:
       table: |-
         (select geometry, type from osm_natural_ways where type IN ('tree_row', 'hedge')
+        and geometry && !bbox!
         union
-        select geometry, type from osm_natural_nodes where type = 'tree') as landusages
+        select geometry, type from osm_natural_nodes where type = 'tree'
+        and geometry && !bbox!) as landusages
       geometry_field: geometry
       <<: *extents
       <<: *imposm
@@ -147,67 +149,57 @@ Layer:
       geometry_field: geometry
       <<: *extents
       <<: *imposm
-    
-  - id: single_trees
-    Datasource:
-      table: |-
-        (select geometry, type from osm_natural_ways where type IN ('tree_row', 'hedge')
-        union
-        select geometry, type from osm_natural_nodes where type = 'tree') as landusages
-      geometry_field: geometry
-      <<: *extents
-      <<: *imposm
 
-  #~ - id: contours10
-    #~ geometry: linestring
-    #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    #~ Datasource:
-      #~ type: postgis
-      #~ user: mapnik
-      #~ table: |-
-       #~ (select wkb_geometry, height from contours 
-       #~ WHERE height::integer % 10 =0 
-       #~ AND  height::integer % 50 != 0 
-       #~ AND height::integer % 100 != 0) as data
-      #~ key_field: ''
-      #~ geometry_field: ''
-      #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      #~ dbname: contours
-    #~ class: ''
-    #~ srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: contours10
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select wkb_geometry, height from contours 
+       WHERE height::integer % 10 =0 
+       AND  height::integer % 50 != 0 
+       AND height::integer % 100 != 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     
-  #~ - id: contours50
-    #~ geometry: linestring
-    #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    #~ Datasource:
-      #~ type: postgis
-      #~ user: mapnik
-      #~ table: |-
-       #~ (select wkb_geometry, height from contours 
-       #~ WHERE height::integer % 50 = 0 
-       #~ AND height::integer % 100 != 0) as data
-      #~ key_field: ''
-      #~ geometry_field: ''
-      #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      #~ dbname: contours
-    #~ class: ''
-    #~ srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: contours50
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select wkb_geometry, height from contours 
+       WHERE height::integer % 50 = 0 
+       AND height::integer % 100 != 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     
-  #~ - id: contours100
-    #~ geometry: linestring
-    #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    #~ Datasource:
-      #~ type: postgis
-      #~ user: mapnik
-      #~ table: |-
-       #~ (select wkb_geometry, height from contours 
-       #~ WHERE height::integer % 100 = 0) as data
-      #~ key_field: ''
-      #~ geometry_field: ''
-      #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      #~ dbname: contours
-    #~ class: ''
-    #~ srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: contours100
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select wkb_geometry, height from contours 
+       WHERE height::integer % 100 = 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     
 
   - id: hillshade40
@@ -389,10 +381,13 @@ Layer:
             ELSE 'other' END AS stylegroup
           FROM (
             SELECT *, '1_outline' AS render FROM osm_roads WHERE tunnel = 1
+            and  geometry && !bbox!
             UNION ALL
             SELECT *, '2_line' AS render FROM osm_roads WHERE tunnel = 1
+            and  geometry && !bbox!
             UNION ALL
             SELECT *, '3_inline' AS render FROM osm_roads WHERE tunnel = 1
+            and  geometry && !bbox!
           ) AS tunnels
           ORDER BY layer ASC, render ASC
         ) AS data
@@ -477,10 +472,13 @@ Layer:
             ELSE 'other' END AS stylegroup
           FROM (
             SELECT *, '1_outline' AS render FROM osm_roads WHERE bridge = 1
+            and  geometry && !bbox!
             UNION ALL
             SELECT *, '2_line' AS render FROM osm_roads WHERE bridge = 1
+            and  geometry && !bbox!
             UNION ALL
             SELECT *, '3_inline' AS render FROM osm_roads WHERE bridge = 1
+            and  geometry && !bbox!
           ) as bridges
           ORDER BY layer ASC, render ASC
         ) AS data
@@ -538,6 +536,7 @@ Layer:
        FROM osm_amenities 
        WHERE type IN ('alpine_hut', 'wilderness_hut', 'shelter')
        AND shelter_type != 'public_transport'
+       AND geometry && !bbox!
        
        UNION
        
@@ -549,7 +548,8 @@ Layer:
            END AS type
        FROM osm_buildings
        WHERE type IN ('alpine_hut', 'wilderness_hut', 'shelter')
-       AND shelter_type != 'public_transport') as data
+       AND shelter_type != 'public_transport'
+       AND geometry && !bbox!) as data
       <<: *extents
       <<: *imposm
       
@@ -573,21 +573,21 @@ Layer:
       <<: *imposm
       id: pistes_labels
     
-  #~ - id: contours100_labels
-    #~ geometry: linestring
-    #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    #~ Datasource:
-      #~ type: postgis
-      #~ user: mapnik
-      #~ table: |-
-       #~ (select wkb_geometry, height from contours 
-       #~ WHERE height::integer % 100 = 0) as data
-      #~ key_field: ''
-      #~ geometry_field: ''
-      #~ extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      #~ dbname: contours
-    #~ class: ''
-    #~ srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+  - id: contours100_labels
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select wkb_geometry, height from contours 
+       WHERE height::integer % 100 = 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     
 
   - id: place
@@ -703,8 +703,10 @@ Layer:
     Datasource:
       table: |-
         (select type, geometry from osm_pistes_ways
+        where geometry && !bbox!
         UNION ALL
         select type, geometry from osm_aerialways
+        where geometry && !bbox!
         ) as data
       <<: *extents
       <<: *imposm
