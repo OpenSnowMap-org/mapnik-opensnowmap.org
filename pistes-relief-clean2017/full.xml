@@ -25726,34 +25726,43 @@ FF9FAF
 	</Datasource>
 </Layer>
 
-<Layer name="srtm_10" status="on">
+<Layer name="srtm_10" status="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>contours10</StyleName>
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
 		<Parameter name="dbname">contours</Parameter>
-		<Parameter name="estimate_extent">true</Parameter>
+		<Parameter name="geometry_table">contours</Parameter>
+		<Parameter name="geometry_field">wkb_geometry</Parameter>
+		<Parameter name="estimate-extent">false</Parameter>
+		<Parameter name="extent"><![CDATA[-20035282 -7554821,20034402 11753185]]></Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 10 = 0 AND height::integer % 50 != 0 AND height::integer % 100 != 0) as "contours-10"</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="srtm_50" status="on">
+<Layer name="srtm_50" status="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>contours50</StyleName>
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
 		<Parameter name="dbname">contours</Parameter>
-		<Parameter name="estimate_extent">true</Parameter>
+		<Parameter name="geometry_table">contours</Parameter>
+		<Parameter name="geometry_field">wkb_geometry</Parameter>
+		<Parameter name="estimate-extent">false</Parameter>
+		<Parameter name="extent"><![CDATA[-20035282 -7554821,20034402 11753185]]></Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 50 = 0 AND height::integer % 100 != 0) as "contours-50"</Parameter>
 	</Datasource>
 </Layer>
-<Layer name="srtm_100" status="on">
+<Layer name="srtm_100" status="on" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 	<StyleName>contours100</StyleName>
 	<StyleName>contours-text100</StyleName>
 	<Datasource>
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
 		<Parameter name="dbname">contours</Parameter>
-		<Parameter name="estimate_extent">true</Parameter>
+		<Parameter name="geometry_table">contours</Parameter>
+		<Parameter name="geometry_field">wkb_geometry</Parameter>
+		<Parameter name="estimate-extent">false</Parameter>
+		<Parameter name="extent"><![CDATA[-20035282 -7554821,20034402 11753185]]></Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 100 = 0) as "contours-100"</Parameter>
 	</Datasource>
 </Layer>
@@ -25768,7 +25777,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -25789,7 +25798,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -25809,7 +25818,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -25830,7 +25839,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -25865,7 +25874,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -25884,7 +25893,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -25904,7 +25913,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -25925,7 +25934,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -25948,7 +25957,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -25972,7 +25981,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -25992,7 +26001,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26013,7 +26022,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26036,7 +26045,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26062,7 +26071,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26083,7 +26092,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26104,7 +26113,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26125,7 +26134,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26146,7 +26155,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26169,7 +26178,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26192,7 +26201,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26212,7 +26221,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26234,7 +26243,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26256,7 +26265,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26277,7 +26286,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26299,7 +26308,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26318,7 +26327,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -26338,7 +26347,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26356,7 +26365,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26375,7 +26384,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -26395,7 +26404,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26414,7 +26423,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26433,7 +26442,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26451,7 +26460,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26483,7 +26492,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26508,7 +26517,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26536,7 +26545,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26562,7 +26571,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26584,7 +26593,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26611,7 +26620,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26630,7 +26639,7 @@ FF9FAF
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26682,7 +26691,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26715,7 +26724,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26741,7 +26750,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -26764,7 +26773,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -26791,7 +26800,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26809,7 +26818,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -26828,7 +26837,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -26847,7 +26856,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -26894,7 +26903,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
@@ -26941,7 +26950,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -26988,7 +26997,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
@@ -27035,7 +27044,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -27066,7 +27075,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -27085,7 +27094,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="table">
@@ -27103,7 +27112,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_polygon</Parameter>
@@ -27129,7 +27138,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_line</Parameter>
@@ -27176,7 +27185,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_point</Parameter>
@@ -27198,7 +27207,7 @@ Taginfo 2017
 <Parameter name="host">localhost</Parameter>
 <Parameter name="password">mapnik</Parameter>
 <Parameter name="port">5432</Parameter>
-<Parameter name="estimate-extent">true</Parameter>
+<Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
 
 
 		<Parameter name="geometry_table">planet_osm_point</Parameter>
