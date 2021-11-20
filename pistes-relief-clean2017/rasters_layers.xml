@@ -112,7 +112,10 @@
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
 		<Parameter name="dbname">contours</Parameter>
-		<Parameter name="estimate_extent">true</Parameter>
+		<Parameter name="geometry_table">contours</Parameter>
+		<Parameter name="geometry_field">wkb_geometry</Parameter>
+		<Parameter name="estimate-extent">false</Parameter>
+		<Parameter name="extent"><![CDATA[-20035282 -7554821,20034402 11753185]]></Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 10 = 0 AND height::integer % 50 != 0 AND height::integer % 100 != 0) as "contours-10"</Parameter>
 	</Datasource>
 </Layer>
@@ -122,7 +125,10 @@
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
 		<Parameter name="dbname">contours</Parameter>
-		<Parameter name="estimate_extent">true</Parameter>
+		<Parameter name="geometry_table">contours</Parameter>
+		<Parameter name="geometry_field">wkb_geometry</Parameter>
+		<Parameter name="estimate-extent">false</Parameter>
+		<Parameter name="extent"><![CDATA[-20035282 -7554821,20034402 11753185]]></Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 50 = 0 AND height::integer % 100 != 0) as "contours-50"</Parameter>
 	</Datasource>
 </Layer>
@@ -133,7 +139,10 @@
 	<Parameter name="type">postgis</Parameter>
 	<Parameter name="user">mapnik</Parameter>
 		<Parameter name="dbname">contours</Parameter>
-		<Parameter name="estimate_extent">true</Parameter>
+		<Parameter name="geometry_table">contours</Parameter>
+		<Parameter name="geometry_field">wkb_geometry</Parameter>
+		<Parameter name="estimate-extent">false</Parameter>
+		<Parameter name="extent"><![CDATA[-20035282 -7554821,20034402 11753185]]></Parameter>
 		<Parameter name="table">(select wkb_geometry,height::integer from contours WHERE height::integer % 100 = 0) as "contours-100"</Parameter>
 	</Datasource>
 </Layer>
