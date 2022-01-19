@@ -1,6 +1,9 @@
 #aerialways[zoom>=12]{
     line-pattern-file: url('pics/chair_lift_line.png');
     
+    [piste_type='rope_tow']{
+        line-pattern-file: url('pics/simple_line.png');
+    }
     [piste_type='gondola']{
         line-pattern-file: url('pics/cable_car_line.png');
     }
@@ -29,9 +32,11 @@ depending the orientation of the first and last point of the aerialway
 */
     marker-placement: 'line';
     marker-spacing: 350;
+    marker-max-error: 1;
     /* default marker size if no filter matches: */
     marker-width: 0;
     marker-height: 0;
+    marker-ignore-placement: false;
     [direction='right'] {
       [piste_type='funicular']{
           marker-file: url('pics/funicular.svg');
@@ -66,20 +71,20 @@ depending the orientation of the first and last point of the aerialway
           marker-transform:'translate(-10 -10) scale(-0.12,0.12) rotate(180)';
       }
       [piste_type='t-bar']{
-          marker-file: url('pics/drag_lift.svg');
+          marker-file: url('pics/tbar.svg');
           marker-transform:'translate(-10 -10) scale(-0.12,0.12) rotate(180)';
       }
       [piste_type='j-bar']{
-          marker-file: url('pics/drag_lift.svg');
+          marker-file: url('pics/jbar.svg');
           marker-transform:'translate(-10 -10) scale(-0.12,0.12) rotate(180)';
       }
       [piste_type='platter']{
-          marker-file: url('pics/drag_lift.svg');
+          marker-file: url('pics/platter.svg');
           marker-transform:'translate(-10 -10) scale(-0.12,0.12) rotate(180)';
       }
-      [piste_type='rope-tow']{
-          marker-file: url('pics/drag_lift.svg');
-          marker-transform:'translate(-10 -10) scale(-0.12,0.12) rotate(180)';
+      [piste_type='rope_tow']{
+          marker-file: url('pics/rope_tow.svg');
+          marker-transform:'translate(0 0) scale(-0.12,0.12) rotate(180)';
       }
     }
     /* negative scaling is used to mirror images: */
@@ -117,20 +122,20 @@ depending the orientation of the first and last point of the aerialway
           marker-transform:'translate(10 10) scale(0.12,0.12)';
       }
       [piste_type='t-bar']{
-          marker-file: url('pics/drag_lift.svg');
+          marker-file: url('pics/tbar.svg');
           marker-transform:'translate(10 10) scale(0.12,0.12)';
       }
       [piste_type='j-bar']{
-          marker-file: url('pics/drag_lift.svg');
+          marker-file: url('pics/jbar.svg');
           marker-transform:'translate(10 10) scale(0.12,0.12)';
       }
       [piste_type='platter']{
-          marker-file: url('pics/drag_lift.svg');
+          marker-file: url('pics/platter.svg');
           marker-transform:'translate(10 10) scale(0.12,0.12)';
       }
-      [piste_type='rope-tow']{
-          marker-file: url('pics/drag_lift.svg');
-          marker-transform:'translate(10 10) scale(0.12,0.12)';
+      [piste_type='rope_tow']{
+          marker-file: url('pics/rope_tow.svg');
+          marker-transform:'translate(0 0) scale(0.12,0.12)';
       }
     }
 }
