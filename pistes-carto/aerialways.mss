@@ -36,7 +36,6 @@ depending the orientation of the first and last point of the aerialway
     /* default marker size if no filter matches: */
     marker-width: 0;
     marker-height: 0;
-    marker-ignore-placement: false;
     [direction='right'] {
       [piste_type='funicular']{
           marker-file: url('pics/funicular.svg');
