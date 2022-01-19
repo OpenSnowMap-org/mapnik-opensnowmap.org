@@ -4,9 +4,9 @@ bounds: &world
     - 180
     - 85.0511
   
-center: 
-    - 6.0928
-    - 46.4319
+center:
+    - 6.3603
+    - 46.7436
     - 16
 format: png24
 interactivity: false
@@ -14,7 +14,7 @@ minzoom: 0
 maxzoom: 18
 srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
 scale: 1
-metatile: 8
+metatile: 1
 attribution: "Data © OpenStreetMap (and) contributors, OdBL; map (c) Opensnowmap.org, CC-BY-SA"
 description: ""
 name: pistes-carto
@@ -981,6 +981,7 @@ Layer:
         minzoom: 9
         
     # azimuth doesn't work anymore the same ??
+    # North = 0; Northeast = π/4; East = π/2; Southeast = 3π/4; South = π; Southwest 5π/4; West = 3π/2; Northwest = 7π/4
     - id: aerialways-icons
       geometry: linestring
       class: ''
@@ -989,12 +990,12 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-             piste_type, name,
+             piste_type, name, geometry,
             (CASE 
                 WHEN st_x(st_startpoint(geometry)) < st_x(st_endpoint(geometry))
-                THEN geometry 
-                ELSE st_reverse(geometry)
-            END) as geometry
+                THEN 'left' 
+                ELSE 'right'
+            END) as direction
           FROM 
             osm_aerialways
           WHERE 
