@@ -476,6 +476,7 @@ Layer:
                 where 
                 ( piste_type LIKE '%ice_skate%' 
                 or piste_type LIKE '%connection%' 
+                or piste_type LIKE '%fatbike%' 
                 or piste_type LIKE '%playground%' 
                 or piste_type LIKE '%sled%' 
                 or piste_type LIKE '%ski_jump%' 
@@ -491,6 +492,7 @@ Layer:
                 where 
                 ( piste_type LIKE '%ice_skate%' 
                 or piste_type LIKE '%connection%' 
+                or piste_type LIKE '%fatbike%' 
                 or piste_type LIKE '%playground%' 
                 or piste_type LIKE '%sled%' 
                 or piste_type LIKE '%ski_jump%' 
@@ -506,6 +508,7 @@ Layer:
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%connection%' 
+                or piste_type LIKE '%fatbike%' 
                 or piste_type LIKE '%ski_jump%'
                 or piste_type LIKE '%ice_skating%'
                 or piste_type LIKE '%ice_hockey%'
@@ -519,6 +522,7 @@ Layer:
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%connection%' 
+                or piste_type LIKE '%fatbike%' 
                 or piste_type LIKE '%ski_jump%'
                 or piste_type LIKE '%ice_skating%'
                 or piste_type LIKE '%ice_hockey%'

@@ -152,6 +152,15 @@ opacity: 0.95;
         line-width: 2;
         }
     }
+    [piste_type=~".*fatbike.*"][zoom>=15]{
+        line-color: #FFFFFF;
+        [zoom>=9][zoom<=11]{
+        line-width: 2;
+        }
+        [zoom>=12]{
+        line-width: 2;
+        }
+    }
     [piste_type=~".*skat.*"][zoom>=9]{
         line-color: #FFFFFF;
         line-width: 3;
@@ -213,6 +222,18 @@ opacity: 0.90;
         [zoom>=12]{
         line-width: 1.5;
         line-color: #BAFF3A;
+        }
+    }
+    [piste_type=~".*fatbike.*"]{
+        [zoom=9]{
+        line-color: #7565BC;
+        }
+        [zoom>=10][zoom<=11]{
+        line-color: #6C54D8;
+        }
+        [zoom>=12]{
+        line-width: 1.5;
+        line-color: #6C54D8;
         }
     }
     [piste_type=~".*skat.*"][zoom>=9]{
