@@ -194,6 +194,11 @@ opacity: 0.90;
     line-width: 2;
     line-color: #0F6DD3;
     }
+    [piste_type=~".*connection.*"][zoom>=15]{
+    line-width: 0.5;
+    line-dasharray: 1, 5;
+    line-color: #373737;
+    }
     [piste_type=~".*playground.*"][zoom>=15]{
     line-width: 2;
     line-color: #A6E05B;
