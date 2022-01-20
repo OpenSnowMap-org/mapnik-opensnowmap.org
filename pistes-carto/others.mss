@@ -229,11 +229,11 @@ opacity: 0.90;
         line-color: #7565BC;
         }
         [zoom>=10][zoom<=11]{
-        line-color: #6C54D8;
+        line-color: #7359E6;
         }
         [zoom>=12]{
         line-width: 1.5;
-        line-color: #6C54D8;
+        line-color: #7359E6;
         }
     }
     [piste_type=~".*skat.*"][zoom>=9]{
@@ -357,7 +357,7 @@ opacity: 0.90;
     text-allow-overlap:false;
     text-repeat-distance: 150;
     
-    [piste_type=~".*hike.*"][zoom>=13]{
+    [piste_type=~".*hike.*"][zoom>=15]{
         text-name:'j';
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#E88193;
@@ -365,7 +365,7 @@ opacity: 0.90;
         text-repeat-distance: 180;
         text-placement: point;
     }
-    [piste_type=~".*skitour.*"][zoom>=14]{
+    [piste_type=~".*skitour.*"][zoom>=15]{
         text-name:'f';
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#C42C1C;
@@ -376,7 +376,7 @@ opacity: 0.90;
         text-halo-radius:2;
         text-placement: point;
     }
-    [piste_type=~".*downhill.*"][zoom>=14]{
+    [piste_type=~".*downhill.*"][zoom>=15]{
         text-name:'f';
         text-halo-fill:rgba(255,255,255,0.5);
         text-fill:#C42C1C;
@@ -467,6 +467,18 @@ opacity: 0.90;
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
         text-halo-radius:2;
+    }
+    [piste_type=~".*fatbike.*"][zoom>=15]{
+        text-name:'r';
+        text-halo-fill:rgba(255,255,255,0.5);
+        text-fill:#7359E6;
+        text-size: 20;
+        text-dy: -10;
+        text-horizontal-alignment:'middle';
+        text-vertical-alignment:'middle';
+        text-label-position-tolerance:100;
+        text-halo-radius:2;
+        text-placement: point;
     }
     [piste_type=~".*jump.*"][zoom>=15]{
         text-name:'e';
