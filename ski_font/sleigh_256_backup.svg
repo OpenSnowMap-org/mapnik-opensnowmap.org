@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   id="svg7151"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sleigh_256.svg">
+  <defs
+     id="defs7153" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="3.3434862"
+     inkscape:cy="-73.458825"
+     inkscape:document-units="px"
+     inkscape:current-layer="g7170"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1865"
+     inkscape:window-height="1056"
+     inkscape:window-x="55"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7156">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-475.6875,-252.125)">
+    <g
+       id="g7170"
+       transform="matrix(0.30434783,0,0,0.30434783,330.51359,353.88438)">
+      <rect
+         style="opacity:0.8;fill:#003c8c;fill-opacity:1;stroke:none"
+         id="rect3020"
+         width="841.14282"
+         height="841.14282"
+         x="476.99997"
+         y="-334.35223"
+         rx="157.71428"
+         ry="157.71428"
+         inkscape:export-filename="/home/yves/Images/alpine.png"
+         inkscape:export-xdpi="2.3142858"
+         inkscape:export-ydpi="2.3142858" />
+      <path
+         sodipodi:nodetypes="ccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path6713-9-9"
+         d="m 1175.9827,16.004451 19.7866,37.802057 C 1023.0096,28.138851 888.797,6.3916512 715.52944,-15.472577 l -0.36572,-69.621028 -35.67542,0 0,282.700615 -139.57906,0 0,54.1515 c 0,0 357.66856,-2.1888 576.61016,0 191.4213,5.14633 152.405,-191.466059 75.796,-243.2932588 z"
+         style="display:inline;opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+  </g>
+</svg>
