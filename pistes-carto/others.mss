@@ -91,6 +91,7 @@
         line-join: round;
         line-gamma: 0.6;
         line-color: #C42C1C;
+        line-opacity: 0.7;
         [us="1"] {
             [difficulty="novice"]{line-color: #23CD23;}
             [difficulty="easy"]{line-color: #23CD23;}
@@ -109,7 +110,7 @@
             [difficulty="freeride"]{line-color: #FFE72D;}
         }
     
-        [zoom>=9][zoom<=11]{line-width: 1.5;line-dasharray: 1,4;}
+        [zoom>=9][zoom<=11]{line-width: 1.5;line-dasharray: 1,4;line-opacity: 0.9;}
         [zoom=12]{line-width: 4;line-dasharray: 1,9;}
         [zoom>=13][zoom<=14]{line-width: 6;line-dasharray: 1,12;}
         [zoom>=15]{line-width: 7;line-dasharray: 1,16;}
