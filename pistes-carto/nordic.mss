@@ -49,7 +49,7 @@
     line-cap: round;
     line-join: round;
     line-gamma: 0.5;
-    /*    line-color: #29B29C;*/
+
     line-color: @fadein;
     [nordic_route_render_colour != ''] {
         line-color: [nordic_route_render_colour]
@@ -133,38 +133,30 @@
         line-dasharray:9, 4.5;
         line-opacity: 1;
         }
-/*
     [grooming=''] {
-    * Taken care in #nordic-no-difficulty-no-grooming
-        line-opacity: 0.4;
-        [zoom>=13][zoom<=14]{line-width: 1.0;
-            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];}
-        [zoom>=15]{line-width: 2.0;
-            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];}
-    line-opacity: 1;}
-*/
+        [zoom>=12][zoom<=13]{line-opacity: 0.5;}
+        [zoom>=14]{line-opacity: 1;}
+        line-width: 1;
+        line-dasharray:9, 6.5;
+        
+        }
 }
 #nordic-grooming-icons[zoom>=15]{
     opacity: 0.90;
     text-name:'';
     text-face-name:'Ski Medium';
-    text-halo-radius:4;
-    text-size: 18;
     text-placement: vertex;
     text-avoid-edges: true;
     text-allow-overlap:false;
     text-repeat-distance: 300;
     text-spacing: 200;
-        text-halo-fill:rgba(255,255,255,0.4);
-        text-fill:#333333;
-        text-size: 20;
-        text-horizontal-alignment:'middle';
-        text-vertical-alignment:'middle';
-        text-label-position-tolerance:40;
-        text-halo-radius:2;
-	[zoom>=15]{
-        text-size: 22;
-    }
+    text-halo-fill:rgba(255,255,255,0.6);
+    text-fill:#333333;
+    text-horizontal-alignment:'middle';
+    text-vertical-alignment:'middle';
+    text-label-position-tolerance:40;
+    text-halo-radius:2;
+    text-size: 28;
     [grooming='classic'] {
         text-name:'b';
     }
@@ -184,43 +176,35 @@
         text-name:'o';
     }
     [grooming=''] {
-        text-size: 12;
-        text-name:'p';
+        text-name:'s';
     }
-}
-#nordic-no-difficulty-no-grooming[zoom>=13]{
-    opacity: 0.8;
-    line-cap: round;
-    line-join: round;
-    line-gamma: 0.5;
-    line-color: #FFFFFF;
-    [zoom>=13][zoom<=14]{
-        opacity: 0;
-        line-width: 1.0;
-        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
-        }
-    [zoom>=15]{
-        opacity: 0;
-        line-width: 2.0;
-        line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
-        }
-}
+    
 /*
-#nordic-eraser{
-    comp-op: dst-out;
-    line-cap: round;
-    line-join: round;
-    line-color: #FFFFFF;
-    line-gamma: 1;
-    
-    [zoom=9]{line-width: 2;}
-    [zoom=10]{line-width: 3;}
-    [zoom>=11][zoom<=12]{line-width: 3.5;}
-    [zoom>=13][zoom<=14]{line-width: 5;}
-    [zoom>=15]{line-width: 6;}
-    
-}
+    [difficulty=''] {
+      [grooming='classic'] {
+          text-name:'bp';
+      }
+      [grooming='skating'] {
+          text-name:'np';
+      }
+      [grooming='classic+skating'] {
+          text-name:'bnp';
+      }
+      [grooming='classic;skating'] {
+          text-name:'bnp';
+      }
+      [grooming='scooter'] {
+          text-name:'qp';
+      }
+      [grooming='backcountry'] {
+          text-name:'op';
+      }
+      [grooming=''] {
+          text-name:'sp';
+      }
+    }
 */
+}
 
 #nordic-difficulty-markers[zoom>=14]{
     shield-file: url('pics/danger-red.svg');
