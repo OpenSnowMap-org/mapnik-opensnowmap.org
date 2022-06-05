@@ -541,7 +541,7 @@ Layer:
                 
                 UNION
                 
-                select geometry, piste_type from osm_sport_ways 
+                select geometry, piste_type from osm_other_ways 
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%connection%' 
@@ -555,7 +555,7 @@ Layer:
                 
                 UNION
                 
-                select geometry, piste_type from osm_sport_nodes 
+                select geometry, piste_type from osm_other_nodes 
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%connection%' 
@@ -1165,7 +1165,6 @@ Layer:
         minzoom: 9
     - id: sites
       geometry: point
-      geometry_field: "geometry"
       class: ''
       <<: *extents
       Datasource:
@@ -1240,7 +1239,6 @@ Layer:
           ) as data
       properties:
         minzoom: 9
-        geometry_field: "geometry"
     
     
     - id: nordic-text
@@ -1361,7 +1359,7 @@ Layer:
                 
                 UNION
                 
-                select geometry, piste_type from osm_sport_ways 
+                select geometry, piste_type from osm_other_ways 
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%connection%' 
@@ -1375,7 +1373,7 @@ Layer:
                 
                 UNION
                 
-                select geometry, piste_type from osm_sport_nodes 
+                select geometry, piste_type from osm_other_nodes 
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%connection%' 
@@ -1386,6 +1384,37 @@ Layer:
                 or piste_type LIKE '%curling%'
                 or piste_type LIKE '%ice_stock%')
                 AND geometry && !bbox!
+                
+                ) as pistes
+      properties:
+        minzoom: 9
+    - id: amenity-icons
+      geometry: geometry
+      class: ''
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+                
+                (select geometry,'' as man_made, avalanche_transceiver from osm_other_areas 
+                where 
+                ( avalanche_transceiver is not null)
+                AND geometry && !bbox!
+                
+                UNION
+                
+                select geometry,'' as man_made, avalanche_transceiver from osm_other_ways 
+                where 
+                ( avalanche_transceiver is not null)
+                AND geometry && !bbox!
+                UNION
+                
+                select geometry, man_made, avalanche_transceiver from osm_other_nodes 
+                where 
+                ( man_made = 'snow_cannon%'
+                or avalanche_transceiver is not null)
+                AND geometry && !bbox!
+                
                 
                 ) as pistes
       properties:
@@ -1450,7 +1479,7 @@ Layer:
                 
                 select geometry, piste_type,
                 coalesce(NULLIF(name,'')) as name
-                from osm_sport_ways 
+                from osm_other_ways 
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%ski_jump%'
@@ -1464,7 +1493,7 @@ Layer:
                 
                 select geometry, piste_type,
                 coalesce(NULLIF(name,'')) as name
-                from osm_sport_nodes 
+                from osm_other_nodes 
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%ski_jump%'

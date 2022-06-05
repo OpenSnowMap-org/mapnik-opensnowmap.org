@@ -494,5 +494,24 @@ opacity: 0.90;
         text-repeat-distance: 200;
     }
 }
-
+#amenity-icons{
+      [avalanche_transceiver="training"][zoom>=14]{
+      marker-file: url('pics/avt_training.svg');
+      marker-width: 20;
+      [zoom>=16]{
+        marker-width: 24;
+      }
+    }
+    [avalanche_transceiver="checkpoint"][zoom>=14]{
+        marker-file: url('pics/avt.svg');
+        marker-width: 15;
+      [zoom>=16]{
+        marker-width: 18;
+      }
+    }
+    [man_made="snow_cannon"][zoom>=17]{
+        marker-file: url('pics/snow_cannon.svg');
+        marker-width: 10;
+    }
+}
 
