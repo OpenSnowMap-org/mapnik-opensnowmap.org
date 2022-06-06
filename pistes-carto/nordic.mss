@@ -31,20 +31,23 @@
         line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
         }
 }
-#nordic-difficulty-bg[zoom>13]{
+#nordic-difficulty-casing[zoom>13]{
     line-cap: round;
     line-join: round;
     line-color: #FDE067;
     line-gamma: 1;
+    line-opacity: 0.6;
     [zoom>13][zoom<=14]{
-        line-width: 3.5;
+        line-width: 6;
         line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
     }
     [zoom>=15]{
-        line-width: 4.5;
+        line-opacity: 0.8;
+        line-width: 6.5;
         line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
-        }
+    }
 }
+
 .nordic-way[zoom>=12]{
     line-cap: round;
     line-join: round;
@@ -134,11 +137,17 @@
         line-opacity: 1;
         }
     [grooming=''] {
-        [zoom>=12][zoom<=13]{line-opacity: 0.5;}
-        [zoom>=14]{line-opacity: 1;}
-        line-width: 1;
         line-dasharray:9, 6.5;
-        
+        [zoom>=12][zoom<=13]{line-opacity: 0.5;}
+        [zoom>=14]{line-opacity: 0.7;}
+        [zoom>=13][zoom<=14]{
+            line-width: 0.5;
+            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+            }
+        [zoom>=15]{
+            line-width: 0.8;
+            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+            }
         }
 }
 #nordic-grooming-icons[zoom>=15]{
@@ -179,8 +188,7 @@
         text-name:'s';
     }
     
-/*
-    [difficulty=''] {
+    [difficulty=''][zoom>=17] {
       [grooming='classic'] {
           text-name:'bp';
       }
@@ -203,15 +211,14 @@
           text-name:'sp';
       }
     }
-*/
 }
 
-#nordic-difficulty-markers[zoom>=14]{
+#nordic-difficulty-markers[zoom>=15]{
     shield-file: url('pics/danger-red.svg');
     [difficulty='intermediate']{shield-file: url('pics/danger-black.svg');}
     shield-placement: 'line';
-    shield-spacing: 200;
-    shield-min-distance: 50;
+    shield-spacing: 400;
+    shield-min-distance: 100;
     shield-transform: scale(0.4,0.4);
     shield-face-name:@bold-fonts;
     shield-name:'';

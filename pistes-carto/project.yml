@@ -572,60 +572,7 @@ Layer:
         minzoom: 9
         
     ## NORDIC ##
-    - id: nordic-bg
-      geometry: linestring
-      class: nordic-bg
-      <<: *extents
-      Datasource:
-        <<: *imposm
-        table: |-
-          (SELECT 
-            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
-            FROM 
-            osm_pistes_ways
-            WHERE
-            piste_type like '%nordic%'
-            AND geometry && !bbox!
-            and not (abandoned1 or abandoned2)
-            AND osm_id NOT IN (
-                SELECT member
-                FROM osm_pistes_route_members
-                WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
-            )
-            
-            UNION
-            
-            SELECT 
-            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route
-            FROM 
-            osm_pistes_area
-            WHERE
-            piste_type like '%nordic%'
-            AND geometry && !bbox!
-            and not (abandoned1 or abandoned2)
-            AND osm_id NOT IN (
-                SELECT member
-                FROM osm_pistes_route_members
-                WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
-            )
-            
-            UNION
-            
-            SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
-            FROM 
-            osm_pistes_route_members
-            WHERE
-            piste_type like '%nordic%'
-            AND geometry && !bbox!
-            and not (abandoned1 or abandoned2)
-          ) as data
-      properties:
-        minzoom: 9
-        
-    - id: nordic-difficulty-bg
+    - id: nordic-difficulty-casing
       geometry: linestring
       #~ class: nordic-bg
       <<: *extents
@@ -679,7 +626,58 @@ Layer:
           ) as data
       properties:
         minzoom: 9
-        
+    - id: nordic-bg
+      geometry: linestring
+      class: nordic-bg
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+          (SELECT 
+            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
+            FROM 
+            osm_pistes_ways
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            and not (abandoned1 or abandoned2)
+            AND osm_id NOT IN (
+                SELECT member
+                FROM osm_pistes_route_members
+                WHERE piste_type like '%nordic%'
+                AND geometry && !bbox!
+            )
+            
+            UNION
+            
+            SELECT 
+            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route
+            FROM 
+            osm_pistes_area
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            and not (abandoned1 or abandoned2)
+            AND osm_id NOT IN (
+                SELECT member
+                FROM osm_pistes_route_members
+                WHERE piste_type like '%nordic%'
+                AND geometry && !bbox!
+            )
+            
+            UNION
+            
+            SELECT 
+            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            FROM 
+            osm_pistes_route_members
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            and not (abandoned1 or abandoned2)
+          ) as data
+      properties:
+        minzoom: 9
         
     - id: nordic-way-fadein
       geometry: linestring

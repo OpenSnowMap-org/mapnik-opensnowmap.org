@@ -9775,6 +9775,76 @@ AND geometry && !bbox!
     </Datasource>
   </Layer>
 
+<Style name="nordic-difficulty-casing" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="6" offset="2.4*[nordic_route_offset]*[direction_to_route]" stroke-linecap="round" stroke-linejoin="round" stroke="#fde067" stroke-gamma="1" stroke-opacity="0.6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <LineSymbolizer stroke-opacity="0.8" stroke-width="6.5" offset="3*[nordic_route_offset]*[direction_to_route]" stroke-linecap="round" stroke-linejoin="round" stroke="#fde067" stroke-gamma="1" />
+  </Rule>
+</Style>
+<Layer name="nordic-difficulty-casing"
+  maximum-scale-denominator="1500000"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>nordic-difficulty-casing</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[pistes_imposm]]></Parameter>
+       <Parameter name="user"><![CDATA[imposm]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
+       <Parameter name="table"><![CDATA[(SELECT 
+  geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
+  FROM 
+  osm_pistes_ways
+  WHERE
+  piste_type like '%nordic%'
+  AND geometry && !bbox!
+  and not (abandoned1 or abandoned2)
+  AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
+  AND osm_id NOT IN (
+      SELECT member
+      FROM osm_pistes_route_members
+      WHERE piste_type like '%nordic%'
+      AND geometry && !bbox!
+  )
+  
+  UNION
+  
+  SELECT 
+  geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route
+  FROM 
+  osm_pistes_area
+  WHERE
+  piste_type like '%nordic%'
+  AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
+  AND geometry && !bbox!
+  and not (abandoned1 or abandoned2)
+  AND osm_id NOT IN (
+      SELECT member
+      FROM osm_pistes_route_members
+      WHERE piste_type like '%nordic%'
+      AND geometry && !bbox!
+  )
+  UNION
+  
+  SELECT 
+  geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+  FROM 
+  osm_pistes_route_members
+  WHERE
+  piste_type like '%nordic%'
+  AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
+  AND geometry && !bbox!
+  and not (abandoned1 or abandoned2)
+) as data]]></Parameter>
+    </Datasource>
+  </Layer>
+
 <Style name="nordic-bg" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
@@ -9856,76 +9926,6 @@ AND geometry && !bbox!
   osm_pistes_route_members
   WHERE
   piste_type like '%nordic%'
-  AND geometry && !bbox!
-  and not (abandoned1 or abandoned2)
-) as data]]></Parameter>
-    </Datasource>
-  </Layer>
-
-<Style name="nordic-difficulty-bg" filter-mode="first">
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="3.5" offset="2.4*[nordic_route_offset]*[direction_to_route]" stroke-linecap="round" stroke-linejoin="round" stroke="#fde067" stroke-gamma="1" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="4.5" offset="3*[nordic_route_offset]*[direction_to_route]" stroke-linecap="round" stroke-linejoin="round" stroke="#fde067" stroke-gamma="1" />
-  </Rule>
-</Style>
-<Layer name="nordic-difficulty-bg"
-  maximum-scale-denominator="1500000"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>nordic-difficulty-bg</StyleName>
-    <Datasource>
-       <Parameter name="type"><![CDATA[postgis]]></Parameter>
-       <Parameter name="dbname"><![CDATA[pistes_imposm]]></Parameter>
-       <Parameter name="user"><![CDATA[imposm]]></Parameter>
-       <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
-       <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
-       <Parameter name="table"><![CDATA[(SELECT 
-  geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
-  FROM 
-  osm_pistes_ways
-  WHERE
-  piste_type like '%nordic%'
-  AND geometry && !bbox!
-  and not (abandoned1 or abandoned2)
-  AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
-  AND osm_id NOT IN (
-      SELECT member
-      FROM osm_pistes_route_members
-      WHERE piste_type like '%nordic%'
-      AND geometry && !bbox!
-  )
-  
-  UNION
-  
-  SELECT 
-  geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route
-  FROM 
-  osm_pistes_area
-  WHERE
-  piste_type like '%nordic%'
-  AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
-  AND geometry && !bbox!
-  and not (abandoned1 or abandoned2)
-  AND osm_id NOT IN (
-      SELECT member
-      FROM osm_pistes_route_members
-      WHERE piste_type like '%nordic%'
-      AND geometry && !bbox!
-  )
-  UNION
-  
-  SELECT 
-  geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
-  FROM 
-  osm_pistes_route_members
-  WHERE
-  piste_type like '%nordic%'
-  AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
   AND geometry && !bbox!
   and not (abandoned1 or abandoned2)
 ) as data]]></Parameter>
@@ -10131,7 +10131,13 @@ ORDER BY length DESC
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([grooming] = '')</Filter>
-    <LineSymbolizer stroke-opacity="0.5" stroke-width="1.5" offset="2.4*[nordic_route_offset]*[direction_to_route]" stroke-dasharray="9, 6.5" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.5" stroke="#ffffff" />
+    <LineSymbolizer stroke-width="0.5" offset="2.4*[nordic_route_offset]*[direction_to_route]" stroke-opacity="0.5" stroke-dasharray="9, 6.5" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.5" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([grooming] = '')</Filter>
+    <LineSymbolizer stroke-width="0.5" offset="2.4*[nordic_route_offset]*[direction_to_route]" stroke-opacity="0.7" stroke-dasharray="9, 6.5" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.5" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
@@ -10140,15 +10146,9 @@ ORDER BY length DESC
     <LineSymbolizer stroke-opacity="0.5" stroke-width="1" offset="2.4*[nordic_route_offset]*[direction_to_route]" stroke-dasharray="9, 6.5" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.5" stroke="#ffffff" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([grooming] = '')</Filter>
-    <LineSymbolizer stroke-opacity="1" stroke-width="1.5" offset="2.4*[nordic_route_offset]*[direction_to_route]" stroke-dasharray="9, 6.5" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.5" stroke="#ffffff" />
-  </Rule>
-  <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([grooming] = '')</Filter>
-    <LineSymbolizer stroke-opacity="1" stroke-width="1" stroke-dasharray="9, 6.5" offset="3*[nordic_route_offset]*[direction_to_route]" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.5" stroke="#ffffff" />
+    <LineSymbolizer stroke-width="0.8" offset="3*[nordic_route_offset]*[direction_to_route]" stroke-opacity="0.7" stroke-dasharray="9, 6.5" stroke-linecap="round" stroke-linejoin="round" stroke-gamma="0.5" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
@@ -10297,13 +10297,13 @@ ORDER BY length DESC
 
 <Style name="nordic-difficulty-markers" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([difficulty] = 'intermediate')</Filter>
-    <ShieldSymbolizer file="pics/danger-black.svg" placement="line" spacing="200" minimum-distance="50" transform="scale(0.4,0.4)" fontset-name="fontset-0"><![CDATA[]]></ShieldSymbolizer>
+    <ShieldSymbolizer file="pics/danger-black.svg" placement="line" spacing="400" minimum-distance="100" transform="scale(0.4,0.4)" fontset-name="fontset-0"><![CDATA[]]></ShieldSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <ShieldSymbolizer file="pics/danger-red.svg" placement="line" spacing="200" minimum-distance="50" transform="scale(0.4,0.4)" fontset-name="fontset-0"><![CDATA[]]></ShieldSymbolizer>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <ShieldSymbolizer file="pics/danger-red.svg" placement="line" spacing="400" minimum-distance="100" transform="scale(0.4,0.4)" fontset-name="fontset-0"><![CDATA[]]></ShieldSymbolizer>
   </Rule>
 </Style>
 <Layer name="nordic-difficulty-markers"
@@ -10344,6 +10344,88 @@ ORDER BY length DESC
   </Layer>
 
 <Style name="nordic-grooming-icons" filter-mode="first" opacity="0.9">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = '')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[sp]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = '')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[s]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'backcountry')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[op]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'backcountry')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[o]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'scooter')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[qp]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'scooter')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[q]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'classic;skating')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[bnp]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'classic;skating')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[bn]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'classic+skating')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[bnp]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'classic+skating')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[bn]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'skating')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[np]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'skating')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[n]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'classic')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[bp]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([difficulty] = '') and ([grooming] = 'classic')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[b]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([difficulty] = '')</Filter>
+    <TextSymbolizer face-name="Ski Medium" placement="vertex" avoid-edges="true" allow-overlap="false" repeat-distance="300" spacing="200" halo-fill="rgba(255, 255, 255, 0.6)" fill="#333333" horizontal-alignment="middle" vertical-alignment="middle" label-position-tolerance="40" halo-radius="2" size="28"><![CDATA[]]></TextSymbolizer>
+  </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([grooming] = '')</Filter>
