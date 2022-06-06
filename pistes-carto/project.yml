@@ -842,7 +842,10 @@ Layer:
             
             SELECT 
             geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
-            grooming
+            CASE 
+              WHEN grooming='' THEN rel_grooming
+              ELSE grooming
+            END grooming
             FROM 
             osm_pistes_route_members
             WHERE
@@ -929,7 +932,11 @@ Layer:
             
             SELECT 
             geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
-            grooming, difficulty
+            CASE 
+              WHEN grooming='' THEN rel_grooming
+              ELSE grooming
+            END grooming,
+            difficulty
             FROM 
             osm_pistes_route_members
             WHERE
