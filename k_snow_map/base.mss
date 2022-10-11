@@ -209,14 +209,14 @@ hillshade_d8.tif
   [type='pitch']         { polygon-fill: @sports; }
   [type='sports_center'] { polygon-fill: @sports; }
   [type='stadium']       { polygon-fill: @sports; }
-  [type='wood']          { polygon-fill: @wooded; }
   [type='glacier']       { polygon-fill: @glacier; }
 }
 #landuse_gen0[zoom>5][zoom<=12] {
-  [type='forest']        { polygon-fill: @wooded_low; }
+  [type='forest']    { polygon-fill: @wooded_low; }
+  [type='wood']    { polygon-fill: @wooded_low; }
 }
 #landuse_gen0[zoom>=11][zoom<=12] {
-  [type='forest'] { 
+  [type='forest'],[type='wood'] { 
     polygon-smooth: 0.4;
     polygon-gamma: 0.5;
     /* line below masks the artefact between smoothed polygons*/
@@ -227,9 +227,6 @@ hillshade_d8.tif
     }
   }
 
-#landuse[zoom>12] {
-  [type='forest']        { polygon-fill: @wooded; }
-}
 #landuse[zoom>14] {
   [type='college']       { polygon-fill: @school; }
   [type='common']        { polygon-fill: @park; }
