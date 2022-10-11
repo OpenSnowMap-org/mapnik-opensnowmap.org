@@ -111,12 +111,14 @@ hillshade_2.tif
   }
 #hillshade[zoom=12]{
   raster-opacity: 0.5;
+  raster-scaling: bilinear;
   }
 /*
 hillshade_d2.tif
 */
 #hillshade11[zoom=11]{
   raster-opacity: 0.5;
+  raster-scaling: bilinear;
   }
 #hillshade11[zoom=10]{
   raster-opacity: 0.5;
