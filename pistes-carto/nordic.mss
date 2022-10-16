@@ -84,11 +84,11 @@
         }
         marker-line-color: transparent;
 */
+        marker-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
         marker-placement: line;
         marker-spacing: 300;
-        marker-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
         marker-max-error: 0;
-        marker-smooth:0.5;
+        marker-smooth:0;
         
         [oneway=1]{
             marker-transform: scale(1.1 0.7);
