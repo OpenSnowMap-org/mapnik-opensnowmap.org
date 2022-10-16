@@ -75,6 +75,29 @@
         line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
     }
 }
+#nordic-way-oneway[oneway!=0][zoom>=15]{
+        marker-file: url('pics/arrow.svg');
+/*
+        marker-fill: @fadein;
+        [nordic_route_render_colour != ''] {
+            marker-fill: [nordic_route_render_colour];
+        }
+        marker-line-color: transparent;
+*/
+        marker-placement: line;
+        marker-spacing: 300;
+        marker-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+        marker-max-error: 0;
+        marker-smooth:0.5;
+        
+        [oneway=1]{
+            marker-transform: scale(1.1 0.7);
+        }
+        [oneway=-1]{
+            marker-transform: "rotate(180) scale(1.1 0.7)";
+        }
+}
+    
 #nordic-way-fadein[zoom>=9][zoom<=12]{
     line-cap: round;
     line-join: round;
