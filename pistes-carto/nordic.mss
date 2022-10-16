@@ -31,6 +31,7 @@
         line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
         }
 }
+
 #nordic-difficulty-casing[zoom>13]{
     line-cap: round;
     line-join: round;
@@ -75,6 +76,7 @@
         line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
     }
 }
+
 #nordic-way-oneway[oneway!=0][zoom>=15]{
         marker-file: url('pics/arrow.svg');
 /*
@@ -122,6 +124,7 @@
         line-opacity: 1;
         }
 }
+
 #nordic-grooming[zoom>=12]{
     line-cap: round;
     line-join: round;
@@ -173,6 +176,7 @@
             }
         }
 }
+
 #nordic-grooming-icons[zoom>=15]{
     opacity: 0.90;
     text-name:'';
