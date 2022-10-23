@@ -155,7 +155,7 @@ Layer:
                 piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
-                
+                and difficulty not in ('')                
                 ) as pistes
       properties:
         minzoom: 9
@@ -194,6 +194,7 @@ Layer:
                 piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 )
                 ORDER BY ord DESC
                 ) as pistes
@@ -211,6 +212,7 @@ Layer:
                 where 
                 (piste_type LIKE '%downhill%' )
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 ) as pistes
       properties:
         minzoom: 9
@@ -232,6 +234,7 @@ Layer:
                 where 
                 (piste_type LIKE '%downhill%' )
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 ) as pistes
       properties:
         minzoom: 9
@@ -256,6 +259,7 @@ Layer:
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 
                 ) as pistes
       properties:
@@ -280,6 +284,7 @@ Layer:
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 
                 ) as pistes
       properties:
@@ -304,6 +309,7 @@ Layer:
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 
                 ) as pistes
       properties:
@@ -329,6 +335,7 @@ Layer:
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 
                 ) as pistes
       properties:
@@ -369,6 +376,7 @@ Layer:
                 piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 )
                 ORDER BY ord DESC
                 ) as pistes
@@ -386,6 +394,7 @@ Layer:
                 where 
                 (piste_type LIKE '%downhill%' )
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 ) as pistes
       properties:
         minzoom: 9
@@ -408,6 +417,7 @@ Layer:
                 where 
                 (piste_type LIKE '%downhill%' )
                 and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
                 ) as pistes
       properties:
         minzoom: 9
