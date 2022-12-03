@@ -98,7 +98,7 @@
             [difficulty="intermediate"]{line-color: #1919DE;}
             [difficulty="advanced"]{line-color: #222222;}
             [difficulty="expert"]{line-color: #222222;}
-            [difficulty="freeride"]{line-color: #FFE72D;}
+            [difficulty="freeride"]{line-color: #E1C90B;}
         }
     
         [us="0"] {
@@ -107,15 +107,16 @@
             [difficulty="intermediate"]{line-color: #E81F1F;}
             [difficulty="advanced"]{line-color: #222222;}
             [difficulty="expert"]{line-color: #FFBB2D;}
-            [difficulty="freeride"]{line-color: #FFE72D;}
+            [difficulty="freeride"]{line-color: #E1C90B;}
         }
     
-        [zoom>=9][zoom<=11]{line-width: 1.5;line-dasharray: 1,4;line-opacity: 0.9;}
-        [zoom=12]{line-width: 4;line-dasharray: 1,9;}
-        [zoom>=13][zoom<=14]{line-width: 6;line-dasharray: 1,12;}
-        [zoom>=15]{line-width: 7;line-dasharray: 1,16;}
+        [zoom>=9][zoom<=11]{line-width: 0.5;line-dasharray: 1,4;line-opacity: 0.9;}
+        [zoom=12]{line-width: 1;line-dasharray: 1,9;}
+        [zoom>=13][zoom<=14]{line-width: 1.5;line-dasharray: 1,12;}
+        [zoom>=15]{line-width: 2;line-dasharray: 1,24;}
+        [zoom>=16]{line-width: 2.5;line-dasharray: 1,36;}
     }
-    ::dash-inner{
+    /*::dash-inner{
         comp-op: dst-out;
         line-cap: round;
         line-join: round;
@@ -126,7 +127,7 @@
         [zoom=12]{line-width: 2.5;line-dasharray: 1,9;}
         [zoom>=13][zoom<=14]{line-width: 4.5;line-dasharray: 1,12;}
         [zoom>=15]{line-width: 5.5;line-dasharray: 1,16;}
-    }
+    }*/
 }
 #various-ways::bg{
 opacity: 0.95;
