@@ -4,10 +4,18 @@ bounds: &world
     - 180
     - 85.0511
   
+#Kosmtik config:
 center:
     - 6.3603
     - 46.7436
     - 16
+overlay:
+    url: 'http://tiles.opensnowmap.org/base_snow_map/{z}/{x}/{y}.png?debug1'
+    active: true
+    opacity: 1
+    position: -1
+compareUrl: 'http://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png?debug1'
+    
 format: png24
 interactivity: false
 minzoom: 0
