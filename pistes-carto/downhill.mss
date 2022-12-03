@@ -65,7 +65,7 @@
   [grooming="backcountry"] {
     
     ::dash{  
-        line-cap: round;
+        line-cap: square;
         line-join: round;
         line-gamma: 0.6;
         line-color: #C42C1C;
@@ -76,7 +76,7 @@
             [difficulty="intermediate"]{line-color: #1919DE;}
             [difficulty="advanced"]{line-color: #262121;}
             [difficulty="expert"]{line-color: #262121;}
-            [difficulty="freeride"]{line-color: #E1C90B;}
+            [difficulty="freeride"]{line-color: #D2C700;line-opacity: 0.9;}
         }
     
         [us="0"] {
@@ -84,26 +84,33 @@
             [difficulty="easy"]{line-color: #1919DE;}
             [difficulty="intermediate"]{line-color: #E81F1F;}
             [difficulty="advanced"]{line-color: #262121;}
-            [difficulty="expert"]{line-color: #FFBB2D;}
-            [difficulty="freeride"]{line-color: #E1C90B;}
+            [difficulty="expert"]{line-color: #FFAB2D;line-opacity: 0.9;}
+            [difficulty="freeride"]{line-color: #D2C700;line-opacity: 0.9;}
         }
     
-        [zoom>=9][zoom<=11]{line-width: 1.5;line-dasharray: 1,4;line-opacity: 0.9;}
+        /*[zoom>=9][zoom<=11]{line-width: 1.5;line-dasharray: 1,4;line-opacity: 0.9;}
         [zoom=12]{line-width: 4;line-dasharray: 1,9;}
         [zoom>=13][zoom<=14]{line-width: 6;line-dasharray: 1,12;}
         [zoom>=15]{line-width: 7;line-dasharray: 1,16;}
+        */
+    
+        [zoom>=9][zoom<=11]{line-width: 1.5;line-dasharray: 1,4;line-opacity: 0.9;}
+        [zoom=12]{line-width: 3;line-dasharray: 6,9;}
+        [zoom>=13][zoom<=14]{line-width: 5;line-dasharray: 9,14;}
+        [zoom>=15]{line-width: 7;line-dasharray: 10,20;}
     }
     ::dash-inner{
         comp-op: dst-out;
-        line-cap: round;
+        line-cap: square;
         line-join: round;
         line-color: #FFFFFF;
         line-gamma: 0.6;
+        line-opacity: 0.9;
 
         [zoom>=9][zoom<=11]{line-width: 0.8;line-dasharray: 1,4;}
-        [zoom=12]{line-width: 2.5;line-dasharray: 1,9;}
-        [zoom>=13][zoom<=14]{line-width: 4.5;line-dasharray: 1,12;}
-        [zoom>=15]{line-width: 5.5;line-dasharray: 1,16;}
+        [zoom=12]{line-width: 2;line-dasharray: 6,9;}
+        [zoom>=13][zoom<=14]{line-width: 3.5;line-dasharray: 9,14;}
+        [zoom>=15]{line-width: 5;line-dasharray: 10,20;}
     }
   }
 }
@@ -292,12 +299,13 @@ opacity: 0.9;
     text-name:'[pistename]';
     text-face-name:@book-fonts;
     text-halo-radius:1;
-    text-size: 10;
+    text-size: 11;
     text-placement: point;
     text-avoid-edges: true;
     text-allow-overlap:false;
     text-wrap-width: 25;
     text-spacing: 10000;
+    text-repeat-distance: 200;
     
     text-halo-fill:#DFE9F0;
     text-fill:#666666;
@@ -308,7 +316,7 @@ opacity: 0.9;
             [difficulty="intermediate"]{text-fill: #1919DE;}
             [difficulty="advanced"]{text-fill: #262121;}
             [difficulty="expert"]{text-fill: #262121;}
-            [difficulty="freeride"]{text-fill: #FFE72D;}
+            [difficulty="freeride"]{text-fill: #A68000;text-halo-fill:#FFFFFF;}
         }
     
         [us="0"] {
@@ -316,8 +324,8 @@ opacity: 0.9;
             [difficulty="easy"]{text-fill: #1919DE;}
             [difficulty="intermediate"]{text-fill: #E81F1F;}
             [difficulty="advanced"]{text-fill: #262121;}
-            [difficulty="expert"]{text-fill: #FFBB2D;}
-            [difficulty="freeride"]{text-fill: #FFE72D;}
+            [difficulty="expert"]{text-fill: #A68000;text-halo-fill:#FFFFFF;}
+            [difficulty="freeride"]{text-fill: #A68000;text-halo-fill:#FFFFFF;}
         }
     
     [grooming='mogul']{text-dy: 10;}
@@ -353,12 +361,16 @@ opacity: 0.9;
 #downhill-icons[zoom>=14]{
     
     [difficulty='freeride']{
+        shield-opacity: 0.75;
         shield-placement: 'line';
         shield-spacing: 400;
+        shield-min-distance: 200;
         shield-face-name:@bold-fonts;
         shield-name:'';
         shield-allow-overlap: false;
-        shield-label-position-tolerance: 200;
+/*
+        shield-label-position-tolerance: 20;
+*/
         shield-transform: scale(0.4,0.4);
         shield-file: url('pics/danger-red.svg');
     }

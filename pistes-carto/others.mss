@@ -378,17 +378,6 @@ opacity: 0.90;
         text-halo-radius:2;
         text-placement: point;
     }
-    [piste_type=~".*downhill.*"][zoom>=15]{
-        text-name:'f';
-        text-halo-fill:rgba(255,255,255,0.5);
-        text-fill:#C42C1C;
-        text-size: 20;
-        text-horizontal-alignment:'middle';
-        text-vertical-alignment:'middle';
-        text-label-position-tolerance:40;
-        text-halo-radius:2;
-        text-placement: point;
-    }
     [piste_type=~".*snow_park.*"][zoom>=15]{
         text-repeat-distance: 50;
         text-name:'i';

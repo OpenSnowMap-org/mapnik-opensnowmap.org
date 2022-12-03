@@ -140,6 +140,7 @@ Layer:
                 ) as pistes
       properties:
         minzoom: 9
+
     ## DOWNHILL ##
     - id: downhill-bg
       geometry: linestring
@@ -184,7 +185,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
+        table: &downhill_sql |-
                 (
                 (select 0 as ord, geometry, difficulty, 
                 (case
@@ -208,7 +209,9 @@ Layer:
                 
                 (select 1 as ord, geometry, difficulty, 
                 (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
+                    when difficulty in ('freeride') 
+                     and not grooming in ('classic') 
+                     and not rel_grooming in ('classic')
                     then 'backcountry'
                     else grooming
                 end ) as grooming ,
@@ -217,7 +220,7 @@ Layer:
                     then '0' 
                     else '1' 
                 end) as us
-                from pistes_routes
+                from osm_pistes_route_members
                 where 
                 piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
@@ -435,48 +438,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (
-                (select 0 as ord, geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming ,
-                (case 
-                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
-                    then '0' 
-                    else '1' 
-                end) as us
-                from osm_pistes_ways
-                where 
-                piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                )
-                
-                UNION
-                
-                (select 1 as ord, geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming ,
-                (case 
-                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
-                    then '0' 
-                    else '1' 
-                end) as us
-                from pistes_routes
-                where 
-                piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                )
-                ORDER BY ord DESC
-                ) as pistes
+        table: *downhill_sql 
       properties:
         minzoom: 9
         
@@ -536,47 +498,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (
-                (select 0 as ord, geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming ,
-                (case 
-                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
-                    then '0' 
-                    else '1' 
-                end) as us
-                from osm_pistes_ways
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                )
-                
-                UNION
-                
-                (select 1 as ord, geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming ,
-                (case 
-                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
-                    then '0' 
-                    else '1' 
-                end) as us
-                from pistes_routes
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                )
-                ORDER BY ord DESC
-                ) as pistes
+        table: *downhill_sql 
       properties:
         minzoom: 9
         
