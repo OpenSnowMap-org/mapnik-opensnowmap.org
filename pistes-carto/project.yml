@@ -148,7 +148,12 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming 
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming 
                 from osm_pistes_ways
                 where 
                 (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
@@ -157,7 +162,12 @@ Layer:
                 
                 UNION
                 
-                select geometry, difficulty, grooming 
+                select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming 
                 from pistes_routes
                 where 
                 piste_type LIKE '%downhill%'
@@ -176,7 +186,12 @@ Layer:
         <<: *imposm
         table: |-
                 (
-                (select 0 as ord, geometry, difficulty, grooming ,
+                (select 0 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -191,7 +206,12 @@ Layer:
                 
                 UNION
                 
-                (select 1 as ord, geometry, difficulty, grooming ,
+                (select 1 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -216,7 +236,13 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming from osm_pistes_area 
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                from osm_pistes_area 
                 where 
                 (piste_type LIKE '%downhill%' )
                 and not (abandoned1 or abandoned2)
@@ -232,7 +258,12 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming ,
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -254,7 +285,13 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming from osm_pistes_ways 
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from osm_pistes_ways 
                 where 
                 piste_type LIKE '%downhill%'
                 AND geometry && !bbox!
@@ -262,7 +299,13 @@ Layer:
                 
                 UNION
                 
-                select geometry, difficulty, grooming from pistes_routes 
+                select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from pistes_routes 
                 where 
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
@@ -279,7 +322,13 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming from osm_pistes_ways 
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from osm_pistes_ways 
                 where 
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
@@ -287,7 +336,13 @@ Layer:
                 
                 UNION
                 
-                select geometry, difficulty, grooming from pistes_routes 
+                select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from pistes_routes 
                 where 
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
@@ -304,7 +359,13 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming from osm_pistes_ways 
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from osm_pistes_ways 
                 where 
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
@@ -312,7 +373,13 @@ Layer:
                 
                 UNION
                 
-                select geometry, difficulty, grooming from pistes_routes 
+                select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from pistes_routes 
                 where 
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
@@ -330,7 +397,13 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming from osm_pistes_ways 
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from osm_pistes_ways 
                 where 
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
@@ -338,7 +411,13 @@ Layer:
                 
                 UNION
                 
-                select geometry, difficulty, grooming from pistes_routes 
+                select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from pistes_routes 
                 where 
                 (piste_type LIKE '%downhill%' )
                 AND geometry && !bbox!
@@ -358,7 +437,12 @@ Layer:
         <<: *imposm
         table: |-
                 (
-                (select 0 as ord, geometry, difficulty, grooming ,
+                (select 0 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -373,7 +457,12 @@ Layer:
                 
                 UNION
                 
-                (select 1 as ord, geometry, difficulty, grooming ,
+                (select 1 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -398,7 +487,13 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming from osm_pistes_area 
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming
+                 from osm_pistes_area 
                 where 
                 (piste_type LIKE '%downhill%' )
                 and not (abandoned1 or abandoned2)
@@ -415,7 +510,12 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming ,
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -438,7 +538,12 @@ Layer:
         <<: *imposm
         table: |-
                 (
-                (select 0 as ord, geometry, difficulty, grooming ,
+                (select 0 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -453,7 +558,12 @@ Layer:
                 
                 UNION
                 
-                (select 1 as ord, geometry, difficulty, grooming ,
+                (select 1 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride') and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
