@@ -84,14 +84,33 @@
     [zoom>=13][zoom<=14]{line-width: 6.5;}
     [zoom>=15]{line-width: 8;}
 }
-.skitour[zoom>=9]{
-    opacity: 0.95;
+.skitour[zoom>=11]{
+    opacity: 0.75;
+    ::dash_halo{
+        line-cap: round;
+        line-join: round;
+        line-gamma: 0.1;
+        line-color: #FFFFFF;
+        line-opacity: 1;
+    
+        [zoom>=9]{line-width: 0.6;line-opacity: 0.9;}
+        [zoom=12]{line-width: 1;}
+        [zoom>=13]{line-width: 2;}
+        [zoom>=15]{line-width: 4;}
+        [zoom>=16]{line-width: 6;}
+        
+        [zoom>=9]{line-dasharray: 1,8;}
+        [zoom=12]{line-dasharray: 1,12;}
+        [zoom>=13]{line-dasharray: 1,18;}
+        [zoom>=15]{line-dasharray: 1,24;}
+        [zoom>=16]{line-dasharray: 1,36;}
+    }
     ::dash{  
         line-cap: round;
         line-join: round;
-        line-gamma: 0.6;
+        line-gamma: 0.1;
         line-color: #C42C1C;
-        line-opacity: 0.7;
+        line-opacity: 1;
         [us="1"] {
             [difficulty="novice"]{line-color: #23CD23;}
             [difficulty="easy"]{line-color: #23CD23;}
@@ -110,24 +129,18 @@
             [difficulty="freeride"]{line-color: #E1C90B;}
         }
     
-        [zoom>=9][zoom<=11]{line-width: 0.5;line-dasharray: 1,4;line-opacity: 0.9;}
-        [zoom=12]{line-width: 1;line-dasharray: 1,9;}
-        [zoom>=13][zoom<=14]{line-width: 1.5;line-dasharray: 1,12;}
-        [zoom>=15]{line-width: 2;line-dasharray: 1,24;}
-        [zoom>=16]{line-width: 2.5;line-dasharray: 1,36;}
+        [zoom>=9]{line-width: 0.3;line-opacity: 0.9;}
+        [zoom=12]{line-width: 0.4;}
+        [zoom>=13]{line-width: 1.0;}
+        [zoom>=15]{line-width: 2.5;}
+        [zoom>=16]{line-width: 3.5;}
+        
+        [zoom>=9]{line-dasharray: 1,8;}
+        [zoom=12]{line-dasharray: 1,12;}
+        [zoom>=13]{line-dasharray: 1,18;}
+        [zoom>=15]{line-dasharray: 1,24;}
+        [zoom>=16]{line-dasharray: 1,36;}
     }
-    /*::dash-inner{
-        comp-op: dst-out;
-        line-cap: round;
-        line-join: round;
-        line-color: #FFFFFF;
-        line-gamma: 0.6;
-
-        [zoom>=9][zoom<=11]{line-width: 0.8;line-dasharray: 1,4;}
-        [zoom=12]{line-width: 2.5;line-dasharray: 1,9;}
-        [zoom>=13][zoom<=14]{line-width: 4.5;line-dasharray: 1,12;}
-        [zoom>=15]{line-width: 5.5;line-dasharray: 1,16;}
-    }*/
 }
 #various-ways::bg{
 opacity: 0.95;
@@ -370,8 +383,8 @@ opacity: 0.90;
     [piste_type=~".*skitour.*"][zoom>=15]{
         text-name:'f';
         text-halo-fill:rgba(255,255,255,0.5);
-        text-fill:#C42C1C;
-        text-size: 20;
+        text-fill:#000000;
+        text-size: 22;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
@@ -383,7 +396,7 @@ opacity: 0.90;
         text-name:'i';
         text-halo-fill:rgba(0,116,243,0.3);
         text-fill:#000000;
-        text-size: 20;
+        text-size: 22;
         text-horizontal-alignment:'middle';
         text-vertical-alignment:'middle';
         text-label-position-tolerance:40;
