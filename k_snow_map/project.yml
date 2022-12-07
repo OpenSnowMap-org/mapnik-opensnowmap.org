@@ -3,10 +3,18 @@ bounds:
     - -85.0511
     - 180
     - 85.0511
-center: 
-    - 6.0928
-    - 46.4319
+    
+#Kosmtik config:
+center:
+    - 6.3603
+    - 46.7436
     - 16
+overlay:
+    url: 'http://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png?debug1'
+    active: true
+    opacity: 1
+    position: -1
+compareUrl: 'http://tiles.opensnowmap.org/base_snow_map/{z}/{x}/{y}.png?debug1'
     
 format: png24
 interactivity: false
@@ -18,13 +26,6 @@ metatile: 4
 attribution: "Data © OpenStreetMap (and) contributors, OdBL; map (c) Opensnowmap.org, CC-BY-SA"
 description: ""
 name: Snow_Map
-
-overlay:
-    url: 'http://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png?'
-    #~ url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-    active: true
-    opacity: 1
-    position: 1
 
 Stylesheet:
 - palette.mss
