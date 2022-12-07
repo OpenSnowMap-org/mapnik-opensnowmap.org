@@ -198,28 +198,22 @@ Low-zoom cluster effect nodes
   }
 
 /*
-White overlay cuts below downhillpistes
+White overlay cuts below downhill pistes
 */
 #downhill_white_overlay[zoom>=12]{
+    opacity: 0.3;
+    
     line-cap: round;
     line-join: round;
     line-color: #FFFFFF;
-    line-opacity: 0.5;
     image-filters: agg-stack-blur(1,1);
-    line-smooth: 0.5;
-  [zoom=12] {line-width: 6;}
-  [zoom>=13] {line-width: 8;}
-  [zoom>=16] {line-width: 10;}
+    
+    [zoom=12] {line-width: 6;}
+    [zoom>=13] {line-width: 8;}
+    [zoom>=16] {line-width: 10;}
+    
+    ["mapnik::geometry_type"=polygon]{polygon-fill: #FFFFFF;}
 }
-#downhill_white_overlay_area[zoom>=12]{
-    image-filters: agg-stack-blur(1,1);
-    line-smooth: 0.5;
-    polygon-fill: #FFFFFF;
-    polygon-opacity: 0.2;
-    line-opacity: 0;
-    line-width: 1;
-    line-color: #FFFFFF;
 
-}
 
 
