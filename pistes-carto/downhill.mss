@@ -4,7 +4,6 @@
 		line-join: round;
 		line-color: #FFFFFF;
 		line-gamma: 0.6;
-		line-smooth: 0.2;
 		
 		[zoom>=9][zoom<=11]{line-width: 2.5;}
 		[zoom=12]{line-width: 4.5;}
@@ -19,12 +18,11 @@
     line-cap: round;
     line-join: round;
     line-gamma: 0.6;
-    line-smooth: 0.2;
     
     [zoom>=9][zoom<=11]{line-width: 2;}
     [zoom=12]{line-width: 4;}
     [zoom>=13][zoom<=15]{line-width: 6;}
-    [zoom>=16]{line-width: 7.5;}
+    [zoom>=16]{line-width: 7.55;}
     
     line-color: #FFFFFF;
     /* Note: "freeride" is cast to "backcountry" in SQL*/
@@ -41,7 +39,7 @@
 		[difficulty="intermediate"]{line-color: lighten(desaturate(#1919DE,10%), 10%);}
 		[difficulty="advanced"]{line-color: lighten(desaturate(#262121,10%), 10%);}
 		[difficulty="expert"]{line-color: lighten(desaturate(#262121,10%), 10%);}
-		[difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 10%);}
+		[difficulty="freeride"]{line-color: lighten(desaturate(#E1C90B,10%), 10%);}
 		}
 	}
 
@@ -63,9 +61,42 @@
 	}
   }
 }
-#downhill-casing-backcountry[zoom>=11]{
-  [grooming="backcountry"] {
+
+#downhill-casing-backcountry[zoom>=11][grooming="backcountry"][official=false]{
+   
+        line-cap: square;
+        line-join: round;
+        line-gamma: 0.6;
+        line-color: #C42C1C;
+        line-opacity: 0.7;
+        [us="1"] {
+            [difficulty="novice"]{line-color: #23CD23;}
+            [difficulty="easy"]{line-color: #23CD23;}
+            [difficulty="intermediate"]{line-color: #1919DE;}
+            [difficulty="advanced"]{line-color: #262121;}
+            [difficulty="expert"]{line-color: #262121;}
+            [difficulty="freeride"]{line-color: #D2C700;line-opacity: 0.9;}
+        }
     
+        [us="0"] {
+            [difficulty="novice"]{line-color: #2AB62A;}
+            [difficulty="easy"]{line-color: #1919DE;}
+            [difficulty="intermediate"]{line-color: #E81F1F;}
+            [difficulty="advanced"]{line-color: #262121;}
+            [difficulty="expert"]{line-color: #FFAB2D;line-opacity: 0.9;}
+            [difficulty="freeride"]{line-color: #D2C700;line-opacity: 0.9;}
+        }
+    
+        [zoom>=9][zoom<=11]{line-width: 0.25;line-dasharray: 1,4;line-opacity: 0.9;}
+        [zoom=12]{line-width: 0.25;line-dasharray: 6,9;}
+        [zoom>=13][zoom<=14]{line-width: 0.75;line-dasharray: 9,12;}
+        [zoom>=15]{line-width: 1.0;line-dasharray: 10,18;}
+  
+}
+
+
+#downhill-casing-backcountry[zoom>=11][grooming="backcountry"][official=true]{
+/*  Rendering for 'Official' pistes (patrolled=yes, operator=*)  */
     ::dash{  
         line-cap: square;
         line-join: round;
@@ -95,7 +126,7 @@
         [zoom>=13][zoom<=14]{line-width: 4;line-dasharray: 9,12;}
         [zoom>=15]{line-width: 6;line-dasharray: 10,18;}
     }
-    ::dash-inner{
+    ::inner{
         comp-op: dst-out;
         line-cap: square;
         line-join: round;
@@ -108,15 +139,14 @@
         [zoom>=13][zoom<=14]{line-width: 2.5;line-dasharray: 9,12;}
         [zoom>=15]{line-width: 4.5;line-dasharray: 10,18;}
     }
-  }
+  
 }
 
-#downhill-area-bg{ /* white bg for aliasing*/
+#downhill-area-bg[grooming!="backcountry"]{ /* white bg for aliasing*/
     line-cap: round;
     line-join: round;
     line-color: #FFFFFF;
     line-gamma: 0.6;
-    line-smooth: 0.2;
     [zoom>=9][zoom<=11]{line-width: 1;}
     [zoom=12]{line-width: 2.0;}
     [zoom>=13][zoom<=15]{line-width: 2.5;}
@@ -125,19 +155,15 @@
 
 #downhill-area-casing{
 opacity: 0.9;
+[grooming!="backcountry"]{
     line-cap: round;
     line-join: round;
     line-gamma: 0.6;
-    line-smooth: 0.2;
     
     [zoom>=9][zoom<=11]{line-width: 1;}
     [zoom=12]{line-width: 1.5;}
     [zoom>=13][zoom<=15]{line-width: 2;}
     [zoom>=16]{line-width: 2.5;}
-    [grooming="backcountry"] {
-      [zoom>=13][zoom<=15]{line-width: 2;line-dasharray: 15, 5;}
-      [zoom>=16]{line-width: 2.5;line-dasharray: 20, 8;}
-    }
     
     line-color: #FFFFFF;
         [us="1"] {
@@ -173,17 +199,16 @@ opacity: 0.9;
             [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 3%);}
             }
         }
+    }
 }
 
-#downhill-area-fill[zoom>=12]{
+#downhill-area-fill[grooming!="backcountry"][zoom>=12]{
 opacity: 0.9;
     
     [zoom=12]{polygon-opacity: 0.4; polygon-gamma: 1;}
     [zoom>=13][zoom<=15]{polygon-opacity: 0.2; polygon-gamma: 0.6; 
-    polygon-smooth:0.2;
     }
     [zoom>=16]{polygon-opacity: 0.12;polygon-gamma: 1; 
-    polygon-smooth:0.2;
     }
     
     polygon-fill: #FFFFFF;
@@ -204,6 +229,39 @@ opacity: 0.9;
             [difficulty="expert"]{polygon-fill: #FFBB2D;}
             [difficulty="freeride"]{polygon-fill: #FFE72D;}
         }
+}
+
+#downhill-area-fill-pattern-backcountry[zoom>=14]{
+    ::color{
+		[zoom>=14]{polygon-opacity: 0.2; polygon-gamma: 0.6;}
+		[zoom>=15]{polygon-opacity: 0.25;polygon-gamma: 1;}
+		polygon-fill: #FFFFFF;
+			[us="1"] {
+				[difficulty="novice"]{polygon-fill: #26A626;}
+				[difficulty="easy"]{polygon-fill: #26A626;}
+				[difficulty="intermediate"]{polygon-fill: #1919DE;}
+				[difficulty="advanced"]{polygon-fill: #262121;}
+				[difficulty="expert"]{polygon-fill: #262121;}
+				[difficulty="freeride"]{polygon-fill: #D2C700;polygon-opacity: 0.5;}
+			}
+		
+			[us="0"] {
+				[difficulty="novice"]{polygon-fill: #26A626;}
+				[difficulty="easy"]{polygon-fill: #1919DE;}
+				[difficulty="intermediate"]{polygon-fill: #E81F1F;}
+				[difficulty="advanced"]{polygon-fill: #262121;}
+				[difficulty="expert"]{polygon-fill: #FFBB2D;polygon-opacity: 0.5;}
+				[difficulty="freeride"]{polygon-fill: #D2C700;polygon-opacity: 0.5;}
+			}
+    }
+	::pattern{
+		polygon-pattern-comp-op: dst-in;
+		polygon-pattern-file: url('pics/polka_dot_spaced.svg');
+		
+		[zoom>=14]{polygon-pattern-transform: scale(1);}
+		[zoom>=15]{polygon-pattern-transform: scale(1.75);polygon-pattern-file: url('pics/polka_dot_small_spaced.svg');}
+		[zoom>=16]{polygon-pattern-transform: scale(3.0);}
+		}
 }
 /*Overlay erasers */
 #downhill-overlay-eraser1[zoom>=9][zoom<=11]{
@@ -235,7 +293,6 @@ opacity: 0.9;
     line-join: round;
     line-gamma: 0.6;
     line-width: 4;
-    line-smooth: 0.2;
 }
 #downhill-overlay-eraser4[zoom>=16]{
     comp-op: dst-out;
@@ -246,31 +303,27 @@ opacity: 0.9;
     line-join: round;
     line-gamma: 0.6;
     line-width: 5;
-    line-smooth: 0.2;
 }
 
-#downhill-area-eraser[zoom>=12]{
+#downhill-area-eraser[grooming!="backcountry"][zoom>=12]{
     comp-op: dst-out;
     
     polygon-fill: #FFFFFF;
     [zoom=12]{polygon-opacity: 1; polygon-gamma: 0.6;}
     [zoom>=13][zoom<=15]{polygon-opacity: 1; polygon-gamma: 0.6; 
-    polygon-smooth:0.2;
     }
     [zoom>=16]{polygon-opacity: 1; polygon-gamma: 1; 
-    polygon-smooth:0.2;
     }
 
 }
 
-#downhill-overlay-thin[zoom>=15]{
+#downhill-overlay-thin[zoom>=15][grooming!="backcountry"]{
     line-cap: round;
     line-join: round;
     line-gamma: 0.6;
-    line-smooth: 0.2;
     line-width: 3;
     line-color: #FFFFFF;
-    line-opacity: 0.07;
+    line-opacity: 0.12;
     
         [us="1"] {
             [difficulty="novice"]{line-color: #26A626;}

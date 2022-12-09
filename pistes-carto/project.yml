@@ -142,44 +142,40 @@ Layer:
         minzoom: 9
 
     ## DOWNHILL ##
-    - id: downhill-bg
+    - id: downhill-area-fill-pattern-backcountry
       geometry: linestring
       class: ''
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
+        table: &downhill_area_sql |-
                 (select geometry, difficulty, 
                 (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
+                    when difficulty in ('freeride', 'extreme') 
+                      and not grooming in ('classic')
                     then 'backcountry'
                     else grooming
-                end ) as grooming 
-                from osm_pistes_ways
-                where 
-                (piste_type LIKE '%downhill%' and (grooming not in ('backcountry') or grooming is null))
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                
-                UNION
-                
-                select geometry, difficulty, 
+                end ) as grooming ,
                 (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming 
-                from pistes_routes
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from osm_pistes_area
                 where 
-                piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
+                (piste_type LIKE '%downhill%' )
                 and not (abandoned1 or abandoned2)
-                and difficulty not in ('')                
+                and difficulty not in ('')
                 ) as pistes
       properties:
         minzoom: 9
-        
-    - id: downhill-casing
+    - id: downhill-bg
       geometry: linestring
       class: ''
       <<: *extents
@@ -189,10 +185,17 @@ Layer:
                 (
                 (select 0 as ord, geometry, difficulty, 
                 (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
+                    when difficulty in ('freeride', 'extreme') 
+                      and not grooming in ('classic')
                     then 'backcountry'
                     else grooming
                 end ) as grooming ,
+                (case
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -209,12 +212,18 @@ Layer:
                 
                 (select 1 as ord, geometry, difficulty, 
                 (case
-                    when difficulty in ('freeride') 
+                    when difficulty in ('freeride', 'extreme') 
                      and not grooming in ('classic') 
                      and not rel_grooming in ('classic')
                     then 'backcountry'
                     else grooming
                 end ) as grooming ,
+                (case
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
                 (case 
                     when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
                     then '0' 
@@ -232,52 +241,43 @@ Layer:
       properties:
         minzoom: 9
         
+    - id: downhill-casing
+      geometry: linestring
+      class: ''
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: *downhill_sql 
+      properties:
+        minzoom: 9
+        
+    - id: downhill-casing-backcountry
+      geometry: linestring
+      class: ''
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: *downhill_sql 
+      properties:
+        minzoom: 9
+        
     - id: downhill-area-bg
       geometry: linestring
       class: ''
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                from osm_pistes_area 
-                where 
-                (piste_type LIKE '%downhill%' )
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                ) as pistes
+        table: *downhill_area_sql
       properties:
         minzoom: 9
         
     - id: downhill-area-casing
       geometry: linestring
-      class: ''
+      class: downhill-area-casing
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming ,
-                (case 
-                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
-                    then '0' 
-                    else '1' 
-                end) as us
-                from osm_pistes_area 
-                where 
-                (piste_type LIKE '%downhill%' )
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                ) as pistes
+        table: *downhill_area_sql
       properties:
         minzoom: 9
         
@@ -287,35 +287,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from osm_pistes_ways 
-                where 
-                piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                
-                UNION
-                
-                select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from pistes_routes 
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                
-                ) as pistes
+        table: *downhill_sql 
       properties:
         minzoom: 9
     - id: downhill-overlay-eraser2
@@ -324,35 +296,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from osm_pistes_ways 
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                
-                UNION
-                
-                select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from pistes_routes 
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                
-                ) as pistes
+        table: *downhill_sql 
       properties:
         minzoom: 9
     - id: downhill-overlay-eraser3
@@ -361,35 +305,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from osm_pistes_ways 
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                
-                UNION
-                
-                select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from pistes_routes 
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                
-                ) as pistes
+        table: *downhill_sql 
       properties:
         minzoom: 9
     
@@ -399,35 +315,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from osm_pistes_ways 
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                
-                UNION
-                
-                select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from pistes_routes 
-                where 
-                (piste_type LIKE '%downhill%' )
-                AND geometry && !bbox!
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                
-                ) as pistes
+        table: *downhill_sql 
       properties:
         minzoom: 9
         
@@ -448,19 +336,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming
-                 from osm_pistes_area 
-                where 
-                (piste_type LIKE '%downhill%' )
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                ) as pistes
+        table: *downhill_area_sql
       properties:
         minzoom: 9
         
@@ -471,24 +347,7 @@ Layer:
       <<: *extents
       Datasource:
         <<: *imposm
-        table: |-
-                (select geometry, difficulty, 
-                (case
-                    when difficulty in ('freeride') and not grooming in ('classic')
-                    then 'backcountry'
-                    else grooming
-                end ) as grooming ,
-                (case 
-                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
-                    then '0' 
-                    else '1' 
-                end) as us
-                from osm_pistes_area
-                where 
-                (piste_type LIKE '%downhill%' )
-                and not (abandoned1 or abandoned2)
-                and difficulty not in ('')
-                ) as pistes
+        table: *downhill_area_sql
       properties:
         minzoom: 9
         
