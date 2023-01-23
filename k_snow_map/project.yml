@@ -328,7 +328,15 @@ Layer:
             WHEN type IN ('service', 'track') THEN 'service'
             WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
             WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
-            ELSE 'other' END AS stylegroup
+            ELSE 'other' 
+            END AS stylegroup,
+          CASE 
+            WHEN sac_scale IN ('demanding_mountain_hiking', 'alpine_hiking', 'demanding_alpine_hiking', 'difficult_alpine_hiking') THEN 'very_demanding'
+            WHEN (sac_scale IN ('mountain_hiking')
+              OR
+              trail_visibility IN ('intermediate','bad','horrible','no')) THEN 'demanding'
+            ELSE 'normal'
+            END AS int_difficulty
           FROM (
             SELECT *, '1_outline' AS render FROM osm_roads WHERE tunnel = 1
             and  geometry && !bbox!
@@ -363,10 +371,17 @@ Layer:
             WHEN type IN ('primary', 'secondary') THEN 'mainroad'
             WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
             WHEN type IN ('service') THEN 'service'
-        WHEN type IN ('track') THEN 'track'
+            WHEN type IN ('track') THEN 'track'
             WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
             WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
-            ELSE 'other' END AS stylegroup
+            ELSE 'other' END AS stylegroup,
+          CASE 
+            WHEN sac_scale IN ('demanding_mountain_hiking', 'alpine_hiking', 'demanding_alpine_hiking', 'difficult_alpine_hiking') THEN 'very_demanding'
+            WHEN (sac_scale IN ('mountain_hiking')
+              OR
+              trail_visibility IN ('intermediate','bad','horrible','no')) THEN 'demanding'
+            ELSE 'normal'
+            END AS int_difficulty
           FROM osm_roads
           WHERE bridge = 0
             AND tunnel = 0
@@ -419,7 +434,14 @@ Layer:
             WHEN type IN ('service', 'track') THEN 'service'
             WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
             WHEN type IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
-            ELSE 'other' END AS stylegroup
+            ELSE 'other' END AS stylegroup,
+          CASE 
+            WHEN sac_scale IN ('demanding_mountain_hiking', 'alpine_hiking', 'demanding_alpine_hiking', 'difficult_alpine_hiking') THEN 'very_demanding'
+            WHEN (sac_scale IN ('mountain_hiking')
+              OR
+              trail_visibility IN ('intermediate','bad','horrible','no')) THEN 'demanding'
+            ELSE 'normal'
+            END AS int_difficulty
           FROM (
             SELECT *, '1_outline' AS render FROM osm_roads WHERE bridge = 1
             and  geometry && !bbox!

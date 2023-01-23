@@ -301,7 +301,9 @@ come in as well.
   /* -- colors & styles -- */
   line-color: @standard_fill;
   [stylegroup='noauto']{
-    line-color: darken(@standard_case,25%);
+    [int_difficulty='normal']{line-color: darken(@standard_case,25%);}
+    [int_difficulty='demanding']{line-color: darken(@standard_case,25%);}
+    [int_difficulty='very_demanding']{line-color: darken(@red,25%);}
   }
   [stylegroup='track']{
     line-width: 0;
@@ -371,7 +373,11 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz13_med; }
     [stylegroup='minorroad']{ line-width: @rdz13_min; }
     [stylegroup='service']  { line-width: @rdz13_min / 3;}
-    [stylegroup='noauto']   { line-width: @rdz13_min / 4; line-dasharray: 3,2; }
+    [stylegroup='noauto']   {
+      [int_difficulty='normal']{line-width: @rdz13_min / 4; line-dasharray: 3,2;}
+      [int_difficulty='demanding']{line-width: @rdz13_min / 4; line-dasharray: 2,4;}
+      [int_difficulty='very_demanding']{line-width: @rdz13_min / 5; line-dasharray: 2,6;}
+    }
     [stylegroup='railway']  { line-width: 0.8; }
   }
   [zoom=14] {
@@ -379,7 +385,11 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz14_med; }
     [stylegroup='minorroad']{ line-width: @rdz14_min; }
     [stylegroup='service']  { line-width: @rdz14_min / 4; }
-    [stylegroup='noauto']   { line-width: @rdz14_min / 4; line-dasharray: 3,2; }
+    [stylegroup='noauto']   {
+      [int_difficulty='normal']{line-width: @rdz14_min / 4; line-dasharray: 3,2;}
+      [int_difficulty='demanding']{line-width: @rdz14_min / 4; line-dasharray: 2,4;}
+      [int_difficulty='very_demanding']{line-width: @rdz14_min / 5; line-dasharray: 2,6;}
+    }
     [stylegroup='railway']  { line-width: 1; }
   }
   [zoom=15] {
@@ -387,7 +397,11 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz15_med; }
     [stylegroup='minorroad']{ line-width: @rdz15_min; }
     [stylegroup='service']  { line-width: @rdz15_min / 3;  }
-    [stylegroup='noauto']   { line-width: @rdz15_min / 2.2; line-dasharray: 4,3; }
+    [stylegroup='noauto']   {
+      [int_difficulty='normal']{line-width: @rdz15_min / 2.2; line-dasharray: 4,3;}
+      [int_difficulty='demanding']{line-width: @rdz15_min / 2.2; line-dasharray: 2,4;}
+      [int_difficulty='very_demanding']{line-width: @rdz15_min / 2.2; line-dasharray: 2,6;}
+    }
     [stylegroup='railway']  { line-width: 1.5; }
   }
   [zoom=16] {
@@ -395,7 +409,11 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz16_med; }
     [stylegroup='minorroad']{ line-width: @rdz16_min; }
     [stylegroup='service']  { line-width: @rdz16_min / 3;  }
-    [stylegroup='noauto']   { line-width: @rdz16_min /4; line-dasharray: 5,3; }
+    [stylegroup='noauto']   {
+      [int_difficulty='normal']{line-width: @rdz16_min / 4; line-dasharray: 5,3;}
+      [int_difficulty='demanding']{line-width: @rdz16_min / 4; line-dasharray: 2,4;}
+      [int_difficulty='very_demanding']{line-width: @rdz16_min / 4; line-dasharray: 2,6;}
+    }
     [stylegroup='railway']  { line-width: 2; }
   }
   [zoom=17] {
@@ -403,7 +421,11 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz17_med; }
     [stylegroup='minorroad']{ line-width: @rdz17_min; }
     [stylegroup='service']  { line-width: @rdz17_min / 3; }
-    [stylegroup='noauto']   { line-width: @rdz17_min / 8; line-dasharray: 6,3; }
+    [stylegroup='noauto']   {
+      [int_difficulty='normal']{ line-width: @rdz17_min / 8; line-dasharray: 6,3; }
+      [int_difficulty='demanding']{line-width: @rdz17_min / 6; line-dasharray: 2,5;}
+      [int_difficulty='very_demanding']{line-width: @rdz17_min / 12; line-dasharray: 2,6;}
+    }
     [stylegroup='railway']  { line-width: 3; }
   }
   [zoom>=18] {
@@ -411,7 +433,11 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz18_med; }
     [stylegroup='minorroad']{ line-width: @rdz18_min; }
     [stylegroup='service']  { line-width: @rdz18_min / 2;  }
-    [stylegroup='noauto']   { line-width: @rdz18_min / 8; line-dasharray: 7,4; }
+    [stylegroup='noauto']   {
+      [int_difficulty='normal']{line-width: @rdz18_min / 8; line-dasharray: 7,4;}
+      [int_difficulty='demanding']{line-width: @rdz18_min / 6; line-dasharray: 2,5;}
+      [int_difficulty='very_demanding']{line-width: @rdz18_min / 12; line-dasharray: 2,6;}
+    }
     [stylegroup='railway']  { line-width: 4; }
   }
 }
