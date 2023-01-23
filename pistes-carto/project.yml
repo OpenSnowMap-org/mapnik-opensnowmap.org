@@ -1183,7 +1183,7 @@ Layer:
                     st_Area(geometry) as area
                   FROM 
                     landuse_resorts
-                  WHERE ST_Area(geometry)>500000
+                  WHERE ST_Area(geometry)>350000
                   AND geometry && !bbox!
                   )
                   
