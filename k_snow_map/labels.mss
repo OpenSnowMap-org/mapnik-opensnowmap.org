@@ -660,7 +660,7 @@
 
 /* ****************************************************************** */
 #contours100_labels[zoom>=12][zoom<=13]{
-  text-name: [height];
+  text-name: [ele];
   text-face-name: 'DejaVu Sans Bold';
   text-placement: line;
   text-fill: #9F7B74;
@@ -677,7 +677,7 @@
   comp-op: multiply;
   }
 #contours100_labels[zoom>=14]{
-  text-name: [height];
+  text-name: [ele];
   text-face-name: 'DejaVu Sans Bold';
   text-placement: line;
   text-fill: #9F7B74;

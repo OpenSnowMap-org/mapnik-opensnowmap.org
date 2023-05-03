@@ -209,9 +209,74 @@ Layer:
   - id: hillshade
     geometry: raster
     Datasource:
-      file: "../data/Hillshade/hillshade_2.tif"
+      file: "../data/Hillshade/Hillshade3.tif"
       type: gdal
 
+  - id: downhill_white_overlay
+    geometry: geometry
+    Datasource:
+      table: |-
+        (select geometry from osm_pistes_ways
+        where type LIKE '%downhill%'
+        and not (abandoned or abandoned2)
+        UNION ALL
+        select geometry from osm_pistes_area
+        where type LIKE '%downhill%'
+        and not (abandoned or abandoned2)
+        ) as data
+      <<: *extents
+      <<: *imposm
+  - id: contours10
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select geom, ele from contours 
+       WHERE ele::integer % 10 =0 
+       AND  ele::integer % 50 != 0 
+       AND ele::integer % 100 != 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours_test
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+  - id: contours50
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select geom, ele from contours 
+       WHERE ele::integer % 50 = 0 
+       AND ele::integer % 100 != 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours_test
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+  - id: contours100
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select geom, ele from contours 
+       WHERE ele::integer % 100 = 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours_test
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
 
   - id: waterway_low
     Datasource:
@@ -434,72 +499,6 @@ Layer:
         ) AS data
     geometry: linestring
     
-  - id: downhill_white_overlay
-    geometry: geometry
-    Datasource:
-      table: |-
-        (select geometry from osm_pistes_ways
-        where type LIKE '%downhill%'
-        and not (abandoned or abandoned2)
-        UNION ALL
-        select geometry from osm_pistes_area
-        where type LIKE '%downhill%'
-        and not (abandoned or abandoned2)
-        ) as data
-      <<: *extents
-      <<: *imposm
-  - id: contours10
-    geometry: linestring
-    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    Datasource:
-      type: postgis
-      user: mapnik
-      table: |-
-       (select wkb_geometry, height from contours 
-       WHERE height::integer % 10 =0 
-       AND  height::integer % 50 != 0 
-       AND height::integer % 100 != 0) as data
-      key_field: ''
-      geometry_field: ''
-      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      dbname: contours
-    class: ''
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-    
-  - id: contours50
-    geometry: linestring
-    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    Datasource:
-      type: postgis
-      user: mapnik
-      table: |-
-       (select wkb_geometry, height from contours 
-       WHERE height::integer % 50 = 0 
-       AND height::integer % 100 != 0) as data
-      key_field: ''
-      geometry_field: ''
-      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      dbname: contours
-    class: ''
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-    
-  - id: contours100
-    geometry: linestring
-    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    Datasource:
-      type: postgis
-      user: mapnik
-      table: |-
-       (select wkb_geometry, height from contours 
-       WHERE height::integer % 100 = 0) as data
-      key_field: ''
-      geometry_field: ''
-      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      dbname: contours
-    class: ''
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-    
-
   - id: barrier_points
     Datasource:
       <<: *imposm
@@ -596,12 +595,12 @@ Layer:
       type: postgis
       user: mapnik
       table: |-
-       (select wkb_geometry, height from contours 
-       WHERE height::integer % 100 = 0) as data
+       (select geom, ele from contours 
+       WHERE ele::integer % 100 = 0) as data
       key_field: ''
       geometry_field: ''
       extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      dbname: contours
+      dbname: contours_test
     class: ''
     srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
     
