@@ -102,18 +102,15 @@
 hillshade_2.tif
 */
 #hillshade[zoom>=14]{
-  comp-op:multiply;
-  raster-opacity: 0.8;
+  raster-opacity: 0.5;
   raster-scaling: bicubic;
   }
 #hillshade[zoom=13]{
-  comp-op:multiply;
-  raster-opacity: 0.8;
+  raster-opacity: 0.5;
   raster-scaling: bilinear;
   }
 #hillshade[zoom=12]{
-  comp-op:multiply;
-  raster-opacity: 0.9;
+  raster-opacity: 0.5;
   raster-scaling: bilinear;
   }
 /*

@@ -209,7 +209,7 @@ Layer:
   - id: hillshade
     geometry: raster
     Datasource:
-      file: "../data/Hillshade/Hillshade3.tif"
+      file: "../data/Hillshade/hillshade_2.tif"
       type: gdal
 
   - id: downhill_white_overlay
