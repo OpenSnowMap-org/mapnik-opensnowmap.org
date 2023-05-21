@@ -12,24 +12,11 @@
 /* CONTOURS
 /* ================================================================== */
 
-#contours10[zoom>=14]{
-  line-color: #B7928A;
-  line-width: 0.25;
-  line-opacity: 0.4;
-  comp-op: difference;
-  [zoom>=15]{line-width: 0.4;}
-  [zoom>=16]{line-smooth: 0.5;}
-  }
+
 #contours50[zoom>=12][zoom<=13]{
   line-color: #B7928A;
-  line-width: 0.6;
+  line-width: 0.5;
   line-opacity: 0.4;
-  }
-#contours50[zoom>=14]{
-  line-color: #AA837B;
-  line-width: 0.6;
-  line-opacity: 0.7;
-  [zoom>=16]{line-smooth: 0.5;}
   }
 #contours100[zoom=11]{
   line-color: #B7928A;
@@ -38,19 +25,36 @@
   }
 #contours100[zoom>=12][zoom<=13]{
   line-color: #AA837B;
-  line-width: 0.7;
+  line-width: 0.6;
   line-opacity: 0.6;
   }
+#contours10[zoom>=14]{
+  line-color: #877572;
+  line-width: 0.25;
+  line-opacity: 0.4;
+  [zoom>=15]{line-width: 0.4;}
+  [zoom>=16]{line-smooth: 0.5;}
+  comp-op: multiply;
+  }
+#contours50[zoom>=14]{
+  line-color: #82706C;
+  line-width: 0.6;
+  line-opacity: 0.5;
+  [zoom>=16]{line-smooth: 0.5;}
+  comp-op: multiply;
+  }
 #contours100[zoom>=14][zoom<=15]{
-  line-color: #9f7b74;
-  line-width: 0.7;
-  line-opacity: 0.7;
+  line-color: #6E5954;
+  line-width: 0.8;
+  line-opacity: 0.5;
+  comp-op: multiply;
   }
 #contours100[zoom>=16]{
-  line-color: #9f7b74;
+  line-color: #6E5954;
   line-width: 0.7;
-  line-opacity: 0.7;
+  line-opacity: 0.5;
   [zoom>=16]{line-smooth: 0.5;}
+  comp-op: multiply;
   }
 
 /* ================================================================== */
@@ -59,8 +63,18 @@
 /*
 hillshade_2.tif
 */
-#hillshade[zoom>=14]{
-  raster-opacity: 0.8;
+
+#hillshade[zoom>=15]{
+  raster-opacity: 0.7;
+  raster-scaling: bicubic;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
+  }
+#hillshade[zoom=14]{
+  raster-opacity: 0.75;
   raster-scaling: bicubic;
   raster-colorizer-default-mode: linear;
   raster-colorizer-default-color: transparent;
@@ -163,11 +177,24 @@ hillshade_d8.tif
     stop(255, @hillshade_hi,linear);
   }
 
-#contours100_labels[zoom>=12][zoom<=13]{
+#contours100_labels_eraser[zoom>=14]{
+  text-allow-overlap: true;
+  comp-op: dst-out;
   text-name: [ele];
   text-face-name: 'DejaVu Sans Bold';
   text-placement: line;
-  text-fill: #9F7B74;
+  text-fill: #ffffff;
+  text-size: 7.5;
+  text-opacity: 0.9;
+  text-spacing: 300;
+  text-halo-radius: 1;
+  text-halo-fill: #ffffff;
+  }
+#contours100_labels[zoom>=12][zoom<=14]{
+  text-name: [ele];
+  text-face-name: 'DejaVu Sans Bold';
+  text-placement: line;
+  text-fill: #6E5954;
   text-size: 7.5;
   text-opacity: 0.8;
   text-spacing: 500;
@@ -181,10 +208,11 @@ hillshade_d8.tif
   comp-op: multiply;
   }
 #contours100_labels[zoom>=14]{
+  text-allow-overlap: true;
   text-name: [ele];
   text-face-name: 'DejaVu Sans Bold';
   text-placement: line;
-  text-fill: #9F7B74;
+  text-fill: #6E5954;
   text-size: 7.5;
   text-opacity: 0.8;
   text-spacing: 300;

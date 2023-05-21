@@ -58,70 +58,6 @@ _parts:
     extent: "-20037508,-20037508,20037508,20037508"
 
 Layer:
-    ## relief ##
-    - id: hillshade40
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade_lowzoom/dem_c6_z1.tif"
-        type: gdal
-        band: 1
-      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
-        +units=m +nadgrids=@null +wktext +no_defs +over"
-    - id: hillshade30
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade_lowzoom/dem_c6_z3.tif"
-        type: gdal
-        band: 1
-      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
-        +units=m +nadgrids=@null +wktext +no_defs +over"
-    - id: hillshade20
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade_lowzoom/dem_c6_z4.tif"
-        type: gdal
-        band: 1
-      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
-        +units=m +nadgrids=@null +wktext +no_defs +over"
-    - id: hillshade10
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade_lowzoom/dem_c6_z5.tif"
-        type: gdal
-        band: 1
-      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
-        +units=m +nadgrids=@null +wktext +no_defs +over"
-    - id: hillshade7
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade_lowzoom/dem_c6_z10.tif"
-        type: gdal
-        band: 1
-      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
-        +units=m +nadgrids=@null +wktext +no_defs +over"
-    - id: hillshade8
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade/hillshade_d8.tif"
-        type: gdal
-    - id: hillshade9
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade/hillshade_d4.tif"
-        type: gdal
-    - id: hillshade11
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade/hillshade_d2.tif"
-        type: gdal
-    - id: hillshade
-      geometry: raster
-      Datasource:
-        file: "../data/Hillshade/Hillshade3.tif"
-        type: gdal
-        band: 1
-
-
     - id: nodes_downhill
       geometry: linestring
       Datasource:
@@ -159,6 +95,8 @@ Layer:
       <<: *extents
     
   
+
+    ## relief ##
     - id: downhill_white_overlay
       geometry: geometry
       Datasource:
@@ -274,6 +212,22 @@ Layer:
       srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       
   
+    - id: contours100_labels_eraser
+      geometry: linestring
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      Datasource:
+        type: postgis
+        user: mapnik
+        table: |-
+         (select geom, ele from contours 
+         WHERE ele::integer % 100 = 0) as data
+        key_field: ''
+        geometry_field: ''
+        extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+        dbname: contours
+      class: ''
+      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      
     - id: contours100_labels
       geometry: linestring
       extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
@@ -290,6 +244,68 @@ Layer:
       class: ''
       srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       
+
+    - id: hillshade40
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade_lowzoom/dem_c6_z1.tif"
+        type: gdal
+        band: 1
+      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+        +units=m +nadgrids=@null +wktext +no_defs +over"
+    - id: hillshade30
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade_lowzoom/dem_c6_z3.tif"
+        type: gdal
+        band: 1
+      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+        +units=m +nadgrids=@null +wktext +no_defs +over"
+    - id: hillshade20
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade_lowzoom/dem_c6_z4.tif"
+        type: gdal
+        band: 1
+      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+        +units=m +nadgrids=@null +wktext +no_defs +over"
+    - id: hillshade10
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade_lowzoom/dem_c6_z5.tif"
+        type: gdal
+        band: 1
+      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+        +units=m +nadgrids=@null +wktext +no_defs +over"
+    - id: hillshade7
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade_lowzoom/dem_c6_z10.tif"
+        type: gdal
+        band: 1
+      srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0
+        +units=m +nadgrids=@null +wktext +no_defs +over"
+    - id: hillshade8
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade/hillshade_d8.tif"
+        type: gdal
+    - id: hillshade9
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade/hillshade_d4.tif"
+        type: gdal
+    - id: hillshade11
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade/hillshade_d2.tif"
+        type: gdal
+    - id: hillshade
+      geometry: raster
+      Datasource:
+        file: "../data/Hillshade/Hillshade3.tif"
+        type: gdal
+        band: 1
 
 
 
