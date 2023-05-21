@@ -158,8 +158,8 @@ come in as well.
   }
   
   [zoom=14]{ 
-    line-width: @rdz14_min / 4; 
-    line-color: darken(@standard_case,50%);
+    line-width: @rdz14_min / 3.5; 
+    line-color: darken(@standard_case,40%);
   }
   [zoom=15] {
     line-width: @rdz15_min / 1.5 ; 

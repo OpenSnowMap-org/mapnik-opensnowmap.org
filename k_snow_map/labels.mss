@@ -659,36 +659,35 @@
 
 
 /* ****************************************************************** */
-#contours100_labels[zoom>=12][zoom<=13]{
+#contours100_labels[zoom>=12]{
   text-name: [ele];
-  text-face-name: 'DejaVu Sans Bold';
+  text-face-name: 'DejaVu Sans Book';
   text-placement: line;
-  text-fill: #9F7B74;
+  text-fill: @contour100;
   text-size: 7.5;
-  text-opacity: 0.8;
-  text-spacing: 500;
-  text-min-distance: 300;
-  text-label-position-tolerance:100;
-/*
-  text-halo-radius: 0.3;
-  text-halo-opacity: 0.7;
-  text-halo-fill: @land_grey;
-*/
-  comp-op: multiply;
+  text-opacity: 0.5;
+  [zoom>=12][zoom<=13]{
+    text-spacing: 500;
+    text-min-distance: 300;
+    text-label-position-tolerance:100;
+    }
+  [zoom>=14]{
+    text-spacing: 300;
+    }
   }
-#contours100_labels[zoom>=14]{
+/*
+#contours100_labels_eraser[zoom>=14]{
+  comp-op: dst-out;
   text-name: [ele];
   text-face-name: 'DejaVu Sans Bold';
   text-placement: line;
-  text-fill: #9F7B74;
+  text-fill: #fff;
   text-size: 7.5;
-  text-opacity: 0.8;
+  text-opacity: 1;
   text-spacing: 300;
-/*
-  text-halo-radius: 0.3;
-  text-halo-opacity: 0.7;
-  text-halo-fill: @land_grey;
-*/
-  comp-op: multiply;
+  text-halo-radius: 1;
+  text-halo-opacity: 0.0;
+  text-halo-fill: #fff;
   }
+*/
 

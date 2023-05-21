@@ -55,63 +55,81 @@
 /* CONTOURS
 /* ================================================================== */
 
+
+#contours50[zoom>=12][zoom<=13]{
+  line-color: @contour10;
+  line-width: 0.3;
+  line-opacity: 0.2;
+  }
+#contours100[zoom>=12][zoom<=13]{
+  line-color: @contour10;
+  line-width: 0.4;
+  line-opacity: 0.2;
+  }
+
 #contours10[zoom>=14]{
-  line-color: #B7928A;
-  line-width: 0.25;
-  line-opacity: 0.4;
-  comp-op: difference;
+  line-color: @contour10;
+  line-width: 0.3;
+  line-opacity: 0.3;
   [zoom>=15]{line-width: 0.4;}
   [zoom>=16]{line-smooth: 0.5;}
   }
-#contours50[zoom>=12][zoom<=13]{
-  line-color: #B7928A;
-  line-width: 0.6;
-  line-opacity: 0.4;
-  }
 #contours50[zoom>=14]{
-  line-color: #AA837B;
+  line-color: @contour100;
   line-width: 0.6;
-  line-opacity: 0.7;
+  line-opacity: 0.3;
   [zoom>=16]{line-smooth: 0.5;}
   }
-#contours100[zoom=11]{
-  line-color: #B7928A;
-  line-width: 0.6;
-  line-opacity: 0.5;
-  }
-#contours100[zoom>=12][zoom<=13]{
-  line-color: #AA837B;
-  line-width: 0.7;
-  line-opacity: 0.6;
-  }
-#contours100[zoom>=14][zoom<=15]{
-  line-color: #9f7b74;
-  line-width: 0.7;
-  line-opacity: 0.7;
-  }
-#contours100[zoom>=16]{
-  line-color: #9f7b74;
-  line-width: 0.7;
-  line-opacity: 0.7;
+#contours100[zoom>=14]{
+  line-color: @contour100;
+  line-width: 0.8;
+  line-opacity: 0.3;
+  [zoom>=15]{line-opacity: 0.35;}
   [zoom>=16]{line-smooth: 0.5;}
   }
+
 /* ================================================================== */
 /* Hillshading
 /* ================================================================== */
 /*
 hillshade_2.tif
 */
-#hillshade[zoom>=14]{
-  raster-opacity: 0.5;
+
+#hillshade[zoom>=15]{
+  raster-opacity: 0.7;
   raster-scaling: bicubic;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
+  }
+#hillshade[zoom=14]{
+  raster-opacity: 0.75;
+  raster-scaling: bicubic;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
   }
 #hillshade[zoom=13]{
-  raster-opacity: 0.5;
+  raster-opacity: 0.8;
   raster-scaling: bilinear;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
   }
 #hillshade[zoom=12]{
-  raster-opacity: 0.5;
   raster-scaling: bilinear;
+  raster-opacity: 0.9;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
   }
 /*
 hillshade_d2.tif
