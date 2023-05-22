@@ -72,10 +72,10 @@ come in as well.
     line-join: round;
 
   [zoom=15] {
-    line-color: darken(@standard_case,40%);
+    line-color: darken(@standard_case,50%);
   }
   [zoom>15] {
-    line-color: darken(@standard_case,30%);
+    line-color: darken(@standard_case,40%);
   }
   [tunnel=1] {
     line-cap: butt;
@@ -111,10 +111,10 @@ come in as well.
     line-join: round;
 
   [zoom=15] {
-    line-color: darken(@standard_case,40%);
+    line-color: darken(@standard_case,50%);
   }
   [zoom>15] {
-    line-color: darken(@standard_case,30%);
+    line-color: darken(@standard_case,40%);
   }
   [tunnel=1] {
     line-cap: butt;
@@ -159,7 +159,7 @@ come in as well.
   
   [zoom=14]{ 
     line-width: @rdz14_min / 3.5; 
-    line-color: darken(@standard_case,40%);
+    line-color: darken(@standard_case,50%);
   }
   [zoom=15] {
     line-width: @rdz15_min / 1.5 ; 
@@ -186,7 +186,7 @@ come in as well.
     line-cap: butt;
   }
   line-join: round;
-  line-color: @standard_case;
+  line-color: darken(@standard_case,10%);
   [bridge=1] { line-color: darken(@standard_case,20%) ; }
   
   
@@ -301,8 +301,8 @@ come in as well.
   /* -- colors & styles -- */
   line-color: @standard_fill;
   [stylegroup='noauto']{
-    [int_difficulty='normal']{line-color: darken(@standard_case,25%);}
-    [int_difficulty='demanding']{line-color: darken(@standard_case,25%);}
+    [int_difficulty='normal']{line-color: darken(@standard_case,35%);}
+    [int_difficulty='demanding']{line-color: darken(@standard_case,35%);}
     [int_difficulty='very_demanding']{line-color: darken(@red,25%);}
   }
   [stylegroup='track']{
@@ -386,9 +386,9 @@ come in as well.
     [stylegroup='minorroad']{ line-width: @rdz14_min; }
     [stylegroup='service']  { line-width: @rdz14_min / 4; }
     [stylegroup='noauto']   {
-      [int_difficulty='normal']{line-width: @rdz14_min / 4; line-dasharray: 3,2;}
-      [int_difficulty='demanding']{line-width: @rdz14_min / 4; line-dasharray: 2,4;}
-      [int_difficulty='very_demanding']{line-width: @rdz14_min / 5; line-dasharray: 2,6;}
+      [int_difficulty='normal']{line-width: @rdz14_min / 3; line-dasharray: 3,2;}
+      [int_difficulty='demanding']{line-width: @rdz14_min / 3; line-dasharray: 2,4;}
+      [int_difficulty='very_demanding']{line-width: @rdz14_min / 4; line-dasharray: 2,6;}
     }
     [stylegroup='railway']  { line-width: 1; }
   }

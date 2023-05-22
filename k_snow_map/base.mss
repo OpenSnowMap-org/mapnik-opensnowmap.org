@@ -135,24 +135,42 @@ hillshade_2.tif
 hillshade_d2.tif
 */
 #hillshade11[zoom=11]{
-  raster-opacity: 0.5;
-  raster-scaling: bilinear;
+  raster-opacity: 0.9;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
   }
 #hillshade11[zoom=10]{
-  raster-opacity: 0.5;
+  raster-opacity: 0.9;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
   }
 /*
 hillshade_d4.tif
 */
 #hillshade9[zoom=9]{
-  raster-opacity: 0.5;
+  raster-opacity: 0.9;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
   }
 /*
 hillshade_d8.tif
 */
 #hillshade8[zoom=8]{
-  raster-opacity: 0.4;
-  raster-scaling: bilinear;
+  raster-opacity: 0.9;
+  raster-colorizer-default-mode: linear;
+  raster-colorizer-default-color: transparent;
+  raster-colorizer-stops:
+    stop(0, rgba(0,0,0,1))
+    stop(255, rgba(0,0,0,0));
   }
   
 #hillshade7[zoom=7]{

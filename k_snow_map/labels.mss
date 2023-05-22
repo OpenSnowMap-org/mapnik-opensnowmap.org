@@ -619,7 +619,7 @@
   text-face-name:@sans;
   text-placement:line;
   text-fill:@road_text;
-  text-halo-fill:@road_halo;
+  text-halo-fill:darken(@road_halo,20%);
   text-halo-radius:1;
   text-min-distance:60;
   text-size:9;
@@ -632,8 +632,8 @@
   text-face-name:@sans;
   text-placement:line;
   text-fill:@road_text;
-  text-halo-fill:@road_halo;
-  text-halo-radius:2;
+  text-halo-fill:darken(@road_halo,20%);
+  text-halo-radius:1.5;
   text-min-distance:60;
   text-size:9;
   text-placement-type: "simple";

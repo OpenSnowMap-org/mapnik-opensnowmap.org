@@ -194,18 +194,24 @@ Layer:
   - id: hillshade8
     geometry: raster
     Datasource:
-      file: "../data/Hillshade/hillshade_d8.tif"
+      #~ file: "../data/Hillshade/hillshade_d8.tif"
+      file: "../data/Hillshade/Hillshade3.tif"
       type: gdal
+      band: 1
   - id: hillshade9
     geometry: raster
     Datasource:
-      file: "../data/Hillshade/hillshade_d4.tif"
+      #~ file: "../data/Hillshade/hillshade_d4.tif"
+      file: "../data/Hillshade/Hillshade3.tif"
       type: gdal
+      band: 1
   - id: hillshade11
     geometry: raster
     Datasource:
-      file: "../data/Hillshade/hillshade_d2.tif"
+      #~ file: "../data/Hillshade/hillshade_d2.tif"
+      file: "../data/Hillshade/Hillshade3.tif"
       type: gdal
+      band: 1
   - id: hillshade
     geometry: raster
     Datasource:
