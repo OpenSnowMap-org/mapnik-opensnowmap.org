@@ -151,6 +151,59 @@ Layer:
       <<: *extents
       <<: *imposm
 
+  - id: contours10
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select geom, ele from contours 
+       WHERE ele::integer % 10 =0 
+       AND  ele::integer % 50 != 0 
+       AND ele::integer % 100 != 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+  - id: contours50
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select geom, ele from contours 
+       WHERE ele::integer % 50 = 0 
+       AND ele::integer % 100 != 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+  - id: contours100
+    geometry: linestring
+    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    Datasource:
+      type: postgis
+      user: mapnik
+      table: |-
+       (select geom, ele from contours 
+       WHERE ele::integer % 100 = 0) as data
+      key_field: ''
+      geometry_field: ''
+      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+      dbname: contours
+    class: ''
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    
+
+
   - id: hillshade40
     geometry: raster
     Datasource:
@@ -233,58 +286,6 @@ Layer:
         ) as data
       <<: *extents
       <<: *imposm
-  - id: contours10
-    geometry: linestring
-    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    Datasource:
-      type: postgis
-      user: mapnik
-      table: |-
-       (select geom, ele from contours 
-       WHERE ele::integer % 10 =0 
-       AND  ele::integer % 50 != 0 
-       AND ele::integer % 100 != 0) as data
-      key_field: ''
-      geometry_field: ''
-      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      dbname: contours
-    class: ''
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-    
-  - id: contours50
-    geometry: linestring
-    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    Datasource:
-      type: postgis
-      user: mapnik
-      table: |-
-       (select geom, ele from contours 
-       WHERE ele::integer % 50 = 0 
-       AND ele::integer % 100 != 0) as data
-      key_field: ''
-      geometry_field: ''
-      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      dbname: contours
-    class: ''
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-    
-  - id: contours100
-    geometry: linestring
-    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-    Datasource:
-      type: postgis
-      user: mapnik
-      table: |-
-       (select geom, ele from contours 
-       WHERE ele::integer % 100 = 0) as data
-      key_field: ''
-      geometry_field: ''
-      extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
-      dbname: contours
-    class: ''
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-    
-
   - id: waterway_low
     Datasource:
       <<: *imposm

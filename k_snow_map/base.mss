@@ -65,6 +65,7 @@
   line-color: @contour10;
   line-width: 0.4;
   line-opacity: 0.2;
+
   }
 
 #contours10[zoom>=14]{
@@ -81,12 +82,48 @@
   [zoom>=16]{line-smooth: 0.5;}
   }
 #contours100[zoom>=14]{
-  line-color: @contour100;
-  line-width: 0.8;
-  line-opacity: 0.3;
-  [zoom>=15]{line-opacity: 0.35;}
-  [zoom>=16]{line-smooth: 0.5;}
-  }
+  /* Instances are rendered before another, autorising to mask lines below labels*/
+  /* comp-op doesn't work here */
+    
+  
+    line-color: @contour100;
+    line-width: 0.8;
+    line-opacity: 0.3;
+    [zoom>=15]{line-opacity: 0.35;}
+    [zoom>=16]{line-smooth: 0.5;}
+    ::label {
+    comp-op: dst-out;
+    text-name: [ele];
+    text-face-name: 'DejaVu Sans Book';
+    text-placement: line;
+    text-fill: rgba(255,255,255,1);
+    text-size: 7.5;
+    text-opacity: 1;
+/*
+    text-halo-comp-op: dst-out;
+*/
+    text-halo-radius: 1;
+    text-halo-opacity: 1;
+    text-halo-fill: rgba(255,255,255,1);
+    text-label-position-tolerance:100;
+    text-spacing: 300;
+    }
+/*
+    text-name: [ele];
+    text-face-name: 'DejaVu Sans Book';
+    text-placement: line;
+    text-fill: @land;
+    text-size: 7.5;
+    text-opacity: 1;
+    
+    text-halo-radius: 1;
+    text-halo-opacity: 1;
+    text-halo-fill: @land;
+    
+    text-label-position-tolerance:100;
+    text-spacing: 300;
+*/
+ }
 
 /* ================================================================== */
 /* Hillshading

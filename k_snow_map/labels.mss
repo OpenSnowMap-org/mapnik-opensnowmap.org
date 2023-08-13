@@ -659,21 +659,17 @@
 
 
 /* ****************************************************************** */
-#contours100_labels[zoom>=12]{
+#contours100_labels[zoom>=14]{
+  text-allow-overlap: true;
   text-name: [ele];
   text-face-name: 'DejaVu Sans Book';
   text-placement: line;
   text-fill: @contour100;
   text-size: 7.5;
-  text-opacity: 0.5;
-  [zoom>=12][zoom<=13]{
-    text-spacing: 500;
-    text-min-distance: 300;
-    text-label-position-tolerance:100;
-    }
-  [zoom>=14]{
-    text-spacing: 300;
-    }
+  text-opacity: 0.7;
+
+  text-label-position-tolerance:100;
+  text-spacing: 300;
   }
 /*
 #contours100_labels_eraser[zoom>=14]{
