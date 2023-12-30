@@ -22,13 +22,17 @@
     [zoom>=11][zoom<=12]{
         line-width: 2.5;
         }
-    [zoom>=13][zoom<=14]{
+    [zoom=13]{
+        line-width: 2.5;
+        line-offset: 2*1.2*[member_offset]*[direction_to_offset];
+        }
+    [zoom=14]{
         line-width: 3.5;
-        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+        line-offset: 2*1.4*[member_offset]*[direction_to_offset];
         }
     [zoom>=15]{
         line-width: 4;
-        line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+        line-offset: 2.5*1.4*[member_offset]*[direction_to_offset];
         }
 }
 
@@ -38,14 +42,18 @@
     line-color: #FDE067;
     line-gamma: 1;
     line-opacity: 0.6;
-    [zoom>13][zoom<=14]{
+    [zoom=13]{
+        line-width: 4;
+        line-offset: 2*1.2*[member_offset]*[direction_to_offset];
+        }
+    [zoom=14]{
         line-width: 6;
-        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+        line-offset: 2*1.4*[member_offset]*[direction_to_offset];
     }
     [zoom>=15]{
         line-opacity: 0.8;
         line-width: 6.5;
-        line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+        line-offset: 2.5*1.4*[member_offset]*[direction_to_offset];
     }
 }
 
@@ -53,6 +61,9 @@
     line-cap: round;
     line-join: round;
     line-gamma: 0.5;
+/*
+    line-smooth: 0.2;
+*/
 
     line-color: @fadein;
     [nordic_route_render_colour != ''] {
@@ -64,16 +75,15 @@
         }
     [zoom=13]{
         line-width: 1.5;
-        line-opacity: 1;
-        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+        line-offset: 2*1.2*[member_offset]*[direction_to_offset];
         }
     [zoom=14]{
-        line-width: 1.5;
-        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+        line-width: 2;
+        line-offset: 2*1.4*[member_offset]*[direction_to_offset];
         }
     [zoom>=15]{
-        line-width: 2;
-        line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+        line-width: 2.5;
+        line-offset: 2.5*1.4*[member_offset]*[direction_to_offset];
     }
 }
 
@@ -86,7 +96,7 @@
         }
         marker-line-color: transparent;
 */
-        marker-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+        marker-offset: 2.5*1.2*[member_offset]*[direction_to_offset];
         marker-placement: line;
         marker-spacing: 300;
         marker-max-error: 0;
@@ -134,15 +144,19 @@
 
     [zoom>=12][zoom<=13]{
         line-width: 1;
-        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+        line-offset: 2*1.2*[member_offset]*[direction_to_offset];
         }
-    [zoom>=13][zoom<=14]{
+    [zoom=13]{
+        line-width: 1;
+        line-offset: 2*1.2*[member_offset]*[direction_to_offset];
+        }
+    [zoom=14]{
         line-width: 1.5;
-        line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+        line-offset: 2*1.2*[member_offset]*[direction_to_offset];
         }
     [zoom>=15]{
         line-width: 2;
-        line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+        line-offset: 2.5*1.4*[member_offset]*[direction_to_offset];
         }
         
     [grooming='classic'] {
@@ -166,13 +180,17 @@
         line-dasharray:9, 6.5;
         [zoom>=12][zoom<=13]{line-opacity: 0.5;}
         [zoom>=14]{line-opacity: 0.7;}
-        [zoom>=13][zoom<=14]{
+        [zoom=13]{
             line-width: 0.5;
-            line-offset: 2*1.2*[nordic_route_offset]*[direction_to_route];
+            line-offset: 2*1.2*[member_offset]*[direction_to_offset];
+            }
+        [zoom=14]{
+            line-width: 0.5;
+            line-offset: 2*1.4*[member_offset]*[direction_to_offset];
             }
         [zoom>=15]{
             line-width: 0.8;
-            line-offset: 2.5*1.2*[nordic_route_offset]*[direction_to_route];
+            line-offset: 2.5*1.4*[member_offset]*[direction_to_offset];
             }
         }
 }
@@ -258,7 +276,7 @@
     text-face-name:@bold-fonts;
     text-halo-fill:white;
     text-halo-radius:1;
-    text-size: 10;
+    text-size: 11;
     text-dy: 7;
     text-placement: line;
     text-avoid-edges: true;
