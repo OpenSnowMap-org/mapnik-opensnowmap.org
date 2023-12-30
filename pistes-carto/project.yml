@@ -489,7 +489,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
+            geometry, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset
             FROM 
             osm_pistes_ways
             WHERE
@@ -507,7 +507,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route
+            geometry, 0 as member_offset, '' as nordic_route_render_colour, 1 as direction_to_offset
             FROM 
             osm_pistes_area
             WHERE
@@ -524,7 +524,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            geometry, member_offset, nordic_route_render_colour, direction_to_offset
             FROM 
             osm_pistes_route_members
             WHERE
@@ -543,7 +543,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route
+            geometry, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset
             FROM 
             osm_pistes_ways
             WHERE
@@ -560,7 +560,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route
+            geometry, 0 as member_offset, '' as nordic_route_render_colour, 1 as direction_to_offset
             FROM 
             osm_pistes_area
             WHERE
@@ -577,7 +577,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route
+            geometry, member_offset, nordic_route_render_colour, direction_to_offset
             FROM 
             osm_pistes_route_members
             WHERE
@@ -650,12 +650,12 @@ Layer:
         <<: *imposm
         table: |-
             (SELECT geometry,
-            nordic_route_offset, nordic_route_render_colour, direction_to_route,
-            grooming, ST_Length(geometry) as length
+            member_offset, nordic_route_render_colour, direction_to_offset,
+            grooming, length
             FROM
               (SELECT 
-                geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
-                grooming
+                geometry, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset,
+                grooming, ST_Length(geometry) as length
                 FROM 
                 osm_pistes_ways
                 WHERE
@@ -672,8 +672,8 @@ Layer:
                 UNION
                 
                 SELECT 
-                geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route,
-                grooming
+                geometry, 0 as member_offset, '' as nordic_route_render_colour, 1 as direction_to_offset,
+                grooming, ST_Length(geometry) as length
                 FROM 
                 osm_pistes_area
                 WHERE
@@ -690,15 +690,15 @@ Layer:
                 UNION
                 
                 SELECT 
-                geometry, nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
-                grooming
+                geometry, member_offset, nordic_route_render_colour, direction_to_offset,
+                grooming, shortest_route_length as length
                 FROM 
-                pistes_routes
+                osm_pistes_route_members
                 WHERE
                 piste_type like '%nordic%'
+                and worth_rendering
                 and not (abandoned1 or abandoned2)
                 AND geometry && !bbox!
-                
                 
               ) as lines
             ORDER BY length DESC
@@ -713,7 +713,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+            geometry, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset,
             grooming
             FROM 
             osm_pistes_ways
@@ -731,7 +731,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route,
+            geometry, 0 as member_offset, '' as nordic_route_render_colour, 1 as direction_to_offset,
             grooming
             FROM 
             osm_pistes_area
@@ -748,7 +748,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            geometry, member_offset, nordic_route_render_colour, direction_to_offset,
             CASE 
               WHEN grooming='' THEN rel_grooming
               ELSE grooming
@@ -803,7 +803,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, oneway, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+            geometry, oneway, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset,
             grooming, difficulty
             FROM 
             osm_pistes_ways
@@ -821,7 +821,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, oneway, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            geometry, oneway, member_offset, nordic_route_render_colour, direction_to_offset,
             CASE 
               WHEN grooming='' THEN rel_grooming
               ELSE grooming
@@ -843,7 +843,7 @@ Layer:
         <<: *imposm
         table: |-
           (SELECT 
-            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+            geometry, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset,
             grooming, difficulty
             FROM 
             osm_pistes_ways
@@ -861,7 +861,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route,
+            geometry, 0 as member_offset, '' as nordic_route_render_colour, 1 as direction_to_offset,
             grooming, difficulty
             FROM 
             osm_pistes_area
@@ -878,7 +878,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, direction_to_route,
+            geometry, member_offset, nordic_route_render_colour, direction_to_offset,
             CASE 
               WHEN grooming='' THEN rel_grooming
               ELSE grooming
@@ -1203,7 +1203,7 @@ Layer:
         <<: *imposm
         table: |-
             (SELECT 
-            geometry, 0 as nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
+            geometry, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset,
             coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
             FROM 
             osm_pistes_ways
@@ -1222,7 +1222,7 @@ Layer:
             UNION
             
             SELECT 
-            geometry, 0 as nordic_route_offset, '' as nordic_route_render_colour, 1 as direction_to_route,
+            geometry, 0 as member_offset, '' as nordic_route_render_colour, 1 as direction_to_offset,
             coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
             FROM 
             osm_pistes_area
@@ -1240,10 +1240,10 @@ Layer:
             UNION
             
             SELECT 
-            geometry, nordic_route_offset, nordic_route_render_colour, 1 as direction_to_route,
-            coalesce(NULLIF(piste_name,''), NULLIF(name,'')) as name
+            geometry, member_offset, nordic_route_render_colour, direction_to_offset,
+            coalesce(NULLIF(relname,''), NULLIF(piste_name,'')) as name
             FROM 
-            pistes_routes
+            osm_pistes_route_members
             WHERE
             piste_type like '%nordic%'
             AND geometry && !bbox!
