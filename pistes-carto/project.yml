@@ -763,6 +763,68 @@ Layer:
       properties:
         minzoom: 9
 
+
+    - id: nordic-tunnel
+      geometry: linestring
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+          (SELECT 
+            geometry, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset,
+            grooming
+            FROM 
+            osm_pistes_ways
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            and not (abandoned1 or abandoned2)
+            and tunnel
+            AND osm_id NOT IN (
+                SELECT member
+                FROM osm_pistes_route_members
+                WHERE piste_type like '%nordic%'
+                AND geometry && !bbox!
+            )
+            
+            UNION
+            
+            SELECT 
+            geometry, 0 as member_offset, '' as nordic_route_render_colour, 1 as direction_to_offset,
+            grooming
+            FROM 
+            osm_pistes_area
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            and not (abandoned1 or abandoned2)
+            and tunnel
+            AND osm_id NOT IN (
+                SELECT member
+                FROM osm_pistes_route_members
+                WHERE piste_type like '%nordic%'
+                AND geometry && !bbox!
+            )
+            UNION
+            
+            SELECT 
+            geometry, member_offset, nordic_route_render_colour, direction_to_offset,
+            CASE 
+              WHEN grooming='' THEN rel_grooming
+              ELSE grooming
+            END grooming
+            FROM 
+            osm_pistes_route_members
+            WHERE
+            piste_type like '%nordic%'
+            AND geometry && !bbox!
+            and not (abandoned1 or abandoned2)
+            and tunnel
+          ) as data
+      properties:
+        minzoom: 9
+
+
     - id: nordic-difficulty-markers
       geometry: linestring
       class: ''
