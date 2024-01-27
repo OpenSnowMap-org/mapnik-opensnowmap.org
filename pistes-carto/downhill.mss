@@ -61,7 +61,57 @@
 	}
   }
 }
+#downhill-casing-tunnel{
+  [grooming!="backcountry"] {
+    opacity: 0.9;
+    line-cap: butt;
+    line-join: round;
+    line-gamma: 0.6;
+    
+    line-dasharray: 3, 8;
+    
+    [zoom>=9][zoom<=11]{line-width: 2;}
+    [zoom=12]{line-width: 4;}
+    [zoom>=13][zoom<=15]{line-width: 6;}
+    [zoom>=16]{line-width: 7.55;}
+    
+    line-color: #FFFFFF;
+    /* Note: "freeride" is cast to "backcountry" in SQL*/
+	[us="1"] {
+		[difficulty="novice"]{line-color: #26A626;}
+		[difficulty="easy"]{line-color: #26A626;}
+		[difficulty="intermediate"]{line-color: #1919DE;}
+		[difficulty="advanced"]{line-color: #262121;}
+		[difficulty="expert"]{line-color: #262121;}
+		[difficulty="freeride"]{line-color: #FFE72D;}
+		[zoom>=9][zoom<=10]{
+            [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="easy"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="intermediate"]{line-color: lighten(desaturate(#1919DE,10%), 10%);}
+            [difficulty="advanced"]{line-color: lighten(desaturate(#262121,10%), 10%);}
+            [difficulty="expert"]{line-color: lighten(desaturate(#262121,10%), 10%);}
+            [difficulty="freeride"]{line-color: lighten(desaturate(#E1C90B,10%), 10%);}
+		}
+	}
 
+	[us="0"] {
+		[difficulty="novice"]{line-color: #26A626;}
+		[difficulty="easy"]{line-color: #1919DE;}
+		[difficulty="intermediate"]{line-color: #E81F1F;}
+		[difficulty="advanced"]{line-color: #262121;}
+		[difficulty="expert"]{line-color: #FFBB2D;}
+		[difficulty="freeride"]{line-color: #E1C90B;}
+		[zoom>=9][zoom<=10]{
+            [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="easy"]{line-color: lighten(desaturate(#1919DE,10%), 3%);}
+            [difficulty="intermediate"]{line-color: lighten(desaturate(#E81F1F,25%), 3%);}
+            [difficulty="advanced"]{line-color: lighten(desaturate(#262121,10%), 10%);}
+            [difficulty="expert"]{line-color: lighten(desaturate(#FFBB2D,10%), 3%);}
+            [difficulty="freeride"]{line-color: lighten(desaturate(#E1C90B,10%), 3%);}
+		}
+	}
+  }
+}
 #downhill-casing-backcountry[zoom>=11][grooming="backcountry"][official=false]{
    
         line-cap: square;
@@ -93,8 +143,6 @@
         [zoom>=15]{line-width: 1.0;line-dasharray: 10,18;}
   
 }
-
-
 #downhill-casing-backcountry[zoom>=11][grooming="backcountry"][official=true]{
 /*  Rendering for 'Official' pistes (patrolled=yes, operator=*)  */
     ::dash{  
@@ -139,9 +187,7 @@
         [zoom>=13][zoom<=14]{line-width: 2.5;line-dasharray: 9,12;}
         [zoom>=15]{line-width: 4.5;line-dasharray: 10,18;}
     }
-  
 }
-
 #downhill-area-bg[grooming!="backcountry"]{ /* white bg for aliasing*/
     line-cap: round;
     line-join: round;
@@ -152,10 +198,9 @@
     [zoom>=13][zoom<=15]{line-width: 2.5;}
     [zoom>=16]{line-width: 2;}
 }
-
 #downhill-area-casing{
-opacity: 0.9;
-[grooming!="backcountry"]{
+  opacity: 0.9;
+  [grooming!="backcountry"]{
     line-cap: round;
     line-join: round;
     line-gamma: 0.6;
@@ -166,14 +211,14 @@ opacity: 0.9;
     [zoom>=16]{line-width: 2.5;}
     
     line-color: #FFFFFF;
-        [us="1"] {
-            [difficulty="novice"]{line-color: #26A626;}
-            [difficulty="easy"]{line-color: #26A626;}
-            [difficulty="intermediate"]{line-color: #1919DE;}
-            [difficulty="advanced"]{line-color: #262121;}
-            [difficulty="expert"]{line-color: #262121;}
-            [difficulty="freeride"]{line-color: #FFE72D;}
-            [zoom>=9][zoom<=10]{
+    [us="1"] {
+        [difficulty="novice"]{line-color: #26A626;}
+        [difficulty="easy"]{line-color: #26A626;}
+        [difficulty="intermediate"]{line-color: #1919DE;}
+        [difficulty="advanced"]{line-color: #262121;}
+        [difficulty="expert"]{line-color: #262121;}
+        [difficulty="freeride"]{line-color: #FFE72D;}
+        [zoom>=9][zoom<=10]{
             [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
             [difficulty="easy"]{line-color: darken(desaturate(#26A626,20%), 10%);}
             [difficulty="intermediate"]{line-color: lighten(desaturate(#1919DE,10%), 10%);}
@@ -181,16 +226,16 @@ opacity: 0.9;
             [difficulty="expert"]{line-color: lighten(desaturate(#262121,10%), 10%);}
             [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 10%);}
             }
-        }
-    
-        [us="0"] {
-            [difficulty="novice"]{line-color: #26A626;}
-            [difficulty="easy"]{line-color: #1919DE;}
-            [difficulty="intermediate"]{line-color: #E81F1F;}
-            [difficulty="advanced"]{line-color: #262121;}
-            [difficulty="expert"]{line-color: #FFBB2D;}
-            [difficulty="freeride"]{line-color: #FFE72D;}
-            [zoom>=9][zoom<=10]{
+    }
+
+    [us="0"] {
+        [difficulty="novice"]{line-color: #26A626;}
+        [difficulty="easy"]{line-color: #1919DE;}
+        [difficulty="intermediate"]{line-color: #E81F1F;}
+        [difficulty="advanced"]{line-color: #262121;}
+        [difficulty="expert"]{line-color: #FFBB2D;}
+        [difficulty="freeride"]{line-color: #FFE72D;}
+        [zoom>=9][zoom<=10]{
             [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
             [difficulty="easy"]{line-color: lighten(desaturate(#1919DE,10%), 3%);}
             [difficulty="intermediate"]{line-color: lighten(desaturate(#E81F1F,25%), 3%);}
@@ -198,10 +243,58 @@ opacity: 0.9;
             [difficulty="expert"]{line-color: lighten(desaturate(#FFBB2D,10%), 3%);}
             [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 3%);}
             }
+    }
+  }
+}
+#downhill-area-casing-tunnel{
+  opacity: 0.9;
+  [grooming!="backcountry"]{
+    line-cap: butt;
+    line-join: round;
+    line-gamma: 0.6;
+    line-dasharray: 3, 8;
+    
+    [zoom>=9][zoom<=11]{line-width: 1;}
+    [zoom=12]{line-width: 1.5;}
+    [zoom>=13][zoom<=15]{line-width: 2;}
+    [zoom>=16]{line-width: 2.5;}
+    
+    line-color: #FFFFFF;
+    [us="1"] {
+        [difficulty="novice"]{line-color: #26A626;}
+        [difficulty="easy"]{line-color: #26A626;}
+        [difficulty="intermediate"]{line-color: #1919DE;}
+        [difficulty="advanced"]{line-color: #262121;}
+        [difficulty="expert"]{line-color: #262121;}
+        [difficulty="freeride"]{line-color: #FFE72D;}
+        [zoom>=9][zoom<=10]{
+            [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="easy"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="intermediate"]{line-color: lighten(desaturate(#1919DE,10%), 10%);}
+            [difficulty="advanced"]{line-color: lighten(desaturate(#262121,10%), 10%);}
+            [difficulty="expert"]{line-color: lighten(desaturate(#262121,10%), 10%);}
+            [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 10%);}
+            }
+    }
+
+    [us="0"] {
+        [difficulty="novice"]{line-color: #26A626;}
+        [difficulty="easy"]{line-color: #1919DE;}
+        [difficulty="intermediate"]{line-color: #E81F1F;}
+        [difficulty="advanced"]{line-color: #262121;}
+        [difficulty="expert"]{line-color: #FFBB2D;}
+        [difficulty="freeride"]{line-color: #FFE72D;}
+        [zoom>=9][zoom<=10]{
+            [difficulty="novice"]{line-color: darken(desaturate(#26A626,20%), 10%);}
+            [difficulty="easy"]{line-color: lighten(desaturate(#1919DE,10%), 3%);}
+            [difficulty="intermediate"]{line-color: lighten(desaturate(#E81F1F,25%), 3%);}
+            [difficulty="advanced"]{line-color: lighten(desaturate(#262121,10%), 10%);}
+            [difficulty="expert"]{line-color: lighten(desaturate(#FFBB2D,10%), 3%);}
+            [difficulty="freeride"]{line-color: lighten(desaturate(#FFE72D,10%), 3%);}
         }
     }
+  }
 }
-
 #downhill-area-fill[grooming!="backcountry"][zoom>=12]{
 opacity: 0.9;
     
@@ -233,7 +326,7 @@ opacity: 0.9;
 
 #downhill-area-fill-pattern-backcountry[zoom>=14]{
     ::color{
-		[zoom>=14]{polygon-opacity: 0.2; polygon-gamma: 0.6;}
+		[zoom=14]{polygon-opacity: 0.2; polygon-gamma: 0.6;}
 		[zoom>=15]{polygon-opacity: 0.25;polygon-gamma: 1;}
 		polygon-fill: #FFFFFF;
 			[us="1"] {
@@ -244,7 +337,6 @@ opacity: 0.9;
 				[difficulty="expert"]{polygon-fill: #262121;}
 				[difficulty="freeride"]{polygon-fill: #D2C700;polygon-opacity: 0.5;}
 			}
-		
 			[us="0"] {
 				[difficulty="novice"]{polygon-fill: #26A626;}
 				[difficulty="easy"]{polygon-fill: #1919DE;}
@@ -294,7 +386,7 @@ opacity: 0.9;
     line-gamma: 0.6;
     line-width: 4;
 }
-#downhill-overlay-eraser4[zoom>=16]{
+.downhill-overlay-eraser4[zoom>=16]{
     comp-op: dst-out;
     opacity: 0.95;
     
@@ -310,10 +402,8 @@ opacity: 0.9;
     
     polygon-fill: #FFFFFF;
     [zoom=12]{polygon-opacity: 1; polygon-gamma: 0.6;}
-    [zoom>=13][zoom<=15]{polygon-opacity: 1; polygon-gamma: 0.6; 
-    }
-    [zoom>=16]{polygon-opacity: 1; polygon-gamma: 1; 
-    }
+    [zoom>=13][zoom<=15]{polygon-opacity: 1; polygon-gamma: 0.6;}
+    [zoom>=16]{polygon-opacity: 1; polygon-gamma: 1;}
 
 }
 

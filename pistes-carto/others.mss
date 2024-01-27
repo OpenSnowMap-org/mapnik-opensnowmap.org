@@ -31,7 +31,7 @@
             line-opacity: 0.6;
         }
     }
-    ::line[zoom>=13]{  
+    ::line[zoom>=13][tunnel=false]{  
         line-cap: round;
         line-join: round;
         line-color: #E88193;
@@ -213,7 +213,7 @@ opacity: 0.90;
     line-color: rgba(0,0,0,0);
     line-gamma: 0.6;
     line-smooth: 0.5;
-    
+    [tunnel=true] {line-dasharray: 3, 8;}
     [piste_type=~".*snow_park.*"][zoom>=9]{
     line-width: 2;
     line-color: #0F6DD3;
@@ -297,7 +297,7 @@ opacity: 0.90;
     line-gamma: 0.6;
     line-smooth: 0.5;
     line-width: 0.5;
-    
+    [tunnel=true] {line-dasharray: 3, 8;}
     [piste_type=~".*snow_park.*"][zoom>=13]{
         line-color: #0F6DD3;
         polygon-fill: #0074F3;

@@ -87,6 +87,36 @@
     }
 }
 
+#nordic-way-tunnel[zoom>=16]{
+    line-cap: round;
+    line-join: round;
+    line-gamma: 0.5;
+    line-dasharray: 3, 8;
+/*
+    line-smooth: 0.2;
+*/
+
+    line-color: @fadein;
+    [nordic_route_render_colour != ''] {
+        line-color: [nordic_route_render_colour]
+    }
+    [zoom=12]{
+        line-width: 1.2;
+        line-opacity: 0.5;
+        }
+    [zoom=13]{
+        line-width: 1.5;
+        line-offset: 2*1.2*[member_offset]*[direction_to_offset];
+        }
+    [zoom=14]{
+        line-width: 2;
+        line-offset: 2*1.4*[member_offset]*[direction_to_offset];
+        }
+    [zoom>=15]{
+        line-width: 2.5;
+        line-offset: 2.5*1.4*[member_offset]*[direction_to_offset];
+    }
+}
 #nordic-way-oneway[oneway!=0][zoom>=15]{
         marker-file: url('pics/arrow.svg');
 /*
@@ -194,6 +224,7 @@
             }
         }
 }
+
 
 #nordic-grooming-icons[zoom>=15]{
     opacity: 0.90;
