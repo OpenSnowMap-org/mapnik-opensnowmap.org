@@ -112,7 +112,6 @@
 	}
   }
 }
-
 #downhill-casing-backcountry[zoom>=11][grooming="backcountry"][official=false]{
    
         line-cap: square;
@@ -144,7 +143,6 @@
         [zoom>=15]{line-width: 1.0;line-dasharray: 10,18;}
   
 }
-
 #downhill-casing-backcountry[zoom>=11][grooming="backcountry"][official=true]{
 /*  Rendering for 'Official' pistes (patrolled=yes, operator=*)  */
     ::dash{  
@@ -189,7 +187,6 @@
         [zoom>=13][zoom<=14]{line-width: 2.5;line-dasharray: 9,12;}
         [zoom>=15]{line-width: 4.5;line-dasharray: 10,18;}
     }
-  
 }
 #downhill-area-bg[grooming!="backcountry"]{ /* white bg for aliasing*/
     line-cap: round;
@@ -201,7 +198,6 @@
     [zoom>=13][zoom<=15]{line-width: 2.5;}
     [zoom>=16]{line-width: 2;}
 }
-
 #downhill-area-casing{
   opacity: 0.9;
   [grooming!="backcountry"]{
@@ -299,7 +295,6 @@
     }
   }
 }
-
 #downhill-area-fill[grooming!="backcountry"][zoom>=12]{
 opacity: 0.9;
     
@@ -331,7 +326,7 @@ opacity: 0.9;
 
 #downhill-area-fill-pattern-backcountry[zoom>=14]{
     ::color{
-		[zoom>=14]{polygon-opacity: 0.2; polygon-gamma: 0.6;}
+		[zoom=14]{polygon-opacity: 0.2; polygon-gamma: 0.6;}
 		[zoom>=15]{polygon-opacity: 0.25;polygon-gamma: 1;}
 		polygon-fill: #FFFFFF;
 			[us="1"] {
@@ -342,7 +337,6 @@ opacity: 0.9;
 				[difficulty="expert"]{polygon-fill: #262121;}
 				[difficulty="freeride"]{polygon-fill: #D2C700;polygon-opacity: 0.5;}
 			}
-		
 			[us="0"] {
 				[difficulty="novice"]{polygon-fill: #26A626;}
 				[difficulty="easy"]{polygon-fill: #1919DE;}
@@ -408,10 +402,8 @@ opacity: 0.9;
     
     polygon-fill: #FFFFFF;
     [zoom=12]{polygon-opacity: 1; polygon-gamma: 0.6;}
-    [zoom>=13][zoom<=15]{polygon-opacity: 1; polygon-gamma: 0.6; 
-    }
-    [zoom>=16]{polygon-opacity: 1; polygon-gamma: 1; 
-    }
+    [zoom>=13][zoom<=15]{polygon-opacity: 1; polygon-gamma: 0.6;}
+    [zoom>=16]{polygon-opacity: 1; polygon-gamma: 1;}
 
 }
 
