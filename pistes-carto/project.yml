@@ -34,7 +34,6 @@ Stylesheet:
     - downhill.mss
     - nordic.mss
     - aerialways.mss
-    - routes_simples.mss
     - sites.mss
 
 # Various parts to be included later on

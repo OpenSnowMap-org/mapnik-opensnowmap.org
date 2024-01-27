@@ -35,7 +35,6 @@ Stylesheet:
     - downhill.mss
     - nordic.mss
     - aerialways.mss
-    - routes_simples.mss
     - sites.mss
 
 # Various parts to be included later on
@@ -376,7 +375,7 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-                
-                (select geometry, piste_type, grooming from osm_pistes_area
+                (select geometry, piste_type, grooming, tunnel from osm_pistes_area
                 where 
                 (piste_type LIKE '%ice_skate%' 
                 or piste_type LIKE '%playground%' 
@@ -493,13 +492,148 @@ Layer:
       properties:
         minzoom: 9
         
+    - id: downhill-casing-tunnel
+      geometry: linestring
+      class: ''
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: &downhill_tunnel_sql |-
+                (
+                (select 0 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride', 'extreme') 
+                      and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
+                (case
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from osm_pistes_ways
+                where 
+                piste_type LIKE '%downhill%'
+                AND geometry && !bbox!
+                and not (abandoned1 or abandoned2)
+                and tunnel
+                )
+                
+                UNION
+                
+                (select 1 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride', 'extreme') 
+                     and not grooming in ('classic') 
+                     and not rel_grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
+                (case
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from osm_pistes_route_members
+                where 
+                piste_type LIKE '%downhill%'
+                AND geometry && !bbox!
+                and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
+                and tunnel
+                )
+                ORDER BY ord DESC
+                ) as pistes
+      properties:
+        minzoom: 9
+        
+    - id: downhill-overlay-eraser4-tunnel
+      geometry: linestring
+      class: 'downhill-overlay-eraser4'
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: *downhill_tunnel_sql 
+      properties:
+        minzoom: 9    
     - id: downhill-casing
       geometry: linestring
       class: ''
       <<: *extents
       Datasource:
         <<: *imposm
-        table: *downhill_sql 
+        table: &downhill_sql_no_tunnel |-
+                (
+                (select 0 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride', 'extreme') 
+                      and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
+                (case
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from osm_pistes_ways
+                where 
+                piste_type LIKE '%downhill%'
+                AND geometry && !bbox!
+                and not (abandoned1 or abandoned2)
+                and not tunnel
+                )
+                
+                UNION
+                
+                (select 1 as ord, geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride', 'extreme') 
+                     and not grooming in ('classic') 
+                     and not rel_grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
+                (case
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from osm_pistes_route_members
+                where 
+                piste_type LIKE '%downhill%'
+                AND geometry && !bbox!
+                and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
+                and not tunnel
+                )
+                ORDER BY ord DESC
+                ) as pistes
       properties:
         minzoom: 9
         
@@ -523,13 +657,74 @@ Layer:
       properties:
         minzoom: 9
         
+    - id: downhill-area-casing-tunnel
+      geometry: linestring
+      class: downhill-area-casing
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: &downhill_area_tunnel_sql |-
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride', 'extreme') 
+                      and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
+                (case
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from osm_pistes_area
+                where 
+                (piste_type LIKE '%downhill%' )
+                and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
+                and tunnel
+                ) as pistes
+      properties:
+        minzoom: 9
+        
     - id: downhill-area-casing
       geometry: linestring
       class: downhill-area-casing
       <<: *extents
       Datasource:
         <<: *imposm
-        table: *downhill_area_sql
+        table: &downhill_area_no_tunnel_sql |-
+                (select geometry, difficulty, 
+                (case
+                    when difficulty in ('freeride', 'extreme') 
+                      and not grooming in ('classic')
+                    then 'backcountry'
+                    else grooming
+                end ) as grooming ,
+                (case
+                    when patrolled 
+                     or tags?'operator'
+                    then true
+                    else false
+                end ) as official ,
+                (case 
+                    when (ST_X(ST_centroid(geometry)) > -4000000 or ST_y(ST_centroid(geometry)) < 0)
+                    then '0' 
+                    else '1' 
+                end) as us
+                from osm_pistes_area
+                where 
+                (piste_type LIKE '%downhill%' )
+                and not (abandoned1 or abandoned2)
+                and difficulty not in ('')
+                and not tunnel
+                ) as pistes
+
       properties:
         minzoom: 9
         
@@ -563,7 +758,7 @@ Layer:
     
     - id: downhill-overlay-eraser4
       geometry: linestring
-      class: ''
+      class: 'downhill-overlay-eraser4'
       <<: *extents
       Datasource:
         <<: *imposm
@@ -584,7 +779,7 @@ Layer:
         
     - id: downhill-area-eraser
       geometry: linestring
-      class: ''
+      class: 'downhill-area-eraser'
       <<: *extents
       Datasource:
         <<: *imposm
@@ -622,7 +817,7 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming from pistes_routes 
+                (select geometry, difficulty, grooming, false as tunnel from pistes_routes 
                 where 
                 piste_type LIKE '%hike%'
                 and not (abandoned1 or abandoned2)
@@ -654,7 +849,7 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, difficulty, grooming from osm_pistes_ways 
+                (select geometry, difficulty, grooming, tunnel from osm_pistes_ways 
                 where 
                 piste_type LIKE '%hike%'
                 and not (abandoned1 or abandoned2)
@@ -670,7 +865,7 @@ Layer:
       Datasource:
         <<: *imposm
         table: |-
-                (select geometry, piste_type from osm_pistes_ways 
+                (select geometry, piste_type, tunnel from osm_pistes_ways 
                 where 
                 ( piste_type LIKE '%ice_skate%' 
                 or piste_type LIKE '%connection%' 
@@ -686,7 +881,7 @@ Layer:
                 
                 UNION
                 
-                select geometry, piste_type from pistes_routes 
+                select geometry, piste_type, false as tunnel from pistes_routes 
                 where 
                 ( piste_type LIKE '%ice_skate%' 
                 or piste_type LIKE '%connection%' 
@@ -702,7 +897,7 @@ Layer:
                 
                 UNION
                 
-                select geometry, piste_type from osm_other_ways 
+                select geometry, piste_type, tunnel from osm_other_ways 
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%connection%' 
@@ -716,7 +911,7 @@ Layer:
                 
                 UNION
                 
-                select geometry, piste_type from osm_other_nodes 
+                select geometry, piste_type, false as tunnel from osm_other_nodes 
                 where 
                 ( piste_type LIKE '%skating%'
                 or piste_type LIKE '%connection%' 
@@ -894,6 +1089,73 @@ Layer:
             ) as data
       properties:
         minzoom: 9
+    - id: nordic-way-tunnel 
+      geometry: linestring
+      class: nordic-way-tunnel 
+      <<: *extents
+      Datasource:
+        <<: *imposm
+        table: |-
+            (SELECT geometry,
+            member_offset, nordic_route_render_colour, direction_to_offset,
+            grooming, length
+            FROM
+              (SELECT 
+                geometry, 0 as member_offset, nordic_route_render_colour, 1 as direction_to_offset,
+                grooming, ST_Length(geometry) as length
+                FROM 
+                osm_pistes_ways
+                WHERE
+                piste_type like '%nordic%'
+                AND geometry && !bbox!
+                and not (abandoned1 or abandoned2)
+                and tunnel
+                AND osm_id NOT IN (
+                    SELECT member
+                    FROM osm_pistes_route_members
+                    WHERE piste_type like '%nordic%'
+                    AND geometry && !bbox!
+                )
+                
+                UNION
+                
+                SELECT 
+                geometry, 0 as member_offset, '' as nordic_route_render_colour, 1 as direction_to_offset,
+                grooming, ST_Length(geometry) as length
+                FROM 
+                osm_pistes_area
+                WHERE
+                piste_type like '%nordic%'
+                AND geometry && !bbox!
+                and not (abandoned1 or abandoned2)
+                and tunnel
+                AND osm_id NOT IN (
+                    SELECT member
+                    FROM osm_pistes_route_members
+                    WHERE piste_type like '%nordic%'
+                    AND geometry && !bbox!
+                )
+                
+                UNION
+                
+                SELECT 
+                geometry, member_offset, nordic_route_render_colour, direction_to_offset,
+                grooming, shortest_route_length as length
+                FROM 
+                osm_pistes_route_members
+                WHERE
+                piste_type like '%nordic%'
+                and worth_rendering
+                and not (abandoned1 or abandoned2)
+                and tunnel
+                AND geometry && !bbox!
+                
+              ) as lines
+            ORDER BY length DESC
+            ) as data
+      properties:
+        minzoom: 12
+
     - id: nordic-way 
       geometry: linestring
       class: nordic-way
@@ -914,6 +1176,7 @@ Layer:
                 piste_type like '%nordic%'
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
+                and not tunnel
                 AND osm_id NOT IN (
                     SELECT member
                     FROM osm_pistes_route_members
@@ -932,6 +1195,7 @@ Layer:
                 piste_type like '%nordic%'
                 AND geometry && !bbox!
                 and not (abandoned1 or abandoned2)
+                and not tunnel
                 AND osm_id NOT IN (
                     SELECT member
                     FROM osm_pistes_route_members
@@ -950,6 +1214,7 @@ Layer:
                 piste_type like '%nordic%'
                 and worth_rendering
                 and not (abandoned1 or abandoned2)
+                and not tunnel
                 AND geometry && !bbox!
                 
                 
@@ -974,6 +1239,7 @@ Layer:
             piste_type like '%nordic%'
             AND geometry && !bbox!
             and not (abandoned1 or abandoned2)
+                and not tunnel
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
@@ -992,6 +1258,7 @@ Layer:
             piste_type like '%nordic%'
             AND geometry && !bbox!
             and not (abandoned1 or abandoned2)
+                and not tunnel
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
@@ -1012,9 +1279,11 @@ Layer:
             piste_type like '%nordic%'
             AND geometry && !bbox!
             and not (abandoned1 or abandoned2)
+                and not tunnel
           ) as data
       properties:
         minzoom: 9
+
 
     - id: nordic-difficulty-markers
       geometry: linestring
