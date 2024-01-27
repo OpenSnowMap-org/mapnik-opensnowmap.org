@@ -325,6 +325,17 @@ opacity: 0.90;
     }
 }
 
+#various-tunnel[zoom>=12]{
+	comp-op: dst-out;
+	opacity: 1;
+    line-cap: butt;
+    line-join: round;
+    line-dasharray:6, 4;
+	line-color: #FFF;
+    line-gamma: 0.6;
+    line-smooth: 0.5;
+	line-width: 1.5;
+}
 #various-text[zoom>=15]{
     text-name:'[name]';
     text-face-name:@book-fonts;
