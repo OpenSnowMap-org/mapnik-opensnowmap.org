@@ -340,9 +340,24 @@ hillshade_d8.tif
     [zoom>14]{ polygon-pattern-file:url(img/forest_lite.png);}
 }
 #land_features[zoom>12] {
-    opacity: 0.5;
+    
     [type='cliff']{
-      line-pattern-file: url(img/cliff2.png);
+      [density > 8] {
+        [zoom <=16]{
+          opacity: 0.4;
+          line-pattern-file: url(img/cliff.svg);
+          line-pattern-transform: scale(0.6,0.6);
+        }
+        [zoom >16]{
+          opacity: 0.6;
+          line-pattern-file: url(img/cliff.svg);
+          line-pattern-transform: scale(0.9,0.9);
+        }
+      }
+      [density <= 8] {
+        opacity: 0.6;
+        line-pattern-file: url(img/cliff.svg);
+      }
     }
 }
 #single_trees[zoom>=12] {

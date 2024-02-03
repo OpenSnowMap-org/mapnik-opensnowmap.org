@@ -146,7 +146,14 @@ Layer:
   - id: land_features
     Datasource:
       table: |-
-        (select geometry, type from osm_natural_ways ) as landusages
+        (select  count(*) as density, st_collect(sq.geometry) AS geometry, type
+        from
+        (Select geometry, type, st_clusterdbscan(geometry,100,1) over() AS cluster
+            from osm_natural_ways
+            where type='cliff'
+            and geometry && !bbox!) sq
+        where geometry && !bbox!
+        group by cluster, type) as landusages
       geometry_field: geometry
       <<: *extents
       <<: *imposm

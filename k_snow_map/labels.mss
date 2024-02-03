@@ -344,20 +344,23 @@
 
 #land_nodes[type='peak'][zoom>=13],
 #land_nodes[type='saddle'][zoom>=13] {
-  point-file:url(img/peak.png);
+  point-file:url(img/peak.svg);
   point-opacity: 0.5;
-  text-size:0;
-  text-name:'[name]';
-  text-face-name:@sans_lt_italic;
-  text-placement:point;
-  text-fill:@other_text*0.6;
-  text-halo-fill:@other_halo;
-  text-halo-radius:1;
-  text-wrap-width: 30;
-  text-placement-type: "simple";
-  text-placements: "E,S,N,W";
+  [zoom>=14]{
+	/* no text at z13 */
+	  text-size:0;
+	  text-name:'[name]';
+	  text-face-name:@sans_lt_italic;
+	  text-placement:point;
+	  text-fill:@other_text*0.6;
+	  text-halo-fill:@other_halo;
+	  text-halo-radius:1;
+	  text-wrap-width: 30;
+	  text-placement-type: "simple";
+	  text-placements: "E,S,N,W";
+	}
   [zoom>=14] {
-    point-file:url(img/peak.png);
+    point-file:url(img/peak.svg);
     point-opacity: 1;
     text-size:9;
     text-character-spacing: 1;
@@ -366,7 +369,7 @@
     text-dy: 13;
   }
   [zoom>=15] {
-    point-file:url(img/peak.png);
+    point-file:url(img/peak.svg);
     text-size:10;
     text-character-spacing: 1;
     text-wrap-width: 60; 
@@ -374,7 +377,7 @@
     text-dy: 13;
   }
   [zoom>=16] {
-    point-file:url(img/peak.png);
+    point-file:url(img/peak.svg);
     text-size:11;
     text-character-spacing: 2;
     text-wrap-width: 120;
@@ -382,7 +385,7 @@
     text-dy: 14;
   } 
   [zoom>=17] {
-    point-file:url(img/peak.png);
+    point-file:url(img/peak.svg);
     text-size:12; 
     text-character-spacing: 3;
     text-wrap-width: 160;
@@ -390,7 +393,7 @@
     text-dy: 15;
   }
   [zoom>=18] {
-    point-file:url(img/peak.png);
+    point-file:url(img/peak.svg);
     text-size:12;
     text-character-spacing: 4;
     text-line-spacing: 6;
