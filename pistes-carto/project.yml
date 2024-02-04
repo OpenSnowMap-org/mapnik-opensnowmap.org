@@ -203,7 +203,7 @@ Layer:
                 from osm_pistes_ways
                 where 
                 piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 )
                 
@@ -231,7 +231,7 @@ Layer:
                 from osm_pistes_route_members
                 where 
                 piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and difficulty not in ('')
                 )
@@ -269,7 +269,7 @@ Layer:
                 from osm_pistes_ways
                 where 
                 piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and tunnel
                 )
@@ -298,7 +298,7 @@ Layer:
                 from osm_pistes_route_members
                 where 
                 piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and difficulty not in ('')
                 and tunnel
@@ -346,7 +346,7 @@ Layer:
                 from osm_pistes_ways
                 where 
                 piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and not tunnel
                 )
@@ -375,7 +375,7 @@ Layer:
                 from osm_pistes_route_members
                 where 
                 piste_type LIKE '%downhill%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and difficulty not in ('')
                 and not tunnel
@@ -624,7 +624,7 @@ Layer:
                 or piste_type LIKE '%sleigh%' 
                 or piste_type LIKE '%hike%')
                 and not (abandoned1 or abandoned2)
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 UNION
                 
@@ -640,7 +640,7 @@ Layer:
                 or piste_type LIKE '%sleigh%' 
                 or piste_type LIKE '%hike%')
                 and not (abandoned1 or abandoned2)
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 UNION
                 
@@ -654,7 +654,7 @@ Layer:
                 or piste_type LIKE '%ice_hockey%'
                 or piste_type LIKE '%curling%'
                 or piste_type LIKE '%ice_stock%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 UNION
                 
@@ -668,7 +668,7 @@ Layer:
                 or piste_type LIKE '%ice_hockey%'
                 or piste_type LIKE '%curling%'
                 or piste_type LIKE '%ice_stock%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 ) as pistes
       properties:
@@ -688,14 +688,14 @@ Layer:
             osm_pistes_ways
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             
             UNION
@@ -707,13 +707,13 @@ Layer:
             WHERE
             piste_type like '%nordic%'
             AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             UNION
             
@@ -724,7 +724,7 @@ Layer:
             WHERE
             piste_type like '%nordic%'
             AND difficulty IN ('intermediate', 'advanced', 'expert', 'freeride','extreme')
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
           ) as data
       properties:
@@ -742,13 +742,13 @@ Layer:
             osm_pistes_ways
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             
             UNION
@@ -759,13 +759,13 @@ Layer:
             osm_pistes_area
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             
             UNION
@@ -776,7 +776,7 @@ Layer:
             osm_pistes_route_members
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
           ) as data
       properties:
@@ -796,13 +796,13 @@ Layer:
                 osm_pistes_ways
                 WHERE
                 piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 AND osm_id NOT IN (
                     SELECT member
                     FROM osm_pistes_route_members
                     WHERE piste_type like '%nordic%'
-                    AND geometry && !bbox!
+                    AND geometry && !BBOX!
                 )
                 
                 UNION
@@ -813,13 +813,13 @@ Layer:
                 osm_pistes_area
                 WHERE
                 piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 AND osm_id NOT IN (
                     SELECT member
                     FROM osm_pistes_route_members
                     WHERE piste_type like '%nordic%'
-                    AND geometry && !bbox!
+                    AND geometry && !BBOX!
                 )
                 
                 UNION
@@ -831,7 +831,7 @@ Layer:
                 WHERE
                 piste_type like '%nordic%'
                 and not (abandoned1 or abandoned2)
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
               ) as lines
             ) as data
       properties:
@@ -854,14 +854,14 @@ Layer:
                 osm_pistes_ways
                 WHERE
                 piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and tunnel
                 AND osm_id NOT IN (
                     SELECT member
                     FROM osm_pistes_route_members
                     WHERE piste_type like '%nordic%'
-                    AND geometry && !bbox!
+                    AND geometry && !BBOX!
                 )
                 
                 UNION
@@ -873,14 +873,14 @@ Layer:
                 osm_pistes_area
                 WHERE
                 piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and tunnel
                 AND osm_id NOT IN (
                     SELECT member
                     FROM osm_pistes_route_members
                     WHERE piste_type like '%nordic%'
-                    AND geometry && !bbox!
+                    AND geometry && !BBOX!
                 )
                 
                 UNION
@@ -895,7 +895,7 @@ Layer:
                 and worth_rendering
                 and not (abandoned1 or abandoned2)
                 and tunnel
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
               ) as lines
             ORDER BY length DESC
@@ -921,14 +921,14 @@ Layer:
                 osm_pistes_ways
                 WHERE
                 piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and not tunnel
                 AND osm_id NOT IN (
                     SELECT member
                     FROM osm_pistes_route_members
                     WHERE piste_type like '%nordic%'
-                    AND geometry && !bbox!
+                    AND geometry && !BBOX!
                 )
                 
                 UNION
@@ -940,14 +940,14 @@ Layer:
                 osm_pistes_area
                 WHERE
                 piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 and not tunnel
                 AND osm_id NOT IN (
                     SELECT member
                     FROM osm_pistes_route_members
                     WHERE piste_type like '%nordic%'
-                    AND geometry && !bbox!
+                    AND geometry && !BBOX!
                 )
                 
                 UNION
@@ -962,7 +962,7 @@ Layer:
                 and worth_rendering
                 and not (abandoned1 or abandoned2)
                 and not tunnel
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
               ) as lines
             ORDER BY length DESC
@@ -983,14 +983,14 @@ Layer:
             osm_pistes_ways
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
                 and not tunnel
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             
             UNION
@@ -1002,14 +1002,14 @@ Layer:
             osm_pistes_area
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
                 and not tunnel
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             UNION
             
@@ -1023,7 +1023,7 @@ Layer:
             osm_pistes_route_members
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
                 and not tunnel
           ) as data
@@ -1044,7 +1044,7 @@ Layer:
             osm_pistes_ways
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             and difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
             
@@ -1058,7 +1058,7 @@ Layer:
             piste_type like '%nordic%'
             and not (abandoned1 or abandoned2)
             and difficulty in ('intermediate', 'advanced', 'expert', 'freeride','extreme')
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             
           ) as data
       properties:
@@ -1077,13 +1077,13 @@ Layer:
             osm_pistes_ways
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             
             UNION
@@ -1099,7 +1099,7 @@ Layer:
             osm_pistes_route_members
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
           ) as data
       properties:
@@ -1117,13 +1117,13 @@ Layer:
             osm_pistes_ways
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             
             UNION
@@ -1135,13 +1135,13 @@ Layer:
             osm_pistes_area
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
             )
             UNION
             
@@ -1156,7 +1156,7 @@ Layer:
             osm_pistes_route_members
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
           ) as data
       properties:
@@ -1175,7 +1175,7 @@ Layer:
             geometry, piste_type, name
           FROM 
             osm_aerialways
-            WHERE geometry && !bbox!
+            WHERE geometry && !BBOX!
             and not (abandoned1 or abandoned2)
           
           ) as data
@@ -1220,7 +1220,7 @@ Layer:
             osm_pistes_ways
           WHERE
             lit1 or lit2
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             
           UNION
@@ -1231,7 +1231,7 @@ Layer:
             osm_pistes_area
           WHERE
             lit1 or lit2
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
           ) as data
       properties:
@@ -1253,7 +1253,7 @@ Layer:
                 from osm_pistes_ways
                 where 
                 piste_type LIKE '%downhill%' and (grooming='mogul' or gladed=true or lit1=true or lit2=true or difficulty='freeride')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 
                 UNION
@@ -1267,7 +1267,7 @@ Layer:
                 from pistes_routes
                 where 
                 piste_type LIKE '%downhill%' and (grooming='mogul' or gladed=true or lit1=true or lit2=true or difficulty='freeride')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 
                 ) as pistes
@@ -1308,7 +1308,7 @@ Layer:
                     FROM osm_pistes_ways
                     WHERE 
                         piste_type LIKE '%downhill%' 
-                        AND geometry && !bbox!
+                        AND geometry && !BBOX!
                         AND (piste_name!='' or name!='' or piste_ref!='' or ref!='' )
                         and not (abandoned1 or abandoned2)
                     
@@ -1327,7 +1327,7 @@ Layer:
                     FROM pistes_routes
                     WHERE 
                         piste_type LIKE '%downhill%' 
-                        AND geometry && !bbox!
+                        AND geometry && !BBOX!
                         AND (piste_name!='' or name!='' or piste_ref!='' or ref!='' )
                         and not (abandoned1 or abandoned2)
                     
@@ -1346,7 +1346,7 @@ Layer:
                     FROM osm_pistes_area
                     WHERE 
                         piste_type LIKE '%downhill%' 
-                        AND geometry && !bbox!
+                        AND geometry && !BBOX!
                         AND (piste_name!='' or name!='' or piste_ref!='' or ref!='' )
                         and not (abandoned1 or abandoned2)
                 
@@ -1430,7 +1430,7 @@ Layer:
                     st_Area(geometry) as area
                   FROM 
                     pistes_sites
-                  WHERE geometry && !bbox!
+                  WHERE geometry && !BBOX!
                   )
                   
                   UNION
@@ -1452,7 +1452,7 @@ Layer:
                   FROM 
                     landuse_resorts
                   WHERE ST_Area(geometry)>350000
-                  AND geometry && !bbox!
+                  AND geometry && !BBOX!
                   )
                   
                 ) as resorts
@@ -1477,13 +1477,13 @@ Layer:
             osm_pistes_ways
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             AND NOT (abandoned1 or abandoned2)
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                  and not (abandoned1 or abandoned2)
             )
             
@@ -1496,12 +1496,12 @@ Layer:
             osm_pistes_area
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             AND osm_id NOT IN (
                 SELECT member
                 FROM osm_pistes_route_members
                 WHERE piste_type like '%nordic%'
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                  and not (abandoned1 or abandoned2)
             )
             
@@ -1514,7 +1514,7 @@ Layer:
             osm_pistes_route_members
             WHERE
             piste_type like '%nordic%'
-            AND geometry && !bbox!
+            AND geometry && !BBOX!
             and not (abandoned1 or abandoned2)
             
             ) as data
@@ -1541,7 +1541,7 @@ Layer:
                 or piste_type LIKE '%skitour%'
                 or (piste_type LIKE '%downhill%' and grooming='backcountry')
                 )
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 
                 UNION
@@ -1558,7 +1558,7 @@ Layer:
                 or piste_type LIKE '%sleigh%' 
                 or piste_type LIKE '%hike%'
                 )
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 
                 UNION
@@ -1577,7 +1577,7 @@ Layer:
                 or piste_type LIKE '%skitour%'
                 or (piste_type LIKE '%downhill%' and grooming='backcountry')
                 )
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 
                 UNION
@@ -1592,7 +1592,7 @@ Layer:
                 or piste_type LIKE '%ice_hockey%'
                 or piste_type LIKE '%curling%'
                 or piste_type LIKE '%ice_stock%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 UNION
                 
@@ -1606,7 +1606,7 @@ Layer:
                 or piste_type LIKE '%ice_hockey%'
                 or piste_type LIKE '%curling%'
                 or piste_type LIKE '%ice_stock%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 ) as pistes
       properties:
@@ -1622,21 +1622,21 @@ Layer:
                 (select geometry,'' as man_made, avalanche_transceiver from osm_other_areas 
                 where 
                 ( avalanche_transceiver is not null)
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 UNION
                 
                 select geometry,'' as man_made, avalanche_transceiver from osm_other_ways 
                 where 
                 ( avalanche_transceiver is not null)
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 UNION
                 
                 select geometry, man_made, avalanche_transceiver from osm_other_nodes 
                 where 
                 ( man_made = 'snow_cannon%'
                 or avalanche_transceiver is not null)
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 
                 ) as pistes
@@ -1661,7 +1661,7 @@ Layer:
                 or piste_type LIKE '%sleigh%' 
                 or piste_type LIKE '%hike%'
                 or piste_type LIKE '%skitour%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 
                 UNION
@@ -1678,7 +1678,7 @@ Layer:
                 or piste_type LIKE '%sleigh%' 
                 or piste_type LIKE '%hike%'
                 or piste_type LIKE '%skitour%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 
                 UNION
@@ -1695,7 +1695,7 @@ Layer:
                 or piste_type LIKE '%sleigh%' 
                 or piste_type LIKE '%hike%'
                 or piste_type LIKE '%skitour%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 and not (abandoned1 or abandoned2)
                 
                 UNION
@@ -1710,7 +1710,7 @@ Layer:
                 or piste_type LIKE '%ice_hockey%'
                 or piste_type LIKE '%curling%'
                 or piste_type LIKE '%ice_stock%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 UNION
                 
@@ -1724,7 +1724,7 @@ Layer:
                 or piste_type LIKE '%ice_hockey%'
                 or piste_type LIKE '%curling%'
                 or piste_type LIKE '%ice_stock%')
-                AND geometry && !bbox!
+                AND geometry && !BBOX!
                 
                 ) as pistes
       properties:
