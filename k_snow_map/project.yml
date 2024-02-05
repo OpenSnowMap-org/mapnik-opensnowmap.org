@@ -10,17 +10,17 @@ center:
     - 46.7436
     - 16
 overlay:
-    url: 'http://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png?debug10'
+    url: 'http://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png?debug1'
     active: true
     opacity: 1
     position: -1
-compareUrl: 'http://tiles.opensnowmap.org/base_snow_map/{z}/{x}/{y}.png?debug10'
+compareUrl: 'http://tiles.opensnowmap.org/base_snow_map/{z}/{x}/{y}.png?debug1'
     
 format: png24
 interactivity: false
 minzoom: 0
 maxzoom: 18
-srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs +type=crs"
+srs: &srs "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
 scale: 1
 metatile: 4
 attribution: "Data © OpenStreetMap (and) contributors, OdBL; map (c) Opensnowmap.org, CC-BY-SA"
@@ -37,9 +37,9 @@ Stylesheet:
 # Various parts to be included later on
 _parts:
   extents: &extents
-    extent: "-20037508.34,-20037508.34,20037508.34,20037508.34"
+    extent: "-180,-85.0511,180,85.0511"
     srs-name: "3857"
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs +type=crs"
+    srs: *srs
   extents84: &extents84
     extent: "-180,-85.0511,180,85.0511"
     srs-name: "WGS84"
@@ -51,8 +51,8 @@ _parts:
     key_field: ""
     geometry_field: ""
     extent: "-20037508,-20037508,20037508,20037508"
-    srid : 3857
-    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs +type=crs"
+    srid : "3857"
+    srs: *srs
     
 Layer:
   - id: ocean_background
@@ -126,10 +126,10 @@ Layer:
     Datasource:
       table: |-
         (select geometry, type from osm_natural_ways where type IN ('tree_row', 'hedge')
-        and geometry && !BBOX!
+        and geometry && !bbox!
         union
         select geometry, type from osm_natural_nodes where type = 'tree'
-        and geometry && !BBOX!) as landusages
+        and geometry && !bbox!) as landusages
       geometry_field: geometry
       <<: *extents
       <<: *imposm
@@ -154,12 +154,13 @@ Layer:
         (Select geometry, type, st_clusterdbscan(geometry,100,1) over() AS cluster
             from osm_natural_ways
             where type='cliff'
-            and geometry && !BBOX!) sq
-        where geometry && !BBOX!
+            and geometry && !bbox!
+            ) sq
+        
         group by cluster, type) as landusages
       geometry_field: geometry
-      <<: *extents
       <<: *imposm
+      <<: *extents
 
   - id: contours10
     geometry: linestring
@@ -422,13 +423,13 @@ Layer:
             END AS int_difficulty
           FROM (
             SELECT *, '1_outline' AS render FROM osm_roads WHERE tunnel = 1
-            and  geometry && !BBOX!
+            and  geometry && !bbox!
             UNION ALL
             SELECT *, '2_line' AS render FROM osm_roads WHERE tunnel = 1
-            and  geometry && !BBOX!
+            and  geometry && !bbox!
             UNION ALL
             SELECT *, '3_inline' AS render FROM osm_roads WHERE tunnel = 1
-            and  geometry && !BBOX!
+            and  geometry && !bbox!
           ) AS tunnels
           ORDER BY layer ASC, render ASC
         ) AS data
@@ -527,13 +528,13 @@ Layer:
             END AS int_difficulty
           FROM (
             SELECT *, '1_outline' AS render FROM osm_roads WHERE bridge = 1
-            and  geometry && !BBOX!
+            and  geometry && !bbox!
             UNION ALL
             SELECT *, '2_line' AS render FROM osm_roads WHERE bridge = 1
-            and  geometry && !BBOX!
+            and  geometry && !bbox!
             UNION ALL
             SELECT *, '3_inline' AS render FROM osm_roads WHERE bridge = 1
-            and  geometry && !BBOX!
+            and  geometry && !bbox!
           ) as bridges
           ORDER BY layer ASC, render ASC
         ) AS data
@@ -591,7 +592,7 @@ Layer:
        FROM osm_amenities 
        WHERE type IN ('alpine_hut', 'wilderness_hut', 'shelter')
        AND shelter_type != 'public_transport'
-       AND geometry && !BBOX!
+       AND geometry && !bbox!
        
        UNION
        
@@ -604,7 +605,7 @@ Layer:
        FROM osm_buildings
        WHERE type IN ('alpine_hut', 'wilderness_hut', 'shelter')
        AND shelter_type != 'public_transport'
-       AND geometry && !BBOX!) as data
+       AND geometry && !bbox!) as data
       <<: *extents
       <<: *imposm
       
@@ -614,15 +615,15 @@ Layer:
       table: |-
        (select type, geometry, 'o' as name 
        from osm_pistes_ways 
-       Where geometry && !BBOX!
+       Where geometry && !bbox!
        UNION ALL  
        select type, geometry, 'o' as name 
        from osm_aerialways 
-       Where geometry && !BBOX!
+       Where geometry && !bbox!
        UNION ALL  
        select type, geometry,'o' as name 
        from osm_pistes_area 
-       Where geometry && !BBOX!
+       Where geometry && !bbox!
        ) as data
       <<: *extents
       <<: *imposm
@@ -693,15 +694,15 @@ Layer:
        ( SELECT type, name, area, 'land' AS stylegroup, ST_Centroid(geometry) AS geometry   
         FROM osm_landusages   
         WHERE name IS NOT NULL     
-        AND geometry && !BBOX!     
+        AND geometry && !bbox!     
         AND type IN ('glacier' )     
-        AND geometry && !BBOX! 
+        AND geometry && !bbox! 
               UNION ALL    
         SELECT type, name, area, 'water' AS stylegroup,     ST_Centroid(geometry) AS geometry   
         FROM osm_waterareas   
         WHERE name IS NOT NULL     
         AND type in( 'water', 'basin' )     
-        AND geometry && !BBOX!
+        AND geometry && !bbox!
         ) AS data
     geometry: point
     
@@ -717,7 +718,7 @@ Layer:
         ST_Centroid(geometry) AS geometry   
         FROM osm_landusages   
         WHERE name IS NOT NULL     
-        AND geometry && !BBOX!     
+        AND geometry && !bbox!     
         AND type IN (         'cemetery', 'college', 'commercial', 'common',
         'garden', 'golf_course',         'hospital', 'industrial', 'library', 'park',
         'pedestrian', 'place_of_worship',         'playground', 'school', 'sports_center',
@@ -730,7 +731,7 @@ Layer:
         FROM osm_buildings   
         WHERE
         name IS NOT NULL      
-        AND geometry && !BBOX!        
+        AND geometry && !bbox!        
         ORDER BY area DESC )
         AS data
     geometry: point
@@ -787,10 +788,10 @@ Layer:
     Datasource:
       table: |-
         (select type, geometry from osm_pistes_ways
-        where geometry && !BBOX!
+        where geometry && !bbox!
         UNION ALL
         select type, geometry from osm_aerialways
-        where geometry && !BBOX!
+        where geometry && !bbox!
         ) as data
       <<: *extents
       <<: *imposm
