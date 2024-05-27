@@ -97,32 +97,15 @@
     text-face-name: 'DejaVu Sans Book';
     text-placement: line;
     text-fill: rgba(255,255,255,1);
-    text-size: 7.5;
+    text-size: 10;
+    text-upright: left;
     text-opacity: 1;
-/*
-    text-halo-comp-op: dst-out;
-*/
     text-halo-radius: 1;
     text-halo-opacity: 1;
     text-halo-fill: rgba(255,255,255,1);
-    text-label-position-tolerance:100;
-    text-spacing: 300;
+    text-label-position-tolerance:200;
+    text-spacing: 512;
     }
-/*
-    text-name: [ele];
-    text-face-name: 'DejaVu Sans Book';
-    text-placement: line;
-    text-fill: @land;
-    text-size: 7.5;
-    text-opacity: 1;
-    
-    text-halo-radius: 1;
-    text-halo-opacity: 1;
-    text-halo-fill: @land;
-    
-    text-label-position-tolerance:100;
-    text-spacing: 300;
-*/
  }
 
 /* ================================================================== */

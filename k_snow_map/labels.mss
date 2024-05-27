@@ -16,7 +16,7 @@
     text-fill:@city_text;
     text-halo-fill:@city_halo;
     text-halo-radius:1;
-    text-size: 9;}
+    text-size:10;}
   [zoom=4][scalerank <2] {    
     text-name:'[nameascii]';
     text-face-name:@sans;
@@ -54,14 +54,14 @@
     text-fill:@city_text;
     text-halo-fill:@city_halo;
     text-halo-radius:1;
-    text-size: 9;}
+    text-size:10;}
   [zoom>5][zoom<=8][scalerank >=2] {
     text-name:'[nameascii]';
     text-face-name:@sans;
     text-fill:@city_text;
     text-halo-fill:@city_halo;
     text-halo-radius:1;
-    text-size: 9;}
+    text-size:10;}
   }
 /*#place::country[type='country'][zoom>3][zoom<9] {
   text-name:'[name]';
@@ -193,7 +193,7 @@
   text-face-name:@sans;
   text-placement:point;
   text-fill:@town_text;
-  text-size:9;
+  text-size:10;
   text-halo-fill:@town_halo;
   text-halo-radius:1;
   text-wrap-width: 50;
@@ -201,7 +201,7 @@
   text-placements: "E,S,N,W";
   [zoom>=10] {
     text-halo-radius:2;
-    text-size: 10;
+    text-size: 11;
   }
   [zoom>=11]{ text-size:11; }
   [zoom>=12]{
@@ -255,18 +255,18 @@
     text-dx: 20;
     text-dy: 15;
     text-min-distance : 40;
-    text-size:9;
+    text-size:10;
   }
   [zoom>=11] {
     text-dx: 15;
     text-dy: 10;
-    text-size:10;
+    text-size:11;
     text-min-distance : 30;
   }
   [zoom>=12] {
     text-dx: 10;
     text-dy: 10;
-    text-size:10;
+    text-size:11;
     text-min-distance : 7;
   }
   [zoom>=13] {
@@ -277,8 +277,10 @@
   }
   [zoom>=14] {
     text-dx: 20;
-    text-dy: 10;
+    text-dy: 11;
     text-size:11;
+    text-transform: uppercase;
+  text-halo-radius:1.5;
     text-character-spacing: 1;
     text-line-spacing: 1;
   }
@@ -316,9 +318,9 @@
   text-face-name:@sans;
   text-placement:point;
   text-fill:@locality_text;
-  text-size:9;
+  text-size:10.5;
   text-halo-fill:@locality_halo;
-  text-halo-radius:1;
+  text-halo-radius:1.5;
   text-wrap-width: 30;
   text-placement-type: "simple";
   text-placements: "E,S,N,W";
@@ -327,7 +329,7 @@
     text-wrap-width: 60;
     text-line-spacing: 1;
   }
-  [zoom>=17] {
+  [zoom>=16] {
     text-size:11;
     text-wrap-width: 120;
     text-line-spacing: 2;
@@ -362,7 +364,7 @@
   [zoom>=14] {
     point-file:url(img/peak.svg);
     point-opacity: 1;
-    text-size:9;
+    text-size:10;
     text-character-spacing: 1;
     text-wrap-width: 40;
     text-line-spacing: 1;
@@ -609,7 +611,7 @@
   text-halo-fill:@road_halo;
   text-halo-radius:1;
   text-min-distance:60;
-  text-size:9;
+  text-size:10;
   [zoom=11] { text-min-distance:70; }
   [zoom=12] { text-min-distance:80; }
   [zoom=13] { text-min-distance:100; }
@@ -625,7 +627,7 @@
   text-halo-fill:darken(@road_halo,20%);
   text-halo-radius:1;
   text-min-distance:60;
-  text-size:9;
+  text-size:10;
   text-placement-type: "simple";
   text-placements: "E,S,N,W";
 }
@@ -638,7 +640,7 @@
   text-halo-fill:darken(@road_halo,20%);
   text-halo-radius:1.5;
   text-min-distance:60;
-  text-size:9;
+  text-size:10;
   text-placement-type: "simple";
   text-placements: "E,S,N,W";
   [zoom>16] {text-size:12;}
@@ -668,11 +670,12 @@
   text-face-name: 'DejaVu Sans Book';
   text-placement: line;
   text-fill: @contour100;
-  text-size: 7.5;
+  text-size: 10;
+  text-upright: left;
   text-opacity: 0.7;
 
-  text-label-position-tolerance:100;
-  text-spacing: 300;
+  text-label-position-tolerance:200;
+  text-spacing: 512;
   }
 /*
 #contours100_labels_eraser[zoom>=14]{

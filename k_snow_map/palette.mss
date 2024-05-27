@@ -157,11 +157,11 @@ Map { font-directory: url(./fonts); }
 @other_text:        #555;
 @other_halo:        @lite_halo;
 
-@locality_text:     #999;
+@locality_text:     #555;
 @locality_halo:     @lite_halo;
 
 /* Also used for other small places: hamlets, suburbs, localities */
-@village_text:      #777;
+@village_text:      #555;
 @village_halo:      @lite_halo;
 
 /* ****************************************************************** */
