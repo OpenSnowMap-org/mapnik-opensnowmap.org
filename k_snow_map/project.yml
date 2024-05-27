@@ -89,17 +89,17 @@ Layer:
           ORDER BY area DESC
         ) AS data
     geometry: polygon
-  - id: landuse_gen1
-    Datasource:
-      <<: *imposm
-      <<: *extents
-      geometry_field: geometry
-      table: |-
-        ( SELECT geometry, type, area
-          FROM osm_landusages_gen1
-          ORDER BY area DESC
-        ) AS data
-    geometry: polygon
+  #~ - id: landuse_gen1
+    #~ Datasource:
+      #~ <<: *imposm
+      #~ <<: *extents
+      #~ geometry_field: geometry
+      #~ table: |-
+        #~ ( SELECT geometry, type, area
+          #~ FROM osm_landusages_gen1
+          #~ ORDER BY area DESC
+        #~ ) AS data
+    #~ geometry: polygon
   - id: landuse
     Datasource:
       <<: *imposm
@@ -782,19 +782,6 @@ Layer:
        ( SELECT geometry, type, name   FROM osm_waterways   WHERE type IN ('canal',
         'river', 'stream')      AND name IS NOT NULL AND tunnel = 0 ) AS data
     geometry: linestring
-    
-  - id: pistes
-    geometry: linestring
-    Datasource:
-      table: |-
-        (select type, geometry from osm_pistes_ways
-        where geometry && !bbox!
-        UNION ALL
-        select type, geometry from osm_aerialways
-        where geometry && !bbox!
-        ) as data
-      <<: *extents
-      <<: *imposm
     
   - id: nodes_downhill
     geometry: linestring
