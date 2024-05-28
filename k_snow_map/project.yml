@@ -284,8 +284,10 @@ Layer:
       band: 1
 
   - id: downhill_white_overlay
-    geometry: geometry
     Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
       table: |-
         (select geometry from osm_pistes_ways
         where type LIKE '%downhill%'
@@ -786,38 +788,42 @@ Layer:
   - id: nodes_downhill
     geometry: linestring
     Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
       table: |-
        (select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
         "type"='downhill'   ) as nodes
-      <<: *extents
-      <<: *imposm
     
   - id: nodes_downhill2
     geometry: linestring
     Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
       table: |-
        (select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
         "type"='downhill'   ) as nodes
-      <<: *extents
-      <<: *imposm
     
   - id: nodes_nordic
     geometry: linestring
     Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
       table: |-
        (select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
         "type"='nordic'   ) as nodes
-      <<: *extents
-      <<: *imposm
     
   - id: nodes_nordic2
     geometry: linestring
     Datasource:
+      <<: *imposm
+      <<: *extents
+      geometry_field: geometry
       table: |-
        (select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
         "type"='nordic'   ) as nodes
-      <<: *extents
-      <<: *imposm
     
 
   - id: countries_ne2

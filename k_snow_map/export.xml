@@ -885,6 +885,15 @@ WHERE ele::integer % 100 = 0) as data]]></Parameter>
   <Layer name="downhill_white_overlay">
     <StyleName><![CDATA[downhill_white_overlay]]></StyleName>
     <Datasource>
+      <Parameter name="type"><![CDATA[postgis]]></Parameter>
+      <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
+      <Parameter name="user"><![CDATA[imposm]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
+      <Parameter name="srid"><![CDATA[3857]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
       <Parameter name="table"><![CDATA[(select geometry from osm_pistes_ways
 where type LIKE '%downhill%'
 and not (abandoned or abandoned2)
@@ -893,15 +902,6 @@ select geometry from osm_pistes_area
 where type LIKE '%downhill%'
 and not (abandoned or abandoned2)
 ) as data]]></Parameter>
-      <Parameter name="extent"><![CDATA[-180,-85.0511,180,85.0511]]></Parameter>
-      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="type"><![CDATA[postgis]]></Parameter>
-      <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
-      <Parameter name="user"><![CDATA[imposm]]></Parameter>
-      <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[]]></Parameter>
-      <Parameter name="srid"><![CDATA[3857]]></Parameter>
     </Datasource>
   </Layer>
   <Style filter-mode="first" name="waterway_low">
@@ -50768,17 +50768,17 @@ WHERE ele::integer % 100 = 0) as data]]></Parameter>
   <Layer name="nodes_downhill">
     <StyleName><![CDATA[nodes_downhill]]></StyleName>
     <Datasource>
-      <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
- "type"='downhill'   ) as nodes]]></Parameter>
-      <Parameter name="extent"><![CDATA[-180,-85.0511,180,85.0511]]></Parameter>
-      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
       <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
       <Parameter name="user"><![CDATA[imposm]]></Parameter>
       <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
       <Parameter name="srid"><![CDATA[3857]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
+      <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
+ "type"='downhill'   ) as nodes]]></Parameter>
     </Datasource>
   </Layer>
   <Style comp-op="color-dodge" filter-mode="first" name="nodes_downhill2">
@@ -50800,17 +50800,17 @@ WHERE ele::integer % 100 = 0) as data]]></Parameter>
   <Layer name="nodes_downhill2">
     <StyleName><![CDATA[nodes_downhill2]]></StyleName>
     <Datasource>
-      <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
- "type"='downhill'   ) as nodes]]></Parameter>
-      <Parameter name="extent"><![CDATA[-180,-85.0511,180,85.0511]]></Parameter>
-      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
       <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
       <Parameter name="user"><![CDATA[imposm]]></Parameter>
       <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
       <Parameter name="srid"><![CDATA[3857]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
+      <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
+ "type"='downhill'   ) as nodes]]></Parameter>
     </Datasource>
   </Layer>
   <Style filter-mode="first" name="nodes_nordic">
@@ -50832,17 +50832,17 @@ WHERE ele::integer % 100 = 0) as data]]></Parameter>
   <Layer name="nodes_nordic">
     <StyleName><![CDATA[nodes_nordic]]></StyleName>
     <Datasource>
-      <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
- "type"='nordic'   ) as nodes]]></Parameter>
-      <Parameter name="extent"><![CDATA[-180,-85.0511,180,85.0511]]></Parameter>
-      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
       <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
       <Parameter name="user"><![CDATA[imposm]]></Parameter>
       <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
       <Parameter name="srid"><![CDATA[3857]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
+      <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
+ "type"='nordic'   ) as nodes]]></Parameter>
     </Datasource>
   </Layer>
   <Style comp-op="color-dodge" filter-mode="first" name="nodes_nordic2">
@@ -50864,17 +50864,17 @@ WHERE ele::integer % 100 = 0) as data]]></Parameter>
   <Layer name="nodes_nordic2">
     <StyleName><![CDATA[nodes_nordic2]]></StyleName>
     <Datasource>
-      <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
- "type"='nordic'   ) as nodes]]></Parameter>
-      <Parameter name="extent"><![CDATA[-180,-85.0511,180,85.0511]]></Parameter>
-      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
       <Parameter name="dbname"><![CDATA[imposm]]></Parameter>
       <Parameter name="user"><![CDATA[imposm]]></Parameter>
       <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508,-20037508,20037508,20037508]]></Parameter>
       <Parameter name="srid"><![CDATA[3857]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="srs-name"><![CDATA[3857]]></Parameter>
+      <Parameter name="table"><![CDATA[(select ST_StartPoint(geometry) as geometry from osm_pistes_ways where
+ "type"='nordic'   ) as nodes]]></Parameter>
     </Datasource>
   </Layer>
   <Style filter-mode="first" name="countries_ne2">
