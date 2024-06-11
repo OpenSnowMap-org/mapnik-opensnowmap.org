@@ -1,71 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32"
-   height="32"
-   viewBox="0 0 8.4666665 8.4666669"
-   version="1.1"
-   id="svg8"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
-   sodipodi:docname="polka_dot_spaced.svg">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="22.4"
-     inkscape:cx="22.26322"
-     inkscape:cy="10.561804"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     units="px"
-     inkscape:snap-center="false"
-     inkscape:snap-object-midpoints="false"
-     inkscape:snap-bbox="true"
-     inkscape:bbox-nodes="true"
-     inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:window-width="1877"
-     inkscape:window-height="1016"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Calque 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <path
-       id="circle879"
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.55906;paint-order:fill markers stroke;stop-color:#000000"
-       d="M 0 0 L 0 2.1054688 A 1.9999999 1.9999999 0 0 0 0.109375 2.109375 A 1.9999999 1.9999999 0 0 0 2.109375 0.109375 A 1.9999999 1.9999999 0 0 0 2.1054688 0 L 0 0 z M 14.113281 0 A 1.9999999 1.9999999 0 0 0 14.109375 0.109375 A 1.9999999 1.9999999 0 0 0 16.109375 2.109375 A 1.9999999 1.9999999 0 0 0 18.109375 0.109375 A 1.9999999 1.9999999 0 0 0 18.105469 0 L 14.113281 0 z M 30.113281 0 A 1.9999999 1.9999999 0 0 0 30.109375 0.109375 A 1.9999999 1.9999999 0 0 0 32 2.1054688 L 32 0 L 30.113281 0 z M 8.109375 6.109375 A 1.9999999 1.9999999 0 0 0 6.109375 8.109375 A 1.9999999 1.9999999 0 0 0 8.109375 10.109375 A 1.9999999 1.9999999 0 0 0 10.109375 8.109375 A 1.9999999 1.9999999 0 0 0 8.109375 6.109375 z M 24.109375 6.109375 A 1.9999999 1.9999999 0 0 0 22.109375 8.109375 A 1.9999999 1.9999999 0 0 0 24.109375 10.109375 A 1.9999999 1.9999999 0 0 0 26.109375 8.109375 A 1.9999999 1.9999999 0 0 0 24.109375 6.109375 z M 0.109375 14.109375 A 1.9999999 1.9999999 0 0 0 0 14.113281 L 0 18.105469 A 1.9999999 1.9999999 0 0 0 0.109375 18.109375 A 1.9999999 1.9999999 0 0 0 2.109375 16.109375 A 1.9999999 1.9999999 0 0 0 0.109375 14.109375 z M 16.109375 14.109375 A 1.9999999 1.9999999 0 0 0 14.109375 16.109375 A 1.9999999 1.9999999 0 0 0 16.109375 18.109375 A 1.9999999 1.9999999 0 0 0 18.109375 16.109375 A 1.9999999 1.9999999 0 0 0 16.109375 14.109375 z M 31.990234 14.113281 A 1.9999999 1.9999999 0 0 0 30.109375 16.109375 A 1.9999999 1.9999999 0 0 0 32 18.105469 L 32 14.113281 A 1.9999999 1.9999999 0 0 0 31.990234 14.113281 z M 8.109375 22.109375 A 1.9999999 1.9999999 0 0 0 6.109375 24.109375 A 1.9999999 1.9999999 0 0 0 8.109375 26.109375 A 1.9999999 1.9999999 0 0 0 10.109375 24.109375 A 1.9999999 1.9999999 0 0 0 8.109375 22.109375 z M 24.109375 22.109375 A 1.9999999 1.9999999 0 0 0 22.109375 24.109375 A 1.9999999 1.9999999 0 0 0 24.109375 26.109375 A 1.9999999 1.9999999 0 0 0 26.109375 24.109375 A 1.9999999 1.9999999 0 0 0 24.109375 22.109375 z M 0.109375 30.109375 A 1.9999999 1.9999999 0 0 0 0 30.113281 L 0 32 L 2.1054688 32 A 1.9999999 1.9999999 0 0 0 0.109375 30.109375 z M 16.109375 30.109375 A 1.9999999 1.9999999 0 0 0 14.113281 32 L 18.105469 32 A 1.9999999 1.9999999 0 0 0 16.109375 30.109375 z M 31.990234 30.113281 A 1.9999999 1.9999999 0 0 0 30.113281 32 L 32 32 L 32 30.113281 A 1.9999999 1.9999999 0 0 0 31.990234 30.113281 z "
-       transform="scale(0.26458333)" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="square"
-     style="display:inline" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg8" width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata5">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="circle879" transform="scale(.26458)" d="m0 0v2.1055a2 2 0 0 0 0.10938 0.0039062 2 2 0 0 0 2-2 2 2 0 0 0-0.0039062-0.10938h-2.1055zm14.113 0a2 2 0 0 0-0.003906 0.10938 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-0.003906-0.10938h-3.9922zm16 0a2 2 0 0 0-0.003906 0.10938 2 2 0 0 0 1.8906 1.9961v-2.1055h-1.8867zm-22.004 6.1094a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2zm16 0a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2zm-24 8a2 2 0 0 0-0.10938 0.003906v3.9922a2 2 0 0 0 0.10938 0.003906 2 2 0 0 0 2-2 2 2 0 0 0-2-2zm16 0a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2zm15.881 0.003906a2 2 0 0 0-1.8809 1.9961 2 2 0 0 0 1.8906 1.9961v-3.9922a2 2 0 0 0-0.009766 0zm-23.881 7.9961a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2zm16 0a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2zm-24 8a2 2 0 0 0-0.10938 0.003906v1.8867h2.1055a2 2 0 0 0-1.9961-1.8906zm16 0a2 2 0 0 0-1.9961 1.8906h3.9922a2 2 0 0 0-1.9961-1.8906zm15.881 0.003906a2 2 0 0 0-1.877 1.8867h1.8867v-1.8867a2 2 0 0 0-0.009766 0z" stop-color="#000000" style="paint-order:fill markers stroke"/>
+ </g>
 </svg>

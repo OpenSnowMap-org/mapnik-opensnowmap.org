@@ -1,107 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="180"
-   height="180"
-   id="svg2998"
-   version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="gondola.svg"
-   inkscape:export-filename="/home/yves/KIMSUFI/www.git/mapnik-styles/offset-style/gondola.png"
-   inkscape:export-xdpi="8"
-   inkscape:export-ydpi="8">
-  <defs
-     id="defs3000" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="4.1"
-     inkscape:cx="31.451125"
-     inkscape:cy="88.699047"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1871"
-     inkscape:window-height="1056"
-     inkscape:window-x="49"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
-     inkscape:snap-nodes="true"
-     inkscape:snap-bbox="true"
-     showguides="true"
-     inkscape:guide-bbox="true">
-    <inkscape:grid
-       type="xygrid"
-       id="grid3006"
-       empspacing="5"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata3003">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-        <cc:license
-           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
-      </cc:Work>
-      <cc:License
-         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Reproduction" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Distribution" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
-      </cc:License>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-872.36218)">
-    <path
-       style="fill:none;stroke-width:20;stroke-miterlimit:4;fill-opacity:1;stroke:none;stroke-opacity:1;stroke-dasharray:none"
-       d="m 72.254444,922.36218 35.468876,0 c 17.88128,0 32.27668,14.3954 32.27668,32.27668 l 0,55.43444 c 0,17.8812 -14.3954,32.2766 -32.27668,32.2766 l -35.468876,0 c -17.881281,0 -32.27668,-14.3954 -32.27668,-32.2766 l 0,-55.43444 c 0,-17.88128 14.395399,-32.27668 32.27668,-32.27668 z"
-       id="rect3195-6"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssssssss" />
-    <path
-       style="fill:#000000;stroke-width:15;stroke-miterlimit:4;stroke:none"
-       d="m 72.254444,922.36218 35.468876,0 c 17.88128,0 32.27668,14.3954 32.27668,32.27668 l 0,55.43444 c 0,17.8812 -14.3954,32.2766 -32.27668,32.2766 l -35.468876,0 c -17.881281,0 -32.27668,-14.3954 -32.27668,-32.2766 l 0,-55.43444 c 0,-17.88128 14.395399,-32.27668 32.27668,-32.27668 z"
-       id="rect3195"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssssssss" />
-    <rect
-       style="fill:#ffffff;stroke-width:15;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;stroke:none"
-       id="rect3199"
-       width="80.02227"
-       height="64.017807"
-       x="49.97773"
-       y="932.36218"
-       ry="23.006399" />
-    <path
-       transform="translate(0,872.36218)"
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       d="m 85,10 10,0 0,40 -10,0 z"
-       id="rect3013" />
-  </g>
+<svg id="svg2998" width="180" height="180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata3003">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    <cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(0 -872.36)">
+  <path id="rect3195-6" d="m72.254 922.36h35.469c17.881 0 32.277 14.395 32.277 32.277v55.434c0 17.881-14.395 32.277-32.277 32.277h-35.469c-17.881 0-32.277-14.395-32.277-32.277v-55.434c0-17.881 14.395-32.277 32.277-32.277z" fill="none"/>
+  <path id="rect3195" d="m72.254 922.36h35.469c17.881 0 32.277 14.395 32.277 32.277v55.434c0 17.881-14.395 32.277-32.277 32.277h-35.469c-17.881 0-32.277-14.395-32.277-32.277v-55.434c0-17.881 14.395-32.277 32.277-32.277z"/>
+  <rect id="rect3199" x="49.978" y="932.36" width="80.022" height="64.018" ry="23.006" fill="#fff"/>
+  <path id="rect3013" transform="translate(0 872.36)" d="m85 10h10v40h-10z"/>
+ </g>
 </svg>

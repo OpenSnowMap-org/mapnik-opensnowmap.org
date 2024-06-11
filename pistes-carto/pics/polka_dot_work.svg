@@ -1,1907 +1,321 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32"
-   height="32"
-   viewBox="0 0 8.4666665 8.4666669"
-   version="1.1"
-   id="svg8"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
-   sodipodi:docname="polka_dot_work.svg">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="7.9195959"
-     inkscape:cx="-92.074226"
-     inkscape:cy="34.271078"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     units="px"
-     inkscape:snap-center="false"
-     inkscape:snap-object-midpoints="false"
-     inkscape:snap-bbox="true"
-     inkscape:bbox-nodes="true"
-     inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:window-width="1877"
-     inkscape:window-height="1016"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Calque 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle879"
-       cx="0.52916664"
-       cy="0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle881"
-       cx="5.8208332"
-       cy="1.5875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle883"
-       cx="1.5874999"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle885"
-       cx="3.7041667"
-       cy="1.5875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle887"
-       cx="5.8208332"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle889"
-       cx="1.5874999"
-       cy="1.5875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle893"
-       cx="4.7624998"
-       cy="2.6458333"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle895"
-       cx="4.7624998"
-       cy="0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle897"
-       cx="2.6458333"
-       cy="2.6458333"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle899"
-       cx="2.6458333"
-       cy="0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle901"
-       cx="0.52916664"
-       cy="2.6458333"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle905"
-       cx="5.8208332"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle907"
-       cx="3.7041667"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle911"
-       cx="0.52916664"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle913"
-       cx="5.8208332"
-       cy="5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle915"
-       cx="1.5874999"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle917"
-       cx="3.7041667"
-       cy="5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle919"
-       cx="5.8208332"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle921"
-       cx="1.5874999"
-       cy="5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle923"
-       cx="4.7624998"
-       cy="6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle925"
-       cx="4.7624998"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle927"
-       cx="2.6458335"
-       cy="6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle929"
-       cx="2.6458335"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle931"
-       cx="0.52916664"
-       cy="6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle933"
-       cx="5.8208332"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle935"
-       cx="3.7041667"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle939"
-       cx="6.8791666"
-       cy="0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle943"
-       cx="7.9374995"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle949"
-       cx="7.9374995"
-       cy="1.5875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle959"
-       cx="6.8791666"
-       cy="2.6458333"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle967"
-       cx="6.8791666"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle971"
-       cx="7.9374995"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle977"
-       cx="7.9374995"
-       cy="5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle987"
-       cx="6.8791666"
-       cy="6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1017"
-       cx="0.529167"
-       cy="-7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1019"
-       cx="5.8208337"
-       cy="-6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1021"
-       cx="1.5875002"
-       cy="-4.7624998"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1023"
-       cx="3.7041669"
-       cy="-6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1025"
-       cx="5.8208337"
-       cy="-4.7624998"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1027"
-       cx="1.5875002"
-       cy="-6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1029"
-       cx="4.7625003"
-       cy="-5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1031"
-       cx="4.7625003"
-       cy="-7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1033"
-       cx="2.6458335"
-       cy="-5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1035"
-       cx="2.6458335"
-       cy="-7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1037"
-       cx="0.529167"
-       cy="-5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1039"
-       cx="5.8208337"
-       cy="-4.7624998"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1041"
-       cx="3.7041669"
-       cy="-4.7624998"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1043"
-       cx="0.529167"
-       cy="-3.7041664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1045"
-       cx="5.8208337"
-       cy="-2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1047"
-       cx="1.5875002"
-       cy="-0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1049"
-       cx="3.7041669"
-       cy="-2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1051"
-       cx="5.8208337"
-       cy="-0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1053"
-       cx="1.5875002"
-       cy="-2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1055"
-       cx="4.7625003"
-       cy="-1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1057"
-       cx="4.7625003"
-       cy="-3.7041664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1059"
-       cx="2.6458337"
-       cy="-1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1061"
-       cx="2.6458337"
-       cy="-3.7041664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1063"
-       cx="0.529167"
-       cy="-1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1065"
-       cx="5.8208337"
-       cy="-0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1067"
-       cx="3.7041669"
-       cy="-0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1069"
-       cx="6.8791671"
-       cy="-7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1071"
-       cx="7.9375"
-       cy="-4.7624998"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1073"
-       cx="7.9375"
-       cy="-6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1075"
-       cx="6.8791671"
-       cy="-5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1077"
-       cx="6.8791671"
-       cy="-3.7041664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1079"
-       cx="7.9375"
-       cy="-0.52916664"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1081"
-       cx="7.9375"
-       cy="-2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1083"
-       cx="6.8791671"
-       cy="-1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1089"
-       cx="-7.9374995"
-       cy="0.52916652"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1091"
-       cx="-2.645833"
-       cy="1.5874999"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1093"
-       cx="-6.8791666"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1095"
-       cx="-4.7624998"
-       cy="1.5874999"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1097"
-       cx="-2.645833"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1099"
-       cx="-6.8791666"
-       cy="1.5874999"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1101"
-       cx="-3.7041664"
-       cy="2.6458333"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1103"
-       cx="-3.7041664"
-       cy="0.52916652"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1105"
-       cx="-5.8208332"
-       cy="2.6458333"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1107"
-       cx="-5.8208332"
-       cy="0.52916652"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1109"
-       cx="-7.9374995"
-       cy="2.6458333"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1111"
-       cx="-2.645833"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1113"
-       cx="-4.7624998"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1115"
-       cx="-7.9374995"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1117"
-       cx="-2.645833"
-       cy="5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1119"
-       cx="-6.8791666"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1121"
-       cx="-4.7624998"
-       cy="5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1123"
-       cx="-2.645833"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1125"
-       cx="-6.8791666"
-       cy="5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1127"
-       cx="-3.7041664"
-       cy="6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1129"
-       cx="-3.7041664"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1131"
-       cx="-5.8208327"
-       cy="6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1133"
-       cx="-5.8208327"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1135"
-       cx="-7.9374995"
-       cy="6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1137"
-       cx="-2.645833"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1139"
-       cx="-4.7624998"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1141"
-       cx="-1.5874996"
-       cy="0.52916652"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1143"
-       cx="-0.52916664"
-       cy="3.7041667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1145"
-       cx="-0.52916664"
-       cy="1.5874999"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1147"
-       cx="-1.5874996"
-       cy="2.6458333"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1149"
-       cx="-1.5874996"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1151"
-       cx="-0.52916664"
-       cy="7.9375"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1153"
-       cx="-0.52916664"
-       cy="5.8208332"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1155"
-       cx="-1.5874996"
-       cy="6.8791666"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1161"
-       cx="0.5291667"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1163"
-       cx="5.8208332"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1165"
-       cx="1.5874996"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1167"
-       cx="3.7041664"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1169"
-       cx="5.8208332"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1171"
-       cx="1.5874996"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1173"
-       cx="4.7624998"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1175"
-       cx="4.7624998"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1177"
-       cx="2.645833"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1179"
-       cx="2.645833"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1181"
-       cx="0.5291667"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1183"
-       cx="5.8208332"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1185"
-       cx="3.7041664"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1187"
-       cx="0.5291667"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1189"
-       cx="5.8208332"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1191"
-       cx="1.5874996"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1193"
-       cx="3.7041664"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1195"
-       cx="5.8208332"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1197"
-       cx="1.5874996"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1199"
-       cx="4.7624998"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1201"
-       cx="4.7624998"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1203"
-       cx="2.6458335"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1205"
-       cx="2.6458335"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1207"
-       cx="0.5291667"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1209"
-       cx="5.8208332"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1211"
-       cx="3.7041664"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1213"
-       cx="6.8791666"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1215"
-       cx="7.9374995"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1217"
-       cx="7.9374995"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1219"
-       cx="6.8791666"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1221"
-       cx="6.8791666"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1223"
-       cx="7.9374995"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1225"
-       cx="7.9374995"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1227"
-       cx="6.8791666"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1233"
-       cx="8.9958324"
-       cy="0.5291667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1235"
-       cx="14.287499"
-       cy="1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1237"
-       cx="10.054166"
-       cy="3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1239"
-       cx="12.170833"
-       cy="1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1241"
-       cx="14.287499"
-       cy="3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1243"
-       cx="10.054166"
-       cy="1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1245"
-       cx="13.229166"
-       cy="2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1247"
-       cx="13.229166"
-       cy="0.5291667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1249"
-       cx="11.112499"
-       cy="2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1251"
-       cx="11.112499"
-       cy="0.5291667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1253"
-       cx="8.9958324"
-       cy="2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1255"
-       cx="14.287499"
-       cy="3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1257"
-       cx="12.170833"
-       cy="3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1259"
-       cx="8.9958324"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1261"
-       cx="14.287499"
-       cy="5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1263"
-       cx="10.054166"
-       cy="7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1265"
-       cx="12.170833"
-       cy="5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1267"
-       cx="14.287499"
-       cy="7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1269"
-       cx="10.054166"
-       cy="5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1271"
-       cx="13.229166"
-       cy="6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1273"
-       cx="13.229166"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1275"
-       cx="11.112499"
-       cy="6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1277"
-       cx="11.112499"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1279"
-       cx="8.9958324"
-       cy="6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1281"
-       cx="14.287499"
-       cy="7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1283"
-       cx="12.170833"
-       cy="7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1285"
-       cx="15.345833"
-       cy="0.5291667"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1287"
-       cx="16.404165"
-       cy="3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1289"
-       cx="16.404165"
-       cy="1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1291"
-       cx="15.345833"
-       cy="2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1293"
-       cx="15.345833"
-       cy="4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1295"
-       cx="16.404165"
-       cy="7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1297"
-       cx="16.404165"
-       cy="5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1299"
-       cx="15.345833"
-       cy="6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1305"
-       cx="8.9958324"
-       cy="-7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1307"
-       cx="14.287499"
-       cy="-6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1309"
-       cx="10.054166"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1311"
-       cx="12.170833"
-       cy="-6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1313"
-       cx="14.287499"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1315"
-       cx="10.054166"
-       cy="-6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1317"
-       cx="13.229166"
-       cy="-5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1319"
-       cx="13.229166"
-       cy="-7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1321"
-       cx="11.112499"
-       cy="-5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1323"
-       cx="11.112499"
-       cy="-7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1325"
-       cx="8.9958324"
-       cy="-5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1327"
-       cx="14.287499"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1329"
-       cx="12.170833"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1331"
-       cx="8.9958324"
-       cy="-3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1333"
-       cx="14.287499"
-       cy="-2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1335"
-       cx="10.054166"
-       cy="-0.52916658"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1337"
-       cx="12.170833"
-       cy="-2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1339"
-       cx="14.287499"
-       cy="-0.52916658"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1341"
-       cx="10.054166"
-       cy="-2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1343"
-       cx="13.229166"
-       cy="-1.5875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1345"
-       cx="13.229166"
-       cy="-3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1347"
-       cx="11.112499"
-       cy="-1.5875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1349"
-       cx="11.112499"
-       cy="-3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1351"
-       cx="8.9958324"
-       cy="-1.5875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1353"
-       cx="14.287499"
-       cy="-0.52916658"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1355"
-       cx="12.170833"
-       cy="-0.52916658"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1357"
-       cx="15.345833"
-       cy="-7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1359"
-       cx="16.404165"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1361"
-       cx="16.404165"
-       cy="-6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1363"
-       cx="15.345833"
-       cy="-5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1365"
-       cx="15.345833"
-       cy="-3.7041669"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1367"
-       cx="16.404165"
-       cy="-0.52916658"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1369"
-       cx="16.404165"
-       cy="-2.6458335"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1371"
-       cx="15.345833"
-       cy="-1.5875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1377"
-       cx="-7.9375"
-       cy="-7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1379"
-       cx="-2.645833"
-       cy="-6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1381"
-       cx="-6.8791666"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1383"
-       cx="-4.7624998"
-       cy="-6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1385"
-       cx="-2.645833"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1387"
-       cx="-6.8791666"
-       cy="-6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1389"
-       cx="-3.7041664"
-       cy="-5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1391"
-       cx="-3.7041664"
-       cy="-7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1393"
-       cx="-5.8208332"
-       cy="-5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1395"
-       cx="-5.8208332"
-       cy="-7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1397"
-       cx="-7.9375"
-       cy="-5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1399"
-       cx="-2.645833"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1401"
-       cx="-4.7624998"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1403"
-       cx="-7.9375"
-       cy="-3.7041671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1405"
-       cx="-2.645833"
-       cy="-2.6458337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1407"
-       cx="-6.8791666"
-       cy="-0.52916676"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1409"
-       cx="-4.7624998"
-       cy="-2.6458337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1411"
-       cx="-2.645833"
-       cy="-0.52916676"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1413"
-       cx="-6.8791666"
-       cy="-2.6458337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1415"
-       cx="-3.7041664"
-       cy="-1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1417"
-       cx="-3.7041664"
-       cy="-3.7041671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1419"
-       cx="-5.8208332"
-       cy="-1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1421"
-       cx="-5.8208332"
-       cy="-3.7041671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1423"
-       cx="-7.9375"
-       cy="-1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1425"
-       cx="-2.645833"
-       cy="-0.52916676"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1427"
-       cx="-4.7624998"
-       cy="-0.52916676"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1429"
-       cx="-1.5874997"
-       cy="-7.9375005"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1431"
-       cx="-0.52916729"
-       cy="-4.7625003"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1433"
-       cx="-0.52916729"
-       cy="-6.8791671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1435"
-       cx="-1.5874997"
-       cy="-5.8208337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1437"
-       cx="-1.5874997"
-       cy="-3.7041671"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1439"
-       cx="-0.52916729"
-       cy="-0.52916676"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1441"
-       cx="-0.52916729"
-       cy="-2.6458337"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1443"
-       cx="-1.5874997"
-       cy="-1.5875001"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1449"
-       cx="-7.937499"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1451"
-       cx="-2.6458323"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1453"
-       cx="-6.8791656"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1455"
-       cx="-4.7624989"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1457"
-       cx="-2.6458323"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1459"
-       cx="-6.8791656"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1461"
-       cx="-3.7041657"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1463"
-       cx="-3.7041657"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1465"
-       cx="-5.8208323"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1467"
-       cx="-5.8208323"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1469"
-       cx="-7.937499"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1471"
-       cx="-2.6458323"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1473"
-       cx="-4.7624989"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1475"
-       cx="-7.937499"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1477"
-       cx="-2.6458323"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1479"
-       cx="-6.8791656"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1481"
-       cx="-4.7624989"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1483"
-       cx="-2.6458323"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1485"
-       cx="-6.8791656"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1487"
-       cx="-3.7041657"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1489"
-       cx="-3.7041657"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1491"
-       cx="-5.8208323"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1493"
-       cx="-5.8208323"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1495"
-       cx="-7.937499"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1497"
-       cx="-2.6458323"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1499"
-       cx="-4.7624989"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1501"
-       cx="-1.587499"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1503"
-       cx="-0.52916658"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1505"
-       cx="-0.52916658"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1507"
-       cx="-1.587499"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1509"
-       cx="-1.587499"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1511"
-       cx="-0.52916658"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1513"
-       cx="-0.52916658"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1515"
-       cx="-1.587499"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1595"
-       cx="8.9958324"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1597"
-       cx="14.287499"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1599"
-       cx="10.054166"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1601"
-       cx="12.170833"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1603"
-       cx="14.287499"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1605"
-       cx="10.054166"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1607"
-       cx="13.229166"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1609"
-       cx="13.229166"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1611"
-       cx="11.112499"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1613"
-       cx="11.112499"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1615"
-       cx="8.9958324"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1617"
-       cx="14.287499"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1619"
-       cx="12.170833"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1621"
-       cx="8.9958324"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1623"
-       cx="14.287499"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1625"
-       cx="10.054166"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1627"
-       cx="12.170833"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1629"
-       cx="14.287499"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1631"
-       cx="10.054166"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1633"
-       cx="13.229166"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1635"
-       cx="13.229166"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1637"
-       cx="11.112499"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1639"
-       cx="11.112499"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1641"
-       cx="8.9958324"
-       cy="15.345834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1643"
-       cx="14.287499"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1645"
-       cx="12.170833"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1647"
-       cx="15.345833"
-       cy="8.9958334"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1649"
-       cx="16.404165"
-       cy="12.170834"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1651"
-       cx="16.404165"
-       cy="10.054167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1653"
-       cx="15.345833"
-       cy="11.1125"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1655"
-       cx="15.345833"
-       cy="13.229167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1657"
-       cx="16.404165"
-       cy="16.404167"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1659"
-       cx="16.404165"
-       cy="14.2875"
-       r="0.52916664" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;paint-order:fill markers stroke;stop-color:#000000"
-       id="circle1661"
-       cx="15.345833"
-       cy="15.345834"
-       r="0.52916664" />
-    <path
-       id="circle1667"
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.55906;paint-order:fill markers stroke;stop-color:#000000"
-       d="M -141.69141 -0.041015625 L -141.69141 0.31640625 A 1.9999999 1.9999999 0 0 0 -140.69922 0.3046875 A 1.9999999 1.9999999 0 0 0 -140 -0.041015625 L -141.69141 -0.041015625 z M -137.88477 -0.041015625 A 1.9999999 1.9999999 0 0 0 -138.25 1.71875 A 1.9999999 1.9999999 0 0 0 -135.80078 3.1328125 A 1.9999999 1.9999999 0 0 0 -134.38672 0.68359375 A 1.9999999 1.9999999 0 0 0 -134.75 -0.041015625 L -137.88477 -0.041015625 z M -130.41016 -0.041015625 A 1.9999999 1.9999999 0 0 0 -128.07227 1.0625 A 1.9999999 1.9999999 0 0 0 -126.76953 -0.041015625 L -130.41016 -0.041015625 z M -117.96289 -0.041015625 A 1.9999999 1.9999999 0 0 0 -117.89648 0.40625 A 1.9999999 1.9999999 0 0 0 -115.44727 1.8203125 A 1.9999999 1.9999999 0 0 0 -113.9668 -0.041015625 L -117.96289 -0.041015625 z M -123.74023 -0.0390625 A 1.9999999 1.9999999 0 0 0 -124.20898 0.02734375 A 1.9999999 1.9999999 0 0 0 -125.62305 2.4765625 A 1.9999999 1.9999999 0 0 0 -123.17383 3.890625 A 1.9999999 1.9999999 0 0 0 -121.75977 1.4414062 A 1.9999999 1.9999999 0 0 0 -123.74023 -0.0390625 z M -111.11328 0.71875 A 1.9999999 1.9999999 0 0 0 -111.58203 0.78515625 A 1.9999999 1.9999999 0 0 0 -112.99805 3.234375 A 1.9999999 1.9999999 0 0 0 -110.54688 4.6484375 A 1.9999999 1.9999999 0 0 0 -109.69141 4.1699219 L -109.69141 1.265625 A 1.9999999 1.9999999 0 0 0 -111.11328 0.71875 z M -131.4668 2.03125 A 1.9999999 1.9999999 0 0 0 -131.9375 2.0976562 A 1.9999999 1.9999999 0 0 0 -133.35156 4.546875 A 1.9999999 1.9999999 0 0 0 -130.90234 5.9609375 A 1.9999999 1.9999999 0 0 0 -129.48633 3.5117188 A 1.9999999 1.9999999 0 0 0 -131.4668 2.03125 z M -118.83984 2.7890625 A 1.9999999 1.9999999 0 0 0 -119.31055 2.8554688 A 1.9999999 1.9999999 0 0 0 -120.72461 5.3046875 A 1.9999999 1.9999999 0 0 0 -118.27539 6.71875 A 1.9999999 1.9999999 0 0 0 -116.86133 4.2695312 A 1.9999999 1.9999999 0 0 0 -118.83984 2.7890625 z M -139.19531 4.1015625 A 1.9999999 1.9999999 0 0 0 -139.66406 4.1679688 A 1.9999999 1.9999999 0 0 0 -141.07812 6.6171875 A 1.9999999 1.9999999 0 0 0 -138.62891 8.0332031 A 1.9999999 1.9999999 0 0 0 -137.21484 5.5820312 A 1.9999999 1.9999999 0 0 0 -139.19531 4.1015625 z M -126.56836 4.859375 A 1.9999999 1.9999999 0 0 0 -127.03711 4.9257812 A 1.9999999 1.9999999 0 0 0 -128.45117 7.3769531 A 1.9999999 1.9999999 0 0 0 -126.00195 8.7910156 A 1.9999999 1.9999999 0 0 0 -124.58789 6.3398438 A 1.9999999 1.9999999 0 0 0 -126.56836 4.859375 z M -113.94141 5.6171875 A 1.9999999 1.9999999 0 0 0 -114.41211 5.6835938 A 1.9999999 1.9999999 0 0 0 -115.82617 8.1347656 A 1.9999999 1.9999999 0 0 0 -113.37695 9.5488281 A 1.9999999 1.9999999 0 0 0 -111.96094 7.0976562 A 1.9999999 1.9999999 0 0 0 -113.94141 5.6171875 z M -134.29492 6.9296875 A 1.9999999 1.9999999 0 0 0 -134.76562 6.9980469 A 1.9999999 1.9999999 0 0 0 -136.17969 9.4472656 A 1.9999999 1.9999999 0 0 0 -133.73047 10.861328 A 1.9999999 1.9999999 0 0 0 -132.31641 8.4121094 A 1.9999999 1.9999999 0 0 0 -134.29492 6.9296875 z M -121.66992 7.6875 A 1.9999999 1.9999999 0 0 0 -122.13867 7.7558594 A 1.9999999 1.9999999 0 0 0 -123.55273 10.205078 A 1.9999999 1.9999999 0 0 0 -121.10352 11.619141 A 1.9999999 1.9999999 0 0 0 -119.68945 9.1699219 A 1.9999999 1.9999999 0 0 0 -121.66992 7.6875 z M -109.69141 8.5722656 A 1.9999999 1.9999999 0 0 0 -110.92578 10.962891 A 1.9999999 1.9999999 0 0 0 -109.69141 12.318359 L -109.69141 8.5722656 z M -141.69141 9.0195312 L -141.69141 12.978516 A 1.9999999 1.9999999 0 0 0 -141.45703 12.931641 A 1.9999999 1.9999999 0 0 0 -140.04297 10.482422 A 1.9999999 1.9999999 0 0 0 -141.69141 9.0195312 z M -129.39648 9.7578125 A 1.9999999 1.9999999 0 0 0 -129.86523 9.8261719 A 1.9999999 1.9999999 0 0 0 -131.28125 12.275391 A 1.9999999 1.9999999 0 0 0 -128.83008 13.689453 A 1.9999999 1.9999999 0 0 0 -127.41602 11.240234 A 1.9999999 1.9999999 0 0 0 -129.39648 9.7578125 z M -116.76953 10.515625 A 1.9999999 1.9999999 0 0 0 -117.24023 10.583984 A 1.9999999 1.9999999 0 0 0 -118.6543 13.033203 A 1.9999999 1.9999999 0 0 0 -116.20508 14.447266 A 1.9999999 1.9999999 0 0 0 -114.79102 11.998047 A 1.9999999 1.9999999 0 0 0 -116.76953 10.515625 z M -137.12305 11.828125 A 1.9999999 1.9999999 0 0 0 -137.59375 11.896484 A 1.9999999 1.9999999 0 0 0 -139.00781 14.345703 A 1.9999999 1.9999999 0 0 0 -136.55859 15.759766 A 1.9999999 1.9999999 0 0 0 -135.14453 13.310547 A 1.9999999 1.9999999 0 0 0 -137.12305 11.828125 z M -124.49805 12.585938 A 1.9999999 1.9999999 0 0 0 -124.9668 12.654297 A 1.9999999 1.9999999 0 0 0 -126.38086 15.103516 A 1.9999999 1.9999999 0 0 0 -123.93164 16.517578 A 1.9999999 1.9999999 0 0 0 -122.51758 14.068359 A 1.9999999 1.9999999 0 0 0 -124.49805 12.585938 z M -111.87109 13.34375 A 1.9999999 1.9999999 0 0 0 -112.33984 13.412109 A 1.9999999 1.9999999 0 0 0 -113.75586 15.861328 A 1.9999999 1.9999999 0 0 0 -111.30469 17.275391 A 1.9999999 1.9999999 0 0 0 -109.89062 14.826172 A 1.9999999 1.9999999 0 0 0 -111.87109 13.34375 z M -132.22461 14.65625 A 1.9999999 1.9999999 0 0 0 -132.69531 14.724609 A 1.9999999 1.9999999 0 0 0 -134.10938 17.173828 A 1.9999999 1.9999999 0 0 0 -131.66016 18.587891 A 1.9999999 1.9999999 0 0 0 -130.24414 16.138672 A 1.9999999 1.9999999 0 0 0 -132.22461 14.65625 z M -119.59766 15.414062 A 1.9999999 1.9999999 0 0 0 -120.06836 15.482422 A 1.9999999 1.9999999 0 0 0 -121.48242 17.931641 A 1.9999999 1.9999999 0 0 0 -119.0332 19.345703 A 1.9999999 1.9999999 0 0 0 -117.61914 16.896484 A 1.9999999 1.9999999 0 0 0 -119.59766 15.414062 z M -139.95312 16.726562 A 1.9999999 1.9999999 0 0 0 -140.42188 16.794922 A 1.9999999 1.9999999 0 0 0 -141.69141 17.830078 L -141.69141 19.621094 A 1.9999999 1.9999999 0 0 0 -139.38672 20.658203 A 1.9999999 1.9999999 0 0 0 -137.97266 18.208984 A 1.9999999 1.9999999 0 0 0 -139.95312 16.726562 z M -127.32617 17.484375 A 1.9999999 1.9999999 0 0 0 -127.79492 17.552734 A 1.9999999 1.9999999 0 0 0 -129.20898 20.001953 A 1.9999999 1.9999999 0 0 0 -126.75977 21.416016 A 1.9999999 1.9999999 0 0 0 -125.3457 18.966797 A 1.9999999 1.9999999 0 0 0 -127.32617 17.484375 z M -114.69922 18.244141 A 1.9999999 1.9999999 0 0 0 -115.16992 18.310547 A 1.9999999 1.9999999 0 0 0 -116.58398 20.759766 A 1.9999999 1.9999999 0 0 0 -114.13477 22.173828 A 1.9999999 1.9999999 0 0 0 -112.71875 19.724609 A 1.9999999 1.9999999 0 0 0 -114.69922 18.244141 z M -135.05273 19.556641 A 1.9999999 1.9999999 0 0 0 -135.52344 19.623047 A 1.9999999 1.9999999 0 0 0 -136.9375 22.072266 A 1.9999999 1.9999999 0 0 0 -134.48828 23.486328 A 1.9999999 1.9999999 0 0 0 -133.07422 21.037109 A 1.9999999 1.9999999 0 0 0 -135.05273 19.556641 z M -122.42773 20.314453 A 1.9999999 1.9999999 0 0 0 -122.89648 20.380859 A 1.9999999 1.9999999 0 0 0 -124.31055 22.830078 A 1.9999999 1.9999999 0 0 0 -121.86133 24.244141 A 1.9999999 1.9999999 0 0 0 -120.44727 21.794922 A 1.9999999 1.9999999 0 0 0 -122.42773 20.314453 z M -109.80078 21.072266 A 1.9999999 1.9999999 0 0 0 -110.26953 21.138672 A 1.9999999 1.9999999 0 0 0 -111.68359 23.587891 A 1.9999999 1.9999999 0 0 0 -109.69141 25.068359 L -109.69141 21.074219 A 1.9999999 1.9999999 0 0 0 -109.80078 21.072266 z M -141.69141 21.919922 L -141.69141 25.333984 A 1.9999999 1.9999999 0 0 0 -140.80078 23.107422 A 1.9999999 1.9999999 0 0 0 -141.69141 21.919922 z M -130.1543 22.384766 A 1.9999999 1.9999999 0 0 0 -130.62305 22.451172 A 1.9999999 1.9999999 0 0 0 -132.03906 24.902344 A 1.9999999 1.9999999 0 0 0 -129.58789 26.316406 A 1.9999999 1.9999999 0 0 0 -128.17383 23.865234 A 1.9999999 1.9999999 0 0 0 -130.1543 22.384766 z M -117.52734 23.142578 A 1.9999999 1.9999999 0 0 0 -117.99805 23.208984 A 1.9999999 1.9999999 0 0 0 -119.41211 25.660156 A 1.9999999 1.9999999 0 0 0 -116.96289 27.074219 A 1.9999999 1.9999999 0 0 0 -115.54883 24.623047 A 1.9999999 1.9999999 0 0 0 -117.52734 23.142578 z M -137.88086 24.455078 A 1.9999999 1.9999999 0 0 0 -138.35156 24.521484 A 1.9999999 1.9999999 0 0 0 -139.76562 26.972656 A 1.9999999 1.9999999 0 0 0 -137.31641 28.386719 A 1.9999999 1.9999999 0 0 0 -135.90234 25.9375 A 1.9999999 1.9999999 0 0 0 -137.88086 24.455078 z M -125.25586 25.212891 A 1.9999999 1.9999999 0 0 0 -125.72461 25.28125 A 1.9999999 1.9999999 0 0 0 -127.13867 27.730469 A 1.9999999 1.9999999 0 0 0 -124.68945 29.144531 A 1.9999999 1.9999999 0 0 0 -123.27539 26.695312 A 1.9999999 1.9999999 0 0 0 -125.25586 25.212891 z M -112.62891 25.970703 A 1.9999999 1.9999999 0 0 0 -113.09961 26.039062 A 1.9999999 1.9999999 0 0 0 -114.51367 28.488281 A 1.9999999 1.9999999 0 0 0 -112.0625 29.902344 A 1.9999999 1.9999999 0 0 0 -110.64844 27.453125 A 1.9999999 1.9999999 0 0 0 -112.62891 25.970703 z M -132.98242 27.283203 A 1.9999999 1.9999999 0 0 0 -133.45312 27.351562 A 1.9999999 1.9999999 0 0 0 -134.86719 29.800781 A 1.9999999 1.9999999 0 0 0 -132.41797 31.214844 A 1.9999999 1.9999999 0 0 0 -131.00391 28.765625 A 1.9999999 1.9999999 0 0 0 -132.98242 27.283203 z M -120.35547 28.041016 A 1.9999999 1.9999999 0 0 0 -120.82617 28.109375 A 1.9999999 1.9999999 0 0 0 -122.24023 30.558594 A 1.9999999 1.9999999 0 0 0 -120.875 31.958984 L -119.74609 31.958984 A 1.9999999 1.9999999 0 0 0 -118.37695 29.523438 A 1.9999999 1.9999999 0 0 0 -120.35547 28.041016 z M -140.71094 29.353516 A 1.9999999 1.9999999 0 0 0 -141.17969 29.421875 A 1.9999999 1.9999999 0 0 0 -141.69141 29.638672 L -141.69141 31.958984 L -138.75586 31.958984 A 1.9999999 1.9999999 0 0 0 -138.73047 30.835938 A 1.9999999 1.9999999 0 0 0 -140.71094 29.353516 z M -128.08398 30.111328 A 1.9999999 1.9999999 0 0 0 -128.55273 30.179688 A 1.9999999 1.9999999 0 0 0 -130.0293 31.958984 L -126.04102 31.958984 A 1.9999999 1.9999999 0 0 0 -126.10352 31.59375 A 1.9999999 1.9999999 0 0 0 -128.08398 30.111328 z M -115.45703 30.869141 A 1.9999999 1.9999999 0 0 0 -115.92773 30.9375 A 1.9999999 1.9999999 0 0 0 -117.19141 31.958984 L -113.63086 31.958984 A 1.9999999 1.9999999 0 0 0 -115.45703 30.869141 z "
-       transform="scale(0.26458333)" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="square"
-     style="display:inline" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg8" width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata5">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <circle id="circle879" cx=".52917" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle881" cx="5.8208" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle883" cx="1.5875" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle885" cx="3.7042" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle887" cx="5.8208" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle889" cx="1.5875" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle893" cx="4.7625" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle895" cx="4.7625" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle897" cx="2.6458" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle899" cx="2.6458" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle901" cx=".52917" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle905" cx="5.8208" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle907" cx="3.7042" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle911" cx=".52917" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle913" cx="5.8208" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle915" cx="1.5875" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle917" cx="3.7042" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle919" cx="5.8208" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle921" cx="1.5875" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle923" cx="4.7625" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle925" cx="4.7625" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle927" cx="2.6458" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle929" cx="2.6458" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle931" cx=".52917" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle933" cx="5.8208" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle935" cx="3.7042" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle939" cx="6.8792" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle943" cx="7.9375" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle949" cx="7.9375" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle959" cx="6.8792" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle967" cx="6.8792" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle971" cx="7.9375" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle977" cx="7.9375" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle987" cx="6.8792" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1017" cx=".52917" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1019" cx="5.8208" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1021" cx="1.5875" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1023" cx="3.7042" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1025" cx="5.8208" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1027" cx="1.5875" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1029" cx="4.7625" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1031" cx="4.7625" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1033" cx="2.6458" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1035" cx="2.6458" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1037" cx=".52917" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1039" cx="5.8208" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1041" cx="3.7042" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1043" cx=".52917" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1045" cx="5.8208" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1047" cx="1.5875" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1049" cx="3.7042" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1051" cx="5.8208" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1053" cx="1.5875" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1055" cx="4.7625" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1057" cx="4.7625" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1059" cx="2.6458" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1061" cx="2.6458" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1063" cx=".52917" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1065" cx="5.8208" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1067" cx="3.7042" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1069" cx="6.8792" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1071" cx="7.9375" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1073" cx="7.9375" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1075" cx="6.8792" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1077" cx="6.8792" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1079" cx="7.9375" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1081" cx="7.9375" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1083" cx="6.8792" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1089" cx="-7.9375" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1091" cx="-2.6458" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1093" cx="-6.8792" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1095" cx="-4.7625" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1097" cx="-2.6458" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1099" cx="-6.8792" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1101" cx="-3.7042" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1103" cx="-3.7042" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1105" cx="-5.8208" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1107" cx="-5.8208" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1109" cx="-7.9375" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1111" cx="-2.6458" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1113" cx="-4.7625" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1115" cx="-7.9375" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1117" cx="-2.6458" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1119" cx="-6.8792" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1121" cx="-4.7625" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1123" cx="-2.6458" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1125" cx="-6.8792" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1127" cx="-3.7042" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1129" cx="-3.7042" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1131" cx="-5.8208" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1133" cx="-5.8208" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1135" cx="-7.9375" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1137" cx="-2.6458" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1139" cx="-4.7625" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1141" cx="-1.5875" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1143" cx="-.52917" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1145" cx="-.52917" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1147" cx="-1.5875" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1149" cx="-1.5875" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1151" cx="-.52917" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1153" cx="-.52917" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1155" cx="-1.5875" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1161" cx=".52917" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1163" cx="5.8208" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1165" cx="1.5875" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1167" cx="3.7042" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1169" cx="5.8208" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1171" cx="1.5875" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1173" cx="4.7625" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1175" cx="4.7625" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1177" cx="2.6458" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1179" cx="2.6458" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1181" cx=".52917" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1183" cx="5.8208" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1185" cx="3.7042" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1187" cx=".52917" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1189" cx="5.8208" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1191" cx="1.5875" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1193" cx="3.7042" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1195" cx="5.8208" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1197" cx="1.5875" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1199" cx="4.7625" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1201" cx="4.7625" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1203" cx="2.6458" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1205" cx="2.6458" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1207" cx=".52917" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1209" cx="5.8208" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1211" cx="3.7042" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1213" cx="6.8792" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1215" cx="7.9375" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1217" cx="7.9375" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1219" cx="6.8792" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1221" cx="6.8792" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1223" cx="7.9375" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1225" cx="7.9375" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1227" cx="6.8792" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1233" cx="8.9958" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1235" cx="14.287" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1237" cx="10.054" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1239" cx="12.171" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1241" cx="14.287" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1243" cx="10.054" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1245" cx="13.229" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1247" cx="13.229" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1249" cx="11.112" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1251" cx="11.112" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1253" cx="8.9958" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1255" cx="14.287" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1257" cx="12.171" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1259" cx="8.9958" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1261" cx="14.287" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1263" cx="10.054" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1265" cx="12.171" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1267" cx="14.287" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1269" cx="10.054" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1271" cx="13.229" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1273" cx="13.229" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1275" cx="11.112" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1277" cx="11.112" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1279" cx="8.9958" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1281" cx="14.287" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1283" cx="12.171" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1285" cx="15.346" cy=".52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1287" cx="16.404" cy="3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1289" cx="16.404" cy="1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1291" cx="15.346" cy="2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1293" cx="15.346" cy="4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1295" cx="16.404" cy="7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1297" cx="16.404" cy="5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1299" cx="15.346" cy="6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1305" cx="8.9958" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1307" cx="14.287" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1309" cx="10.054" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1311" cx="12.171" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1313" cx="14.287" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1315" cx="10.054" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1317" cx="13.229" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1319" cx="13.229" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1321" cx="11.112" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1323" cx="11.112" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1325" cx="8.9958" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1327" cx="14.287" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1329" cx="12.171" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1331" cx="8.9958" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1333" cx="14.287" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1335" cx="10.054" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1337" cx="12.171" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1339" cx="14.287" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1341" cx="10.054" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1343" cx="13.229" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1345" cx="13.229" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1347" cx="11.112" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1349" cx="11.112" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1351" cx="8.9958" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1353" cx="14.287" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1355" cx="12.171" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1357" cx="15.346" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1359" cx="16.404" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1361" cx="16.404" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1363" cx="15.346" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1365" cx="15.346" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1367" cx="16.404" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1369" cx="16.404" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1371" cx="15.346" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1377" cx="-7.9375" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1379" cx="-2.6458" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1381" cx="-6.8792" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1383" cx="-4.7625" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1385" cx="-2.6458" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1387" cx="-6.8792" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1389" cx="-3.7042" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1391" cx="-3.7042" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1393" cx="-5.8208" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1395" cx="-5.8208" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1397" cx="-7.9375" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1399" cx="-2.6458" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1401" cx="-4.7625" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1403" cx="-7.9375" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1405" cx="-2.6458" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1407" cx="-6.8792" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1409" cx="-4.7625" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1411" cx="-2.6458" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1413" cx="-6.8792" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1415" cx="-3.7042" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1417" cx="-3.7042" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1419" cx="-5.8208" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1421" cx="-5.8208" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1423" cx="-7.9375" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1425" cx="-2.6458" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1427" cx="-4.7625" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1429" cx="-1.5875" cy="-7.9375" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1431" cx="-.52917" cy="-4.7625" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1433" cx="-.52917" cy="-6.8792" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1435" cx="-1.5875" cy="-5.8208" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1437" cx="-1.5875" cy="-3.7042" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1439" cx="-.52917" cy="-.52917" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1441" cx="-.52917" cy="-2.6458" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1443" cx="-1.5875" cy="-1.5875" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1449" cx="-7.9375" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1451" cx="-2.6458" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1453" cx="-6.8792" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1455" cx="-4.7625" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1457" cx="-2.6458" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1459" cx="-6.8792" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1461" cx="-3.7042" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1463" cx="-3.7042" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1465" cx="-5.8208" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1467" cx="-5.8208" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1469" cx="-7.9375" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1471" cx="-2.6458" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1473" cx="-4.7625" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1475" cx="-7.9375" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1477" cx="-2.6458" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1479" cx="-6.8792" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1481" cx="-4.7625" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1483" cx="-2.6458" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1485" cx="-6.8792" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1487" cx="-3.7042" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1489" cx="-3.7042" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1491" cx="-5.8208" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1493" cx="-5.8208" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1495" cx="-7.9375" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1497" cx="-2.6458" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1499" cx="-4.7625" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1501" cx="-1.5875" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1503" cx="-.52917" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1505" cx="-.52917" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1507" cx="-1.5875" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1509" cx="-1.5875" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1511" cx="-.52917" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1513" cx="-.52917" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1515" cx="-1.5875" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1595" cx="8.9958" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1597" cx="14.287" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1599" cx="10.054" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1601" cx="12.171" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1603" cx="14.287" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1605" cx="10.054" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1607" cx="13.229" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1609" cx="13.229" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1611" cx="11.112" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1613" cx="11.112" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1615" cx="8.9958" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1617" cx="14.287" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1619" cx="12.171" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1621" cx="8.9958" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1623" cx="14.287" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1625" cx="10.054" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1627" cx="12.171" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1629" cx="14.287" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1631" cx="10.054" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1633" cx="13.229" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1635" cx="13.229" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1637" cx="11.112" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1639" cx="11.112" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1641" cx="8.9958" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1643" cx="14.287" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1645" cx="12.171" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1647" cx="15.346" cy="8.9958" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1649" cx="16.404" cy="12.171" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1651" cx="16.404" cy="10.054" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1653" cx="15.346" cy="11.112" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1655" cx="15.346" cy="13.229" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1657" cx="16.404" cy="16.404" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1659" cx="16.404" cy="14.288" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <circle id="circle1661" cx="15.346" cy="15.346" r=".52917" stop-color="#000000" style="paint-order:fill markers stroke"/>
+  <path id="circle1667" transform="scale(.26458)" d="m-141.69-0.041016v0.35742a2 2 0 0 0 0.99219-0.011719 2 2 0 0 0 0.69922-0.3457h-1.6914zm3.8066 0a2 2 0 0 0-0.36523 1.7598 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-0.36328-0.72461h-3.1348zm7.4746 0a2 2 0 0 0 2.3379 1.1035 2 2 0 0 0 1.3027-1.1035h-3.6406zm12.447 0a2 2 0 0 0 0.06641 0.44727 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4805-1.8613h-3.9961zm-5.7773 0.0019531a2 2 0 0 0-0.46875 0.066406 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4805zm12.627 0.75781a2 2 0 0 0-0.46875 0.066406 2 2 0 0 0-1.416 2.4492 2 2 0 0 0 2.4512 1.4141 2 2 0 0 0 0.85547-0.47852v-2.9043a2 2 0 0 0-1.4219-0.54688zm-20.354 1.3125a2 2 0 0 0-0.4707 0.066406 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.416-2.4492 2 2 0 0 0-1.9805-1.4805zm12.627 0.75781a2 2 0 0 0-0.47071 0.066406 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9785-1.4805zm-20.355 1.3125a2 2 0 0 0-0.46875 0.066406 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.416 2 2 0 0 0 1.4141-2.4512 2 2 0 0 0-1.9805-1.4805zm12.627 0.75781a2 2 0 0 0-0.46875 0.066406 2 2 0 0 0-1.4141 2.4512 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4512 2 2 0 0 0-1.9805-1.4805zm12.627 0.75781a2 2 0 0 0-0.4707 0.066406 2 2 0 0 0-1.4141 2.4512 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.416-2.4512 2 2 0 0 0-1.9805-1.4805zm-20.354 1.3125a2 2 0 0 0-0.4707 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9785-1.4824zm12.625 0.75781a2 2 0 0 0-0.46875 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4824zm11.979 0.88477a2 2 0 0 0-1.2344 2.3906 2 2 0 0 0 1.2344 1.3555v-3.7461zm-32 0.44727v3.959a2 2 0 0 0 0.23438-0.046875 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.6484-1.4629zm12.295 0.73828a2 2 0 0 0-0.46875 0.068359 2 2 0 0 0-1.416 2.4492 2 2 0 0 0 2.4512 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4824zm12.627 0.75781a2 2 0 0 0-0.4707 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9785-1.4824zm-20.354 1.3125a2 2 0 0 0-0.4707 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9785-1.4824zm12.625 0.75781a2 2 0 0 0-0.46875 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4824zm12.627 0.75781a2 2 0 0 0-0.46875 0.068359 2 2 0 0 0-1.416 2.4492 2 2 0 0 0 2.4512 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4824zm-20.354 1.3125a2 2 0 0 0-0.4707 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.416-2.4492 2 2 0 0 0-1.9805-1.4824zm12.627 0.75781a2 2 0 0 0-0.4707 0.06836 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9785-1.4824zm-20.355 1.3125a2 2 0 0 0-0.46876 0.06836 2 2 0 0 0-1.2695 1.0352v1.791a2 2 0 0 0 2.3047 1.0371 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4824zm12.627 0.75781a2 2 0 0 0-0.46875 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4824zm12.627 0.75977a2 2 0 0 0-0.4707 0.066406 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.416-2.4492 2 2 0 0 0-1.9805-1.4805zm-20.354 1.3125a2 2 0 0 0-0.47071 0.066406 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9785-1.4805zm12.625 0.75781a2 2 0 0 0-0.46875 0.066406 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4805zm12.627 0.75781a2 2 0 0 0-0.46875 0.066406 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 1.9922 1.4805v-3.9941a2 2 0 0 0-0.10937-0.001953zm-31.891 0.84766v3.4141a2 2 0 0 0 0.89063-2.2266 2 2 0 0 0-0.89063-1.1875zm11.537 0.46484a2 2 0 0 0-0.46875 0.066406 2 2 0 0 0-1.416 2.4512 2 2 0 0 0 2.4512 1.4141 2 2 0 0 0 1.4141-2.4512 2 2 0 0 0-1.9805-1.4805zm12.627 0.75781a2 2 0 0 0-0.47071 0.066406 2 2 0 0 0-1.4141 2.4512 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4512 2 2 0 0 0-1.9785-1.4805zm-20.354 1.3125a2 2 0 0 0-0.4707 0.066406 2 2 0 0 0-1.4141 2.4512 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9785-1.4824zm12.625 0.75781a2 2 0 0 0-0.46875 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4824zm12.627 0.75781a2 2 0 0 0-0.4707 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4512 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9805-1.4824zm-20.354 1.3125a2 2 0 0 0-0.4707 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 2.4492 1.4141 2 2 0 0 0 1.4141-2.4492 2 2 0 0 0-1.9785-1.4824zm12.627 0.75781a2 2 0 0 0-0.4707 0.068359 2 2 0 0 0-1.4141 2.4492 2 2 0 0 0 1.3652 1.4004h1.1289a2 2 0 0 0 1.3691-2.4355 2 2 0 0 0-1.9785-1.4824zm-20.355 1.3125a2 2 0 0 0-0.46875 0.068359 2 2 0 0 0-0.51172 0.2168v2.3203h2.9356a2 2 0 0 0 0.02539-1.123 2 2 0 0 0-1.9805-1.4824zm12.627 0.75781a2 2 0 0 0-0.46875 0.06836 2 2 0 0 0-1.4766 1.7793h3.9883a2 2 0 0 0-0.0625-0.36523 2 2 0 0 0-1.9805-1.4824zm12.627 0.75781a2 2 0 0 0-0.4707 0.068359 2 2 0 0 0-1.2637 1.0215h3.5606a2 2 0 0 0-1.8262-1.0898z" stop-color="#000000" style="paint-order:fill markers stroke"/>
+ </g>
 </svg>
